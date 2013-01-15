@@ -1,0 +1,31 @@
+﻿
+* Add "Home" text menu entry to station info page (nearby - map - station scenario)
+
+* Timeout on HttpWebRequest (does Timeout exist in WP8 at all?)
+
+* Memory cache for "all stations" / Caching data provider
+
+* Store scroll position in state on tombstoning
+	http://dotnetapp.com/blog/2012/05/27/how-to-save-listview-and-scrollviewer-family-controls-scroll-position/
+	http://tombstonehelper.codeplex.com/
+
+For later:
+
+* On install, detect old reference databases and delete them
+* [Transition to Favorites doesn't work properly at all] disabled in menu atm
+* Navigation effects
+* Localization (localized app bar)
+* Casting to LongListSelector in a ViewModel is absolute not good practice
+* Implement a logging solution instead of ad-hoc Debug.WriteLine
+
+
+RELEVANT FOR SUBMISSION
+
+
+2.7.2
+ 
+The privacy policy of your app must inform users about how location data from the Location Service API 
+is used and disclosed and the controls that users have over the use and sharing of location data. This 
+can be hosted within or directly linked from the app. The privacy policy must be accessible 
+from your app at any time. 
+ 

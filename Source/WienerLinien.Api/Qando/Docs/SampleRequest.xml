@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<ft> 
+    <request clientId="123" apiName="api_get_monitor" apiVersion="2.0"> 
+        <client clientId="123"/> 
+        <requestType>api_get_monitor</requestType> 
+        <monitor> 
+            <outputCoords>WGS84</outputCoords> 
+            <type>stop</type> 
+            <name>60201040</name> 
+            <year>2011</year> 
+            <month>05</month> 
+            <day>31</day> 
+            <hour>14</hour> 
+            <minute>41</minute> 
+            <line></line> 
+            <sourceFrom>stoplist</sourceFrom> 
+        </monitor> 
+    </request> 
+</ft> 

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="MundlTransit.WP8.Views.MenuView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+             xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+             mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <phone:LongListSelector Margin="0,0,-12,0" 
+                                cm:Message.Attach="[Event SelectionChanged] = [Action ExecuteMenuCommand($source)]"
+                                ItemsSource="{Binding MenuItems}">
+            <phone:LongListSelector.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0,0,0,17" Width="432">
+                        <TextBlock Text="{Binding Name}"
+								   Style="{StaticResource PhoneTextLargeStyle}" />
+                        <TextBlock Text="{Binding Description}"
+								   Margin="12,-6,12,0"
+								   Style="{StaticResource PhoneTextNormalStyle}" />
+                    </StackPanel>
+                </DataTemplate>
+            </phone:LongListSelector.ItemTemplate>
+        </phone:LongListSelector>
+    </Grid>
+</UserControl>

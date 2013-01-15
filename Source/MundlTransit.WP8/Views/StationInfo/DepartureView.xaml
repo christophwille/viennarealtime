@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="MundlTransit.WP8.Views.StationInfo.DepartureView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+             xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+             xmlns:local="clr-namespace:MundlTransit.WP8.Views.StationInfo"
+             mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+            <phone:LongListSelector x:Name="TheDepartures" Margin="0,0,-12,0" ItemsSource="{Binding Departures}">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,17">
+                        <local:LineTypeSelector Content="{Binding}" HorizontalAlignment="Left">
+                            <local:LineTypeSelector.Metro>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" >
+                                        <StackPanel Orientation="Horizontal" Background="Red" Width="50">
+                                        <TextBlock Text="{Binding Name}" FontSize="40" Foreground="White" Width="50" HorizontalAlignment="Center"/>
+                                      </StackPanel>
+                                      <TextBlock Text="{Binding Towards}" TextWrapping="Wrap" 
+                                                 HorizontalAlignment="Left"
+                                                 Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </local:LineTypeSelector.Metro>
+                            <local:LineTypeSelector.Default>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding LineInformation}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+                                </DataTemplate>
+                            </local:LineTypeSelector.Default>
+                        </local:LineTypeSelector>
+                            
+                        <TextBlock Text="{Binding DepartureTimes}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextNormalStyle}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+        </Grid>
+
+</UserControl>

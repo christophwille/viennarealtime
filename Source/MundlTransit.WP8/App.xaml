@@ -1,0 +1,31 @@
+﻿<Application
+    x:Class="MundlTransit.WP8.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:local="clr-namespace:MundlTransit.WP8"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:system="clr-namespace:System;assembly=System">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <sys:String x:Key="ApplicationTitleUpperCased">VIENNA REALTIME</sys:String>
+        <sys:String x:Key="ApplicationTitleLowerCased">vienna realtime</sys:String>
+        <sys:String x:Key="ApplicationTitle">Vienna RealTime</sys:String>
+
+        <system:Uri x:Key="GitHubUrl">https://github.com/christophwille/viennarealtime</system:Uri>
+        <system:Uri x:Key="PrivacyPolicyUrl">https://github.com/christophwille/viennarealtime/wiki/Privacy-Policy</system:Uri>
+
+        <local:LocalizedStrings x:Key="LocalizedStrings"/>
+        <local:AppBootstrapper x:Key="Bootstrapper" />
+
+        <!-- http://msdn.microsoft.com/library/windowsphone/develop/jj207033(v=vs.105).aspx#BKMK_appidandtoken -->
+        <sys:String x:Key="MapApplicationId">INSERTWHENSUBMITTINGTOSTORE_ID</sys:String>
+        <sys:String x:Key="AuthenticationToken">INSERTWHENSUBMITTINGTOSTORE_AUTH</sys:String>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>
