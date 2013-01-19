@@ -161,6 +161,9 @@
   <ItemGroup>
     <Content Include="referencedata20130113.db3" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Reference\ReferenceDataContext.WP8.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <ProjectExtensions />

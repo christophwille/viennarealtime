@@ -5,14 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using SQLite;
 
-#if WINDOWS_PHONE
-using Windows.ApplicationModel;
-using Windows.Storage;
-#endif
-
 namespace MundlTransit.WP8.Data.Reference
 {
-    public class ReferenceDataContext
+    public partial class ReferenceDataContext
     {
         public const string DatabaseName = "referencedata20130113.db3";
 
@@ -90,31 +85,5 @@ namespace MundlTransit.WP8.Data.Reference
             var matched = await query.ToListAsync();
             return matched;
         }
-
-#if WINDOWS_PHONE
-        //
-        // http://wp.qmatteoq.com/import-an-already-existing-sqlite-database-in-a-windows-8-application/
-        //
-        public static async Task CopyDatabase()
-        {
-            bool isDatabaseExisting = false;
-
-            try
-            {
-                StorageFile storageFile = await ApplicationData.Current.LocalFolder.GetFileAsync(DatabaseName);
-                isDatabaseExisting = true;
-            }
-            catch
-            {
-                isDatabaseExisting = false;
-            }
-
-            if (!isDatabaseExisting)
-            {
-                StorageFile databaseFile = await Package.Current.InstalledLocation.GetFileAsync(DatabaseName);
-                await databaseFile.CopyAsync(ApplicationData.Current.LocalFolder);
-            }
-        }
-#endif
     }
 }
