@@ -35,7 +35,7 @@ namespace DbPrepare.CreateCamp
 
             var config = new CsvConfiguration()
                              {
-                                 Delimiter = ';'
+                                 Delimiter = ";"
                              };
 
             var csv = new CsvReader(new StreamReader(CsvFilename), config);

@@ -14,10 +14,7 @@ namespace DbPrepare
 
             ReferenceDataContext.InitializeDatabase(db);
 
-            //var importer = new CreateCamp.HaltestellenImporter();
-            //importer.Import(db);
-
-            var importer = new Qando.HaltestellenImporter();
+            var importer = new Ogd.HaltestellenImporter();
             importer.Import(db);
         }
     }
