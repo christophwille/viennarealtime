@@ -15,9 +15,14 @@ namespace MundlTransit.WP8
         public AboutPageViewModel()
         {
             VersionText = GetAppVersion();
+
+            GitHubUrl = new Uri((string)App.Current.Resources["GitHubUrl"]);
+            PrivacyPolicyUrl = new Uri((string)App.Current.Resources["PrivacyPolicyUrl"]);
         }
 
         public string VersionText { get; set; }
+        public Uri GitHubUrl { get; set; }
+        public Uri PrivacyPolicyUrl { get; set; }
 
         public void Review()
         {

@@ -5,8 +5,7 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:local="clr-namespace:MundlTransit.WP8"
-    xmlns:sys="clr-namespace:System;assembly=mscorlib"
-    xmlns:system="clr-namespace:System;assembly=System">
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <!--Application Resources-->
     <Application.Resources>
@@ -14,8 +13,8 @@
         <sys:String x:Key="ApplicationTitleLowerCased">vienna realtime</sys:String>
         <sys:String x:Key="ApplicationTitle">Vienna RealTime</sys:String>
 
-        <system:Uri x:Key="GitHubUrl">https://github.com/christophwille/viennarealtime</system:Uri>
-        <system:Uri x:Key="PrivacyPolicyUrl">https://github.com/christophwille/viennarealtime/wiki/Privacy-Policy</system:Uri>
+        <sys:String x:Key="GitHubUrl">https://github.com/christophwille/viennarealtime</sys:String>
+        <sys:String x:Key="PrivacyPolicyUrl">https://github.com/christophwille/viennarealtime/wiki/Privacy-Policy</sys:String>
 
         <local:LocalizedStrings x:Key="LocalizedStrings"/>
         <local:AppBootstrapper x:Key="Bootstrapper" />

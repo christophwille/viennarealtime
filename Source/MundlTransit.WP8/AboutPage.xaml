@@ -59,7 +59,7 @@
                         Text="by Christoph Wille" />
 
                     <HyperlinkButton
-                        NavigateUri="{StaticResource GitHubUrl}"
+                        NavigateUri="{Binding GitHubUrl}"
                         TargetName="_new"
                         HorizontalAlignment="Left"
                         Content="Support and Source Code" />
@@ -80,7 +80,7 @@
                     </TextBlock>
                     
                     <HyperlinkButton
-                        NavigateUri="{StaticResource PrivacyPolicyUrl}"
+                        NavigateUri="{Binding PrivacyPolicyUrl}"
                         TargetName="_new"
                         HorizontalAlignment="Left"
                         Content="Privacy Policy" />

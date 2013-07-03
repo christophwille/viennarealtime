@@ -366,7 +366,6 @@
       <HintPath>..\packages\Caliburn.Micro.1.4\lib\wp8\System.Windows.Interactivity.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\MundlTransit.WP8.Data\MundlTransit.WP8.Data.csproj">
       <Project>{2BBDEDC5-ED57-486B-90AE-0658E145DA6D}</Project>
