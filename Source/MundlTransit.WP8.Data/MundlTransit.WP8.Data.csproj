@@ -159,10 +159,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="referencedata20130113.db3" />
+    <Compile Include="Reference\ReferenceDataContext.WP8.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Reference\ReferenceDataContext.WP8.cs" />
+    <Content Include="referencedata20130703.db3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

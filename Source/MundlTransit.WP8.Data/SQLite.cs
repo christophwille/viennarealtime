@@ -138,8 +138,8 @@ namespace SQLite
 
 			Sqlite3DatabaseHandle handle;
 
-#if SILVERLIGHT
-			var r = SQLite3.Open (databasePath, out handle, (int)openFlags, IntPtr.Zero);
+#if SILVERLIGHT || USE_CSHARP_SQLITE
+            var r = SQLite3.Open (databasePath, out handle, (int)openFlags, IntPtr.Zero);
 #else
 			// open using the byte[]
 			// in the case where the path may include Unicode
@@ -1663,10 +1663,8 @@ namespace SQLite
 				return "integer";
 			} else if (clrType == typeof(byte[])) {
 				return "blob";
-#if SQLITE_SUPPORT_GUID
             } else if (clrType == typeof(Guid)) {
                 return "varchar(36)";
-#endif
             } else {
 				throw new NotSupportedException ("Don't know about " + clrType);
 			}
@@ -1934,10 +1932,8 @@ namespace SQLite
 					SQLite3.BindInt (stmt, index, Convert.ToInt32 (value));
                 } else if (value is byte[]){
                     SQLite3.BindBlob(stmt, index, (byte[]) value, ((byte[]) value).Length, NegativePointer);
-#if SQLITE_SUPPORT_GUID
                 } else if (value is Guid) {
                     SQLite3.BindText(stmt, index, ((Guid)value).ToString(), 72, NegativePointer);
-#endif
                 } else {
                     throw new NotSupportedException("Cannot store type: " + value.GetType());
                 }
@@ -1998,11 +1994,9 @@ namespace SQLite
 					return (sbyte)SQLite3.ColumnInt (stmt, index);
 				} else if (clrType == typeof(byte[])) {
 					return SQLite3.ColumnByteArray (stmt, index);
-#if SQLITE_SUPPORT_GUID
 				} else if (clrType == typeof(Guid)) {
                   var text = SQLite3.ColumnString(stmt, index);
                   return new Guid(text);
-#endif
                 } else{
 					throw new NotSupportedException ("Don't know how to read " + clrType);
 				}
@@ -2355,6 +2349,9 @@ namespace SQLite
 				else if (call.Method.Name == "EndsWith" && args.Length == 1) {
 					sqlCall = "(" + obj.CommandText + " like ('%' || " + args [0].CommandText + "))";
 				}
+				else if (call.Method.Name == "Equals" && args.Length == 1) {
+					sqlCall = "(" + obj.CommandText + " = (" + args[0].CommandText + "))";
+				}
 				else {
 					sqlCall = call.Method.Name.ToLower () + "(" + string.Join (",", args.Select (a => a.CommandText).ToArray ()) + ")";
 				}
@@ -2378,7 +2375,7 @@ namespace SQLite
 			} else if (expr.NodeType == ExpressionType.MemberAccess) {
 				var mem = (MemberExpression)expr;
 				
-				if (mem.Expression.NodeType == ExpressionType.Parameter) {
+				if (mem.Expression!=null && mem.Expression.NodeType == ExpressionType.Parameter) {
 					//
 					// This is a column of our table, output just the column name
 					// Need to translate it if that column name is mapped

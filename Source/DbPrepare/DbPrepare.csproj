@@ -72,7 +72,6 @@
     <Compile Include="..\MundlTransit.WP8.Data\Reference\ReferenceDataContext.cs">
       <Link>ReferenceDataContext.cs</Link>
     </Compile>
-    <Compile Include="CreateCamp\HaltestellenImporter.cs" />
     <Compile Include="Common\OgdDownloader.cs" />
     <Compile Include="Ogd\HaltestellenImporter.cs" />
     <Compile Include="Program.cs" />
@@ -87,9 +86,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
-    <None Include="CreateCamp\WL_Haltepunkte_CreateCamp_12012013 mit Koordinaten.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Qando\HALTESTELLEWLOGD.csv">

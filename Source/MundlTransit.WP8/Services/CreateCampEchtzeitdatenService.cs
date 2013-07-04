@@ -11,7 +11,7 @@ using MundlTransit.WP8.Data.Reference;
 using Newtonsoft.Json.Linq;
 using WienerLinien.Api;
 using WienerLinien.Api.Qando;
-
+/*
 namespace MundlTransit.WP8.Services
 {
     public class CreateCampEchtzeitdatenService : IEchtzeitdatenService
@@ -39,3 +39,4 @@ namespace MundlTransit.WP8.Services
         }
     }
 }
+*/

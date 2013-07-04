@@ -10,28 +10,31 @@ namespace MundlTransit.WP8.Data.Reference
     [Table("Haltestellen")]
     public class Haltestelle
     {
+        // We use the OGD-provided OBJECTID as primary key
         [PrimaryKey]
         public int Id { get; set; }
-
-        // We use the OGD-provided WL_NUMMER as primary key
-        // [PrimaryKey, AutoIncrement]
-        // public int Id { get; set; }
-        // public int WienerLinienNummer { get; set; }
 
         public string FeatureId { get; set; }
 
         [Indexed(Name="StationSearchIndex")]
         public string Bezeichnung { get; set; }
 
+        public string BezeichnungKurz { get; set; }
+
         public double Longitude { get; set; }
         public double Latitude { get; set; }
 
-        public string HaltepunkteIds { get; set; }
+        public string Linien { get; set; }
 
         [SQLite.Ignore]
         public string SecondaryInformation
         {
-            get { return String.Format("(lat:{0:F2} lon:{1:F2})", Latitude, Longitude); }
+            get { return Linien; }
+        }
+
+        private string FormatLatLonAsInfo()
+        {
+            return String.Format("(lat:{0:F2} lon:{1:F2})", Latitude, Longitude);
         }
 
         [SQLite.Ignore]

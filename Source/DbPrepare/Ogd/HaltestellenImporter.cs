@@ -44,9 +44,10 @@ namespace DbPrepare.Ogd
                     {
                         Id = hsCsv.OBJECTID,
                         Bezeichnung = hsCsv.HTXT,
+                        BezeichnungKurz = hsCsv.HTXTK,
+                        Linien = hsCsv.HLINIEN,
                         Longitude = longitude,
-                        Latitude = latitude,
-                        //HaltepunkteIds = String.Join(",", haltepunkteGroup.Haltepunkte.Select(x => x.haltepunkt))
+                        Latitude = latitude
                     };
 
                     toInsert.Add(h);
