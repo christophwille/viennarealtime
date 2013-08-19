@@ -15,11 +15,13 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
         private readonly DepartureViewModel departureViewModel;
         private readonly IDataService _dataService;
         private readonly INavigationService _navigationService;
+        private readonly IUIService _uiService;
 
-        public StationInfoPivotPageViewModel(INavigationService navigationService,IDataService ds, DepartureViewModel dep)
+        public StationInfoPivotPageViewModel(INavigationService navigationService, IDataService ds, IUIService uisvc, DepartureViewModel dep)
         {
             _navigationService = navigationService;
             _dataService = ds;
+            _uiService = uisvc;
             departureViewModel = dep;
         }
 
@@ -68,6 +70,8 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
                           };
 
             _dataService.InsertFavoriteIfNotExistsAsync(fav);
+
+            _uiService.ShowTextToast("favorite added", _haltestelle.Bezeichnung);
         }
 
         public void RefreshDepartureInformation()

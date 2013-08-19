@@ -179,6 +179,8 @@
     <Compile Include="Services\DefaultDataService.cs" />
     <Compile Include="Services\DefaultLocationService.cs" />
     <Compile Include="Services\CreateCampEchtzeitdatenService.cs" />
+    <Compile Include="Services\DefaultUIService.cs" />
+    <Compile Include="Services\IUIService.cs" />
     <Compile Include="Services\QandoEchtzeitdatenService.cs" />
     <Compile Include="Services\IDataService.cs" />
     <Compile Include="Services\ILocationService.cs" />

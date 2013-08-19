@@ -43,6 +43,7 @@ namespace MundlTransit.WP8
 
             container.RegisterPerRequest(typeof(IDataService), null, typeof(DefaultDataService));
             container.RegisterPerRequest(typeof(ILocationService), null, typeof(DefaultLocationService));
+            container.RegisterPerRequest(typeof(IUIService), null, typeof(DefaultUIService));
 
             // container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(CreateCampEchtzeitdatenService));
             container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(QandoEchtzeitdatenService));
