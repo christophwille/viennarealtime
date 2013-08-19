@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Caliburn.Micro;
 using Microsoft.Phone.Controls;
 using MundlTransit.WP8.Data.Runtime;
@@ -45,8 +46,11 @@ namespace MundlTransit.WP8.ViewModels
                 .Navigate();
         }
 
-        public void Remove(Favorite item)
+        public void Remove(object sender, Favorite item)
         {
+            // http://stackoverflow.com/questions/14444583/contextmenu-in-datatemplate-binding-issue
+            ((sender as MenuItem).Parent as ContextMenu).ClearValue(FrameworkElement.DataContextProperty);
+
             PerformRemovalAsync(item);
         }
 
