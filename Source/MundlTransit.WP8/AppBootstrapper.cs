@@ -27,11 +27,13 @@ namespace MundlTransit.WP8
 
         protected override void Configure()
         {
-            container = new PhoneContainer(RootFrame);
+            container = new PhoneContainer();
 
 #if DEBUG
             LogManager.GetLog = type => new DebugLogger(type);
 #endif
+
+            container.RegisterPhoneServices(RootFrame);
 
             var referenceDbCopyTask = new Task(() => ReferenceDataContext.CopyDatabase());
             referenceDbCopyTask.RunSynchronously();
@@ -39,7 +41,6 @@ namespace MundlTransit.WP8
             var runtimeDbInitTask = new Task(() => RuntimeDataContext.InitializeDatabaseAsync());
             runtimeDbInitTask.RunSynchronously();
 
-            container.RegisterPhoneServices();
             container.RegisterPerRequest(typeof(IDataService), null, typeof(DefaultDataService));
             container.RegisterPerRequest(typeof(ILocationService), null, typeof(DefaultLocationService));
 
