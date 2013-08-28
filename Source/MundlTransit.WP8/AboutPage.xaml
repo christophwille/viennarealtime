@@ -74,7 +74,7 @@
                     <Button x:Name="Review" HorizontalAlignment="Left" Content="Review this app"/>
 
                     <TextBlock TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}">
-                        This app uses services provided by qando.at, and open government
+                        This app uses services provided by wienerlinien.at, and open government
                         data provided by the City of Vienna. No personally identifyable 
                         information (including location data) is sent by this app.
                     </TextBlock>
