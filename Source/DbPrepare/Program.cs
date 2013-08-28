@@ -14,7 +14,7 @@ namespace DbPrepare
 
             ReferenceDataContext.InitializeDatabase(db);
 
-            var importer = new Ogd.HaltestellenImporter();
+            var importer = new Ogd.Importer();
             importer.Import(db);
         }
     }
