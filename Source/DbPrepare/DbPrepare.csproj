@@ -73,24 +73,19 @@
       <Link>ReferenceDataContext.cs</Link>
     </Compile>
     <Compile Include="Common\OgdDownloader.cs" />
+    <Compile Include="Ogd\CsvHaltestelle.cs" />
     <Compile Include="Ogd\HaltestellenImporter.cs" />
+    <Compile Include="Ogd\ShapeHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Qando\HaltestellenImporter.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Ogd\OEFFHALTESTOGD.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Qando\HALTESTELLEWLOGD.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="sqlite3.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

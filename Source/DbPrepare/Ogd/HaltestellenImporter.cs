@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -36,7 +35,7 @@ namespace DbPrepare.Ogd
             foreach (var hsCsv in haltestellen)
             {
                 double longitude, latitude;
-                bool ok = hsCsv.TryParseShape(out longitude, out latitude);
+                bool ok = ShapeHelper.TryParseShape(hsCsv.SHAPE, out longitude, out latitude);
 
                 if (ok && !String.IsNullOrWhiteSpace(hsCsv.HTXT))
                 {
@@ -55,44 +54,6 @@ namespace DbPrepare.Ogd
             }
 
             db.InsertAll(toInsert);
-        }
-    }
-
-    class CsvHaltestelle
-    {
-        public string FID { get; set; }
-        public int OBJECTID { get; set; }
-        public string SHAPE { get; set; }
-        public string HTXT { get; set; }
-        public string HTXTK { get; set; }
-        public string HLINIEN { get; set; }
-        public string SE_ANNO_CAD_DATA { get; set; }
-
-        // POINT (16.389769898563777 48.173790150890646)
-        public bool TryParseShape(out double longitude, out double latitude)
-        {
-            try
-            {
-                string pointShape = SHAPE;
-
-                int openParensPos = pointShape.IndexOf("(", StringComparison.InvariantCultureIgnoreCase);
-                string point = pointShape.Substring(++openParensPos, pointShape.Length - openParensPos - 1);
-
-                var lonlat = point.Split(new char[] { ' ' });
-
-                bool lonOk = Double.TryParse(lonlat[0], NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out longitude);
-                bool latOk = Double.TryParse(lonlat[1], NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out latitude);
-
-                return (lonOk && latOk);
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine(e.ToString());
-
-                longitude = 0.0f;
-                latitude = 0.0f;
-                return false;
-            }
         }
     }
 }
