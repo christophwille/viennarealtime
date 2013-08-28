@@ -10,10 +10,14 @@ namespace DbPrepare
     {
         static void Main(string[] args)
         {
-            var db = ReferenceDataContext.CreateConnection();
+            // Clean up first
+            System.IO.File.Delete(ReferenceDataContext.DatabaseName);
 
+            // Re-initialize
+            var db = ReferenceDataContext.CreateConnection();
             ReferenceDataContext.InitializeDatabase(db);
 
+            // Perform import
             var importer = new Ogd.Importer();
             importer.Import(db);
         }

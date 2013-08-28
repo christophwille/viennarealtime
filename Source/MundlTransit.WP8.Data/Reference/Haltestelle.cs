@@ -14,12 +14,8 @@ namespace MundlTransit.WP8.Data.Reference
         [PrimaryKey]
         public int Id { get; set; }
 
-        public string FeatureId { get; set; }
-
         [Indexed(Name="StationSearchIndex")]
         public string Bezeichnung { get; set; }
-
-        public string BezeichnungKurz { get; set; }
 
         public double Longitude { get; set; }
         public double Latitude { get; set; }

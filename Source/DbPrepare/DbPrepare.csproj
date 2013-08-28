@@ -67,15 +67,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\Haltestelle.cs">
-      <Link>Haltestelle.cs</Link>
+      <Link>Data\Haltestelle.cs</Link>
+    </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\Linie.cs">
+      <Link>Data\Linie.cs</Link>
     </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\ReferenceDataContext.cs">
-      <Link>ReferenceDataContext.cs</Link>
+      <Link>Data\ReferenceDataContext.cs</Link>
     </Compile>
     <Compile Include="Common\OgdDownloader.cs" />
     <Compile Include="Ogd\CsvHaltestelle.cs" />
+    <Compile Include="Ogd\CsvLinie.cs" />
     <Compile Include="Ogd\Importer.cs" />
-    <Compile Include="Ogd\ShapeHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLite.cs" />

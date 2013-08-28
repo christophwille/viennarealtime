@@ -9,7 +9,7 @@ namespace MundlTransit.WP8.Data.Reference
 {
     public partial class ReferenceDataContext
     {
-        public const string DatabaseName = "referencedata20130703.db3";
+        public const string DatabaseName = "referencedata20130829.db3";
 
         #region DbPrepare functions
         public static SQLiteConnection CreateConnection()
@@ -28,6 +28,7 @@ namespace MundlTransit.WP8.Data.Reference
         public static void InitializeDatabase(SQLiteConnection db)
         {
             db.CreateTable<Haltestelle>();
+            db.CreateTable<Linie>();
         }
         #endregion
 

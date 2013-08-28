@@ -35,7 +35,7 @@ namespace DbPrepare.Ogd
             };
 
             ImportHaltestellen();
-
+            ImportLinien();
 
             _db = null;
             _csvConfiguration = null;
@@ -58,6 +58,25 @@ namespace DbPrepare.Ogd
                                     // Linien = hsCsv.HLINIEN,
                                     Longitude = hsCsv.WGS84_LON, 
                                     Latitude = hsCsv.WGS84_LAT
+                                })
+                                .ToList();
+
+            _db.InsertAll(toInsert);
+        }
+
+        private void ImportLinien()
+        {
+            var csv = new CsvReader(GetStream(LinienFile), _csvConfiguration);
+            var linien = csv.GetRecords<CsvLinie>().ToList();
+
+            var toInsert = linien.Select(lCsv => new Linie()
+                                {
+                                    Id = lCsv.LINIEN_ID,
+                                    Reihenfolge = lCsv.REIHENFOLGE,
+                                    Bezeichnung = lCsv.BEZEICHNUNG,
+                                    Echtzeit = lCsv.ECHTZEIT == 1,
+                                    Verkehrsmittel = lCsv.VERKEHRSMITTEL,
+                                    Stand = lCsv.STAND
                                 })
                                 .ToList();
 
