@@ -4,14 +4,19 @@ using System.Globalization;
 
 namespace DbPrepare.Ogd
 {
+    //
+    // "HALTESTELLEN_ID";"TYP";"DIVA";"NAME";"GEMEINDE";"GEMEINDE_ID";"WGS84_LAT";"WGS84_LON";"STAND"
+    //
     class CsvHaltestelle
     {
-        public string FID { get; set; }
-        public int OBJECTID { get; set; }
-        public string SHAPE { get; set; }
-        public string HTXT { get; set; }
-        public string HTXTK { get; set; }
-        public string HLINIEN { get; set; }
-        public string SE_ANNO_CAD_DATA { get; set; }
+        public int HALTESTELLEN_ID { get; set; }
+        public string TYP { get; set; }
+        public string DIVA { get; set; }
+        public string NAME { get; set; }
+        public string GEMEINDE { get; set; }
+        public int GEMEINDE_ID { get; set; }
+        public double WGS84_LAT { get; set; }
+        public double WGS84_LON { get; set; }
+        public string STAND { get; set; }
     }
 }

@@ -27,11 +27,11 @@ namespace DbPrepare.Ogd
         {
             _db = db;
 
-            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("de");
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en");
 
             _csvConfiguration = new CsvConfiguration()
             {
-                Delimiter = ","
+                Delimiter = ";"
             };
 
             ImportHaltestellen();
@@ -41,33 +41,25 @@ namespace DbPrepare.Ogd
             _csvConfiguration = null;
         }
 
+        private StreamReader GetStream(string filename)
+        {
+            return new StreamReader("../../" + filename, System.Text.Encoding.UTF8);
+        }
+
         private void ImportHaltestellen()
         {
-            var csv = new CsvReader(new StreamReader(HaltestellenFile, System.Text.Encoding.UTF8), _csvConfiguration);
+            var csv = new CsvReader(GetStream(HaltestellenFile), _csvConfiguration);
             var haltestellen = csv.GetRecords<CsvHaltestelle>().ToList();
 
-            var toInsert = new List<Haltestelle>();
-
-            foreach (var hsCsv in haltestellen)
-            {
-                double longitude, latitude;
-                bool ok = ShapeHelper.TryParseShape(hsCsv.SHAPE, out longitude, out latitude);
-
-                if (ok && !String.IsNullOrWhiteSpace(hsCsv.HTXT))
-                {
-                    var h = new Haltestelle()
-                    {
-                        Id = hsCsv.OBJECTID,
-                        Bezeichnung = hsCsv.HTXT,
-                        BezeichnungKurz = hsCsv.HTXTK,
-                        Linien = hsCsv.HLINIEN,
-                        Longitude = longitude,
-                        Latitude = latitude
-                    };
-
-                    toInsert.Add(h);
-                }
-            }
+            var toInsert = haltestellen.Select(hsCsv => new Haltestelle()
+                                {
+                                    Id = hsCsv.HALTESTELLEN_ID, 
+                                    Bezeichnung = hsCsv.NAME,
+                                    // Linien = hsCsv.HLINIEN,
+                                    Longitude = hsCsv.WGS84_LON, 
+                                    Latitude = hsCsv.WGS84_LAT
+                                })
+                                .ToList();
 
             _db.InsertAll(toInsert);
         }
