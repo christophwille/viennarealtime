@@ -147,6 +147,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reference\Linie.cs" />
     <Compile Include="Reference\ReferenceDataContext.cs" />
+    <Compile Include="Reference\Steig.cs" />
     <Compile Include="Runtime\Favorite.cs" />
     <Compile Include="Runtime\RuntimeDataContext.cs" />
     <Compile Include="Runtime\StationHistory.cs" />

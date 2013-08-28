@@ -36,6 +36,7 @@ namespace DbPrepare.Ogd
 
             ImportHaltestellen();
             ImportLinien();
+            ImportSteige();
 
             _db = null;
             _csvConfiguration = null;
@@ -53,11 +54,11 @@ namespace DbPrepare.Ogd
 
             var toInsert = haltestellen.Select(hsCsv => new Haltestelle()
                                 {
-                                    Id = hsCsv.HALTESTELLEN_ID, 
+                                    Id = hsCsv.HALTESTELLEN_ID,
                                     Bezeichnung = hsCsv.NAME,
-                                    // Linien = hsCsv.HLINIEN,
-                                    Longitude = hsCsv.WGS84_LON, 
-                                    Latitude = hsCsv.WGS84_LAT
+                                    Longitude = hsCsv.WGS84_LON,
+                                    Latitude = hsCsv.WGS84_LAT,
+                                    Stand = hsCsv.STAND
                                 })
                                 .ToList();
 
@@ -79,6 +80,30 @@ namespace DbPrepare.Ogd
                                     Stand = lCsv.STAND
                                 })
                                 .ToList();
+
+            _db.InsertAll(toInsert);
+        }
+
+        private void ImportSteige()
+        {
+            var csv = new CsvReader(GetStream(SteigeFile), _csvConfiguration);
+            var steige = csv.GetRecords<CsvSteig>().ToList();
+
+            var toInsert = steige.Select(sCsv => new Steig()
+                            {
+                                Id = sCsv.STEIG_ID,
+                                FK_LinienId = sCsv.FK_LINIEN_ID,
+                                FK_HaltestellenId = sCsv.FK_HALTESTELLEN_ID,
+                                Richtung = sCsv.RICHTUNG,
+                                Reihenfolge = sCsv.REIHENFOLGE,
+                                RblNummer = sCsv.RBL_NUMMER,
+                                Bereich = sCsv.BEREICH,
+                                Name = sCsv.STEIG,
+                                Latitude = sCsv.STEIG_WGS84_LAT,
+                                Longitude = sCsv.STEIG_WGS84_LON,
+                                Stand = sCsv.STAND,
+                            })
+                            .ToList();
 
             _db.InsertAll(toInsert);
         }

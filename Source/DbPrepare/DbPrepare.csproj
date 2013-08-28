@@ -75,9 +75,13 @@
     <Compile Include="..\MundlTransit.WP8.Data\Reference\ReferenceDataContext.cs">
       <Link>Data\ReferenceDataContext.cs</Link>
     </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\Steig.cs">
+      <Link>Data\Steig.cs</Link>
+    </Compile>
     <Compile Include="Common\OgdDownloader.cs" />
     <Compile Include="Ogd\CsvHaltestelle.cs" />
     <Compile Include="Ogd\CsvLinie.cs" />
+    <Compile Include="Ogd\CsvSteig.cs" />
     <Compile Include="Ogd\Importer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

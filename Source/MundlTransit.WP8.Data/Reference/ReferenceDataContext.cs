@@ -29,6 +29,7 @@ namespace MundlTransit.WP8.Data.Reference
         {
             db.CreateTable<Haltestelle>();
             db.CreateTable<Linie>();
+            db.CreateTable<Steig>();
         }
         #endregion
 

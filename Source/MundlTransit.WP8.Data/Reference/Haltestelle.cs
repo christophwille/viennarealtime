@@ -22,6 +22,8 @@ namespace MundlTransit.WP8.Data.Reference
 
         public string Linien { get; set; }
 
+        public string Stand { get; set; }
+
         [SQLite.Ignore]
         public string SecondaryInformation
         {
