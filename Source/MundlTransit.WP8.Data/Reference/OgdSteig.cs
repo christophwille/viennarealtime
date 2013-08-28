@@ -7,8 +7,8 @@ using SQLite;
 
 namespace MundlTransit.WP8.Data.Reference
 {
-    [Table("Steige")]
-    public class Steig
+    [Table("OgdSteige")]
+    public class OgdSteig
     {
         // We use the OGD-provided STEIG_ID as primary key
         [PrimaryKey]

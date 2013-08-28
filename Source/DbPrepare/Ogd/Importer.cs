@@ -52,7 +52,7 @@ namespace DbPrepare.Ogd
             var csv = new CsvReader(GetStream(HaltestellenFile), _csvConfiguration);
             var haltestellen = csv.GetRecords<CsvHaltestelle>().ToList();
 
-            var toInsert = haltestellen.Select(hsCsv => new Haltestelle()
+            var toInsert = haltestellen.Select(hsCsv => new OgdHaltestelle()
                                 {
                                     Id = hsCsv.HALTESTELLEN_ID,
                                     Bezeichnung = hsCsv.NAME,
@@ -70,7 +70,7 @@ namespace DbPrepare.Ogd
             var csv = new CsvReader(GetStream(LinienFile), _csvConfiguration);
             var linien = csv.GetRecords<CsvLinie>().ToList();
 
-            var toInsert = linien.Select(lCsv => new Linie()
+            var toInsert = linien.Select(lCsv => new OgdLinie()
                                 {
                                     Id = lCsv.LINIEN_ID,
                                     Reihenfolge = lCsv.REIHENFOLGE,
@@ -89,7 +89,7 @@ namespace DbPrepare.Ogd
             var csv = new CsvReader(GetStream(SteigeFile), _csvConfiguration);
             var steige = csv.GetRecords<CsvSteig>().ToList();
 
-            var toInsert = steige.Select(sCsv => new Steig()
+            var toInsert = steige.Select(sCsv => new OgdSteig()
                             {
                                 Id = sCsv.STEIG_ID,
                                 FK_LinienId = sCsv.FK_LINIEN_ID,

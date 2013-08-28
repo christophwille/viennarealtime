@@ -143,11 +143,12 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Reference\Haltestelle.cs" />
+    <Compile Include="Reference\OgdHaltestelle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reference\Linie.cs" />
+    <Compile Include="Reference\Haltestelle.cs" />
+    <Compile Include="Reference\OgdLinie.cs" />
     <Compile Include="Reference\ReferenceDataContext.cs" />
-    <Compile Include="Reference\Steig.cs" />
+    <Compile Include="Reference\OgdSteig.cs" />
     <Compile Include="Runtime\Favorite.cs" />
     <Compile Include="Runtime\RuntimeDataContext.cs" />
     <Compile Include="Runtime\StationHistory.cs" />
@@ -158,10 +159,8 @@
     <Compile Include="Reference\ReferenceDataContext.WP8.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="referencedata20130703.db3" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="referencedata20130829.db3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\sqlite-net-wp8\Sqlite.vcxproj">

@@ -7,20 +7,18 @@ using SQLite;
 
 namespace MundlTransit.WP8.Data.Reference
 {
-    [Table("Linien")]
-    public class Linie
+    [Table("OgdHaltestellen")]
+    public class OgdHaltestelle
     {
-        // We use the OGD-provided LINIEN_ID as primary key
+        // We use the OGD-provided OBJECTID as primary key
         [PrimaryKey]
         public int Id { get; set; }
 
+        [Indexed(Name="StationSearchIndex")]
         public string Bezeichnung { get; set; }
 
-        public int Reihenfolge { get; set; }
-        public bool Echtzeit { get; set; }
-
-        [Indexed(Name = "TypeOfVerkehrsmittel")]
-        public string Verkehrsmittel { get; set; }
+        public double Longitude { get; set; }
+        public double Latitude { get; set; }
 
         public string Stand { get; set; }
     }

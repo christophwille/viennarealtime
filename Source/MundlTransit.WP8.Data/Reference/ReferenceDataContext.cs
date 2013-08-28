@@ -28,8 +28,10 @@ namespace MundlTransit.WP8.Data.Reference
         public static void InitializeDatabase(SQLiteConnection db)
         {
             db.CreateTable<Haltestelle>();
-            db.CreateTable<Linie>();
-            db.CreateTable<Steig>();
+
+            db.CreateTable<OgdLinie>();
+            db.CreateTable<OgdSteig>();
+            db.CreateTable<OgdHaltestelle>();
         }
         #endregion
 

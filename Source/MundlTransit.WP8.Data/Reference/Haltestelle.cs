@@ -10,19 +10,17 @@ namespace MundlTransit.WP8.Data.Reference
     [Table("Haltestellen")]
     public class Haltestelle
     {
-        // We use the OGD-provided OBJECTID as primary key
         [PrimaryKey]
         public int Id { get; set; }
 
-        [Indexed(Name="StationSearchIndex")]
+        [Indexed(Name = "StationSearchIndex")]
         public string Bezeichnung { get; set; }
 
         public double Longitude { get; set; }
         public double Latitude { get; set; }
 
         public string Linien { get; set; }
-
-        public string Stand { get; set; }
+        public string LinienIds { get; set; }
 
         [SQLite.Ignore]
         public string SecondaryInformation
@@ -39,9 +37,9 @@ namespace MundlTransit.WP8.Data.Reference
         public double Distanz { get; set; }
 
         [SQLite.Ignore]
-        public string DisplayDistanz 
-        { 
-            get { return String.Format("{0:F0} m", Distanz); } 
+        public string DisplayDistanz
+        {
+            get { return String.Format("{0:F0} m", Distanz); }
         }
 
         [SQLite.Ignore]
@@ -53,5 +51,4 @@ namespace MundlTransit.WP8.Data.Reference
         [SQLite.Ignore]
         public string PostHighlightBlock { get; set; }
     }
-
 }

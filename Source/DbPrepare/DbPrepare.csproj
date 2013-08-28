@@ -69,14 +69,17 @@
     <Compile Include="..\MundlTransit.WP8.Data\Reference\Haltestelle.cs">
       <Link>Data\Haltestelle.cs</Link>
     </Compile>
-    <Compile Include="..\MundlTransit.WP8.Data\Reference\Linie.cs">
-      <Link>Data\Linie.cs</Link>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\OgdHaltestelle.cs">
+      <Link>Data\OgdHaltestelle.cs</Link>
+    </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\OgdLinie.cs">
+      <Link>Data\OgdLinie.cs</Link>
+    </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\OgdSteig.cs">
+      <Link>Data\OgdSteig.cs</Link>
     </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\ReferenceDataContext.cs">
       <Link>Data\ReferenceDataContext.cs</Link>
-    </Compile>
-    <Compile Include="..\MundlTransit.WP8.Data\Reference\Steig.cs">
-      <Link>Data\Steig.cs</Link>
     </Compile>
     <Compile Include="Common\OgdDownloader.cs" />
     <Compile Include="Ogd\CsvHaltestelle.cs" />
