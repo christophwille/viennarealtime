@@ -21,6 +21,7 @@ namespace MundlTransit.WP8.Data.Reference
 
         public string Linien { get; set; }
         public string LinienIds { get; set; }
+        public string RblNummern { get; set; }
 
         [SQLite.Ignore]
         public string SecondaryInformation

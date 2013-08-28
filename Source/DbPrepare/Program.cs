@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using MundlTransit.WP8.Data.Reference;
@@ -27,18 +28,20 @@ namespace DbPrepare
         }
 
         private static string JoinQuery =
-                    @"SELECT OgdLinien.Id, OgdLinien.Bezeichnung
+                    @"SELECT OgdLinien.Id, OgdLinien.Bezeichnung, OgdSteige.RblNummer
                             FROM OgdLinien
                             INNER JOIN OgdSteige
                             ON OgdLinien.Id = OgdSteige.FK_LinienId
                             WHERE OgdSteige.FK_HaltestellenId = {0}
-                            GROUP BY OgdLinien.Id, OgdLinien.Bezeichnung
                             ORDER BY OgdLinien.Reihenfolge";
+
+        // GROUP BY OgdLinien.Id, OgdLinien.Bezeichnung
 
         class LinienAtHaltestelleModel
         {
             public int Id { get; set; }
             public string Bezeichnung { get; set; }
+            public string RblNummer { get; set; }
         }
 
         private static void CreateLookupTable(SQLiteConnection db)
@@ -50,8 +53,14 @@ namespace DbPrepare
             {
                 var result = db.Query<LinienAtHaltestelleModel>(String.Format(JoinQuery, h.Id));
 
-                string linienDisplay = String.Join(", ", result.Select(r => r.Bezeichnung));
-                string linienIds = String.Join(",", result.Select(r => r.Id));
+                var groupedLinien = (from model in result
+                    group model by  new { model.Id, model.Bezeichnung }
+                    into g
+                    select new { g.Key.Id, g.Key.Bezeichnung }).ToList();
+
+                string linienDisplay = String.Join(", ", groupedLinien.Select(r => r.Bezeichnung));
+                string linienIds = String.Join(",", groupedLinien.Select(r => r.Id));
+                string rblNummern = String.Join(",", result.Select(r => r.RblNummer));
 
                 var haltstelle = new Haltestelle()
                 {
@@ -60,7 +69,8 @@ namespace DbPrepare
                     Longitude = h.Longitude,
                     Latitude = h.Latitude,
                     Linien = linienDisplay,
-                    LinienIds = linienIds
+                    LinienIds = linienIds,
+                    RblNummern = rblNummern
                 };
 
                 toInsert.Add(haltstelle);
