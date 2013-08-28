@@ -153,12 +153,6 @@
     <Compile Include="SQLiteAsync.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\sqlite-net-wp8\Sqlite.vcxproj">
-      <Project>{59B35F6C-E062-4F0E-88D8-13F3F82A24F3}</Project>
-      <Name>Sqlite</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Reference\ReferenceDataContext.WP8.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +160,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sqlite-net-wp8\Sqlite.vcxproj">
+      <Project>{59B35F6C-E062-4F0E-88D8-13F3F82A24F3}</Project>
+      <Name>Sqlite</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
