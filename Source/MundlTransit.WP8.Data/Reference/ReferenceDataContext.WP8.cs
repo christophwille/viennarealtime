@@ -13,7 +13,7 @@ namespace MundlTransit.WP8.Data.Reference
         //
         // http://wp.qmatteoq.com/import-an-already-existing-sqlite-database-in-a-windows-8-application/
         //
-        public static async Task CopyDatabase()
+        public static async Task CopyDatabaseAsync()
         {
             bool isDatabaseExisting = false;
 
@@ -31,6 +31,21 @@ namespace MundlTransit.WP8.Data.Reference
             {
                 StorageFile databaseFile = await Package.Current.InstalledLocation.GetFileAsync(DatabaseName);
                 await databaseFile.CopyAsync(ApplicationData.Current.LocalFolder);
+            }
+        }
+
+        public static async Task DeletePreviousDatabasesAsync()
+        {
+            foreach (string filename in PreviousDatabases)
+            {
+                try
+                {
+                    StorageFile storageFile = await ApplicationData.Current.LocalFolder.GetFileAsync(DatabaseName);
+                    await storageFile.DeleteAsync();
+                }
+                catch
+                {
+                }
             }
         }
     }

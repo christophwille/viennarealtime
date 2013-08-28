@@ -11,6 +11,11 @@ namespace MundlTransit.WP8.Data.Reference
     {
         public const string DatabaseName = "referencedata20130829.db3";
 
+        private static readonly List<string> PreviousDatabases = new List<string>()
+        {
+            // "referencedata20130701.db3",
+        }; 
+
         #region DbPrepare functions
         public static SQLiteConnection CreateConnection()
         {
