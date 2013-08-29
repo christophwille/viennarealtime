@@ -1,0 +1,171 @@
+{
+"data": {
+"monitors": [
+{
+"locationStop": {
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+16.312048857547,
+48.1990873871873
+]
+},
+"properties": {
+"name": "60201035",
+"title": "Hütteldorfer Straße",
+"municipality": "Wien",
+"municipalityId": 90000,
+"type": "stop",
+"coordName": "WGS84",
+"attributes": {
+"rbl": 1450
+}
+}
+},
+"lines": [
+{
+"name": "N49",
+"towards": "Hütteldorf",
+"direction": "H",
+"richtungsId": "1",
+"barrierFree": true,
+"realtimeSupported": true,
+"trafficjam": false,
+"departures": {
+"departure": [
+{
+"departureTime": {
+"timePlanned": "2013-08-07T02:51:00.000+0200",
+"timeReal": "2013-08-07T02:51:30.000+0200",
+"countdown": 27
+}
+},
+{
+"departureTime": {
+"timePlanned": "2013-08-07T03:21:00.000+0200",
+"timeReal": "2013-08-07T03:21:30.000+0200",
+"countdown": 57
+}
+}
+]
+},
+"type": "ptBusNight",
+"lineId": 549
+}
+],
+"refTrafficInfoNames": [
+"tk_-444190366"
+]
+},
+{
+"locationStop": {
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+16.312048857547,
+48.1990873871873
+]
+},
+"properties": {
+"name": "60201035",
+"title": "Hütteldorfer Straße",
+"municipality": "Wien",
+"municipalityId": 90000,
+"type": "stop",
+"coordName": "WGS84",
+"attributes": {
+"rbl": 1450
+}
+}
+},
+"lines": [
+{
+"name": "49",
+"towards": "Hütteldorf, Bujattig.",
+"direction": "H",
+"richtungsId": "1",
+"barrierFree": false,
+"realtimeSupported": true,
+"trafficjam": false,
+"departures": {
+"departure": [
+{
+"departureTime": {
+"timePlanned": "2013-08-07T05:00:00.000+0200",
+"countdown": 155
+}
+},
+{
+"departureTime": {
+"timePlanned": "2013-08-07T05:03:00.000+0200",
+"countdown": 158
+},
+"vehicle": {
+"name": "49",
+"towards": "Breitensee S",
+"direction": "H",
+"richtungsId": "1",
+"barrierFree": false,
+"realtimeSupported": true,
+"trafficjam": false,
+"type": "ptTram"
+}
+}
+]
+},
+"type": "ptTram"
+}
+]
+}
+],
+"trafficInfos": [
+{
+"refTrafficInfoCategoryId": 3,
+"name": "tk_-444190366",
+"priority": "1",
+"owner": "WL",
+"title": "Haltestelle \nzur Breitenseer Straße 8 verlegt",
+"description": "Haltestelle \nzur Breitenseer Straße 8 verlegt",
+"time": {
+"start": "2013-07-31T00:15:00.000+0200",
+"end": "2013-08-10T05:00:00.000+0200"
+},
+"relatedLines": [
+"N49"
+],
+"relatedStops": [
+1450
+]
+}
+],
+"trafficInfoCategories": [
+{
+"id": 2,
+"refTrafficInfoCategoryGroupId": 1,
+"name": "stoerunglang",
+"trafficInfoNameList": "",
+"title": "Störung Lang"
+},
+{
+"id": 3,
+"refTrafficInfoCategoryGroupId": 1,
+"name": "stoerungkurz",
+"trafficInfoNameList": "",
+"title": "Störung Kurz"
+}
+],
+"trafficInfoCategoryGroups": [
+{
+"id": 1,
+"name": "pt"
+}
+]
+},
+"message": {
+"value": "OK",
+"messageCode": 1,
+"serverTime": "2013-08-07T02:24:07.380+0200"
+}
+}

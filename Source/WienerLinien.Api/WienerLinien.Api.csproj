@@ -41,6 +41,7 @@
     <Compile Include="MonitorLine.cs" />
     <Compile Include="MonitorLineType.cs" />
     <Compile Include="MonitorInformation.cs" />
+    <Compile Include="Ogd\Proxies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Qando\EchtzeitdatenSchnittstelle.cs" />
     <Compile Include="Qando\QandoDeparture.cs" />
