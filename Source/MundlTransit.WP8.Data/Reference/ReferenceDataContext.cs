@@ -103,5 +103,18 @@ namespace MundlTransit.WP8.Data.Reference
             return matched;
         }
 
+        private const string SqlForLineStations = 
+                @"SELECT Haltestellen.*, OgdSteige.Richtung, OgdSteige.Reihenfolge
+                    FROM  OgdSteige INNER JOIN
+                                OgdLinien ON OgdSteige.FK_LinienId = OgdLinien.Id INNER JOIN
+                                Haltestellen ON OgdSteige.FK_HaltestellenId = Haltestellen.Id
+                    WHERE OgdLinien.Id = {0}
+                    ORDER BY OgdSteige.Richtung, OgdSteige.Reihenfolge";
+
+        public async Task<List<LinienHaltestelleView>> GetHaltestellenForLinie(int linienId)
+        {
+            var result = await _connection.QueryAsync<LinienHaltestelleView>(String.Format(SqlForLineStations, linienId));
+            return result;
+        }
     }
 }

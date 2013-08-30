@@ -85,7 +85,7 @@ namespace DbPrepare
                 }
                 else
                 {
-                    Debug.WriteLine(h.Bezeichnung + " was omitted because of missing Steige");
+                    Console.WriteLine(h.Bezeichnung + " was omitted because of missing Steige");
                 }
             }
 

@@ -69,6 +69,9 @@
     <Compile Include="..\MundlTransit.WP8.Data\Reference\Haltestelle.cs">
       <Link>Data\Haltestelle.cs</Link>
     </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\LinienHaltestelleView.cs">
+      <Link>Data\LinienHaltestelleView.cs</Link>
+    </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\OgdHaltestelle.cs">
       <Link>Data\OgdHaltestelle.cs</Link>
     </Compile>

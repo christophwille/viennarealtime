@@ -142,5 +142,11 @@ namespace MundlTransit.WP8.Services
             var db = new ReferenceDataContext();
             return await db.GetLinienAsync();
         }
+
+        public async Task<List<LinienHaltestelleView>> GetHaltestellenForLinie(int linienId)
+        {
+            var db = new ReferenceDataContext();
+            return await db.GetHaltestellenForLinie(linienId);
+        }
     }
 }
