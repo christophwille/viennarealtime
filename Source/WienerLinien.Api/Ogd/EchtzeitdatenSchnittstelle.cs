@@ -22,7 +22,7 @@ namespace WienerLinien.Api.Ogd
             _apiKey = apiKey;
         }
 
-        public async Task<MonitorInformation> GetMonitorInformation(List<int> rblList, IAsyncWebRequest requestor)
+        public async Task<MonitorInformation> GetMonitorInformation(List<int> rblList) // , IAsyncWebRequest requestor)
         {
             if (null == rblList || !rblList.Any())
             {
@@ -32,12 +32,10 @@ namespace WienerLinien.Api.Ogd
             var rbls = String.Join("&", rblList.Select(rbl => String.Format("rbl={0}", rbl)));
             var url = String.Format(ApiUrl, rbls, _apiKey);
 
-            // IDEALLY - this would work this way, but not with the header requirements as they currently are...
-            //
             string response = null;
             try
             {
-                HttpClient c = new HttpClient();
+                var c = new HttpClient();
                 c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 response = await c.GetStringAsync(url);
             }
@@ -46,7 +44,7 @@ namespace WienerLinien.Api.Ogd
                 Debug.WriteLine(ex.ToString());
             }
 
-            // var response = await requestor.Get(url);
+            // var response = await requestor.Get(url); // use this with IAsyncWebRequest
 
             if (null == response)
                 new MonitorInformation(MonitorInformationErrorCode.DownloadingFailed);
@@ -151,7 +149,8 @@ namespace WienerLinien.Api.Ogd
                 }
             }
 
-            return new MonitorInformation(parsedMonitorLines);
+            var orderForReturn = parsedMonitorLines.OrderBy(moli => moli.Type).ThenBy(moli => moli.Name).ThenBy(moli => moli.Towards);
+            return new MonitorInformation(orderForReturn.ToList());
         }
 
         private DateTime? ToLocalTime(string jsonDatetime)

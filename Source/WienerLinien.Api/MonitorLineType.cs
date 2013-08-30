@@ -8,14 +8,14 @@ namespace WienerLinien.Api
 {
     public enum MonitorLineType
     {
-        Unknown = 0,
-        Metro,
+        Metro = 1,
         Tram,
         Bus,
         SBahn,
         Regionalzug,
         Other,
         BusB,
-        NightBus
+        NightBus,
+        Unknown = 1000,
     }
 }

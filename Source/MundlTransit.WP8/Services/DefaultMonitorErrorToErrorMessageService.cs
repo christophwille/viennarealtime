@@ -10,7 +10,7 @@ namespace MundlTransit.WP8.Services
     public class DefaultMonitorErrorToErrorMessageService
     {
 
-        //        RblNotSpecified,
+        //RblNotSpecified,
         //DownloadingFailed,
         //ResponseParsingFailed,
         //MonitorsEmpty,
@@ -23,14 +23,31 @@ namespace MundlTransit.WP8.Services
         //ServerNoDataInDatabase = 322, // keine Daten in der DB vorhanden
 
         private const string GenericError = "Realtime data could not be downloaded, please try again later.";
+        private const string ResponseParsingFailed = "Parsing the response failed.";
+
         private const string MonitorsEmpty = "No departures available at this time.";
+        private const string ServerStopDoesNotExist = "This stop does not exist (stop database out of date?).";
+        private const string ServerCallQuotaExceeded = "This app has exceeded the call quota allowed by Wiener Linien.";
+        private const string ServerAuthenticationFailed = "This app has failed to authenticate to the Wiener Linien API.";
 
         public string GetMessage(MonitorInformationErrorCode errCode)
         {
             switch (errCode)
             {
+                case MonitorInformationErrorCode.ResponseParsingFailed:
+                    return ResponseParsingFailed;
+                    break;
                 case MonitorInformationErrorCode.MonitorsEmpty:
                     return MonitorsEmpty;
+                    break;
+                case MonitorInformationErrorCode.ServerStopDoesNotExist:
+                    return ServerStopDoesNotExist;
+                    break;
+                case MonitorInformationErrorCode.ServerCallQuotaExceeded:
+                    return ServerCallQuotaExceeded;
+                    break;
+                case MonitorInformationErrorCode.ServerAuthenticationFailed:
+                    return ServerAuthenticationFailed;
                     break;
                 default:
                     return GenericError;

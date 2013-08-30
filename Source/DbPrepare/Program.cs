@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -60,20 +61,32 @@ namespace DbPrepare
 
                 string linienDisplay = String.Join(", ", groupedLinien.Select(r => r.Bezeichnung));
                 string linienIds = String.Join(",", groupedLinien.Select(r => r.Id));
-                string rblNummern = String.Join(",", result.Select(r => r.RblNummer));
 
-                var haltstelle = new Haltestelle()
+                // Take only records where RblNummer exists
+                string rblNummern = String.Join(",", result
+                    .Where(r => !String.IsNullOrWhiteSpace(r.RblNummer))
+                    .Select(r => r.RblNummer));
+
+                // eg.Abdsdorf-Hippersdorf S Bahn has no Steige
+                if (!String.IsNullOrWhiteSpace(rblNummern))
                 {
-                    Id = h.Id,
-                    Bezeichnung = h.Bezeichnung,
-                    Longitude = h.Longitude,
-                    Latitude = h.Latitude,
-                    Linien = linienDisplay,
-                    LinienIds = linienIds,
-                    RblNummern = rblNummern
-                };
+                    var haltstelle = new Haltestelle()
+                    {
+                        Id = h.Id,
+                        Bezeichnung = h.Bezeichnung,
+                        Longitude = h.Longitude,
+                        Latitude = h.Latitude,
+                        Linien = linienDisplay,
+                        LinienIds = linienIds,
+                        RblNummern = rblNummern
+                    };
 
-                toInsert.Add(haltstelle);
+                    toInsert.Add(haltstelle);
+                }
+                else
+                {
+                    Debug.WriteLine(h.Bezeichnung + " was omitted because of missing Steige");
+                }
             }
 
             db.InsertAll(toInsert);

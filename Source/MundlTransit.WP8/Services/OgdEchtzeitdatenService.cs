@@ -23,21 +23,38 @@ namespace MundlTransit.WP8.Services
 
         public async Task<MonitorInformation> RetrieveMonitorInformation(Haltestelle haltestelle)
         {
-            if (String.IsNullOrWhiteSpace(haltestelle.RblNummern))
-                return null;
+            var rbls = RblNummernStringToIntList(haltestelle.RblNummern);
 
-            // turn comma-separated string into List of int32
-            var rbls = haltestelle.RblNummern
-                .Split(new char[] {','})
-                .Select(Int32.Parse)
-                .ToList();
+            if (!rbls.Any())
+                return new MonitorInformation(MonitorInformationErrorCode.RblNotSpecified);
 
             var schnittstelle = new WienerLinien.Api.Ogd.EchtzeitdatenSchnittstelle();
             schnittstelle.InitializeApi(_apiKey);
 
-            MonitorInformation response = await schnittstelle.GetMonitorInformation(rbls, new SocketWebRequest());
+            MonitorInformation response = await schnittstelle.GetMonitorInformation(rbls); //, new SocketWebRequest());
 
             return response;
+        }
+
+        private List<int> RblNummernStringToIntList(string rblnummern)
+        {
+            if (String.IsNullOrWhiteSpace(rblnummern)) 
+                return new List<int>();
+
+            // Turn comma-separated string into List of int32
+            var rblsToParse = rblnummern
+                .Split(new char[] { ',' });
+
+            var rbls = new List<int>();
+
+            foreach (var rblToParse in rblsToParse)
+            {
+                int rbl = 0;
+                if (Int32.TryParse(rblToParse, out rbl))
+                    rbls.Add(rbl);
+            }
+
+            return rbls;
         }
     }
 }

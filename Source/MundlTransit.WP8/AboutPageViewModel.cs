@@ -19,11 +19,14 @@ namespace MundlTransit.WP8
 
             GitHubUrl = new Uri(config.GitHubUrl);
             PrivacyPolicyUrl = new Uri(config.PrivacyPolicyUrl);
+            WienerLinienOgdCatalogPage = new Uri("https://open.wien.at/site/datensatz/?id=add66f20-d033-4eee-b9a0-47019828e698");
         }
 
         public string VersionText { get; set; }
+
         public Uri GitHubUrl { get; set; }
         public Uri PrivacyPolicyUrl { get; set; }
+        public Uri WienerLinienOgdCatalogPage { get; set; }
 
         public void Review()
         {

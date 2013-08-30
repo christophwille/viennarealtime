@@ -77,7 +77,7 @@
                         <Paragraph>
                             The app uses open data provided by Wiener Linien. To learn 
                             more about the data and API they are offering, please visit
-                            <Hyperlink NavigateUri="https://open.wien.at/site/datensatz/?id=add66f20-d033-4eee-b9a0-47019828e698">Wiener Linien - Echtzeitdaten</Hyperlink>
+                            <Hyperlink  TargetName="_new" NavigateUri="{Binding WienerLinienOgdCatalogPage}">Wiener Linien - Echtzeitdaten</Hyperlink>
                         </Paragraph>
                         <Paragraph></Paragraph>
                         <Paragraph>
