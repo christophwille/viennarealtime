@@ -1,0 +1,82 @@
+﻿{ "data" : { "monitors" : [ { "attributes" : {  },
+            "lines" : [ { "barrierFree" : true,
+                  "departures" : { "departure" : [ { "departureTime" : { "countdown" : 0,
+                                "timePlanned" : "2013-08-30T04:56:24.000+0200",
+                                "timeReal" : "2013-08-30T04:56:24.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 0,
+                                "timePlanned" : "2013-08-30T05:06:24.000+0200",
+                                "timeReal" : "2013-08-30T05:06:24.000+0200"
+                              } }
+                        ] },
+                  "direction" : "H",
+                  "lineId" : 306,
+                  "name" : "U6",
+                  "platform" : "1",
+                  "realtimeSupported" : true,
+                  "richtungsId" : "1",
+                  "towards" : "FLORIDSDORF",
+                  "trafficjam" : false,
+                  "type" : "ptMetro"
+                } ],
+            "locationStop" : { "geometry" : { "coordinates" : [ 16.327495103448701,
+                        48.164842353021598
+                      ],
+                    "type" : "Point"
+                  },
+                "properties" : { "attributes" : { "rbl" : 4640 },
+                    "coordName" : "WGS84",
+                    "gate" : "1",
+                    "municipality" : "Wien",
+                    "municipalityId" : 90000,
+                    "name" : "60201394",
+                    "title" : "Tscherttegasse",
+                    "type" : "stop"
+                  },
+                "type" : "Feature"
+              }
+          },
+          { "attributes" : {  },
+            "lines" : [ { "barrierFree" : true,
+                  "departures" : { "departure" : [ { "departureTime" : { "countdown" : 0,
+                                "timePlanned" : "2013-08-30T05:00:24.000+0200",
+                                "timeReal" : "2013-08-30T05:00:24.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 0,
+                                "timePlanned" : "2013-08-30T05:09:24.000+0200",
+                                "timeReal" : "2013-08-30T05:09:24.000+0200"
+                              } }
+                        ] },
+                  "direction" : "R",
+                  "lineId" : 306,
+                  "name" : "U6",
+                  "platform" : "2",
+                  "realtimeSupported" : true,
+                  "richtungsId" : "1",
+                  "towards" : "SIEBENHIRTEN",
+                  "trafficjam" : false,
+                  "type" : "ptMetro"
+                } ],
+            "locationStop" : { "geometry" : { "coordinates" : [ 16.327268720598902,
+                        48.164925911171899
+                      ],
+                    "type" : "Point"
+                  },
+                "properties" : { "attributes" : { "rbl" : 4629 },
+                    "coordName" : "WGS84",
+                    "gate" : "2",
+                    "municipality" : "Wien",
+                    "municipalityId" : 90000,
+                    "name" : "60201394",
+                    "title" : "Tscherttegasse",
+                    "type" : "stop"
+                  },
+                "type" : "Feature"
+              }
+          }
+        ] },
+  "message" : { "messageCode" : 1,
+      "serverTime" : "2013-08-30T07:45:47.897+0200",
+      "value" : "OK"
+    }
+}

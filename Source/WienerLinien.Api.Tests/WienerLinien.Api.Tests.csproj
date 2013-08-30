@@ -65,6 +65,9 @@
     <None Include="sample.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TscherttegasseNoOverrides.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WienerLinien.Api\WienerLinien.Api.csproj">

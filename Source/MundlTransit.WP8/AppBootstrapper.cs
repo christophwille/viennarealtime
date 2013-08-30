@@ -25,6 +25,12 @@ namespace MundlTransit.WP8
     {
         PhoneContainer container;
 
+        // http://caliburnmicro.codeplex.com/discussions/346663
+        protected override PhoneApplicationFrame CreatePhoneApplicationFrame()
+        {
+            return new TransitionFrame();
+        }
+
         async Task PerformDatabaseInitializationsAsync()
         {
             await ReferenceDataContext.CopyDatabaseAsync().ConfigureAwait(continueOnCapturedContext: false);
