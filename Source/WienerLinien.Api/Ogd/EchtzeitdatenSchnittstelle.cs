@@ -13,7 +13,10 @@ namespace WienerLinien.Api.Ogd
 {
     public class EchtzeitdatenSchnittstelle : IEchtzeitdatenSchnittstelle
     {
-        private const string ApiUrl = "http://www.wienerlinien.at/ogd_realtime/monitor?{0}&sender={1}";
+        // {0}: the multiple rbls
+        // {1}: the Api key
+        // {2}: this is a "no-cache" parameter (Ticks)
+        private const string ApiUrl = "http://www.wienerlinien.at/ogd_realtime/monitor?{0}&sender={1}&vrtnocache={2}";
 
         private string _apiKey;
 
@@ -30,7 +33,7 @@ namespace WienerLinien.Api.Ogd
             }
 
             var rbls = String.Join("&", rblList.Select(rbl => String.Format("rbl={0}", rbl)));
-            var url = String.Format(ApiUrl, rbls, _apiKey);
+            var url = String.Format(ApiUrl, rbls, _apiKey, DateTime.Now.Ticks.ToString());
 
             string response = null;
             try
