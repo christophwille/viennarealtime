@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Caliburn.Micro;
 using Microsoft.Phone.Controls;
 using MundlTransit.WP8.Data.Reference;
+using MundlTransit.WP8.ViewModels.LineInfo;
 
 namespace MundlTransit.WP8.ViewModels.Lines
 {
@@ -34,9 +35,10 @@ namespace MundlTransit.WP8.ViewModels.Lines
 
             ll.SelectedItem = null;
 
-            //navigationService.UriFor<StationInfoPivotPageViewModel>()
-            //    .WithParam(vm => vm.NavigationStationId, item.HaltestellenId)
-            //    .Navigate();
+            _navigationService.UriFor<LineInfoPageViewModel>()
+                .WithParam(vm => vm.NavigationLineId, item.Id)
+                .WithParam(vm => vm.LineName, item.Bezeichnung)
+                .Navigate();
         }
     }
 }

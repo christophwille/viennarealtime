@@ -19,6 +19,7 @@ using MundlTransit.WP8.ViewModels.Lines;
 using MundlTransit.WP8.ViewModels.StationInfo;
 using MundlTransit.WP8.ViewModels.Stations;
 using MundlTransit.WP8.Services;
+using MundlTransit.WP8.ViewModels.LineInfo;
 
 namespace MundlTransit.WP8
 {
@@ -75,6 +76,8 @@ namespace MundlTransit.WP8
                 container.PerRequest<TramViewModel>();
                 container.PerRequest<BusViewModel>();
                 container.PerRequest<NightBusViewModel>();
+
+            container.PerRequest<LineInfoPageViewModel>();
 
             container.PerRequest<MapNearbyStationsPageViewModel>();
 

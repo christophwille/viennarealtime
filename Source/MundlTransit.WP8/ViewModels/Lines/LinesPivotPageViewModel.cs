@@ -19,16 +19,14 @@ namespace MundlTransit.WP8.ViewModels.Lines
         private NightBusViewModel nbvm;
 
         private readonly IDataService _dataService;
-        private readonly INavigationService _navigationService;
 
-        public LinesPivotPageViewModel(MetroViewModel mvm, TramViewModel tvm, BusViewModel bvm, NightBusViewModel nbvm, INavigationService navigationService, IDataService ds)
+        public LinesPivotPageViewModel(MetroViewModel mvm, TramViewModel tvm, BusViewModel bvm, NightBusViewModel nbvm, IDataService ds)
         {
             this.mvm = mvm;
             this.tvm = tvm;
             this.bvm = bvm;
             this.nbvm = nbvm;
 
-            _navigationService = navigationService;
             _dataService = ds;
         }
 

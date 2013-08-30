@@ -10,6 +10,9 @@ namespace MundlTransit.WP8.Data.Reference
     [Table("OgdLinien")]
     public class OgdLinie
     {
+        public const string Hin = "H";
+        public const string Retour = "R";
+
         // We use the OGD-provided LINIEN_ID as primary key
         [PrimaryKey]
         public int Id { get; set; }

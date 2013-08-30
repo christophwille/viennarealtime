@@ -196,6 +196,7 @@
     <Compile Include="StorageHandlers\StationsPivotPageModelStorage.cs" />
     <Compile Include="StorageHandlers\StationsSearchViewModelStorage.cs" />
     <Compile Include="ViewModels\FavoritesViewModel.cs" />
+    <Compile Include="ViewModels\LineInfo\LineInfoPageViewModel.cs" />
     <Compile Include="ViewModels\Lines\BusViewModel.cs" />
     <Compile Include="ViewModels\Lines\LinesPivotPageViewModel.cs" />
     <Compile Include="ViewModels\Lines\LineTypeBaseViewModel.cs" />
@@ -214,6 +215,9 @@
     <Compile Include="ViewModels\Stations\StationsSearchViewModel.cs" />
     <Compile Include="Views\FavoritesView.xaml.cs">
       <DependentUpon>FavoritesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LineInfo\LineInfoPage.xaml.cs">
+      <DependentUpon>LineInfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Lines\BusView.xaml.cs">
       <DependentUpon>BusView.xaml</DependentUpon>
@@ -286,6 +290,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FavoritesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LineInfo\LineInfoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -447,6 +455,7 @@
       <Name>WienerLinien.Api</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
