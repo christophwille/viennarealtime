@@ -181,6 +181,7 @@
     <Compile Include="Services\DefaultConfigurationService.cs" />
     <Compile Include="Services\DefaultDataService.cs" />
     <Compile Include="Services\DefaultLocationService.cs" />
+    <Compile Include="Services\DefaultMonitorErrorToErrorMessageService.cs" />
     <Compile Include="Services\DefaultUIService.cs" />
     <Compile Include="Services\IConfigurationService.cs" />
     <Compile Include="Services\IUIService.cs" />

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.Micro;
@@ -39,19 +40,26 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
         {
             EnableProgressBar();
 
-            var lines = await _echtzeitdatenService.RetrieveMonitorInformation(Haltestelle);
+            var monitorInfo = await _echtzeitdatenService.RetrieveMonitorInformation(Haltestelle);
 
             DisableProgressBar();
 
-            if (lines != null && lines.Any())
+            if (monitorInfo.Succeeded && monitorInfo.Lines.Any())
             {
-                Departures = lines;
+                Departures = monitorInfo.Lines;
             }
             else
             {
+                string errMessage = "No departure information was sent by the server.";
+
+                if (!monitorInfo.Succeeded)
+                {
+                    errMessage = new DefaultMonitorErrorToErrorMessageService().GetMessage(monitorInfo.ErrorCode);
+                }
+
                 MessageBoxResult result =
-                    MessageBox.Show("Realtime data could not be downloaded, please try again later.",
-                    "Server Error",
+                    MessageBox.Show(errMessage,
+                    "Error",
                     MessageBoxButton.OK);
             }
         }

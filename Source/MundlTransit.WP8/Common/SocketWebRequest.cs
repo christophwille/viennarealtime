@@ -24,7 +24,7 @@ namespace MundlTransit.WP8.Common
                 {
                     var host = new HostName("www.wienerlinien.at");
 
-                    await socket.ConnectAsync(host, "80");
+                    await socket.ConnectAsync(host, "80").AsTask().ConfigureAwait(false);
 
                     const string request = "GET {0} HTTP/1.1\r\n" +
                                            "Host: www.wienerlinien.at\r\n" +
@@ -34,7 +34,7 @@ namespace MundlTransit.WP8.Common
                     var outStream = socket.OutputStream.AsStreamForWrite();
                     using (var sw = new StreamWriter(outStream))
                     {
-                        await sw.WriteAsync(String.Format(request, url));
+                        await sw.WriteAsync(String.Format(request, url)).ConfigureAwait(false);
                         await sw.FlushAsync();
                     }
 
@@ -42,15 +42,37 @@ namespace MundlTransit.WP8.Common
                     string response = "";
                     using (var reader = new StreamReader(inStream))
                     {
-                        response = await reader.ReadToEndAsync();
+                        response = await reader.ReadToEndAsync().ConfigureAwait(false);
                     }
 
-                    var parts = response.Trim().Split(new string[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
-                    var length = parts.Length;
+                    var parts = response.Trim().Split(new string[] {"\r\n"}, StringSplitOptions.None);
+                    
+                    // This is totally a hack, do not copy/paste as it will break everywhere but this special case
+                    var stb = new StringBuilder();
+                    bool endOfHeaders = false, appendLine = false;
+                    foreach (var p in parts)
+                    {
+                        if (String.IsNullOrWhiteSpace(p))
+                        {
+                            endOfHeaders = true;
+                            continue;
+                        }
 
-                    if (length < 2) return "";
+                        if (endOfHeaders)
+                        {
+                            endOfHeaders = false;
+                            appendLine = true;
+                            continue;
+                        }
 
-                    return parts[length - 2];
+                        if (appendLine)
+                        {
+                            if (p.Length > 1)
+                                stb.AppendLine(p);
+                        }
+                    }
+
+                    return stb.ToString();
                 }
             }
             catch (Exception ex)

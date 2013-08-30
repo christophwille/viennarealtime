@@ -10,6 +10,6 @@ namespace MundlTransit.WP8.Services
 {
     public interface IEchtzeitdatenService
     {
-        Task<List<MonitorLine>> RetrieveMonitorInformation(Haltestelle haltestelle);
+        Task<MonitorInformation> RetrieveMonitorInformation(Haltestelle haltestelle);
     }
 }

@@ -34,19 +34,19 @@ namespace WienerLinien.Api.Ogd
 
             // IDEALLY - this would work this way, but not with the header requirements as they currently are...
             //
-            //string response = null;
-            //try
-            //{
-            //    HttpClient c = new HttpClient();
-            //    c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            //    var response = await c.GetStringAsync(url);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Debug.WriteLine(ex.ToString());
-            //}
+            string response = null;
+            try
+            {
+                HttpClient c = new HttpClient();
+                c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                response = await c.GetStringAsync(url);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
 
-            var response = await requestor.Get(url);
+            // var response = await requestor.Get(url);
 
             if (null == response)
                 new MonitorInformation(MonitorInformationErrorCode.DownloadingFailed);

@@ -21,7 +21,7 @@ namespace MundlTransit.WP8.Services
             _apiKey = config.WienerLinienApiKey;
         }
 
-        public async Task<List<MonitorLine>> RetrieveMonitorInformation(Haltestelle haltestelle)
+        public async Task<MonitorInformation> RetrieveMonitorInformation(Haltestelle haltestelle)
         {
             if (String.IsNullOrWhiteSpace(haltestelle.RblNummern))
                 return null;
@@ -35,9 +35,9 @@ namespace MundlTransit.WP8.Services
             var schnittstelle = new WienerLinien.Api.Ogd.EchtzeitdatenSchnittstelle();
             schnittstelle.InitializeApi(_apiKey);
 
-            var response = await schnittstelle.GetMonitorInformation(rbls, new SocketWebRequest());
+            MonitorInformation response = await schnittstelle.GetMonitorInformation(rbls, new SocketWebRequest());
 
-            return response.Succeeded ? response.Lines : null;
+            return response;
         }
     }
 }
