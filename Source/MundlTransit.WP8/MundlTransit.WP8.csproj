@@ -159,14 +159,11 @@
     </Compile>
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="Common\AlphaKeyGroup.cs" />
-    <Compile Include="Common\AsyncWebRequest.cs" />
     <Compile Include="Common\BindableRuns.cs" />
     <Compile Include="Common\DataTemplateSelector.cs" />
     <Compile Include="Common\DebugLogger.cs" />
     <Compile Include="Common\NearestLocationHelpers.cs" />
     <Compile Include="Common\PanoramaExtensions.cs" />
-    <Compile Include="Common\SocketWebRequest.cs" />
-    <Compile Include="Common\WinPhoneExtensions.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -436,10 +433,6 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpGIS.GZipWebClient, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SharpGIS.GZipWebClient.1.4.0.0\lib\wp71\SharpGIS.GZipWebClient.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\wp8\System.Windows.Interactivity.dll</HintPath>

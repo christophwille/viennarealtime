@@ -31,7 +31,7 @@ namespace MundlTransit.WP8.Services
             var schnittstelle = new WienerLinien.Api.Ogd.EchtzeitdatenSchnittstelle();
             schnittstelle.InitializeApi(_apiKey);
 
-            MonitorInformation response = await schnittstelle.GetMonitorInformation(rbls); //, new SocketWebRequest());
+            MonitorInformation response = await schnittstelle.GetMonitorInformation(rbls);
 
             return response;
         }

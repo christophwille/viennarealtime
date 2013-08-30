@@ -34,7 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Departure.cs" />
-    <Compile Include="IAsyncWebRequest.cs" />
     <Compile Include="IEchtzeitdatenSchnittstelle.cs" />
     <Compile Include="ILineInformation.cs" />
     <Compile Include="MonitorInformationErrorCode.cs" />

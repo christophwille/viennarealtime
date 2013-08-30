@@ -25,7 +25,7 @@ namespace WienerLinien.Api.Ogd
             _apiKey = apiKey;
         }
 
-        public async Task<MonitorInformation> GetMonitorInformation(List<int> rblList) // , IAsyncWebRequest requestor)
+        public async Task<MonitorInformation> GetMonitorInformation(List<int> rblList)
         {
             if (null == rblList || !rblList.Any())
             {
