@@ -196,6 +196,12 @@
     <Compile Include="StorageHandlers\StationsPivotPageModelStorage.cs" />
     <Compile Include="StorageHandlers\StationsSearchViewModelStorage.cs" />
     <Compile Include="ViewModels\FavoritesViewModel.cs" />
+    <Compile Include="ViewModels\Lines\BusViewModel.cs" />
+    <Compile Include="ViewModels\Lines\LinesPivotPageViewModel.cs" />
+    <Compile Include="ViewModels\Lines\LineTypeBaseViewModel.cs" />
+    <Compile Include="ViewModels\Lines\MetroViewModel.cs" />
+    <Compile Include="ViewModels\Lines\NightBusViewModel.cs" />
+    <Compile Include="ViewModels\Lines\TramViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
     <Compile Include="ViewModels\StationInfo\DepartureViewModel.cs" />
     <Compile Include="ViewModels\StationInfo\StationInfoPivotPageViewModel.cs" />
@@ -208,6 +214,21 @@
     <Compile Include="ViewModels\Stations\StationsSearchViewModel.cs" />
     <Compile Include="Views\FavoritesView.xaml.cs">
       <DependentUpon>FavoritesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lines\BusView.xaml.cs">
+      <DependentUpon>BusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lines\LinesPivotPage.xaml.cs">
+      <DependentUpon>LinesPivotPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lines\MetroView.xaml.cs">
+      <DependentUpon>MetroView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lines\NightBusView.xaml.cs">
+      <DependentUpon>NightBusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lines\TramView.xaml.cs">
+      <DependentUpon>TramView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
@@ -262,6 +283,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FavoritesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lines\BusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lines\LinesPivotPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lines\MetroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lines\NightBusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lines\TramView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

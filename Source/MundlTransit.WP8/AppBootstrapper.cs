@@ -15,6 +15,7 @@ using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Data.Runtime;
 using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.ViewModels;
+using MundlTransit.WP8.ViewModels.Lines;
 using MundlTransit.WP8.ViewModels.StationInfo;
 using MundlTransit.WP8.ViewModels.Stations;
 using MundlTransit.WP8.Services;
@@ -68,6 +69,12 @@ namespace MundlTransit.WP8
                 container.PerRequest<StationsListViewModel>();
                 container.PerRequest<StationsSearchViewModel>();
                 container.PerRequest<NearbyStationsViewModel>();
+
+            container.PerRequest<LinesPivotPageViewModel>();
+                container.PerRequest<MetroViewModel>();
+                container.PerRequest<TramViewModel>();
+                container.PerRequest<BusViewModel>();
+                container.PerRequest<NightBusViewModel>();
 
             container.PerRequest<MapNearbyStationsPageViewModel>();
 

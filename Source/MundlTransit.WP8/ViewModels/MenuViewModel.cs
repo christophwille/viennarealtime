@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
 using Microsoft.Phone.Controls;
+using MundlTransit.WP8.ViewModels.Lines;
 using MundlTransit.WP8.ViewModels.Stations;
+using MundlTransit.WP8.Views.Lines;
 using MenuItem = MundlTransit.WP8.Model.MenuItem;
 
 namespace MundlTransit.WP8.ViewModels
@@ -49,6 +51,12 @@ namespace MundlTransit.WP8.ViewModels
                                         Name = "station list", 
                                         Description="complete list of stations", 
                                         Navigate = (n) => n.UriFor<StationsPivotPageViewModel>().Navigate() 
+                                    },
+									new MenuItem
+                                    { 
+                                        Name = "lines", 
+                                        Description="search by line / station", 
+                                        Navigate = (n) => n.UriFor<LinesPivotPageViewModel>().Navigate() 
                                     },
 
                                     new MenuItem
