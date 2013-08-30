@@ -74,6 +74,16 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
             _uiService.ShowTextToast("favorite added", _haltestelle.Bezeichnung);
         }
 
+        public async void WalkTo()
+        {
+            if (null == _haltestelle) return;
+
+            Uri uri = new Uri("ms-walk-to:?destination.latitude=" + _haltestelle.Latitude +
+                "&destination.longitude=" + _haltestelle.Longitude + "&destination.name=" + _haltestelle.Bezeichnung);
+
+            var success = await Windows.System.Launcher.LaunchUriAsync(uri);
+        }
+
         public void RefreshDepartureInformation()
         {
             departureViewModel.RefreshDepartureInformationAsync();
