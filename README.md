@@ -4,15 +4,8 @@ Vienna RealTime
 A Windows Phone 8 App to display realtime public transport information for Vienna, Austria.
 The source code is released under the MIT License.
 
-The app contains two implementations for data / realtime providers:
-
-* `CreateCamp` This is an implementation created while at the CreateCamp in Vienna, Jan 12th & 13th 2013. This was a "preview event" of how
-	a future official Wiener Linien API could look like, with a focus on feedback / app ideas. The API was not fully built out at that event,
-	and access to it was limited for participants during the weekend (ie you cannot access it any more).
-* `Qando` Calls the qando.at Web Service API for monitor information. Station search (nearby, fulltext) is based on a stop list 
-	provided by [OGD Wien](http://data.wien.gv.at/katalog/haltestellen.html) 
-	(open government data for the city of Vienna, Austria) and is performed entirely on the device. This fulfills
-	the purpose of not having to send PII (personally identifyable information) to a server (eg current location for nearby search).
+The app uses open data provided by Wiener Linien. To learn more about the data and API they are offering,
+please visit [Wiener Linien - Echtzeitdaten](https://open.wien.at/site/datensatz/?id=add66f20-d033-4eee-b9a0-47019828e698)
 
 ## Features
 
@@ -21,10 +14,13 @@ The app contains two implementations for data / realtime providers:
 * `List` - list all stations
 * `Departures` - list all departures by line / direction for a station (selected via one of the previous three options)
 
-## What is Missing
+## TODO List
 
-* There is no public information on stops per line (you could type that in yourself, but...). Thus you cannot list the lines that serve a specific
-	stop, or do a "reverse" search by listing the stops on a certain line to pick a stop.
+* Search by line (Pivot by line type, tap on line to show stops, tap on stop to go either to departures or list of other lines at station)
+* Station information: Map of station, navigation for "walk to station" (currently displays only departures)
+* News
+* Station history (useful?)
+* Download of station / line updates instead of DbPrepare (background task) - would need some information to know "is there something new?"
 	
 ## Screenshots
 
