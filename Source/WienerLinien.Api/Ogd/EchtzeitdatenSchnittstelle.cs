@@ -35,22 +35,12 @@ namespace WienerLinien.Api.Ogd
             var rbls = String.Join("&", rblList.Select(rbl => String.Format("rbl={0}", rbl)));
             var url = String.Format(ApiUrl, rbls, _apiKey, DateTime.Now.Ticks.ToString());
 
-            string response = null;
-            try
-            {
-                var c = new HttpClient();
-                c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                response = await c.GetStringAsync(url);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.ToString());
-            }
-
-            // var response = await requestor.Get(url); // use this with IAsyncWebRequest
+            var response = await PerformHttpGetRequest(url);
 
             if (null == response)
-                new MonitorInformation(MonitorInformationErrorCode.DownloadingFailed);
+            {
+                return new MonitorInformation(MonitorInformationErrorCode.DownloadingFailed);
+            }
 
             try
             {
@@ -163,6 +153,22 @@ namespace WienerLinien.Api.Ogd
 
             if (ok)
                 return parsed.ToLocalTime();
+
+            return null;
+        }
+
+        private async Task<string> PerformHttpGetRequest(string url)
+        {
+            try
+            {
+                var c = new HttpClient();
+                c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                return await c.GetStringAsync(url);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
 
             return null;
         }
