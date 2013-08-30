@@ -62,7 +62,7 @@ namespace MundlTransit.WP8.ViewModels
             PerformRemovalAsync(item);
         }
 
-        private async void PerformRemovalAsync(Favorite item)
+        private async Task PerformRemovalAsync(Favorite item)
         {
             await _dataService.DeleteFavoriteAsync(item);
             await LoadFavoritesAsync();

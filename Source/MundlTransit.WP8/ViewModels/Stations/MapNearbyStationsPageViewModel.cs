@@ -37,7 +37,7 @@ namespace MundlTransit.WP8.ViewModels.Stations
             PopulateMapAsync();
         }
 
-        private async void PopulateMapAsync()
+        private async Task PopulateMapAsync()
         {
             var idsAsString = NavigationNearbyStationIdList.Split(new char[] { ',' });
             var ids = idsAsString.Select(Int32.Parse).ToList();

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="MundlTransit.WP8.Views.Lines.MetroView"
+﻿<UserControl xmlns:Lines="clr-namespace:MundlTransit.WP8.Views.Lines"  x:Class="MundlTransit.WP8.Views.Lines.MetroView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,8 +8,8 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     d:DesignHeight="480" d:DesignWidth="480">
-    
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
 
+    <Grid x:Name="FavoritesLayoutRoot" Background="Transparent">
+        <Lines:LinesUserControl DataContext="{Binding}" />
     </Grid>
 </UserControl>

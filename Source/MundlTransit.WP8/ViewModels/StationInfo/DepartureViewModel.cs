@@ -36,7 +36,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
                 NotifyOfPropertyChange(() => Departures);
             }
         }
-        public async void RefreshDepartureInformationAsync()
+        public async Task RefreshDepartureInformationAsync()
         {
             EnableProgressBar();
 

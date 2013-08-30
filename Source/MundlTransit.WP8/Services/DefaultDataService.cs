@@ -136,5 +136,11 @@ namespace MundlTransit.WP8.Services
             var db = new RuntimeDataContext();
             await db.DeleteFavorite(fav);
         }
+
+        public async Task<List<OgdLinie>> GetLinienAsync()
+        {
+            var db = new ReferenceDataContext();
+            return await db.GetLinienAsync();
+        }
     }
 }

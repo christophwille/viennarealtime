@@ -29,6 +29,9 @@ namespace WienerLinien.Api.Ogd
                 case "pttrainr":
                     retType = MonitorLineType.Regionalzug;
                     break;
+                case "ptbusnight":
+                    retType = MonitorLineType.NightBus;
+                    break;
                 case "other":
                     retType = MonitorLineType.Other;
                     break;

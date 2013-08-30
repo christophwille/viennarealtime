@@ -221,6 +221,9 @@
     <Compile Include="Views\Lines\LinesPivotPage.xaml.cs">
       <DependentUpon>LinesPivotPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Lines\LinesUserControl.xaml.cs">
+      <DependentUpon>LinesUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Lines\MetroView.xaml.cs">
       <DependentUpon>MetroView.xaml</DependentUpon>
     </Compile>
@@ -291,6 +294,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Lines\LinesPivotPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lines\LinesUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

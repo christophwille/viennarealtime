@@ -94,5 +94,14 @@ namespace MundlTransit.WP8.Data.Reference
             var matched = await query.ToListAsync();
             return matched;
         }
+
+        public async Task<List<OgdLinie>> GetLinienAsync()
+        {
+            var query = _connection.Table<OgdLinie>();
+
+            var matched = await query.ToListAsync();
+            return matched;
+        }
+
     }
 }
