@@ -9,6 +9,8 @@
 
     <!--Application Resources-->
     <Application.Resources>
+        <sys:String x:Key="WienerLinienApiKey"></sys:String>
+        
         <sys:String x:Key="ApplicationTitleUpperCased">VIENNA REALTIME</sys:String>
         <sys:String x:Key="ApplicationTitleLowerCased">vienna realtime</sys:String>
         <sys:String x:Key="ApplicationTitle">Vienna RealTime</sys:String>
@@ -21,7 +23,7 @@
 
         <!-- http://msdn.microsoft.com/library/windowsphone/develop/jj207033(v=vs.105).aspx#BKMK_appidandtoken -->
         <sys:String x:Key="MapApplicationId">INSERTWHENSUBMITTINGTOSTORE_ID</sys:String>
-        <sys:String x:Key="AuthenticationToken">INSERTWHENSUBMITTINGTOSTORE_AUTH</sys:String>
+        <sys:String x:Key="MapAuthenticationToken">INSERTWHENSUBMITTINGTOSTORE_AUTH</sys:String>
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

@@ -14,6 +14,7 @@ using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Maps.Toolkit;
 using Microsoft.Phone.Shell;
 using MundlTransit.WP8.Model;
+using MundlTransit.WP8.Services;
 using MundlTransit.WP8.ViewModels.Stations;
 
 namespace MundlTransit.WP8.Views.Stations
@@ -91,11 +92,10 @@ namespace MundlTransit.WP8.Views.Stations
         private void Map_Loaded(object sender, RoutedEventArgs e)
         {
 #if !DEBUG
-            string applicationId = (string) App.Current.Resources["MapApplicationId"];
-            string authenticationToken = (string)App.Current.Resources["AuthenticationToken"];
+            var config = IoC.Get<IConfigurationService>();
 
-            Microsoft.Phone.Maps.MapsSettings.ApplicationContext.ApplicationId = applicationId;
-            Microsoft.Phone.Maps.MapsSettings.ApplicationContext.AuthenticationToken = authenticationToken;
+            Microsoft.Phone.Maps.MapsSettings.ApplicationContext.ApplicationId = config.MapApplicationId;
+            Microsoft.Phone.Maps.MapsSettings.ApplicationContext.AuthenticationToken = config.MapAuthenticationToken;
 #endif
         }
     }

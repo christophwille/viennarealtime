@@ -1,0 +1,224 @@
+﻿{ "data" : { "monitors" : [ { "attributes" : {  },
+            "lines" : [ { "barrierFree" : true,
+                  "departures" : { "departure" : [ { "departureTime" : { "countdown" : 2,
+                                "timePlanned" : "2013-08-29T19:41:00.000+0200",
+                                "timeReal" : "2013-08-29T19:41:00.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 14,
+                                "timePlanned" : "2013-08-29T19:51:00.000+0200",
+                                "timeReal" : "2013-08-29T19:52:52.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "H",
+                                "linienId" : 140,
+                                "name" : "40",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Gersthof, Herbeckstraße",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          },
+                          { "departureTime" : { "countdown" : 22,
+                                "timePlanned" : "2013-08-29T20:01:00.000+0200",
+                                "timeReal" : "2013-08-29T20:01:08.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "H",
+                                "linienId" : 140,
+                                "name" : "40",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Gersthof, Herbeckstraße",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          },
+                          { "departureTime" : { "countdown" : 31,
+                                "timePlanned" : "2013-08-29T20:10:00.000+0200",
+                                "timeReal" : "2013-08-29T20:10:00.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "H",
+                                "linienId" : 140,
+                                "name" : "40",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Gersthof, Herbeckstraße",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          },
+                          { "departureTime" : { "countdown" : 41,
+                                "timePlanned" : "2013-08-29T20:19:00.000+0200",
+                                "timeReal" : "2013-08-29T20:19:30.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 51,
+                                "timePlanned" : "2013-08-29T20:29:00.000+0200",
+                                "timeReal" : "2013-08-29T20:29:30.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "H",
+                                "linienId" : 140,
+                                "name" : "40",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Gersthof, Herbeckstraße",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          },
+                          { "departureTime" : { "countdown" : 60,
+                                "timePlanned" : "2013-08-29T20:39:00.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "H",
+                                "name" : "40",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Herbeckstraße",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          }
+                        ] },
+                  "direction" : "H",
+                  "lineId" : 140,
+                  "name" : "40",
+                  "realtimeSupported" : true,
+                  "richtungsId" : "1",
+                  "towards" : "Gersthof, Herbeckstraße",
+                  "trafficjam" : false,
+                  "type" : "ptTram"
+                } ],
+            "locationStop" : { "geometry" : { "coordinates" : [ 16.3245391967878,
+                        48.231662444316498
+                      ],
+                    "type" : "Point"
+                  },
+                "properties" : { "attributes" : { "rbl" : 194 },
+                    "coordName" : "WGS84",
+                    "municipality" : "Wien",
+                    "municipalityId" : 90000,
+                    "name" : "60200026",
+                    "title" : "Alsegger Straße",
+                    "type" : "stop"
+                  },
+                "type" : "Feature"
+              }
+          },
+          { "attributes" : {  },
+            "lines" : [ { "barrierFree" : true,
+                  "departures" : { "departure" : [ { "departureTime" : { "countdown" : 7,
+                                "timePlanned" : "2013-08-29T19:46:00.000+0200",
+                                "timeReal" : "2013-08-29T19:46:00.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 17,
+                                "timePlanned" : "2013-08-29T19:56:00.000+0200",
+                                "timeReal" : "2013-08-29T19:56:00.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 28,
+                                "timePlanned" : "2013-08-29T20:06:00.000+0200",
+                                "timeReal" : "2013-08-29T20:06:30.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "R",
+                                "linienId" : 140,
+                                "name" : "40",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Schottentor U",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          },
+                          { "departureTime" : { "countdown" : 38,
+                                "timePlanned" : "2013-08-29T20:16:00.000+0200",
+                                "timeReal" : "2013-08-29T20:16:30.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "R",
+                                "linienId" : 140,
+                                "name" : "40",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Schottentor U",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          },
+                          { "departureTime" : { "countdown" : 48,
+                                "timePlanned" : "2013-08-29T20:26:00.000+0200",
+                                "timeReal" : "2013-08-29T20:26:30.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "R",
+                                "linienId" : 140,
+                                "name" : "40",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Schottentor U",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          },
+                          { "departureTime" : { "countdown" : 58,
+                                "timePlanned" : "2013-08-29T20:36:00.000+0200",
+                                "timeReal" : "2013-08-29T20:36:30.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "R",
+                                "linienId" : 140,
+                                "name" : "40",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Schottentor U",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          },
+                          { "departureTime" : { "countdown" : 67,
+                                "timePlanned" : "2013-08-29T20:46:00.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "R",
+                                "name" : "40",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Schottentor U",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          }
+                        ] },
+                  "direction" : "R",
+                  "lineId" : 140,
+                  "name" : "40",
+                  "realtimeSupported" : true,
+                  "richtungsId" : "1",
+                  "towards" : "Schottentor U",
+                  "trafficjam" : false,
+                  "type" : "ptTram"
+                } ],
+            "locationStop" : { "geometry" : { "coordinates" : [ 16.3241637926964,
+                        48.231720732021799
+                      ],
+                    "type" : "Point"
+                  },
+                "properties" : { "attributes" : { "rbl" : 142 },
+                    "coordName" : "WGS84",
+                    "municipality" : "Wien",
+                    "municipalityId" : 90000,
+                    "name" : "60200026",
+                    "title" : "Alsegger Straße",
+                    "type" : "stop"
+                  },
+                "type" : "Feature"
+              }
+          }
+        ] },
+  "message" : { "messageCode" : 1,
+      "serverTime" : "2013-08-29T19:38:15.198+0200",
+      "value" : "OK"
+    }
+}

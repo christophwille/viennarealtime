@@ -33,25 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CreateCamp\FahrplanAnlage.cs" />
-    <Compile Include="CreateCamp\CreateCampMonitorLine.cs" />
-    <Compile Include="CreateCamp\EchtzeitdatenSchnittstelle.cs" />
+    <Compile Include="Departure.cs" />
+    <Compile Include="IAsyncWebRequest.cs" />
     <Compile Include="IEchtzeitdatenSchnittstelle.cs" />
-    <Compile Include="IWebRequestProcessor.cs" />
+    <Compile Include="ILineInformation.cs" />
+    <Compile Include="MonitorInformationErrorCode.cs" />
     <Compile Include="MonitorLine.cs" />
     <Compile Include="MonitorLineType.cs" />
     <Compile Include="MonitorInformation.cs" />
+    <Compile Include="Ogd\EchtzeitdatenSchnittstelle.cs" />
+    <Compile Include="Ogd\MonitorLineTypeMapper.cs" />
     <Compile Include="Ogd\Proxies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Qando\EchtzeitdatenSchnittstelle.cs" />
-    <Compile Include="Qando\QandoDeparture.cs" />
-    <Compile Include="Qando\QandoMonitorLine.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CreateCamp\Docs\SampleResponse.xml" />
-    <Content Include="Qando\Docs\akirk.github.com.html" />
-    <Content Include="Qando\Docs\SampleRequest.xml" />
-    <Content Include="Qando\Docs\SampleResponse.xml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

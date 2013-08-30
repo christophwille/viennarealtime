@@ -1,0 +1,78 @@
+﻿{ "data" : { "monitors" : [ { "attributes" : {  },
+            "lines" : [ { "barrierFree" : true,
+                  "departures" : { "departure" : [ { "departureTime" : { "countdown" : 3,
+                                "timePlanned" : "2013-08-29T19:31:00.000+0200",
+                                "timeReal" : "2013-08-29T19:31:30.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 11,
+                                "timePlanned" : "2013-08-29T19:39:00.000+0200",
+                                "timeReal" : "2013-08-29T19:39:06.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 18,
+                                "timePlanned" : "2013-08-29T19:46:00.000+0200",
+                                "timeReal" : "2013-08-29T19:46:30.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 26,
+                                "timePlanned" : "2013-08-29T19:54:00.000+0200",
+                                "timeReal" : "2013-08-29T19:54:00.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 33,
+                                "timePlanned" : "2013-08-29T20:01:00.000+0200",
+                                "timeReal" : "2013-08-29T20:01:30.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 41,
+                                "timePlanned" : "2013-08-29T20:09:00.000+0200",
+                                "timeReal" : "2013-08-29T20:09:00.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 48,
+                                "timePlanned" : "2013-08-29T20:16:00.000+0200",
+                                "timeReal" : "2013-08-29T20:16:30.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 56,
+                                "timePlanned" : "2013-08-29T20:24:00.000+0200",
+                                "timeReal" : "2013-08-29T20:24:00.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 63,
+                                "timePlanned" : "2013-08-29T20:31:00.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "H",
+                                "name" : "31",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Stammersdorf",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          }
+                        ] },
+                  "direction" : "H",
+                  "lineId" : 131,
+                  "name" : "31",
+                  "realtimeSupported" : true,
+                  "richtungsId" : "1",
+                  "towards" : "Stammersdorf",
+                  "trafficjam" : false,
+                  "type" : "ptTram"
+                } ],
+            "locationStop" : { "geometry" : { "coordinates" : [ 16.392158942538099,
+                        48.250684737822603
+                      ],
+                    "type" : "Point"
+                  },
+                "properties" : { "attributes" : { "rbl" : 2170 },
+                    "coordName" : "WGS84",
+                    "municipality" : "Wien",
+                    "municipalityId" : 90000,
+                    "name" : "60200554",
+                    "title" : "Hubertusdamm",
+                    "type" : "stop"
+                  },
+                "type" : "Feature"
+              }
+          } ] },
+  "message" : { "messageCode" : 1,
+      "serverTime" : "2013-08-29T19:27:33.117+0200",
+      "value" : "OK"
+    }
+}

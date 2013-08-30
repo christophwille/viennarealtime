@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace WienerLinien.Api
 {
-    public interface IWebRequestProcessor
+    public interface IAsyncWebRequest
     {
-        Task<string> PostXml(string url, string postdata);
         Task<string> Get(string url);
     }
 }

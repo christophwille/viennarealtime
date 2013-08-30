@@ -45,12 +45,13 @@ namespace MundlTransit.WP8
             var initTasks = new Task(() => PerformDatabaseInitializationsAsync());
             initTasks.RunSynchronously();
 
+            container.RegisterPerRequest(typeof(IConfigurationService), null, typeof(DefaultConfigurationService));
             container.RegisterPerRequest(typeof(IDataService), null, typeof(DefaultDataService));
             container.RegisterPerRequest(typeof(ILocationService), null, typeof(DefaultLocationService));
             container.RegisterPerRequest(typeof(IUIService), null, typeof(DefaultUIService));
 
             // container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(CreateCampEchtzeitdatenService));
-            container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(QandoEchtzeitdatenService));
+            container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(OgdEchtzeitdatenService));
             
             
             container.PerRequest<MainPageViewModel>();

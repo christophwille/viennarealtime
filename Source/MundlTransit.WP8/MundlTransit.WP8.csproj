@@ -159,11 +159,13 @@
     </Compile>
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="Common\AlphaKeyGroup.cs" />
+    <Compile Include="Common\AsyncWebRequest.cs" />
     <Compile Include="Common\BindableRuns.cs" />
     <Compile Include="Common\DataTemplateSelector.cs" />
     <Compile Include="Common\DebugLogger.cs" />
     <Compile Include="Common\NearestLocationHelpers.cs" />
     <Compile Include="Common\PanoramaExtensions.cs" />
+    <Compile Include="Common\SocketWebRequest.cs" />
     <Compile Include="Common\WinPhoneExtensions.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -176,16 +178,16 @@
     <Compile Include="Model\LocationResult.cs" />
     <Compile Include="Model\MenuItem.cs" />
     <Compile Include="Model\ZoomMapToPinsMessage.cs" />
+    <Compile Include="Services\DefaultConfigurationService.cs" />
     <Compile Include="Services\DefaultDataService.cs" />
     <Compile Include="Services\DefaultLocationService.cs" />
-    <Compile Include="Services\CreateCampEchtzeitdatenService.cs" />
     <Compile Include="Services\DefaultUIService.cs" />
+    <Compile Include="Services\IConfigurationService.cs" />
     <Compile Include="Services\IUIService.cs" />
-    <Compile Include="Services\QandoEchtzeitdatenService.cs" />
+    <Compile Include="Services\OgdEchtzeitdatenService.cs" />
     <Compile Include="Services\IDataService.cs" />
     <Compile Include="Services\ILocationService.cs" />
     <Compile Include="Services\IEchtzeitdatenService.cs" />
-    <Compile Include="Common\WP8WebRequestProcessor.cs" />
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>

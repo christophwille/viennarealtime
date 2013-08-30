@@ -6,12 +6,6 @@ using System.Threading.Tasks;
 
 namespace WienerLinien.Api
 {
-    public enum MonitorInformationErrorCode
-    {
-        DownloadingFailed,
-        ResponseParsingFailed
-
-    }
     public class MonitorInformation
     {
         public MonitorInformation(List<MonitorLine> lines)

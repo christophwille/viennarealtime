@@ -7,17 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Phone.Tasks;
 using Windows.ApplicationModel;
+using MundlTransit.WP8.Services;
 
 namespace MundlTransit.WP8
 {
     public class AboutPageViewModel : Screen
     {
-        public AboutPageViewModel()
+        public AboutPageViewModel(IConfigurationService config)
         {
             VersionText = GetAppVersion();
 
-            GitHubUrl = new Uri((string)App.Current.Resources["GitHubUrl"]);
-            PrivacyPolicyUrl = new Uri((string)App.Current.Resources["PrivacyPolicyUrl"]);
+            GitHubUrl = new Uri(config.GitHubUrl);
+            PrivacyPolicyUrl = new Uri(config.PrivacyPolicyUrl);
         }
 
         public string VersionText { get; set; }

@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace WienerLinien.Api
 {
-    public class MonitorLine
+    public class MonitorLine : ILineInformation
     {
         public string Name { get; set; }
         public string Towards { get; set; }
         public MonitorLineType Type { get; set; }
+        public bool RealtimeSupported { get; set; }
+        public bool BarrierFree { get; set; }
+
+        public List<Departure> Departures { get; set; } 
 
         public virtual string FormatLineInformation()
         {
@@ -25,7 +29,32 @@ namespace WienerLinien.Api
 
         public virtual string FormatDepartureTimes()
         {
-            throw new NotImplementedException();
+            if (null == Departures) return "";
+
+            var stb = new StringBuilder();
+            bool first = true;
+            int maxItems = 4;               // Limit # of departure times shown
+
+            foreach (var d in Departures)
+            {
+                if (maxItems-- == 0) break;
+
+                if (!first) stb.Append(", ");
+
+                // Show minutes if: realtime information available, time to departure less than 60 minutes
+                if (RealtimeSupported && d.Countdown < 60)
+                {
+                    stb.Append(d.Countdown);
+                }
+                else
+                {
+                    stb.AppendFormat("{0:H:mm}", d.TimePlanned);
+                }
+
+                first = false;
+            }
+
+            return stb.ToString();
         }
 
         public string DepartureTimes

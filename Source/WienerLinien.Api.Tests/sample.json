@@ -1,171 +1,113 @@
-{
-"data": {
-"monitors": [
-{
-"locationStop": {
-"type": "Feature",
-"geometry": {
-"type": "Point",
-"coordinates": [
-16.312048857547,
-48.1990873871873
-]
-},
-"properties": {
-"name": "60201035",
-"title": "Hütteldorfer Straße",
-"municipality": "Wien",
-"municipalityId": 90000,
-"type": "stop",
-"coordName": "WGS84",
-"attributes": {
-"rbl": 1450
-}
-}
-},
-"lines": [
-{
-"name": "N49",
-"towards": "Hütteldorf",
-"direction": "H",
-"richtungsId": "1",
-"barrierFree": true,
-"realtimeSupported": true,
-"trafficjam": false,
-"departures": {
-"departure": [
-{
-"departureTime": {
-"timePlanned": "2013-08-07T02:51:00.000+0200",
-"timeReal": "2013-08-07T02:51:30.000+0200",
-"countdown": 27
-}
-},
-{
-"departureTime": {
-"timePlanned": "2013-08-07T03:21:00.000+0200",
-"timeReal": "2013-08-07T03:21:30.000+0200",
-"countdown": 57
-}
-}
-]
-},
-"type": "ptBusNight",
-"lineId": 549
-}
-],
-"refTrafficInfoNames": [
-"tk_-444190366"
-]
-},
-{
-"locationStop": {
-"type": "Feature",
-"geometry": {
-"type": "Point",
-"coordinates": [
-16.312048857547,
-48.1990873871873
-]
-},
-"properties": {
-"name": "60201035",
-"title": "Hütteldorfer Straße",
-"municipality": "Wien",
-"municipalityId": 90000,
-"type": "stop",
-"coordName": "WGS84",
-"attributes": {
-"rbl": 1450
-}
-}
-},
-"lines": [
-{
-"name": "49",
-"towards": "Hütteldorf, Bujattig.",
-"direction": "H",
-"richtungsId": "1",
-"barrierFree": false,
-"realtimeSupported": true,
-"trafficjam": false,
-"departures": {
-"departure": [
-{
-"departureTime": {
-"timePlanned": "2013-08-07T05:00:00.000+0200",
-"countdown": 155
-}
-},
-{
-"departureTime": {
-"timePlanned": "2013-08-07T05:03:00.000+0200",
-"countdown": 158
-},
-"vehicle": {
-"name": "49",
-"towards": "Breitensee S",
-"direction": "H",
-"richtungsId": "1",
-"barrierFree": false,
-"realtimeSupported": true,
-"trafficjam": false,
-"type": "ptTram"
-}
-}
-]
-},
-"type": "ptTram"
-}
-]
-}
-],
-"trafficInfos": [
-{
-"refTrafficInfoCategoryId": 3,
-"name": "tk_-444190366",
-"priority": "1",
-"owner": "WL",
-"title": "Haltestelle \nzur Breitenseer Straße 8 verlegt",
-"description": "Haltestelle \nzur Breitenseer Straße 8 verlegt",
-"time": {
-"start": "2013-07-31T00:15:00.000+0200",
-"end": "2013-08-10T05:00:00.000+0200"
-},
-"relatedLines": [
-"N49"
-],
-"relatedStops": [
-1450
-]
-}
-],
-"trafficInfoCategories": [
-{
-"id": 2,
-"refTrafficInfoCategoryGroupId": 1,
-"name": "stoerunglang",
-"trafficInfoNameList": "",
-"title": "Störung Lang"
-},
-{
-"id": 3,
-"refTrafficInfoCategoryGroupId": 1,
-"name": "stoerungkurz",
-"trafficInfoNameList": "",
-"title": "Störung Kurz"
-}
-],
-"trafficInfoCategoryGroups": [
-{
-"id": 1,
-"name": "pt"
-}
-]
-},
-"message": {
-"value": "OK",
-"messageCode": 1,
-"serverTime": "2013-08-07T02:24:07.380+0200"
-}
+{ "data" : { "monitors" : [ { "lines" : [ { "barrierFree" : true,
+                  "departures" : { "departure" : [ { "departureTime" : { "countdown" : 27,
+                                "timePlanned" : "2013-08-07T02:51:00.000+0200",
+                                "timeReal" : "2013-08-07T02:51:30.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 57,
+                                "timePlanned" : "2013-08-07T03:21:00.000+0200",
+                                "timeReal" : "2013-08-07T03:21:30.000+0200"
+                              } }
+                        ] },
+                  "direction" : "H",
+                  "lineId" : 549,
+                  "name" : "N49",
+                  "realtimeSupported" : true,
+                  "richtungsId" : "1",
+                  "towards" : "Hütteldorf",
+                  "trafficjam" : false,
+                  "type" : "ptBusNight"
+                } ],
+            "locationStop" : { "geometry" : { "coordinates" : [ 16.312048857547001,
+                        48.199087387187298
+                      ],
+                    "type" : "Point"
+                  },
+                "properties" : { "attributes" : { "rbl" : 1450 },
+                    "coordName" : "WGS84",
+                    "municipality" : "Wien",
+                    "municipalityId" : 90000,
+                    "name" : "60201035",
+                    "title" : "Hütteldorfer Straße",
+                    "type" : "stop"
+                  },
+                "type" : "Feature"
+              },
+            "refTrafficInfoNames" : [ "tk_-444190366" ]
+          },
+          { "lines" : [ { "barrierFree" : false,
+                  "departures" : { "departure" : [ { "departureTime" : { "countdown" : 155,
+                                "timePlanned" : "2013-08-07T05:00:00.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 158,
+                                "timePlanned" : "2013-08-07T05:03:00.000+0200"
+                              },
+                            "vehicle" : { "barrierFree" : false,
+                                "direction" : "H",
+                                "name" : "49",
+                                "realtimeSupported" : true,
+                                "richtungsId" : "1",
+                                "towards" : "Breitensee S",
+                                "trafficjam" : false,
+                                "type" : "ptTram"
+                              }
+                          }
+                        ] },
+                  "direction" : "H",
+                  "name" : "49",
+                  "realtimeSupported" : true,
+                  "richtungsId" : "1",
+                  "towards" : "Hütteldorf, Bujattig.",
+                  "trafficjam" : false,
+                  "type" : "ptTram"
+                } ],
+            "locationStop" : { "geometry" : { "coordinates" : [ 16.312048857547001,
+                        48.199087387187298
+                      ],
+                    "type" : "Point"
+                  },
+                "properties" : { "attributes" : { "rbl" : 1450 },
+                    "coordName" : "WGS84",
+                    "municipality" : "Wien",
+                    "municipalityId" : 90000,
+                    "name" : "60201035",
+                    "title" : "Hütteldorfer Straße",
+                    "type" : "stop"
+                  },
+                "type" : "Feature"
+              }
+          }
+        ],
+      "trafficInfoCategories" : [ { "id" : 2,
+            "name" : "stoerunglang",
+            "refTrafficInfoCategoryGroupId" : 1,
+            "title" : "Störung Lang",
+            "trafficInfoNameList" : ""
+          },
+          { "id" : 3,
+            "name" : "stoerungkurz",
+            "refTrafficInfoCategoryGroupId" : 1,
+            "title" : "Störung Kurz",
+            "trafficInfoNameList" : ""
+          }
+        ],
+      "trafficInfoCategoryGroups" : [ { "id" : 1,
+            "name" : "pt"
+          } ],
+      "trafficInfos" : [ { "description" : "Haltestelle \nzur Breitenseer Straße 8 verlegt",
+            "name" : "tk_-444190366",
+            "owner" : "WL",
+            "priority" : "1",
+            "refTrafficInfoCategoryId" : 3,
+            "relatedLines" : [ "N49" ],
+            "relatedStops" : [ 1450 ],
+            "time" : { "end" : "2013-08-10T05:00:00.000+0200",
+                "start" : "2013-07-31T00:15:00.000+0200"
+              },
+            "title" : "Haltestelle \nzur Breitenseer Straße 8 verlegt"
+          } ]
+    },
+  "message" : { "messageCode" : 1,
+      "serverTime" : "2013-08-07T02:24:07.380+0200",
+      "value" : "OK"
+    }
 }
