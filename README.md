@@ -7,6 +7,8 @@ The source code is released under the MIT License.
 The app uses open data provided by Wiener Linien. To learn more about the data and API they are offering,
 please visit [Wiener Linien - Echtzeitdaten](https://open.wien.at/site/datensatz/?id=add66f20-d033-4eee-b9a0-47019828e698)
 
+[Release History](https://github.com/christophwille/viennarealtime/wiki/Release-History)
+
 ## Features
 
 * `Nearby` - list / map stations near my current location
