@@ -27,8 +27,16 @@ namespace MundlTransit.WP8.ViewModels
         {
             var favorites = await _dataService.GetFavoritesAsync();
 
-            Favorites = new BindableCollection<Favorite>(favorites);
-            NotifyOfPropertyChange(() => Favorites);
+            if (favorites != null && favorites.Any())
+            {
+                Favorites = new BindableCollection<Favorite>(favorites);
+                NotifyOfPropertyChange(() => Favorites);
+                SetResultsFound();
+            }
+            else
+            {
+                SetNoResultsFound();
+            }
         }
 
         public IObservableCollection<Favorite> Favorites { get; private set; }
@@ -58,6 +66,26 @@ namespace MundlTransit.WP8.ViewModels
         {
             await _dataService.DeleteFavoriteAsync(item);
             await LoadFavoritesAsync();
+        }
+
+        public bool ResultsFound { get; set; }
+        public bool NoResultsFound { get; set; }
+
+        protected void SetNoResultsFound()
+        {
+            ResultsFound = false;
+            NoResultsFound = true;
+            NotifyOfPropertyChange(() => ResultsFound);
+            NotifyOfPropertyChange(() => NoResultsFound);
+        }
+
+        protected void SetResultsFound()
+        {
+
+            NoResultsFound = false;
+            ResultsFound = true;
+            NotifyOfPropertyChange(() => NoResultsFound);
+            NotifyOfPropertyChange(() => ResultsFound);
         }
     }
 }

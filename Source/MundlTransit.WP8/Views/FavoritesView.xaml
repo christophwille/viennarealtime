@@ -3,19 +3,24 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
-             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
-             xmlns:system="clr-namespace:System;assembly=mscorlib"
-             xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
-             mc:Ignorable="d"
+    xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     d:DesignHeight="480" d:DesignWidth="480">
 
+    <UserControl.Resources>
+        <cm:BooleanToVisibilityConverter x:Key="visConverter" />
+    </UserControl.Resources>
+
     <Grid x:Name="FavoritesLayoutRoot" Background="Transparent">
 
         <phone:LongListSelector Margin="0,0,-12,0" 
+                                Visibility="{Binding ResultsFound,Converter={StaticResource visConverter}}"
                                 cm:Message.Attach="[Event SelectionChanged] = [Action ShowFavorite($source)]"
                                 ItemsSource="{Binding Favorites}">
             <phone:LongListSelector.ItemTemplate>
@@ -32,11 +37,17 @@
                                         
                                     </toolkit:ContextMenu>
                                 </toolkit:ContextMenuService.ContextMenu>
-                            
+
                         </TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </phone:LongListSelector.ItemTemplate>
         </phone:LongListSelector>
+
+        <TextBlock 
+                Style="{StaticResource PhoneTextLargeStyle}"
+                TextWrapping="Wrap"
+                Visibility="{Binding NoResultsFound,Converter={StaticResource visConverter}}"
+                Text="You do not have any favorites yet." />
     </Grid>
 </UserControl>

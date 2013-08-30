@@ -73,11 +73,19 @@
                     
                     <Button x:Name="Review" HorizontalAlignment="Left" Content="Review this app"/>
 
-                    <TextBlock TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}">
-                        This app uses services provided by wienerlinien.at, and open government
-                        data provided by the City of Vienna. No personally identifyable 
-                        information (including location data) is sent by this app.
-                    </TextBlock>
+                    <RichTextBox>
+                        <Paragraph>
+                            The app uses open data provided by Wiener Linien. To learn 
+                            more about the data and API they are offering, please visit
+                            <Hyperlink NavigateUri="https://open.wien.at/site/datensatz/?id=add66f20-d033-4eee-b9a0-47019828e698">Wiener Linien - Echtzeitdaten</Hyperlink>
+                        </Paragraph>
+                        <Paragraph></Paragraph>
+                        <Paragraph>
+                            No personally identifyable information (including location data) is 
+                            sent by this app.
+                        </Paragraph>
+                        <Paragraph></Paragraph>
+                    </RichTextBox>
                     
                     <HyperlinkButton
                         NavigateUri="{Binding PrivacyPolicyUrl}"
