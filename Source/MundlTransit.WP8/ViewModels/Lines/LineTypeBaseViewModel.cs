@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Caliburn.Micro;
 using Microsoft.Phone.Controls;
 using MundlTransit.WP8.Data.Reference;
+using MundlTransit.WP8.Model;
 using MundlTransit.WP8.ViewModels.LineInfo;
 
 namespace MundlTransit.WP8.ViewModels.Lines
@@ -19,18 +20,18 @@ namespace MundlTransit.WP8.ViewModels.Lines
             _navigationService = navigationService;
         }
 
-        public void SetLines(IEnumerable<OgdLinie> lines)
+        public void SetLines(IEnumerable<LinieModel> lines)
         {
-            Lines = new BindableCollection<OgdLinie>(lines);
+            Lines = new BindableCollection<LinieModel>(lines);
             NotifyOfPropertyChange(() => Lines);
         }
 
-        public BindableCollection<OgdLinie> Lines { get; set; }
+        public BindableCollection<LinieModel> Lines { get; set; }
 
         public void ShowLine(object sender)
         {
             var ll = sender as LongListSelector;
-            var item = ll.SelectedItem as OgdLinie;
+            var item = ll.SelectedItem as LinieModel;
             if (item == null) return;
 
             ll.SelectedItem = null;

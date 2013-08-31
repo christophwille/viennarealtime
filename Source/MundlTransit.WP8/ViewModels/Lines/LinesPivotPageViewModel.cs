@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
+using MundlTransit.WP8.Model;
 using MundlTransit.WP8.Services;
 using WienerLinien.Api;
 using WienerLinien.Api.Ogd;
@@ -49,13 +50,12 @@ namespace MundlTransit.WP8.ViewModels.Lines
         protected async Task LoadLinienAsync()
         {
             var linien = await _dataService.GetLinienAsync();
+            var modelLinien = linien.Select(l => new LinieModel(l)).ToList();
 
-            // TODO: Rewrite, inefficient as is
-            var metros = linien.Where(l => MonitorLineTypeMapper.TypeStringToType(l.Verkehrsmittel) == MonitorLineType.Metro);
-            var trams = linien.Where(l => MonitorLineTypeMapper.TypeStringToType(l.Verkehrsmittel) == MonitorLineType.Tram);
-            var buses = linien
-                .Where(l => MonitorLineTypeMapper.TypeStringToType(l.Verkehrsmittel) == MonitorLineType.Bus || MonitorLineTypeMapper.TypeStringToType(l.Verkehrsmittel) == MonitorLineType.BusB);
-            var nightbuses = linien.Where(l => MonitorLineTypeMapper.TypeStringToType(l.Verkehrsmittel) == MonitorLineType.NightBus);
+            var metros = modelLinien.Where(l => l.LineType == MonitorLineType.Metro);
+            var trams = modelLinien.Where(l => l.LineType == MonitorLineType.Tram);
+            var buses = modelLinien.Where(l => l.LineType == MonitorLineType.Bus || l.LineType == MonitorLineType.BusB);
+            var nightbuses = modelLinien.Where(l => l.LineType == MonitorLineType.NightBus);
 
             mvm.SetLines(metros);
             tvm.SetLines(trams);
