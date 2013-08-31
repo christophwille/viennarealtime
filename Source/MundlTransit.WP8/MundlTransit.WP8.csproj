@@ -164,6 +164,9 @@
     <Compile Include="Common\DebugLogger.cs" />
     <Compile Include="Common\NearestLocationHelpers.cs" />
     <Compile Include="Common\PanoramaExtensions.cs" />
+    <Compile Include="DesignTimeData\SampleData.cs" />
+    <Compile Include="DesignTimeData\SampleHaltestelleData.cs" />
+    <Compile Include="DesignTimeData\SampleLineData.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
