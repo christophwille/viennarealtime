@@ -1,0 +1,79 @@
+﻿{ "data" : { "monitors" : [ { "attributes" : {  },
+            "lines" : [ { "barrierFree" : false,
+                  "departures" : { "departure" : [ { "departureTime" : {  },
+                            "vehicle" : { "linienId" : 306,
+                                "towards" : "ALLE ZÜGE GLEIS 1 ",
+                                "type" : "ptMetro"
+                              }
+                          } ] },
+                  "direction" : "R",
+                  "lineId" : 306,
+                  "name" : "U6",
+                  "platform" : "2",
+                  "realtimeSupported" : true,
+                  "richtungsId" : "1",
+                  "towards" : "ALLE ZÜGE GLEIS 1",
+                  "trafficjam" : false,
+                  "type" : "ptMetro"
+                } ],
+            "locationStop" : { "geometry" : { "coordinates" : [ 16.309619735721501,
+                        48.130179340146903
+                      ],
+                    "type" : "Point"
+                  },
+                "properties" : { "attributes" : { "rbl" : 4634 },
+                    "coordName" : "WGS84",
+                    "gate" : "2",
+                    "municipality" : "Wien",
+                    "municipalityId" : 90000,
+                    "name" : "60201235",
+                    "title" : "Siebenhirten",
+                    "type" : "stop"
+                  },
+                "type" : "Feature"
+              }
+          },
+          { "attributes" : {  },
+            "lines" : [ { "barrierFree" : true,
+                  "departures" : { "departure" : [ { "departureTime" : { "countdown" : 1,
+                                "timePlanned" : "2013-08-31T15:51:38.000+0200",
+                                "timeReal" : "2013-08-31T15:51:38.000+0200"
+                              } },
+                          { "departureTime" : { "countdown" : 6,
+                                "timePlanned" : "2013-08-31T15:56:38.000+0200",
+                                "timeReal" : "2013-08-31T15:56:38.000+0200"
+                              } }
+                        ] },
+                  "direction" : "H",
+                  "lineId" : 306,
+                  "name" : "U6",
+                  "platform" : "1",
+                  "realtimeSupported" : true,
+                  "richtungsId" : "1",
+                  "towards" : "FLORIDSDORF",
+                  "trafficjam" : false,
+                  "type" : "ptMetro"
+                } ],
+            "locationStop" : { "geometry" : { "coordinates" : [ 16.309726951523501,
+                        48.130169123975001
+                      ],
+                    "type" : "Point"
+                  },
+                "properties" : { "attributes" : { "rbl" : 4635 },
+                    "coordName" : "WGS84",
+                    "gate" : "1",
+                    "municipality" : "Wien",
+                    "municipalityId" : 90000,
+                    "name" : "60201235",
+                    "title" : "Siebenhirten",
+                    "type" : "stop"
+                  },
+                "type" : "Feature"
+              }
+          }
+        ] },
+  "message" : { "messageCode" : 1,
+      "serverTime" : "2013-08-31T15:49:39.045+0200",
+      "value" : "OK"
+    }
+}

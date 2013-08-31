@@ -54,8 +54,8 @@ namespace MundlTransit.WP8.ViewModels
                                     },
 									new MenuItem
                                     { 
-                                        Name = "lines", 
-                                        Description="search by line / station", 
+                                        Name = "stations by lines", 
+                                        Description="metro, tram and buses by direction", 
                                         Navigate = (n) => n.UriFor<LinesPivotPageViewModel>().Navigate() 
                                     },
 

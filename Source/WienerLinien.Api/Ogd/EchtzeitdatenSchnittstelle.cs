@@ -109,8 +109,16 @@ namespace WienerLinien.Api.Ogd
                     {
                         foreach (var departure in line.departures.departure)
                         {
-                            var timePlanned = ToLocalTime(departure.departureTime.timePlanned);
-                            var timeReal = ToLocalTime(departure.departureTime.timeReal);
+                            var dt = departure.departureTime;
+
+                            // Empty departureTime object show all values as null or 0
+                            if (dt.timePlanned == null && dt.timeReal == null && dt.countdown == 0)
+                            {
+                                continue;
+                            }
+
+                            var timePlanned = ToLocalTime(dt.timePlanned);
+                            var timeReal = ToLocalTime(dt.timeReal);
 
                             var md = new Api.Departure()
                             {
@@ -119,7 +127,7 @@ namespace WienerLinien.Api.Ogd
                                 Type = ml.Type,
                                 RealtimeSupported = ml.RealtimeSupported,
                                 BarrierFree = ml.BarrierFree,
-                                Countdown = departure.departureTime.countdown,
+                                Countdown = dt.countdown,
                                 TimeReal = timeReal,
                                 TimePlanned = timePlanned
                             };
@@ -138,7 +146,11 @@ namespace WienerLinien.Api.Ogd
                         }
                     }
 
-                    parsedMonitorLines.Add(ml);
+                    // Do not add empty lines (NICHT EINSTEIGEN, ALLE ZÜGE GLEIS 1, &c)
+                    if (ml.Departures.Any())
+                    {
+                        parsedMonitorLines.Add(ml);
+                    }
                 }
             }
 

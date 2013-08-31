@@ -40,15 +40,16 @@ namespace WienerLinien.Api.Tests
             Assert.That(result.Lines[0].Departures.Count, Is.EqualTo(9));
         }
 
-        //[Test]
-        //  // towards="" NICHT EINSTEIGEN !""
-        //public void TestUmkehrfahrt()
-        //{
-        //    var schnittstelle = new Api.Qando.EchtzeitdatenSchnittstelle();
+        // This tests towards="ALLE ZÜGE GLEIS 1 "
+        [Test]
+        public void U6SiebenhirtenTest()
+        {
+            var schnittstelle = new EchtzeitdatenSchnittstelle();
+            MonitorInformation result = schnittstelle.ParseMonitorResponse(ResponseFiles.LoadJson(ResponseFiles.U6Siebenhirten));
 
-        //    MonitorInformation result = schnittstelle.ParseMonitorResponse(QandoResponseTestStrings.HeiligenstadtUmkehrfahrt);
-
-        //    Assert.That(result.Lines.Count, Is.EqualTo(0));
-        //}
+            Assert.That(result.Succeeded, Is.EqualTo(true));
+            Assert.That(result.Lines.Count, Is.EqualTo(1));
+            Assert.That(result.Lines[0].Departures.Count, Is.EqualTo(2));
+        }
     }
 }
