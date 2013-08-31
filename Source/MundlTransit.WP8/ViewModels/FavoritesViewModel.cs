@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.Micro;
 using Microsoft.Phone.Controls;
+using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Data.Runtime;
 using MundlTransit.WP8.Services;
 using MundlTransit.WP8.ViewModels.StationInfo;
@@ -43,15 +44,12 @@ namespace MundlTransit.WP8.ViewModels
 
         public void ShowFavorite(object sender)
         {
-            var ll = sender as LongListSelector;
-            var item = ll.SelectedItem as Favorite;
-            if (item == null) return;
-
-            ll.SelectedItem = null;
-
-            navigationService.UriFor<StationInfoPivotPageViewModel>()
-                .WithParam(vm => vm.NavigationStationId, item.HaltestellenId)
-                .Navigate();
+            this.WhenSelectionChanged<Favorite>(sender, (item) =>
+            {
+                navigationService.UriFor<StationInfoPivotPageViewModel>()
+                    .WithParam(vm => vm.NavigationStationId, item.HaltestellenId)
+                    .Navigate();
+            });
         }
 
         public void Remove(object sender, Favorite item)

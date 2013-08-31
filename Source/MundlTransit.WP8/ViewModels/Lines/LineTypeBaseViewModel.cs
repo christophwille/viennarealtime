@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
-using Microsoft.Phone.Controls;
+using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Model;
 using MundlTransit.WP8.ViewModels.LineInfo;
@@ -30,16 +30,13 @@ namespace MundlTransit.WP8.ViewModels.Lines
 
         public void ShowLine(object sender)
         {
-            var ll = sender as LongListSelector;
-            var item = ll.SelectedItem as LinieModel;
-            if (item == null) return;
-
-            ll.SelectedItem = null;
-
-            _navigationService.UriFor<LineInfoPageViewModel>()
-                .WithParam(vm => vm.NavigationLineId, item.Id)
-                .WithParam(vm => vm.LineName, item.Bezeichnung)
-                .Navigate();
+            this.WhenSelectionChanged<LinieModel>(sender, (item) =>
+            {
+                _navigationService.UriFor<LineInfoPageViewModel>()
+                    .WithParam(vm => vm.NavigationLineId, item.Id)
+                    .WithParam(vm => vm.LineName, item.Bezeichnung)
+                    .Navigate();
+            });
         }
     }
 }

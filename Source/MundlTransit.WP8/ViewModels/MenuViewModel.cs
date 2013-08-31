@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
-using Microsoft.Phone.Controls;
+using MundlTransit.WP8.Common;
 using MundlTransit.WP8.ViewModels.Lines;
 using MundlTransit.WP8.ViewModels.Stations;
 using MundlTransit.WP8.Views.Lines;
@@ -78,13 +78,7 @@ namespace MundlTransit.WP8.ViewModels
 
         public void ExecuteMenuCommand(object sender)
         {
-            var ll = sender as LongListSelector;
-            var item = ll.SelectedItem as MenuItem;
-            if (item == null) return;
-
-            ll.SelectedItem = null;
-
-            item.Navigate(navigationService);
+            this.WhenSelectionChanged<MenuItem>(sender, (item) => item.Navigate(navigationService));
         }
 	}
 }

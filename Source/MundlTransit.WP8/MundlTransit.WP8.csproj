@@ -164,6 +164,7 @@
     <Compile Include="Common\DebugLogger.cs" />
     <Compile Include="Common\NearestLocationHelpers.cs" />
     <Compile Include="Common\PanoramaExtensions.cs" />
+    <Compile Include="Common\ScreenExtensions.cs" />
     <Compile Include="DesignTimeData\SampleData.cs" />
     <Compile Include="DesignTimeData\SampleHaltestelleData.cs" />
     <Compile Include="DesignTimeData\SampleLineData.cs" />
@@ -214,6 +215,7 @@
     <Compile Include="ViewModels\Stations\StationsViewModelBase.cs" />
     <Compile Include="ViewModels\Stations\StationsPivotPageViewModel.cs" />
     <Compile Include="ViewModels\Stations\StationsSearchViewModel.cs" />
+    <Compile Include="ViewModels\Stations\StationsViewModelEnum.cs" />
     <Compile Include="Views\FavoritesView.xaml.cs">
       <DependentUpon>FavoritesView.xaml</DependentUpon>
     </Compile>

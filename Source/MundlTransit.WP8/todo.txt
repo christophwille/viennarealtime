@@ -13,6 +13,5 @@ For later:
 
 * [Transition to Favorites doesn't work properly at all] disabled in menu atm
 * Localization (localized app bar)
-* Casting to LongListSelector in a ViewModel is absolute not good practice
 * Implement a logging solution instead of ad-hoc Debug.WriteLine
 
