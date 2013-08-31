@@ -371,6 +371,7 @@
     <Content Include="Assets\map.centerme.png" />
     <Content Include="Assets\outline.squares.png" />
     <Content Include="Assets\refresh.png" />
+    <Content Include="Assets\sort.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
