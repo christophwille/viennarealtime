@@ -8,21 +8,14 @@ using WienerLinien.Api.Ogd;
 
 namespace WienerLinien.Api.Tests
 {
-    // Tscherttegasse: http://www.wienerlinien.at/ogd_realtime/monitor?rbl=4640&rbl=4629&sender=<SENDER>
-
     [TestFixture]
-    public class ParseTests
+    public class EchtzeitdatenParseTests
     {
-        private string LoadJson(string filename)
-        {
-            return System.IO.File.ReadAllText(filename);
-        }
-
         [Test]
         public void InvalidKeyTest()
         {
             var schnittstelle = new EchtzeitdatenSchnittstelle();
-            MonitorInformation result = schnittstelle.ParseMonitorResponse(LoadJson("InvalidKeyResponse.json"));
+            MonitorInformation result = schnittstelle.ParseMonitorResponse(ResponseFiles.LoadJson(ResponseFiles.InvalidKeyResponse));
 
             Assert.That(result.ErrorCode, Is.EqualTo(MonitorInformationErrorCode.ServerAuthenticationFailed));
         }
@@ -31,7 +24,7 @@ namespace WienerLinien.Api.Tests
         public void EmptyResponseTest()
         {
             var schnittstelle = new EchtzeitdatenSchnittstelle();
-            MonitorInformation result = schnittstelle.ParseMonitorResponse(LoadJson("EmptyOkResponse.json"));
+            MonitorInformation result = schnittstelle.ParseMonitorResponse(ResponseFiles.LoadJson(ResponseFiles.EmptyOkResponse));
 
             Assert.That(result.ErrorCode, Is.EqualTo(MonitorInformationErrorCode.MonitorsEmpty));
         }
@@ -40,7 +33,7 @@ namespace WienerLinien.Api.Tests
         public void RBL2170HubertusdammTest()
         {
             var schnittstelle = new EchtzeitdatenSchnittstelle();
-            MonitorInformation result = schnittstelle.ParseMonitorResponse(LoadJson("RBL2170Hubertusdamm.json"));
+            MonitorInformation result = schnittstelle.ParseMonitorResponse(ResponseFiles.LoadJson(ResponseFiles.RBL2170Hubertusdamm));
 
             Assert.That(result.Succeeded, Is.EqualTo(true));
             Assert.That(result.Lines.Count, Is.EqualTo(1));

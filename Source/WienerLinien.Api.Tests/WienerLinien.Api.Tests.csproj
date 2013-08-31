@@ -45,8 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ParseTests.cs" />
+    <Compile Include="EchtzeitdatenParseTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseFiles.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="EmptyOkResponse.json">
@@ -62,7 +63,7 @@
     <None Include="RBL2170Hubertusdamm.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="sample.json">
+    <None Include="Spec216BeispielResponse.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TscherttegasseNoOverrides.json">
