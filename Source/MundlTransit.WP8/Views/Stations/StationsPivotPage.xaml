@@ -41,7 +41,7 @@
     <Grid x:Name="LayoutRoot" Background="Transparent">
 
         <phone:Pivot x:Name="Items"
-						Title="Stations"
+						Title="{Binding Path=LocalizedResources.Stations_PageTitle, Source={StaticResource LocalizedStrings}}"
                         LoadingPivotItem="Items_OnLoadingPivotItem"
 						SelectedItem="{Binding ActiveItem, Mode=TwoWay}">
             <phone:Pivot.HeaderTemplate>

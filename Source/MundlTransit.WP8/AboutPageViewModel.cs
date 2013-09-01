@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Phone.Tasks;
 using Windows.ApplicationModel;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
 
 namespace MundlTransit.WP8
@@ -44,5 +45,8 @@ namespace MundlTransit.WP8
 
             return string.Format("{0}.{1}.{2}.{3}", version.Major, version.Minor, version.Build, version.Revision);
         }
+
+        public string AboutParagraphOne { get { return AppResources.About_InfoParagraphOne; }}
+        public string AboutParagraphTwo { get { return AppResources.About_InfoParagraphTwo; } }
     }
 }

@@ -40,8 +40,8 @@
     <Grid x:Name="LayoutRoot">
         <phone:Panorama x:Name="panoramaMain" Title="{StaticResource ApplicationTitleLowerCased}">
 
-            <phone:PanoramaItem x:Name="Menu" Header="menu" />
-            <phone:PanoramaItem x:Name="Favorites" Header="favorites" />
+            <phone:PanoramaItem x:Name="Menu" Header="{Binding Path=LocalizedResources.Menu_PageTitle, Source={StaticResource LocalizedStrings}}" />
+            <phone:PanoramaItem x:Name="Favorites" Header="{Binding Path=LocalizedResources.Favorites_PageTitle, Source={StaticResource LocalizedStrings}}" />
             
             <!--
             <phone:PanoramaItem Header="history">

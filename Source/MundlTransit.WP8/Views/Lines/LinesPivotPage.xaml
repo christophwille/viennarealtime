@@ -40,7 +40,7 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <phone:Pivot x:Name="Items"
-						Title="Lines"
+						Title="{Binding Path=LocalizedResources.Lines_PageTitle, Source={StaticResource LocalizedStrings}}"
                         LoadingPivotItem="Items_OnLoadingPivotItem"
 						SelectedItem="{Binding ActiveItem, Mode=TwoWay}">
             <phone:Pivot.HeaderTemplate>

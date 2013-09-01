@@ -12,6 +12,6 @@
 For later:
 
 * [Transition to Favorites doesn't work properly at all] disabled in menu atm
-* Localization (localized app bar)
+* Localization
 * Implement a logging solution instead of ad-hoc Debug.WriteLine
 

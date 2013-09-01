@@ -46,14 +46,14 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="{StaticResource ApplicationTitleUpperCased}" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.Settings_PageTitle, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <toolkit:ToggleSwitch 
                 IsChecked="{Binding Checked, Mode=TwoWay}"
-                Header="Geolocation for nearby stations"/>
+                Header="{Binding Path=LocalizedResources.Settings_GeolocationForNearbyStations, Source={StaticResource LocalizedStrings}}"/>
         </Grid>
     </Grid>
 

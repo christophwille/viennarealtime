@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Caliburn.Micro;
 using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Data.Reference;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
 
 namespace MundlTransit.WP8.ViewModels.Stations
@@ -19,7 +20,7 @@ namespace MundlTransit.WP8.ViewModels.Stations
             : base(StationsViewModelEnum.List, navigationService)
         {
             _dataService = ds;
-			DisplayName = "list";
+			DisplayName = AppResources.Stations_ListTitle;
 		}
 
         public List<AlphaKeyGroup<Haltestelle>> Haltestellen { get; set; }

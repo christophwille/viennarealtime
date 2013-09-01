@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
 using MundlTransit.WP8.Common;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.ViewModels.Lines;
 using MundlTransit.WP8.ViewModels.Stations;
 using MundlTransit.WP8.Views.Lines;
@@ -12,14 +13,14 @@ using MenuItem = MundlTransit.WP8.Model.MenuItem;
 
 namespace MundlTransit.WP8.ViewModels
 {
-	public class MenuViewModel : Screen
-	{
-		private readonly INavigationService navigationService;
+    public class MenuViewModel : Screen
+    {
+        private readonly INavigationService navigationService;
         private readonly IEventAggregator eventAggregator;
 
         public MenuViewModel(INavigationService navigationService, IEventAggregator events)
-		{
-			this.navigationService = navigationService;
+        {
+            this.navigationService = navigationService;
             eventAggregator = events;
 
             MenuItems = new BindableCollection<MenuItem>()
@@ -32,47 +33,47 @@ namespace MundlTransit.WP8.ViewModels
                                     //},
                                     new MenuItem
                                     { 
-                                        Name = "nearby", 
-                                        Description="stations nearby your current location", 
+                                        Name = AppResources.MenuItem_Nearby, 
+                                        Description=AppResources.MenuItem_Nearby_Description, 
                                         Navigate = (n) => n.UriFor<StationsPivotPageViewModel>()
                                             .WithParam(p => p.StationsViewModelOnNavigating, StationsViewModelEnum.Nearby)
                                             .Navigate() 
                                     },
                                     new MenuItem
                                     { 
-                                        Name = "search", 
-                                        Description="stations by name (fulltext)", 
+                                        Name = AppResources.MenuItem_Search, 
+                                        Description=AppResources.MenuItem_Search_Description, 
                                         Navigate = (n) => n.UriFor<StationsPivotPageViewModel>()
                                             .WithParam(p => p.StationsViewModelOnNavigating, StationsViewModelEnum.Search)
                                             .Navigate() 
                                     },
 									new MenuItem
                                     { 
-                                        Name = "station list", 
-                                        Description="complete list of stations", 
+                                        Name = AppResources.MenuItem_StationList, 
+                                        Description=AppResources.MenuItem_StationList_Description, 
                                         Navigate = (n) => n.UriFor<StationsPivotPageViewModel>().Navigate() 
                                     },
 									new MenuItem
                                     { 
-                                        Name = "stations by lines", 
-                                        Description="metro, tram and buses by direction", 
+                                        Name = AppResources.MenuItem_StationsByLines, 
+                                        Description=AppResources.MenuItem_StationsByLines_Description, 
                                         Navigate = (n) => n.UriFor<LinesPivotPageViewModel>().Navigate() 
                                     },
 
                                     new MenuItem
                                     { 
-                                        Name = "settings", 
-                                        Description="turn on/off geolocation for nearby search", 
+                                        Name = AppResources.MenuItem_Settings, 
+                                        Description=AppResources.MenuItem_Settings_Description, 
                                         Navigate = (n) => n.UriFor<SettingsPageViewModel>().Navigate() 
                                     },
                                     new MenuItem
                                     { 
-                                        Name = "about", 
-                                        Description="privacy policy, support", 
+                                        Name = AppResources.MenuItem_About, 
+                                        Description=AppResources.MenuItem_About_Description, 
                                         Navigate = (n) => n.UriFor<AboutPageViewModel>().Navigate() 
                                     },
 								};
-		}
+        }
 
         public IObservableCollection<MenuItem> MenuItems { get; private set; }
 
@@ -80,5 +81,5 @@ namespace MundlTransit.WP8.ViewModels
         {
             this.WhenSelectionChanged<MenuItem>(sender, (item) => item.Navigate(navigationService));
         }
-	}
+    }
 }

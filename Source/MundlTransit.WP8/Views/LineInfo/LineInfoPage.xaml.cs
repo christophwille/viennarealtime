@@ -27,7 +27,7 @@ namespace MundlTransit.WP8.Views.LineInfo
             var appBarButton = new CM.AppBarButton()
             {
                 IconUri = new Uri("/Assets/sort.png", UriKind.Relative),
-                Text = "direction",
+                Text = AppResources.LineInfo_AppBar_Direction,
                 Message = "ChangeDirection"
             };
 

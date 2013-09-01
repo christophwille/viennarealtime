@@ -48,6 +48,6 @@
                 Style="{StaticResource PhoneTextLargeStyle}"
                 TextWrapping="Wrap"
                 Visibility="{Binding NoResultsFound,Converter={StaticResource visConverter}}"
-                Text="You do not have any favorites yet." />
+                Text="{Binding Path=LocalizedResources.Favorites_NoFavoritesYet, Source={StaticResource LocalizedStrings}}" />
     </Grid>
 </UserControl>

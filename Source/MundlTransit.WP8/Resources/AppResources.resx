@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-    Microsoft ResX Schema
-
+  <!-- 
+    Microsoft ResX Schema 
+    
     Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
-
+    
     Example:
-
+    
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-
-    There are any number of "resheader" rows that contain simple
+                
+    There are any number of "resheader" rows that contain simple 
     name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
     mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
     extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
-
+    
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
+    value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,6 +117,144 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About_InfoParagraphOne" xml:space="preserve">
+    <value>The app uses open data provided by Wiener Linien. To learn more about the data and API they are offering, please visit</value>
+  </data>
+  <data name="About_InfoParagraphTwo" xml:space="preserve">
+    <value>No personally identifyable information (including location data) is sent by this app.</value>
+  </data>
+  <data name="About_PageTitle" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="About_PrivacyPolicy_LinkText" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="About_ReviewApp_ButtonText" xml:space="preserve">
+    <value>Review this app</value>
+  </data>
+  <data name="About_SupportSourceCode_LinkText" xml:space="preserve">
+    <value>Support and Source Code</value>
+  </data>
+  <data name="About_Version_Text" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="ErrorMessage_Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Favorites_NoFavoritesYet" xml:space="preserve">
+    <value>You do not have any favorites yet.</value>
+  </data>
+  <data name="Favorites_PageTitle" xml:space="preserve">
+    <value>favorites</value>
+  </data>
+  <data name="LineInfo_AppBar_Direction" xml:space="preserve">
+    <value>direction</value>
+  </data>
+  <data name="Lines_Bus" xml:space="preserve">
+    <value>bus</value>
+  </data>
+  <data name="Lines_Metro" xml:space="preserve">
+    <value>metro</value>
+  </data>
+  <data name="Lines_NightBus" xml:space="preserve">
+    <value>night bus</value>
+  </data>
+  <data name="Lines_PageTitle" xml:space="preserve">
+    <value>Lines</value>
+  </data>
+  <data name="Lines_Tram" xml:space="preserve">
+    <value>tram</value>
+  </data>
+  <data name="MenuItem_About" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="MenuItem_About_Description" xml:space="preserve">
+    <value>privacy policy, support</value>
+  </data>
+  <data name="MenuItem_Nearby" xml:space="preserve">
+    <value>nearby</value>
+  </data>
+  <data name="MenuItem_Nearby_Description" xml:space="preserve">
+    <value>stations nearby your current location</value>
+  </data>
+  <data name="MenuItem_Search" xml:space="preserve">
+    <value>search</value>
+  </data>
+  <data name="MenuItem_Search_Description" xml:space="preserve">
+    <value>stations by name (fulltext)</value>
+  </data>
+  <data name="MenuItem_Settings" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="MenuItem_Settings_Description" xml:space="preserve">
+    <value>turn on/off geolocation for nearby search</value>
+  </data>
+  <data name="MenuItem_StationList" xml:space="preserve">
+    <value>station list</value>
+  </data>
+  <data name="MenuItem_StationList_Description" xml:space="preserve">
+    <value>complete list of stations</value>
+  </data>
+  <data name="MenuItem_StationsByLines" xml:space="preserve">
+    <value>stations by lines</value>
+  </data>
+  <data name="MenuItem_StationsByLines_Description" xml:space="preserve">
+    <value>metro, tram and buses by direction</value>
+  </data>
+  <data name="Menu_PageTitle" xml:space="preserve">
+    <value>menu</value>
+  </data>
+  <data name="Message_FavoriteAdded" xml:space="preserve">
+    <value>favorite added</value>
+  </data>
+  <data name="MonitorError_DownloadingFailed" xml:space="preserve">
+    <value>Downloading departure information failed.</value>
+  </data>
+  <data name="MonitorError_FallbackOnErrorToErrorMessageConversion" xml:space="preserve">
+    <value>No departure information was sent by the server.</value>
+  </data>
+  <data name="MonitorError_GenericError" xml:space="preserve">
+    <value>An unexpected error occured, please try again later.</value>
+  </data>
+  <data name="MonitorError_MonitorsEmpty" xml:space="preserve">
+    <value>No departures available at this time.</value>
+  </data>
+  <data name="MonitorError_RblNotSpecified" xml:space="preserve">
+    <value>Internal app error: RBL not specified.</value>
+  </data>
+  <data name="MonitorError_ResponseParsingFailed" xml:space="preserve">
+    <value>Parsing the response failed.</value>
+  </data>
+  <data name="MonitorError_ServerAuthenticationFailed" xml:space="preserve">
+    <value>This app has failed to authenticate to the Wiener Linien API.</value>
+  </data>
+  <data name="MonitorError_ServerCallQuotaExceeded" xml:space="preserve">
+    <value>This app has exceeded the call quota allowed by Wiener Linien.</value>
+  </data>
+  <data name="MonitorError_ServerDatabaseUnavailable" xml:space="preserve">
+    <value>Server error reported: Database unavailable.</value>
+  </data>
+  <data name="MonitorError_ServerNoDataInDatabase" xml:space="preserve">
+    <value>Server error reported: No data in database.</value>
+  </data>
+  <data name="MonitorError_ServerQueryStringParameterInvalid" xml:space="preserve">
+    <value>This app has failed to send a properly formatted query to the Wiener Linien API.</value>
+  </data>
+  <data name="MonitorError_ServerStopDoesNotExist" xml:space="preserve">
+    <value>This stop does not exist (stop database out of date?).</value>
+  </data>
+  <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
+    <value>No stops found near</value>
+  </data>
+  <data name="PositionMessage_YourPosition" xml:space="preserve">
+    <value>Your position</value>
+  </data>
+  <data name="ProgressMessage_AcquiringPosition" xml:space="preserve">
+    <value>Acquiring position...</value>
+  </data>
+  <data name="ProgressMessage_LoadingDepartures" xml:space="preserve">
+    <value>Loading departures...</value>
+  </data>
   <data name="ResourceFlowDirection" xml:space="preserve">
     <value>LeftToRight</value>
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
@@ -125,13 +263,40 @@
     <value>en-US</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
-  <data name="ApplicationTitle" xml:space="preserve">
-    <value>MY APPLICATION</value>
+  <data name="Settings_GeolocationForNearbyStations" xml:space="preserve">
+    <value>Geolocation for nearby stations</value>
   </data>
-  <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
+  <data name="Settings_PageTitle" xml:space="preserve">
+    <value>settings</value>
   </data>
-  <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Menu Item</value>
+  <data name="StationInfo_AppBar_Favorite" xml:space="preserve">
+    <value>favorite</value>
+  </data>
+  <data name="StationInfo_AppBar_Refresh" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="StationInfo_AppBar_WalkTo" xml:space="preserve">
+    <value>walk to</value>
+  </data>
+  <data name="StationInfo_Departures_Title" xml:space="preserve">
+    <value>departures</value>
+  </data>
+  <data name="Stations_AppBar_Map" xml:space="preserve">
+    <value>map</value>
+  </data>
+  <data name="Stations_AppBar_Refresh" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="Stations_ListTitle" xml:space="preserve">
+    <value>list</value>
+  </data>
+  <data name="Stations_NearbyTitle" xml:space="preserve">
+    <value>nearby</value>
+  </data>
+  <data name="Stations_PageTitle" xml:space="preserve">
+    <value>Stations</value>
+  </data>
+  <data name="Stations_SearchTitle" xml:space="preserve">
+    <value>search</value>
   </data>
 </root>

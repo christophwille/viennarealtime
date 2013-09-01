@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.ViewModels.Stations;
 using CM = Caliburn.Micro;
 
@@ -27,7 +28,7 @@ namespace MundlTransit.WP8.Views.Stations
             var mapAppBarButton = new CM.AppBarButton()
             {
                 IconUri = new Uri("/Assets/map.centerme.png", UriKind.Relative),
-                Text = "map",
+                Text = AppResources.Stations_AppBar_Map,
                 Message = "ShowOnMap"
             };
 
@@ -36,7 +37,7 @@ namespace MundlTransit.WP8.Views.Stations
             var refreshAppBarButton = new CM.AppBarButton()
             {
                 IconUri = new Uri("/Assets/refresh.png", UriKind.Relative),
-                Text = "refresh",
+                Text = AppResources.Stations_AppBar_Refresh,
                 Message = "RefreshPosition"
             };
 

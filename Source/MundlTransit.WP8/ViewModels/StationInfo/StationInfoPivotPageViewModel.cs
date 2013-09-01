@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Caliburn.Micro;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Data.Runtime;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
 
 namespace MundlTransit.WP8.ViewModels.StationInfo
@@ -71,7 +72,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
 
             _dataService.InsertFavoriteIfNotExistsAsync(fav);
 
-            _uiService.ShowTextToast("favorite added", _haltestelle.Bezeichnung);
+            _uiService.ShowTextToast(AppResources.Message_FavoriteAdded, _haltestelle.Bezeichnung);
         }
 
         public async void WalkTo()

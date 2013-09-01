@@ -46,7 +46,7 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="{StaticResource ApplicationTitleUpperCased}" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="about" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.About_PageTitle, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
@@ -62,27 +62,25 @@
                         NavigateUri="{Binding GitHubUrl}"
                         TargetName="_new"
                         HorizontalAlignment="Left"
-                        Content="Support and Source Code" />
+                        Content="{Binding Path=LocalizedResources.About_SupportSourceCode_LinkText, Source={StaticResource LocalizedStrings}}" />
 
                     <StackPanel Orientation="Horizontal" Margin="0,18,0,0">
                         <TextBlock Style="{StaticResource PhoneTextNormalStyle}"
-                            Text="Version:" />
+                            Text="{Binding Path=LocalizedResources.About_Version_Text, Source={StaticResource LocalizedStrings}}" />
                         <TextBlock Margin="0" Style="{StaticResource PhoneTextNormalStyle}"
                             x:Name="VersionText" />
                     </StackPanel>
-                    
-                    <Button x:Name="Review" HorizontalAlignment="Left" Content="Review this app"/>
+
+                    <Button x:Name="Review" HorizontalAlignment="Left" Content="{Binding Path=LocalizedResources.About_ReviewApp_ButtonText, Source={StaticResource LocalizedStrings}}"/>
 
                     <RichTextBox>
                         <Paragraph>
-                            The app uses open data provided by Wiener Linien. To learn 
-                            more about the data and API they are offering, please visit
-                            <Hyperlink  TargetName="_new" NavigateUri="{Binding WienerLinienOgdCatalogPage}">Wiener Linien - Echtzeitdaten</Hyperlink>
+                            <Run Text="{Binding Path=AboutParagraphOne}" />
+                            <Hyperlink TargetName="_new" NavigateUri="{Binding WienerLinienOgdCatalogPage}">Wiener Linien - Echtzeitdaten</Hyperlink>
                         </Paragraph>
                         <Paragraph></Paragraph>
                         <Paragraph>
-                            No personally identifyable information (including location data) is 
-                            sent by this app.
+                            <Run Text="{Binding Path=AboutParagraphTwo}" />
                         </Paragraph>
                         <Paragraph></Paragraph>
                     </RichTextBox>
@@ -91,7 +89,7 @@
                         NavigateUri="{Binding PrivacyPolicyUrl}"
                         TargetName="_new"
                         HorizontalAlignment="Left"
-                        Content="Privacy Policy" />
+                        Content="{Binding Path=LocalizedResources.About_PrivacyPolicy_LinkText, Source={StaticResource LocalizedStrings}}" />
                 </StackPanel>
             </ScrollViewer>
         </Grid>

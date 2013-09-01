@@ -8,6 +8,7 @@ using Caliburn.Micro;
 using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Model;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
 using Windows.Devices.Geolocation;
 
@@ -24,7 +25,7 @@ namespace MundlTransit.WP8.ViewModels.Stations
             _locationService = ls;
             _dataService = ds;
 
-            DisplayName = "nearby";
+            DisplayName = AppResources.Stations_NearbyTitle;
         }
 
         private string _infoMessage;
@@ -51,7 +52,7 @@ namespace MundlTransit.WP8.ViewModels.Stations
         // Geolocator works only on the UI thread; won't return at all if not
         protected async void PerformNearestSearch()
         {
-            InfoMessage = "Acquiring position...";
+            InfoMessage = AppResources.ProgressMessage_AcquiringPosition;
             Deployment.Current.Dispatcher.BeginInvoke(ContinueNearestSearchOnUiThread);
         }
 
@@ -65,7 +66,7 @@ namespace MundlTransit.WP8.ViewModels.Stations
             if (posResult.Succeeded)
             {
                 var pos = posResult.Position;
-                InfoMessage = String.Format("Your position: {0:F2} {1:F2}", pos.Coordinate.Longitude, pos.Coordinate.Latitude);
+                InfoMessage = String.Format("{0}: {1:F2} {2:F2}", AppResources.PositionMessage_YourPosition, pos.Coordinate.Longitude, pos.Coordinate.Latitude);
 
                 MyLocation = new Wgs84Location(pos.Coordinate);
 
@@ -73,7 +74,7 @@ namespace MundlTransit.WP8.ViewModels.Stations
 
                 if (!haltestellen.Any())
                 {
-                    InfoMessage = String.Format("No stops found near: {0:F2} {1:F2}", 
+                    InfoMessage = String.Format("{0}: {1:F2} {2:F2}", AppResources.PositionMessage_NoStopsFoundNear,
                         pos.Coordinate.Longitude, pos.Coordinate.Latitude);
                 }
                 else

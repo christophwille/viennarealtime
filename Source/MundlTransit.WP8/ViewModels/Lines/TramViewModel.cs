@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
+using MundlTransit.WP8.Resources;
 
 namespace MundlTransit.WP8.ViewModels.Lines
 {
@@ -12,7 +13,7 @@ namespace MundlTransit.WP8.ViewModels.Lines
         public TramViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            DisplayName = "tram";
+            DisplayName = AppResources.Lines_Tram;
         }
     }
 }

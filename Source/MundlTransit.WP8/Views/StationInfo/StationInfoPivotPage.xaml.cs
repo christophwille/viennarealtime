@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using MundlTransit.WP8.Resources;
 using CM = Caliburn.Micro;
 
 namespace MundlTransit.WP8.Views.StationInfo
@@ -26,7 +27,7 @@ namespace MundlTransit.WP8.Views.StationInfo
             var addToFavsAppBarButton = new CM.AppBarButton()
             {
                 IconUri = new Uri("/Assets/favs.addto.png", UriKind.Relative),
-                Text = "favorite",
+                Text = AppResources.StationInfo_AppBar_Favorite,
                 Message = "AddToFavorites"
             };
 
@@ -35,7 +36,7 @@ namespace MundlTransit.WP8.Views.StationInfo
             var walkToAppBarButton = new CM.AppBarButton()
             {
                 IconUri = new Uri("/Assets/map.centerme.png", UriKind.Relative),
-                Text = "walk to",
+                Text = AppResources.StationInfo_AppBar_WalkTo,
                 Message = "WalkTo"
             };
 
@@ -44,7 +45,7 @@ namespace MundlTransit.WP8.Views.StationInfo
             var refreshAppBarButton = new CM.AppBarButton()
             {
                 IconUri = new Uri("/Assets/refresh.png", UriKind.Relative),
-                Text = "refresh",
+                Text = AppResources.StationInfo_AppBar_Refresh,
                 Message = "RefreshDepartureInformation"
             };
 

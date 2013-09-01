@@ -8,6 +8,7 @@ using System.Windows;
 using Caliburn.Micro;
 using Microsoft.Phone.Shell;
 using MundlTransit.WP8.Data.Reference;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
 using WienerLinien.Api;
 
@@ -21,7 +22,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
         public DepartureViewModel(IEchtzeitdatenService wlds)
         {
             _echtzeitdatenService = wlds;
-            DisplayName = "departures";
+            DisplayName = AppResources.StationInfo_Departures_Title;
         }
 
         public Haltestelle Haltestelle { get; set; }
@@ -50,7 +51,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
             }
             else
             {
-                string errMessage = "No departure information was sent by the server.";
+                string errMessage = AppResources.MonitorError_FallbackOnErrorToErrorMessageConversion;
 
                 if (!monitorInfo.Succeeded)
                 {
@@ -59,7 +60,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
 
                 MessageBoxResult result =
                     MessageBox.Show(errMessage,
-                    "Error",
+                    AppResources.ErrorMessage_Title,
                     MessageBoxButton.OK);
             }
         }
@@ -73,7 +74,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
                 SystemTray.ProgressIndicator = _progressIndicator;
             }
 
-            _progressIndicator.Text = "Loading departures...";
+            _progressIndicator.Text = AppResources.ProgressMessage_LoadingDepartures;
             _progressIndicator.IsIndeterminate = true;
         }
 

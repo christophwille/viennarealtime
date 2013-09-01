@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MundlTransit.WP8.Data.Reference;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
 
 namespace MundlTransit.WP8.ViewModels.Stations
@@ -22,7 +23,7 @@ namespace MundlTransit.WP8.ViewModels.Stations
             : base(StationsViewModelEnum.Search, navigationService)
         {
             _dataService = ds;
-            DisplayName = "search";
+            DisplayName = AppResources.Stations_SearchTitle;
         }
 
         protected override void OnInitialize()
