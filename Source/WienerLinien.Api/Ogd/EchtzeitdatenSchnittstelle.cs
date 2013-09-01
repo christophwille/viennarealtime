@@ -35,7 +35,7 @@ namespace WienerLinien.Api.Ogd
             var rbls = String.Join("&", rblList.Select(rbl => String.Format("rbl={0}", rbl)));
             var url = String.Format(ApiUrl, rbls, _apiKey, DateTime.Now.Ticks.ToString());
 
-            var response = await PerformHttpGetRequest(url);
+            var response = await PerformHttpGetRequest(url).ConfigureAwait(false);
 
             if (null == response)
             {
@@ -175,7 +175,7 @@ namespace WienerLinien.Api.Ogd
             {
                 var c = new HttpClient();
                 c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                return await c.GetStringAsync(url);
+                return await c.GetStringAsync(url).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
