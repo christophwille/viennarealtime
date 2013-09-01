@@ -10,5 +10,6 @@ namespace MundlTransit.WP8.DesignTimeData
     {
         public string Bezeichnung { get; set; }
         public string SecondaryInformation { get; set; }
+        public string DisplayDistanz { get; set; }
     }
 }
