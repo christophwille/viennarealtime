@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MundlTransit.WP8.ViewModels.Stations;
+using CM = Caliburn.Micro;
 
 namespace MundlTransit.WP8.Views.Stations
 {
@@ -16,6 +17,30 @@ namespace MundlTransit.WP8.Views.Stations
         public StationsPivotPage()
         {
             InitializeComponent();
+            BuildLocalizedApplicationBar();
+        }
+
+        private void BuildLocalizedApplicationBar()
+        {
+            ApplicationBar = new ApplicationBar();
+
+            var mapAppBarButton = new CM.AppBarButton()
+            {
+                IconUri = new Uri("/Assets/map.centerme.png", UriKind.Relative),
+                Text = "map",
+                Message = "ShowOnMap"
+            };
+
+            ApplicationBar.Buttons.Add(mapAppBarButton);
+
+            var refreshAppBarButton = new CM.AppBarButton()
+            {
+                IconUri = new Uri("/Assets/refresh.png", UriKind.Relative),
+                Text = "refresh",
+                Message = "RefreshPosition"
+            };
+
+            ApplicationBar.Buttons.Add(refreshAppBarButton);
         }
 
         //

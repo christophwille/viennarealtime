@@ -52,6 +52,8 @@
 
     </Grid>
 
+    <!-- SEE CodeBehind for AppBar (>> Localization <<)
+    
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True">
             <shell:ApplicationBar.Buttons>
@@ -61,14 +63,14 @@
                 <cm:AppBarButton IconUri="/Assets/map.centerme.png"
 				                 Text="walk to"
 				                 Message="WalkTo" />
-                <!--<cm:AppBarButton IconUri="/Assets/outline.squares.png"
+                <cm:AppBarButton IconUri="/Assets/outline.squares.png"
 				                 Text="home"
-				                 Message="GoToStart" />-->
+				                 Message="GoToStart" />
                 <cm:AppBarButton IconUri="/Assets/refresh.png"
 				                 Text="refresh"
 				                 Message="RefreshDepartureInformation" />
             </shell:ApplicationBar.Buttons>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
     
 </phone:PhoneApplicationPage>

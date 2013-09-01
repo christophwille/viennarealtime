@@ -53,6 +53,8 @@
 
     </Grid>
 
+    <!-- SEE CodeBehind for AppBar (>> Localization <<)
+    
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True">
             <shell:ApplicationBar.Buttons>
@@ -64,6 +66,6 @@
 				                 Message="RefreshPosition" />
             </shell:ApplicationBar.Buttons>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
 
 </phone:PhoneApplicationPage>
