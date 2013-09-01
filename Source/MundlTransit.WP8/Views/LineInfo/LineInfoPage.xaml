@@ -73,6 +73,8 @@
         </Grid>
     </Grid>
 
+    <!-- SEE CodeBehind for AppBar (>> Localization <<)
+    
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True">
             <shell:ApplicationBar.Buttons>
@@ -82,5 +84,6 @@
             </shell:ApplicationBar.Buttons>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
+    -->
     
 </phone:PhoneApplicationPage>
