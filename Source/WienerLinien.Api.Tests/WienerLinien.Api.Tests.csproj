@@ -66,6 +66,12 @@
     <None Include="Spec216BeispielResponse.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Spec35BeispielResponse.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Spec45BeispielResponse.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TscherttegasseNoOverrides.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

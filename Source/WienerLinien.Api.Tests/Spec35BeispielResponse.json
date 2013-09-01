@@ -1,0 +1,43 @@
+﻿{ "data" : { "trafficInfoCategories" : [ { "id" : 1,
+            "name" : "aufzugsinfo",
+            "refTrafficInfoCategoryGroupId" : 1,
+            "title" : "Aufzugsstörungen"
+          },
+          { "id" : 3,
+            "name" : "stoerungkurz",
+            "refTrafficInfoCategoryGroupId" : 1,
+            "title" : "Störungen Kurz"
+          }
+        ],
+      "trafficInfoCategoryGroups" : [ { "id" : 1,
+            "name" : "pt"
+          } ],
+      "trafficInfos" : [ { "attributes" : { "location" : "U6 Bahnsteig Ri. Siebenhirten - Ausgang Sechshauserstraße",
+                "reason" : "",
+                "relatedLines" : [ "U6" ],
+                "relatedStops" : [ 4611 ],
+                "station" : "Gumpendorfer Straße",
+                "status" : "außer Betrieb",
+                "towards" : "U6 Siebenhirten"
+              },
+            "description" : "U6 Bahnsteig Ri. Siebenhirten - Ausgang Sechshauserstraße",
+            "name" : "eD_23",
+            "refTrafficInfoCategoryId" : 1,
+            "relatedLines" : [ "U6" ],
+            "relatedStops" : [ 4611 ],
+            "title" : "Gumpendorfer Straße"
+          },
+          { "description" : "Haltestelle\naufgelassen, Einsteigstelle Johnstraße",
+            "name" : "tk_-1466319664",
+            "owner" : "WL",
+            "priority" : "1",
+            "refTrafficInfoCategoryId" : 3,
+            "relatedLines" : [ "N49" ],
+            "relatedStops" : [ 1472 ],
+            "time" : { "end" : "2013-08-10T05:15:00.000+0200",
+                "start" : "2013-07-31T00:45:00.000+0200"
+              },
+            "title" : "Haltestelle\naufgelassen, Einsteigstelle Johnstraße"
+          }
+        ]
+    } }
