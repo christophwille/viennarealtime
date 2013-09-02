@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,6 +27,8 @@ namespace MundlTransit.WP8
 {
     public class AppBootstrapper : PhoneBootstrapper
     {
+        public static String appForceCulture = ""; // "qps-PLOC"; 
+
         PhoneContainer container;
 
         // http://caliburnmicro.codeplex.com/discussions/346663
@@ -175,6 +179,13 @@ namespace MundlTransit.WP8
         {
             try
             {
+                // See http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/03/08/tips-for-localizing-windows-phone-apps-part-2.aspx, section Pseudolocalization support 
+                if (Debugger.IsAttached && !String.IsNullOrWhiteSpace(appForceCulture))
+                {
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo(appForceCulture);
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(appForceCulture);
+                }
+
                 // Set the font to match the display language defined by the
                 // ResourceLanguage resource string for each supported language.
                 //

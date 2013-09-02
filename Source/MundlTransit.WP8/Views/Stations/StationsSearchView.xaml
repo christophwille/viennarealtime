@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
         
         <StackPanel Margin="12,0,12,0" Grid.Row="0">
-            <TextBlock Text="Station Name (auto-search after 3 characters)" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.Stations_SearchHowTo_Text, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBox x:Name="SearchText" VerticalAlignment="Top" Margin="0,12"/>
         </StackPanel>
 

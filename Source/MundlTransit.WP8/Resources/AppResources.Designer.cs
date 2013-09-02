@@ -592,6 +592,15 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Station Name (auto-search after 3 characters).
+        /// </summary>
+        public static string Stations_SearchHowTo_Text {
+            get {
+                return ResourceManager.GetString("Stations_SearchHowTo_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to search.
         /// </summary>
         public static string Stations_SearchTitle {

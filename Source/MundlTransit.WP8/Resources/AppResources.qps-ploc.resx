@@ -117,189 +117,189 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About_InfoParagraphOne" xml:space="preserve">
-    <value>The app uses open data provided by Wiener Linien. To learn more about the data and API they are offering, please visit</value>
-  </data>
-  <data name="About_InfoParagraphTwo" xml:space="preserve">
-    <value>No personally identifyable information (including location data) is sent by this app.</value>
-  </data>
-  <data name="About_PageTitle" xml:space="preserve">
-    <value>about</value>
-  </data>
-  <data name="About_PrivacyPolicy_LinkText" xml:space="preserve">
-    <value>Privacy Policy</value>
-  </data>
-  <data name="About_ReviewApp_ButtonText" xml:space="preserve">
-    <value>Review this app</value>
-  </data>
-  <data name="About_SupportSourceCode_LinkText" xml:space="preserve">
-    <value>Support and Source Code</value>
-  </data>
-  <data name="About_Version_Text" xml:space="preserve">
-    <value>Version:</value>
-  </data>
-  <data name="ErrorMessage_Title" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="Favorites_NoFavoritesYet" xml:space="preserve">
-    <value>You do not have any favorites yet.</value>
-  </data>
-  <data name="Favorites_PageTitle" xml:space="preserve">
-    <value>favorites</value>
-  </data>
-  <data name="LineInfo_AppBar_Direction" xml:space="preserve">
-    <value>direction</value>
-  </data>
-  <data name="Lines_Bus" xml:space="preserve">
-    <value>bus</value>
-  </data>
-  <data name="Lines_Metro" xml:space="preserve">
-    <value>metro</value>
-  </data>
-  <data name="Lines_NightBus" xml:space="preserve">
-    <value>night bus</value>
-  </data>
-  <data name="Lines_PageTitle" xml:space="preserve">
-    <value>Lines</value>
-  </data>
-  <data name="Lines_Tram" xml:space="preserve">
-    <value>tram</value>
-  </data>
-  <data name="MenuItem_About" xml:space="preserve">
-    <value>about</value>
-  </data>
-  <data name="MenuItem_About_Description" xml:space="preserve">
-    <value>privacy policy, support</value>
-  </data>
-  <data name="MenuItem_Nearby" xml:space="preserve">
-    <value>nearby</value>
-  </data>
-  <data name="MenuItem_Nearby_Description" xml:space="preserve">
-    <value>stations nearby your current location</value>
-  </data>
-  <data name="MenuItem_Search" xml:space="preserve">
-    <value>search</value>
-  </data>
-  <data name="MenuItem_Search_Description" xml:space="preserve">
-    <value>stations by name (fulltext)</value>
-  </data>
-  <data name="MenuItem_Settings" xml:space="preserve">
-    <value>settings</value>
-  </data>
-  <data name="MenuItem_Settings_Description" xml:space="preserve">
-    <value>turn on/off geolocation for nearby search</value>
-  </data>
-  <data name="MenuItem_StationList" xml:space="preserve">
-    <value>station list</value>
-  </data>
-  <data name="MenuItem_StationList_Description" xml:space="preserve">
-    <value>complete list of stations</value>
-  </data>
-  <data name="MenuItem_StationsByLines" xml:space="preserve">
-    <value>stations by lines</value>
-  </data>
-  <data name="MenuItem_StationsByLines_Description" xml:space="preserve">
-    <value>metro, tram and buses by direction</value>
-  </data>
-  <data name="Menu_PageTitle" xml:space="preserve">
-    <value>menu</value>
-  </data>
-  <data name="Message_FavoriteAdded" xml:space="preserve">
-    <value>favorite added</value>
-  </data>
-  <data name="MonitorError_DownloadingFailed" xml:space="preserve">
-    <value>Downloading departure information failed.</value>
-  </data>
-  <data name="MonitorError_FallbackOnErrorToErrorMessageConversion" xml:space="preserve">
-    <value>No departure information was sent by the server.</value>
-  </data>
-  <data name="MonitorError_GenericError" xml:space="preserve">
-    <value>An unexpected error occured, please try again later.</value>
-  </data>
-  <data name="MonitorError_MonitorsEmpty" xml:space="preserve">
-    <value>No departures available at this time.</value>
-  </data>
-  <data name="MonitorError_RblNotSpecified" xml:space="preserve">
-    <value>Internal app error: RBL not specified.</value>
-  </data>
-  <data name="MonitorError_ResponseParsingFailed" xml:space="preserve">
-    <value>Parsing the response failed.</value>
-  </data>
-  <data name="MonitorError_ServerAuthenticationFailed" xml:space="preserve">
-    <value>This app has failed to authenticate to the Wiener Linien API.</value>
-  </data>
-  <data name="MonitorError_ServerCallQuotaExceeded" xml:space="preserve">
-    <value>This app has exceeded the call quota allowed by Wiener Linien.</value>
-  </data>
-  <data name="MonitorError_ServerDatabaseUnavailable" xml:space="preserve">
-    <value>Server error reported: Database unavailable.</value>
-  </data>
-  <data name="MonitorError_ServerNoDataInDatabase" xml:space="preserve">
-    <value>Server error reported: No data in database.</value>
-  </data>
-  <data name="MonitorError_ServerQueryStringParameterInvalid" xml:space="preserve">
-    <value>This app has failed to send a properly formatted query to the Wiener Linien API.</value>
-  </data>
-  <data name="MonitorError_ServerStopDoesNotExist" xml:space="preserve">
-    <value>This stop does not exist (stop database out of date?).</value>
-  </data>
-  <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
-    <value>No stops found near</value>
-  </data>
-  <data name="PositionMessage_YourPosition" xml:space="preserve">
-    <value>Your position</value>
-  </data>
-  <data name="ProgressMessage_AcquiringPosition" xml:space="preserve">
-    <value>Acquiring position...</value>
-  </data>
-  <data name="ProgressMessage_LoadingDepartures" xml:space="preserve">
-    <value>Loading departures...</value>
-  </data>
   <data name="ResourceFlowDirection" xml:space="preserve">
     <value>LeftToRight</value>
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>qps-ploc</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
+  <data name="About_InfoParagraphOne" xml:space="preserve">
+    <value>[D0FCE][!!_Ťħê àþρ µŝèş óþéй ðàţã ρřôνįďéð ьý Ẁîêηéѓ Ĺįиìéи. Ţõ ĺèâŗή mòѓę âБôûτ τћę ďâτã áйð ÂРĮ ţђêў àřé õƒƒéřìήġ, ρĺéâšé νíśìт_!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]</value>
+  </data>
+  <data name="About_InfoParagraphTwo" xml:space="preserve">
+    <value>[2C6FC][!!_Ňó þéŕşóηâļĺў ìđèηťîƒўàьłę íηƒõŕmáτìôή (įйċłùðìиĝ ľóċãтįòи đàτà) îŝ śêήţ ьý τнįś áρр._!!!!!!!!!!!!!!!!!!!!!!!!!!]</value>
+  </data>
+  <data name="About_PageTitle" xml:space="preserve">
+    <value>[49CBB][!!_àъóûт_!!]</value>
+  </data>
+  <data name="About_PrivacyPolicy_LinkText" xml:space="preserve">
+    <value>[EB30B][!!_ΡříνáćУ Þóľîćў_!!!!]</value>
+  </data>
+  <data name="About_ReviewApp_ButtonText" xml:space="preserve">
+    <value>[B491A][!!_Ŕêνįêŵ τħîŝ âρр_!!!!]</value>
+  </data>
+  <data name="About_SupportSourceCode_LinkText" xml:space="preserve">
+    <value>[22E56][!!_Śúрþõřт âηð Şõµѓčę Ċôðê_!!!!!!]</value>
+  </data>
+  <data name="About_Version_Text" xml:space="preserve">
+    <value>[C235E][!!_Véřśìóй:_!!]</value>
+  </data>
+  <data name="ErrorMessage_Title" xml:space="preserve">
+    <value>[4A030][!!_Êŕŗôř_!!]</value>
+  </data>
+  <data name="Favorites_NoFavoritesYet" xml:space="preserve">
+    <value>[C798D][!!_Ýôû đò иóτ нâνê àηŷ ƒâνóѓįťęş Уęť._!!!!!!!!!!]</value>
+  </data>
+  <data name="Favorites_PageTitle" xml:space="preserve">
+    <value>[3340F][!!_ƒâνõŗìţéś_!!]</value>
+  </data>
+  <data name="LineInfo_AppBar_Direction" xml:space="preserve">
+    <value>[74F6F][!!_đíŕéċťįòή_!!]</value>
+  </data>
+  <data name="Lines_Bus" xml:space="preserve">
+    <value>[5815C][!!_вùş_!!]</value>
+  </data>
+  <data name="Lines_Metro" xml:space="preserve">
+    <value>[8B3C4][!!_мéťѓõ_!!]</value>
+  </data>
+  <data name="Lines_NightBus" xml:space="preserve">
+    <value>[F5A75][!!_ηìğћт ъûŝ_!!]</value>
+  </data>
+  <data name="Lines_PageTitle" xml:space="preserve">
+    <value>[14C6D][!!_Ļìηéś_!!]</value>
+  </data>
+  <data name="Lines_Tram" xml:space="preserve">
+    <value>[AAFC4][!!_τŕám_!!]</value>
+  </data>
+  <data name="MenuItem_About" xml:space="preserve">
+    <value>[6B764][!!_ãвóúť_!!]</value>
+  </data>
+  <data name="MenuItem_About_Description" xml:space="preserve">
+    <value>[BAA7D][!!_ρříνãċŷ þôĺìčŷ, ŝúþρòѓτ_!!!!!!]</value>
+  </data>
+  <data name="MenuItem_Nearby" xml:space="preserve">
+    <value>[91B44][!!_йęáŕьў_!!]</value>
+  </data>
+  <data name="MenuItem_Nearby_Description" xml:space="preserve">
+    <value>[44537][!!_śтàтíòήś иèářъÿ ÿôúѓ ċúřřèήт ļòċãţìôи_!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MenuItem_Search" xml:space="preserve">
+    <value>[36D4C][!!_şéáѓčħ_!!]</value>
+  </data>
+  <data name="MenuItem_Search_Description" xml:space="preserve">
+    <value>[703A6][!!_šţáτìõиş ьў ηámê (ƒúĺľτéхт)_!!!!!!!!]</value>
+  </data>
+  <data name="MenuItem_Settings" xml:space="preserve">
+    <value>[F4C25][!!_šéттîйģś_!!]</value>
+  </data>
+  <data name="MenuItem_Settings_Description" xml:space="preserve">
+    <value>[AD1EB][!!_тûŕη óή/ôƒƒ ĝéôłòćâţìõή ƒôŗ йèãѓьУ śéâѓćħ_!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MenuItem_StationList" xml:space="preserve">
+    <value>[D0A10][!!_ŝтàτìôή ľíŝţ_!!]</value>
+  </data>
+  <data name="MenuItem_StationList_Description" xml:space="preserve">
+    <value>[468D5][!!_čómрľęτę ļíšţ ôƒ śťâţîóйŝ_!!!!!!!!]</value>
+  </data>
+  <data name="MenuItem_StationsByLines" xml:space="preserve">
+    <value>[B77E9][!!_şтâţîóήş ъŷ ĺįиêş_!!!!!!]</value>
+  </data>
+  <data name="MenuItem_StationsByLines_Description" xml:space="preserve">
+    <value>[AF218][!!_мęτřô, τŗãm âηď ъùŝęš ьУ đìŕêċţîôй_!!!!!!!!!!]</value>
+  </data>
+  <data name="Menu_PageTitle" xml:space="preserve">
+    <value>[FF0D2][!!_мêиú_!!]</value>
+  </data>
+  <data name="Message_FavoriteAdded" xml:space="preserve">
+    <value>[DA9F0][!!_ƒâνõѓįтę áďđęđ_!!!!]</value>
+  </data>
+  <data name="MonitorError_DownloadingFailed" xml:space="preserve">
+    <value>[AE180][!!_Ðôẃиłôáďîήģ ðęρâŕтùřê ìηƒõѓмãţìõи ƒáìľéđ._!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_FallbackOnErrorToErrorMessageConversion" xml:space="preserve">
+    <value>[04612][!!_Ñõ ðęρáѓťµŗê įйƒóŕмáτîõи ẁãš ŝęит вÿ тħè şéŗνèѓ._!!!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_GenericError" xml:space="preserve">
+    <value>[49801][!!_Âи ùиê×ρęċţęď èřřóѓ õċčúřêđ, þľęãśé тѓý ãĝàįи ĺàτéŕ._!!!!!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_MonitorsEmpty" xml:space="preserve">
+    <value>[4FB04][!!_Ñô đéрãŕтûѓêś àνâîłâвļè àτ тћįš τįмé._!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_RblNotSpecified" xml:space="preserve">
+    <value>[A728C][!!_Îήτéŗиàļ àρр êřŗõř: ŘßĻ иóт ŝрêćìƒįéð._!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_ResponseParsingFailed" xml:space="preserve">
+    <value>[8BEE1][!!_Рãŗşìйġ τћè ŗéšрòйşé ƒãîļêð._!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_ServerAuthenticationFailed" xml:space="preserve">
+    <value>[886A7][!!_Τнìş áрр ħáş ƒãìłęď тô âûτħéиţíčãţé ťô τћę Ŵįêиèѓ Ŀíиìęй ÃÞĮ._!!!!!!!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_ServerCallQuotaExceeded" xml:space="preserve">
+    <value>[E5FAB][!!_Тнíš ãρþ нáš èхćéêðèđ тħé čâĺł qúõťã áłľóẁêđ ьУ Ẅįęиéŗ Ļíήîęй._!!!!!!!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_ServerDatabaseUnavailable" xml:space="preserve">
+    <value>[F5E47][!!_Ŝêŕνęř ęřŕòř ŗéþôѓţèđ: Đâţâъàšê µηàνãįļáвĺę._!!!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_ServerNoDataInDatabase" xml:space="preserve">
+    <value>[27CC7][!!_Śêřνèѓ èŗřõŕ ѓêþòřţêđ: Ņò đãτà įη đãтáьâšê._!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_ServerQueryStringParameterInvalid" xml:space="preserve">
+    <value>[C27F1][!!_Тнìš àρþ ћàŝ ƒáįļęð ťõ šêήđ â рřôрêřĺУ ƒõŕмáτţéð qùéřУ ťõ тĥé Ẅíèйêŗ Ľįήìèή ÀÞÌ._!!!!!!!!!!!!!!!!!!!!!!!!]</value>
+  </data>
+  <data name="MonitorError_ServerStopDoesNotExist" xml:space="preserve">
+    <value>[2791D][!!_Τħíš ŝţóр đòéś ήóт èхįśτ (şţõþ đãτàъãşè òùť òƒ đâтę?)._!!!!!!!!!!!!!!!!]</value>
+  </data>
+  <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
+    <value>[1E0CF][!!_Ňõ ŝτòрš ƒóûйď йèâѓ_!!!!!!]</value>
+  </data>
+  <data name="PositionMessage_YourPosition" xml:space="preserve">
+    <value>[DA61F][!!_Ýóúř ρóšįţíôи_!!]</value>
+  </data>
+  <data name="ProgressMessage_AcquiringPosition" xml:space="preserve">
+    <value>[51AC5][!!_Âĉqùîřįήġ ρõśíţíõη..._!!!!!!]</value>
+  </data>
+  <data name="ProgressMessage_LoadingDepartures" xml:space="preserve">
+    <value>[2E246][!!_Ļóâďîηğ đêрàŕťúřêś..._!!!!!!]</value>
+  </data>
   <data name="Settings_GeolocationForNearbyStations" xml:space="preserve">
-    <value>Geolocation for nearby stations</value>
+    <value>[257D1][!!_Ģèôļòćâţìòή ƒôѓ ηęàřБý śţâтìóиś_!!!!!!!!!!]</value>
   </data>
   <data name="Settings_PageTitle" xml:space="preserve">
-    <value>settings</value>
+    <value>[29D23][!!_şéтţíηġš_!!]</value>
   </data>
   <data name="StationInfo_AppBar_Favorite" xml:space="preserve">
-    <value>favorite</value>
+    <value>[68747][!!_ƒáνõŗìτê_!!]</value>
   </data>
   <data name="StationInfo_AppBar_Refresh" xml:space="preserve">
-    <value>refresh</value>
+    <value>[0E1C2][!!_ŕèƒŗèšĥ_!!]</value>
   </data>
   <data name="StationInfo_AppBar_WalkTo" xml:space="preserve">
-    <value>walk to</value>
+    <value>[965D4][!!_ŵáłĸ ţô_!!]</value>
   </data>
   <data name="StationInfo_Departures_Title" xml:space="preserve">
-    <value>departures</value>
+    <value>[48777][!!_ďęрáŕťûŗèş_!!]</value>
   </data>
   <data name="Stations_AppBar_Map" xml:space="preserve">
-    <value>map</value>
+    <value>[AC922][!!_мâþ_!!]</value>
   </data>
   <data name="Stations_AppBar_Refresh" xml:space="preserve">
-    <value>refresh</value>
+    <value>[5B8B6][!!_řèƒřêšн_!!]</value>
   </data>
   <data name="Stations_ListTitle" xml:space="preserve">
-    <value>list</value>
+    <value>[93E2B][!!_łíšť_!!]</value>
   </data>
   <data name="Stations_NearbyTitle" xml:space="preserve">
-    <value>nearby</value>
+    <value>[2AFC5][!!_ηèãѓъŷ_!!]</value>
   </data>
   <data name="Stations_PageTitle" xml:space="preserve">
-    <value>Stations</value>
-  </data>
-  <data name="Stations_SearchHowTo_Text" xml:space="preserve">
-    <value>Station Name (auto-search after 3 characters)</value>
+    <value>[2D28A][!!_Śťâţíõήś_!!]</value>
   </data>
   <data name="Stations_SearchTitle" xml:space="preserve">
-    <value>search</value>
+    <value>[A5AA8][!!_ŝèàѓćĥ_!!]</value>
+  </data>
+  <data name="Stations_SearchHowTo_Text" xml:space="preserve">
+    <value>[B902A][!!_Şţàťįòй Ńâмę (àûτô-śéàŕċћ ãƒтéř 3 ćĥáѓâčťêѓŝ)_!!!!!!!!!!!!!!]</value>
   </data>
 </root>
