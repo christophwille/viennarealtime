@@ -1,11 +1,21 @@
 ﻿
 Feature wish list
 
+* Traffic information (stoerunglang)
+
+* Traffic information at stop (when showing departure information)
+
 * News (top-level next to menu, favorites)
 
-* Traffic information (at stop when showing departure information)
-
 [* Host development blog on github]
+
+* Station history (how often did I check departures at station X?)
+
+* Search by line (tap on stop to go either to departures or list of other lines at station)
+
+* Station history (useful?)
+
+* Download of station / line updates instead of DbPrepare (background task) - would need some information to know "is there something new?"
 
 
 

@@ -72,6 +72,9 @@
     <None Include="Spec45BeispielResponse.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Stoerunglang.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TscherttegasseNoOverrides.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -22,13 +22,6 @@ if you think that will help me track down a bug quicker, or if that includes inf
 * `Lines` - list all lines by line type, show stations with changeable direction
 * `Departures` - list all departures by line / direction for a station (selected via one of the previous three options)
 
-## TODO List
-
-* Search by line (tap on stop to go either to departures or list of other lines at station)
-* News
-* Station history (useful?)
-* Download of station / line updates instead of DbPrepare (background task) - would need some information to know "is there something new?"
-	
 ## Screenshots
 
 Please see the StoreSubmissionAssets folder, it contains screenshots in various sizes as well as the App logo.

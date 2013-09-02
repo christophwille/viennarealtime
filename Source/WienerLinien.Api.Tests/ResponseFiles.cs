@@ -21,6 +21,9 @@ namespace WienerLinien.Api.Tests
         public static readonly string U6Siebenhirten = "U6Siebenhirten.json"; 
 
         // Tscherttegasse: http://www.wienerlinien.at/ogd_realtime/monitor?rbl=4640&rbl=4629&sender=
-        public static readonly string TscherttegasseNoOverrides = "TscherttegasseNoOverrides.json"; 
+        public static readonly string TscherttegasseNoOverrides = "TscherttegasseNoOverrides.json";
+
+        // Stoerunglang: http://www.wienerlinien.at/ogd_realtime/trafficInfoList?name=stoerunglang&sender=
+        public static readonly string Stoerunglang = "Stoerunglang.json";
     }
 }
