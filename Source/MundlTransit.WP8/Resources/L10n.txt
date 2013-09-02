@@ -1,0 +1,21 @@
+﻿Pseudoizer
+	https://github.com/shanselman/Psuedoizer
+
+	http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/03/08/tips-for-localizing-windows-phone-apps-part-2.aspx
+	http://stackoverflow.com/questions/17428739/how-to-enable-pseudo-language-on-windows-phone-8-emulator
+
+
+App Tile
+	http://www.silverlightshow.net/items/Windows-Phone-8-Localization.aspx
+		http://patrickgetzmann.wordpress.com/wp7-localize/
+
+
+Resource Translation:
+
+	Multilingual App Toolkit for Visual Studio 2012
+		http://msdn.microsoft.com/en-us/windows/apps/hh848309
+
+	3rd party online services:
+		Crowdin, Transifex, &c
+
+	http://www.zeta-resource-editor.com/index.html

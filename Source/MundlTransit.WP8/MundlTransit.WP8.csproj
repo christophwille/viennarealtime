@@ -378,6 +378,7 @@
     <Content Include="Assets\outline.squares.png" />
     <Content Include="Assets\refresh.png" />
     <Content Include="Assets\sort.png" />
+    <None Include="Resources\L10n.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
