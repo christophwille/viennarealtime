@@ -8,6 +8,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using MP = WienerLinien.Api.Ogd.MonitorProxies;
 
 namespace WienerLinien.Api.Ogd
 {
@@ -58,7 +59,7 @@ namespace WienerLinien.Api.Ogd
 
         public MonitorInformation ParseMonitorResponse(string jsonResponse)
         {
-            var rootObj = JsonConvert.DeserializeObject<RootObject>(jsonResponse);
+            var rootObj = JsonConvert.DeserializeObject<MP.RootObject>(jsonResponse);
 
             if (null == rootObj)
             {

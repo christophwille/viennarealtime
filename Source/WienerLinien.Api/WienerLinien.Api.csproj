@@ -42,7 +42,8 @@
     <Compile Include="MonitorInformation.cs" />
     <Compile Include="Ogd\EchtzeitdatenSchnittstelle.cs" />
     <Compile Include="Ogd\MonitorLineTypeMapper.cs" />
-    <Compile Include="Ogd\Proxies.cs" />
+    <Compile Include="Ogd\MonitorProxies.cs" />
+    <Compile Include="Ogd\TrafficInfoListProxies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
