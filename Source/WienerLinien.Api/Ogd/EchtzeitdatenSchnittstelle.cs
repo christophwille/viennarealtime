@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using MP = WienerLinien.Api.Ogd.MonitorProxies;
+using TILP = WienerLinien.Api.Ogd.TrafficInfoListProxies;
 
 namespace WienerLinien.Api.Ogd
 {
@@ -17,13 +18,22 @@ namespace WienerLinien.Api.Ogd
         // {0}: the multiple rbls
         // {1}: the Api key
         // {2}: this is a "no-cache" parameter (Ticks)
-        private const string ApiUrl = "http://www.wienerlinien.at/ogd_realtime/monitor?{0}&sender={1}&vrtnocache={2}";
+        private const string MonitorApiUrl = "http://www.wienerlinien.at/ogd_realtime/monitor?{0}&sender={1}&vrtnocache={2}";
+
+        // {0}: the Api key
+        // {1}: this is a "no-cache" parameter (Ticks)
+        private const string TrafficInfoListApiUrl = "http://www.wienerlinien.at/ogd_realtime/trafficInfoList?name=stoerunglang&sender=&sender={0}&vrtnocache={1}";
 
         private string _apiKey;
 
         public void InitializeApi(string apiKey)
         {
             _apiKey = apiKey;
+        }
+
+        private string GenerateVrtNoCacheParameterValue()
+        {
+            return DateTime.Now.Ticks.ToString();
         }
 
         public async Task<MonitorInformation> GetMonitorInformationAsync(List<int> rblList)
@@ -34,7 +44,7 @@ namespace WienerLinien.Api.Ogd
             }
 
             var rbls = String.Join("&", rblList.Select(rbl => String.Format("rbl={0}", rbl)));
-            var url = String.Format(ApiUrl, rbls, _apiKey, DateTime.Now.Ticks.ToString());
+            var url = String.Format(MonitorApiUrl, rbls, _apiKey, GenerateVrtNoCacheParameterValue());
 
             var response = await PerformHttpGetRequestAsync(url).ConfigureAwait(false);
 
@@ -54,6 +64,27 @@ namespace WienerLinien.Api.Ogd
 
             return
                 new MonitorInformation(MonitorInformationErrorCode.ResponseParsingFailed);
+        }
+
+        public async Task<TrafficInformation> GetTrafficInfoListAsync()
+        {
+            var url = String.Format(TrafficInfoListApiUrl, _apiKey, GenerateVrtNoCacheParameterValue());
+            var response = await PerformHttpGetRequestAsync(url).ConfigureAwait(false);
+
+            if (null == response)
+                return new TrafficInformation();
+
+            try
+            {
+                return ParseTrafficInfoListResponse(response);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+
+            return
+                new TrafficInformation();
         }
 
 
@@ -157,6 +188,34 @@ namespace WienerLinien.Api.Ogd
 
             var orderForReturn = parsedMonitorLines.OrderBy(moli => moli.Type).ThenBy(moli => moli.Name).ThenBy(moli => moli.Towards);
             return new MonitorInformation(orderForReturn.ToList());
+        }
+
+        public TrafficInformation ParseTrafficInfoListResponse(string jsonResponse)
+        {
+            var rootObj = JsonConvert.DeserializeObject<TILP.RootObject>(jsonResponse);
+
+            if (null == rootObj || null == rootObj.data)
+            {
+                return new TrafficInformation();
+            }
+
+            var items = new List<TrafficInformationItem>();
+            foreach (var ti in rootObj.data.trafficInfos)
+            {
+                var item = new TrafficInformationItem()
+                {
+                    Title = ti.title,
+                    Description = ti.description,
+                    RelatedLines = String.Join(", ", ti.relatedLines)
+                };
+
+                items.Add(item);
+            }
+
+            if (items.Any())
+                return new TrafficInformation(items);
+
+            return new TrafficInformation(succeeded: true);
         }
 
         private DateTime? ToLocalTime(string jsonDatetime)

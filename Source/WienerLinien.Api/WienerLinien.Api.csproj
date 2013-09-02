@@ -45,6 +45,8 @@
     <Compile Include="Ogd\MonitorProxies.cs" />
     <Compile Include="Ogd\TrafficInfoListProxies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrafficInformationItem.cs" />
+    <Compile Include="TrafficInformation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

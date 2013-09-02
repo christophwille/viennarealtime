@@ -45,9 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EchtzeitdatenParseTests.cs" />
+    <Compile Include="MonitorParseTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResponseFiles.cs" />
+    <Compile Include="TrafficInfoListParseTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="EmptyOkResponse.json">

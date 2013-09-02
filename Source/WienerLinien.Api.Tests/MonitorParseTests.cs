@@ -9,7 +9,7 @@ using WienerLinien.Api.Ogd;
 namespace WienerLinien.Api.Tests
 {
     [TestFixture]
-    public class EchtzeitdatenParseTests
+    public class MonitorParseTests
     {
         [Test]
         public void InvalidKeyTest()
