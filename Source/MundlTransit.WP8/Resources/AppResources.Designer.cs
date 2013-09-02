@@ -133,6 +133,15 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to remove.
+        /// </summary>
+        public static string Favorites_ContextMenu_Remove {
+            get {
+                return ResourceManager.GetString("Favorites_ContextMenu_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You do not have any favorites yet..
         /// </summary>
         public static string Favorites_NoFavoritesYet {

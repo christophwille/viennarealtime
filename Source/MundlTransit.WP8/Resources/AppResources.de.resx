@@ -117,192 +117,192 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About_InfoParagraphOne" xml:space="preserve">
-    <value>The app uses open data provided by Wiener Linien. To learn more about the data and API they are offering, please visit</value>
-  </data>
-  <data name="About_InfoParagraphTwo" xml:space="preserve">
-    <value>No personally identifyable information (including location data) is sent by this app.</value>
-  </data>
-  <data name="About_PageTitle" xml:space="preserve">
-    <value>about</value>
-  </data>
-  <data name="About_PrivacyPolicy_LinkText" xml:space="preserve">
-    <value>Privacy Policy</value>
-  </data>
-  <data name="About_ReviewApp_ButtonText" xml:space="preserve">
-    <value>Review this app</value>
-  </data>
-  <data name="About_SupportSourceCode_LinkText" xml:space="preserve">
-    <value>Support and Source Code</value>
-  </data>
-  <data name="About_Version_Text" xml:space="preserve">
-    <value>Version:</value>
-  </data>
-  <data name="ErrorMessage_Title" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="Favorites_ContextMenu_Remove" xml:space="preserve">
-    <value>remove</value>
-  </data>
-  <data name="Favorites_NoFavoritesYet" xml:space="preserve">
-    <value>You do not have any favorites yet.</value>
-  </data>
-  <data name="Favorites_PageTitle" xml:space="preserve">
-    <value>favorites</value>
-  </data>
-  <data name="LineInfo_AppBar_Direction" xml:space="preserve">
-    <value>direction</value>
-  </data>
-  <data name="Lines_Bus" xml:space="preserve">
-    <value>bus</value>
-  </data>
-  <data name="Lines_Metro" xml:space="preserve">
-    <value>metro</value>
-  </data>
-  <data name="Lines_NightBus" xml:space="preserve">
-    <value>night bus</value>
-  </data>
-  <data name="Lines_PageTitle" xml:space="preserve">
-    <value>Lines</value>
-  </data>
-  <data name="Lines_Tram" xml:space="preserve">
-    <value>tram</value>
-  </data>
-  <data name="MenuItem_About" xml:space="preserve">
-    <value>about</value>
-  </data>
-  <data name="MenuItem_About_Description" xml:space="preserve">
-    <value>privacy policy, support</value>
-  </data>
-  <data name="MenuItem_Nearby" xml:space="preserve">
-    <value>nearby</value>
-  </data>
-  <data name="MenuItem_Nearby_Description" xml:space="preserve">
-    <value>stations nearby your current location</value>
-  </data>
-  <data name="MenuItem_Search" xml:space="preserve">
-    <value>search</value>
-  </data>
-  <data name="MenuItem_Search_Description" xml:space="preserve">
-    <value>stations by name (fulltext)</value>
-  </data>
-  <data name="MenuItem_Settings" xml:space="preserve">
-    <value>settings</value>
-  </data>
-  <data name="MenuItem_Settings_Description" xml:space="preserve">
-    <value>turn on/off geolocation for nearby search</value>
-  </data>
-  <data name="MenuItem_StationList" xml:space="preserve">
-    <value>station list</value>
-  </data>
-  <data name="MenuItem_StationList_Description" xml:space="preserve">
-    <value>complete list of stations</value>
-  </data>
-  <data name="MenuItem_StationsByLines" xml:space="preserve">
-    <value>stations by lines</value>
-  </data>
-  <data name="MenuItem_StationsByLines_Description" xml:space="preserve">
-    <value>metro, tram and buses by direction</value>
-  </data>
-  <data name="Menu_PageTitle" xml:space="preserve">
-    <value>menu</value>
-  </data>
-  <data name="Message_FavoriteAdded" xml:space="preserve">
-    <value>favorite added</value>
-  </data>
-  <data name="MonitorError_DownloadingFailed" xml:space="preserve">
-    <value>Downloading departure information failed.</value>
-  </data>
-  <data name="MonitorError_FallbackOnErrorToErrorMessageConversion" xml:space="preserve">
-    <value>No departure information was sent by the server.</value>
-  </data>
-  <data name="MonitorError_GenericError" xml:space="preserve">
-    <value>An unexpected error occured, please try again later.</value>
-  </data>
-  <data name="MonitorError_MonitorsEmpty" xml:space="preserve">
-    <value>No departures available at this time.</value>
-  </data>
-  <data name="MonitorError_RblNotSpecified" xml:space="preserve">
-    <value>Internal app error: RBL not specified.</value>
-  </data>
-  <data name="MonitorError_ResponseParsingFailed" xml:space="preserve">
-    <value>Parsing the response failed.</value>
-  </data>
-  <data name="MonitorError_ServerAuthenticationFailed" xml:space="preserve">
-    <value>This app has failed to authenticate to the Wiener Linien API.</value>
-  </data>
-  <data name="MonitorError_ServerCallQuotaExceeded" xml:space="preserve">
-    <value>This app has exceeded the call quota allowed by Wiener Linien.</value>
-  </data>
-  <data name="MonitorError_ServerDatabaseUnavailable" xml:space="preserve">
-    <value>Server error reported: Database unavailable.</value>
-  </data>
-  <data name="MonitorError_ServerNoDataInDatabase" xml:space="preserve">
-    <value>Server error reported: No data in database.</value>
-  </data>
-  <data name="MonitorError_ServerQueryStringParameterInvalid" xml:space="preserve">
-    <value>This app has failed to send a properly formatted query to the Wiener Linien API.</value>
-  </data>
-  <data name="MonitorError_ServerStopDoesNotExist" xml:space="preserve">
-    <value>This stop does not exist (stop database out of date?).</value>
-  </data>
-  <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
-    <value>No stops found near</value>
-  </data>
-  <data name="PositionMessage_YourPosition" xml:space="preserve">
-    <value>Your position</value>
-  </data>
-  <data name="ProgressMessage_AcquiringPosition" xml:space="preserve">
-    <value>Acquiring position...</value>
-  </data>
-  <data name="ProgressMessage_LoadingDepartures" xml:space="preserve">
-    <value>Loading departures...</value>
-  </data>
   <data name="ResourceFlowDirection" xml:space="preserve">
     <value>LeftToRight</value>
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>de</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
+  <data name="About_InfoParagraphOne" xml:space="preserve">
+    <value>Diese App nutzt Open Data der Wiener Linien. Um mehr über die Daten und die APIs zu erfahren, besuchen Sie bitte die Site</value>
+  </data>
+  <data name="About_InfoParagraphTwo" xml:space="preserve">
+    <value>Diese App überträgt keine persönlich identifizierbaren Informationen (einschließlich Standortdaten).</value>
+  </data>
+  <data name="About_PageTitle" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="About_PrivacyPolicy_LinkText" xml:space="preserve">
+    <value>Datenschutzerklärung</value>
+  </data>
+  <data name="About_ReviewApp_ButtonText" xml:space="preserve">
+    <value>Bewerten Sie diese App</value>
+  </data>
+  <data name="About_SupportSourceCode_LinkText" xml:space="preserve">
+    <value>Unterstützung und Quellcode</value>
+  </data>
+  <data name="About_Version_Text" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="ErrorMessage_Title" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="Favorites_NoFavoritesYet" xml:space="preserve">
+    <value>Sie haben noch keine Favoriten.</value>
+  </data>
+  <data name="Favorites_PageTitle" xml:space="preserve">
+    <value>Favoriten</value>
+  </data>
+  <data name="LineInfo_AppBar_Direction" xml:space="preserve">
+    <value>Richtung</value>
+  </data>
+  <data name="Lines_Bus" xml:space="preserve">
+    <value>Bus</value>
+  </data>
+  <data name="Lines_Metro" xml:space="preserve">
+    <value>U-Bahn</value>
+  </data>
+  <data name="Lines_NightBus" xml:space="preserve">
+    <value>Nachtbus</value>
+  </data>
+  <data name="Lines_PageTitle" xml:space="preserve">
+    <value>Linien</value>
+  </data>
+  <data name="Lines_Tram" xml:space="preserve">
+    <value>Bim</value>
+  </data>
+  <data name="MenuItem_About" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="MenuItem_About_Description" xml:space="preserve">
+    <value>Unterstützung, Datenschutzerklärung</value>
+  </data>
+  <data name="MenuItem_Nearby" xml:space="preserve">
+    <value>In meiner Nähe</value>
+  </data>
+  <data name="MenuItem_Nearby_Description" xml:space="preserve">
+    <value>Stationen in der Nähe Ihrer aktuellen Position</value>
+  </data>
+  <data name="MenuItem_Search" xml:space="preserve">
+    <value>Suche</value>
+  </data>
+  <data name="MenuItem_Search_Description" xml:space="preserve">
+    <value>Stationen nach Namen (Volltext)</value>
+  </data>
+  <data name="MenuItem_Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="MenuItem_Settings_Description" xml:space="preserve">
+    <value>Ein-/ Ausschalten GPS Verwendung</value>
+  </data>
+  <data name="MenuItem_StationList" xml:space="preserve">
+    <value>Stationsliste</value>
+  </data>
+  <data name="MenuItem_StationList_Description" xml:space="preserve">
+    <value>Vollständige Liste der Stationen</value>
+  </data>
+  <data name="MenuItem_StationsByLines" xml:space="preserve">
+    <value>Stationen nach Linien</value>
+  </data>
+  <data name="MenuItem_StationsByLines_Description" xml:space="preserve">
+    <value>U-Bahn, Bim und Busse nach Richtung</value>
+  </data>
+  <data name="Menu_PageTitle" xml:space="preserve">
+    <value>Menü</value>
+  </data>
+  <data name="Message_FavoriteAdded" xml:space="preserve">
+    <value>Favorit hinzugefügt</value>
+  </data>
+  <data name="MonitorError_DownloadingFailed" xml:space="preserve">
+    <value>Download der Abfahrtsinformationen ist fehlgeschlagen.</value>
+  </data>
+  <data name="MonitorError_FallbackOnErrorToErrorMessageConversion" xml:space="preserve">
+    <value>Der Server hat keine Abfahrtsinformationen gesendet.</value>
+  </data>
+  <data name="MonitorError_GenericError" xml:space="preserve">
+    <value>Ein unerwarteter Fehler ist aufgetreten, bitte versuchen Sie es später erneut.</value>
+  </data>
+  <data name="MonitorError_MonitorsEmpty" xml:space="preserve">
+    <value>Zu dieser Uhrzeit sind keine Abfahrtsinformationen vorhanden.</value>
+  </data>
+  <data name="MonitorError_RblNotSpecified" xml:space="preserve">
+    <value>Interner App-Fehler: RBL nicht angegeben.</value>
+  </data>
+  <data name="MonitorError_ResponseParsingFailed" xml:space="preserve">
+    <value>Fehler beim Parsen der Antwort vom Server.</value>
+  </data>
+  <data name="MonitorError_ServerAuthenticationFailed" xml:space="preserve">
+    <value>Die App konnte sich nicht am Wiener Linien-API authentifizieren.</value>
+  </data>
+  <data name="MonitorError_ServerCallQuotaExceeded" xml:space="preserve">
+    <value>Die App hat das Aufruf-Kontingent beim Wiener Linien-API überschritten.</value>
+  </data>
+  <data name="MonitorError_ServerDatabaseUnavailable" xml:space="preserve">
+    <value>Serverfehler: Datenbank nicht verfügbar.</value>
+  </data>
+  <data name="MonitorError_ServerNoDataInDatabase" xml:space="preserve">
+    <value>Serverfehler: Keine Daten in der Datenbank.</value>
+  </data>
+  <data name="MonitorError_ServerQueryStringParameterInvalid" xml:space="preserve">
+    <value>Die App hat eine falsch formatierte Anfrage an die Wiener Linien-API gesendet.</value>
+  </data>
+  <data name="MonitorError_ServerStopDoesNotExist" xml:space="preserve">
+    <value>Diese Haltestelle existiert nicht (Haltestellen-Datenbank veraltet?).</value>
+  </data>
+  <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
+    <value>Keine Haltestellen nahe</value>
+  </data>
+  <data name="PositionMessage_YourPosition" xml:space="preserve">
+    <value>Ihre Position</value>
+  </data>
+  <data name="ProgressMessage_AcquiringPosition" xml:space="preserve">
+    <value>GPS Position wird gesucht...</value>
+  </data>
+  <data name="ProgressMessage_LoadingDepartures" xml:space="preserve">
+    <value>Abfahrtsinformationen werden geladen...</value>
+  </data>
   <data name="Settings_GeolocationForNearbyStations" xml:space="preserve">
-    <value>Geolocation for nearby stations</value>
+    <value>GPS aktivieren für Stationssuche</value>
   </data>
   <data name="Settings_PageTitle" xml:space="preserve">
-    <value>settings</value>
+    <value>Einstellungen</value>
   </data>
   <data name="StationInfo_AppBar_Favorite" xml:space="preserve">
-    <value>favorite</value>
+    <value>Favorit</value>
   </data>
   <data name="StationInfo_AppBar_Refresh" xml:space="preserve">
-    <value>refresh</value>
+    <value>Aktualisieren</value>
   </data>
   <data name="StationInfo_AppBar_WalkTo" xml:space="preserve">
-    <value>walk to</value>
+    <value>zu Fuß</value>
   </data>
   <data name="StationInfo_Departures_Title" xml:space="preserve">
-    <value>departures</value>
+    <value>Abfahrten</value>
   </data>
   <data name="Stations_AppBar_Map" xml:space="preserve">
-    <value>map</value>
+    <value>Karte</value>
   </data>
   <data name="Stations_AppBar_Refresh" xml:space="preserve">
-    <value>refresh</value>
+    <value>Aktualisieren</value>
   </data>
   <data name="Stations_ListTitle" xml:space="preserve">
-    <value>list</value>
+    <value>Liste</value>
   </data>
   <data name="Stations_NearbyTitle" xml:space="preserve">
-    <value>nearby</value>
+    <value>Nahe</value>
   </data>
   <data name="Stations_PageTitle" xml:space="preserve">
-    <value>Stations</value>
+    <value>Stationen</value>
   </data>
   <data name="Stations_SearchHowTo_Text" xml:space="preserve">
-    <value>Station Name (auto-search after 3 characters)</value>
+    <value>Stationsname (Suche nach 3 Zeichen)</value>
   </data>
   <data name="Stations_SearchTitle" xml:space="preserve">
-    <value>search</value>
+    <value>Suche</value>
+  </data>
+  <data name="Favorites_ContextMenu_Remove" xml:space="preserve">
+    <value>löschen</value>
   </data>
 </root>

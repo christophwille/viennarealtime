@@ -32,7 +32,7 @@
                                 <toolkit:ContextMenuService.ContextMenu>
                                     <toolkit:ContextMenu cm:Action.TargetWithoutContext="{Binding ElementName=FavoritesLayoutRoot, Path=DataContext}">
                                         <!-- You can suppress tilt on indivudal menu items with TiltEffect.SuppressTilt="True" -->
-                                        <toolkit:MenuItem Header="remove"
+                                        <toolkit:MenuItem Header="{Binding Path=LocalizedResources.Favorites_ContextMenu_Remove, Source={StaticResource LocalizedStrings}}"
                                             cm:Message.Attach="[Event Click] = [Action Remove($source, $datacontext)]" />
                                         
                                     </toolkit:ContextMenu>

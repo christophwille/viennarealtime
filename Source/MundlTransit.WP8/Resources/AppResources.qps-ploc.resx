@@ -302,4 +302,7 @@
   <data name="Stations_SearchHowTo_Text" xml:space="preserve">
     <value>[B902A][!!_Şţàťįòй Ńâмę (àûτô-śéàŕċћ ãƒтéř 3 ćĥáѓâčťêѓŝ)_!!!!!!!!!!!!!!]</value>
   </data>
+  <data name="Favorites_ContextMenu_Remove" xml:space="preserve">
+    <value>[57821][!!_řêмóνê_!!]</value>
+  </data>
 </root>

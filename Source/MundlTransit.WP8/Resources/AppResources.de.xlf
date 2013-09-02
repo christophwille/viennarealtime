@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="qps-ploc" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="MundlTransit.WP8" product-version="2.1.0.0" build-num="0">
+  <file datatype="xml" source-language="en-US" target-language="de" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="MundlTransit.WP8" product-version="2.1.0.0" build-num="0">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.0.1000.0" tool-company="Microsoft" />
     </header>
@@ -8,191 +8,191 @@
       <group id="Resx">
         <trans-unit translate="yes" id="Resx/About_InfoParagraphOne" xml:space="preserve">
           <source>The app uses open data provided by Wiener Linien. To learn more about the data and API they are offering, please visit</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[D0FCE][!!_Ťħê àþρ µŝèş óþéй ðàţã ρřôνįďéð ьý Ẁîêηéѓ Ĺįиìéи. Ţõ ĺèâŗή mòѓę âБôûτ τћę ďâτã áйð ÂРĮ ţђêў àřé õƒƒéřìήġ, ρĺéâšé νíśìт_!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]</target>
+          <target state="translated">Diese App nutzt Open Data der Wiener Linien. Um mehr über die Daten und die APIs zu erfahren, besuchen Sie bitte die Site</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_InfoParagraphTwo" xml:space="preserve">
           <source>No personally identifyable information (including location data) is sent by this app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[2C6FC][!!_Ňó þéŕşóηâļĺў ìđèηťîƒўàьłę íηƒõŕmáτìôή (įйċłùðìиĝ ľóċãтįòи đàτà) îŝ śêήţ ьý τнįś áρр._!!!!!!!!!!!!!!!!!!!!!!!!!!]</target>
+          <target state="translated">Diese App überträgt keine persönlich identifizierbaren Informationen (einschließlich Standortdaten).</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_PageTitle" xml:space="preserve">
           <source>about</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[49CBB][!!_àъóûт_!!]</target>
+          <target state="translated">Über</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_PrivacyPolicy_LinkText" xml:space="preserve">
           <source>Privacy Policy</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[EB30B][!!_ΡříνáćУ Þóľîćў_!!!!]</target>
+          <target state="translated">Datenschutzerklärung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_ReviewApp_ButtonText" xml:space="preserve">
           <source>Review this app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[B491A][!!_Ŕêνįêŵ τħîŝ âρр_!!!!]</target>
+          <target state="translated">Bewerten Sie diese App</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_SupportSourceCode_LinkText" xml:space="preserve">
           <source>Support and Source Code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[22E56][!!_Śúрþõřт âηð Şõµѓčę Ċôðê_!!!!!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Unterstützung und Quellcode</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_Version_Text" xml:space="preserve">
           <source>Version:</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[C235E][!!_Véřśìóй:_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Version:</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/ErrorMessage_Title" xml:space="preserve">
           <source>Error</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[4A030][!!_Êŕŗôř_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fehler</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Favorites_ContextMenu_Remove" xml:space="preserve">
           <source>remove</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[57821][!!_řêмóνê_!!]</target>
+          <target state="translated">löschen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Favorites_NoFavoritesYet" xml:space="preserve">
           <source>You do not have any favorites yet.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[C798D][!!_Ýôû đò иóτ нâνê àηŷ ƒâνóѓįťęş Уęť._!!!!!!!!!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie haben noch keine Favoriten.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Favorites_PageTitle" xml:space="preserve">
           <source>favorites</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[3340F][!!_ƒâνõŗìţéś_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Favoriten</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/LineInfo_AppBar_Direction" xml:space="preserve">
           <source>direction</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[74F6F][!!_đíŕéċťįòή_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Richtung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Lines_Bus" xml:space="preserve">
           <source>bus</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[5815C][!!_вùş_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bus</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Lines_Metro" xml:space="preserve">
           <source>metro</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[8B3C4][!!_мéťѓõ_!!]</target>
+          <target state="translated">U-Bahn</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Lines_NightBus" xml:space="preserve">
           <source>night bus</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[F5A75][!!_ηìğћт ъûŝ_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nachtbus</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Lines_PageTitle" xml:space="preserve">
           <source>Lines</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[14C6D][!!_Ļìηéś_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Linien</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Lines_Tram" xml:space="preserve">
           <source>tram</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[AAFC4][!!_τŕám_!!]</target>
+          <target state="translated">Bim</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_About" xml:space="preserve">
           <source>about</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[6B764][!!_ãвóúť_!!]</target>
+          <target state="translated">Über</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_About_Description" xml:space="preserve">
           <source>privacy policy, support</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[BAA7D][!!_ρříνãċŷ þôĺìčŷ, ŝúþρòѓτ_!!!!!!]</target>
+          <target state="translated">Unterstützung, Datenschutzerklärung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Nearby" xml:space="preserve">
           <source>nearby</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[91B44][!!_йęáŕьў_!!]</target>
+          <target state="translated">In meiner Nähe</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Nearby_Description" xml:space="preserve">
           <source>stations nearby your current location</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[44537][!!_śтàтíòήś иèářъÿ ÿôúѓ ċúřřèήт ļòċãţìôи_!!!!!!!!!!!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stationen in der Nähe Ihrer aktuellen Position</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Search" xml:space="preserve">
           <source>search</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[36D4C][!!_şéáѓčħ_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Suche</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Search_Description" xml:space="preserve">
           <source>stations by name (fulltext)</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[703A6][!!_šţáτìõиş ьў ηámê (ƒúĺľτéхт)_!!!!!!!!]</target>
+          <target state="translated">Stationen nach Namen (Volltext)</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Settings" xml:space="preserve">
           <source>settings</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[F4C25][!!_šéттîйģś_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Einstellungen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Settings_Description" xml:space="preserve">
           <source>turn on/off geolocation for nearby search</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[AD1EB][!!_тûŕη óή/ôƒƒ ĝéôłòćâţìõή ƒôŗ йèãѓьУ śéâѓćħ_!!!!!!!!!!!!]</target>
+          <target state="translated">Ein-/ Ausschalten GPS Verwendung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_StationList" xml:space="preserve">
           <source>station list</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[D0A10][!!_ŝтàτìôή ľíŝţ_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stationsliste</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_StationList_Description" xml:space="preserve">
           <source>complete list of stations</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[468D5][!!_čómрľęτę ļíšţ ôƒ śťâţîóйŝ_!!!!!!!!]</target>
+          <target state="translated">Vollständige Liste der Stationen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_StationsByLines" xml:space="preserve">
           <source>stations by lines</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[B77E9][!!_şтâţîóήş ъŷ ĺįиêş_!!!!!!]</target>
+          <target state="translated">Stationen nach Linien</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_StationsByLines_Description" xml:space="preserve">
           <source>metro, tram and buses by direction</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[AF218][!!_мęτřô, τŗãm âηď ъùŝęš ьУ đìŕêċţîôй_!!!!!!!!!!]</target>
+          <target state="translated">U-Bahn, Bim und Busse nach Richtung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Menu_PageTitle" xml:space="preserve">
           <source>menu</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[FF0D2][!!_мêиú_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Menü</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Message_FavoriteAdded" xml:space="preserve">
           <source>favorite added</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[DA9F0][!!_ƒâνõѓįтę áďđęđ_!!!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Favorit hinzugefügt</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_DownloadingFailed" xml:space="preserve">
           <source>Downloading departure information failed.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[AE180][!!_Ðôẃиłôáďîήģ ðęρâŕтùřê ìηƒõѓмãţìõи ƒáìľéđ._!!!!!!!!!!!!]</target>
+          <target state="translated">Download der Abfahrtsinformationen ist fehlgeschlagen.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_FallbackOnErrorToErrorMessageConversion" xml:space="preserve">
           <source>No departure information was sent by the server.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[04612][!!_Ñõ ðęρáѓťµŗê įйƒóŕмáτîõи ẁãš ŝęит вÿ тħè şéŗνèѓ._!!!!!!!!!!!!!!]</target>
+          <target state="translated">Der Server hat keine Abfahrtsinformationen gesendet.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_GenericError" xml:space="preserve">
           <source>An unexpected error occured, please try again later.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[49801][!!_Âи ùиê×ρęċţęď èřřóѓ õċčúřêđ, þľęãśé тѓý ãĝàįи ĺàτéŕ._!!!!!!!!!!!!!!!!]</target>
+          <target state="translated">Ein unerwarteter Fehler ist aufgetreten, bitte versuchen Sie es später erneut.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_MonitorsEmpty" xml:space="preserve">
           <source>No departures available at this time.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[4FB04][!!_Ñô đéрãŕтûѓêś àνâîłâвļè àτ тћįš τįмé._!!!!!!!!!!!!]</target>
+          <target state="translated">Zu dieser Uhrzeit sind keine Abfahrtsinformationen vorhanden.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_RblNotSpecified" xml:space="preserve">
           <source>Internal app error: RBL not specified.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[A728C][!!_Îήτéŗиàļ àρр êřŗõř: ŘßĻ иóт ŝрêćìƒįéð._!!!!!!!!!!!!]</target>
+          <target state="translated">Interner App-Fehler: RBL nicht angegeben.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ResponseParsingFailed" xml:space="preserve">
           <source>Parsing the response failed.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[8BEE1][!!_Рãŗşìйġ τћè ŗéšрòйşé ƒãîļêð._!!!!!!!!]</target>
+          <target state="translated">Fehler beim Parsen der Antwort vom Server.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerAuthenticationFailed" xml:space="preserve">
           <source>This app has failed to authenticate to the Wiener Linien API.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[886A7][!!_Τнìş áрр ħáş ƒãìłęď тô âûτħéиţíčãţé ťô τћę Ŵįêиèѓ Ŀíиìęй ÃÞĮ._!!!!!!!!!!!!!!!!!!]</target>
+          <target state="translated">Die App konnte sich nicht am Wiener Linien-API authentifizieren.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerCallQuotaExceeded" xml:space="preserve">
           <source>This app has exceeded the call quota allowed by Wiener Linien.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[E5FAB][!!_Тнíš ãρþ нáš èхćéêðèđ тħé čâĺł qúõťã áłľóẁêđ ьУ Ẅįęиéŗ Ļíήîęй._!!!!!!!!!!!!!!!!!!]</target>
+          <target state="translated">Die App hat das Aufruf-Kontingent beim Wiener Linien-API überschritten.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerDatabaseUnavailable" xml:space="preserve">
           <source>Server error reported: Database unavailable.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[F5E47][!!_Ŝêŕνęř ęřŕòř ŗéþôѓţèđ: Đâţâъàšê µηàνãįļáвĺę._!!!!!!!!!!!!!!]</target>
+          <target state="translated">Serverfehler: Datenbank nicht verfügbar.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerNoDataInDatabase" xml:space="preserve">
           <source>Server error reported: No data in database.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[27CC7][!!_Śêřνèѓ èŗřõŕ ѓêþòřţêđ: Ņò đãτà įη đãтáьâšê._!!!!!!!!!!!!]</target>
+          <target state="translated">Serverfehler: Keine Daten in der Datenbank.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerQueryStringParameterInvalid" xml:space="preserve">
           <source>This app has failed to send a properly formatted query to the Wiener Linien API.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[C27F1][!!_Тнìš àρþ ћàŝ ƒáįļęð ťõ šêήđ â рřôрêřĺУ ƒõŕмáτţéð qùéřУ ťõ тĥé Ẅíèйêŗ Ľįήìèή ÀÞÌ._!!!!!!!!!!!!!!!!!!!!!!!!]</target>
+          <target state="translated">Die App hat eine falsch formatierte Anfrage an die Wiener Linien-API gesendet.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerStopDoesNotExist" xml:space="preserve">
           <source>This stop does not exist (stop database out of date?).</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[2791D][!!_Τħíš ŝţóр đòéś ήóт èхįśτ (şţõþ đãτàъãşè òùť òƒ đâтę?)._!!!!!!!!!!!!!!!!]</target>
+          <target state="translated">Diese Haltestelle existiert nicht (Haltestellen-Datenbank veraltet?).</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/PositionMessage_NoStopsFoundNear" xml:space="preserve">
           <source>No stops found near</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[1E0CF][!!_Ňõ ŝτòрš ƒóûйď йèâѓ_!!!!!!]</target>
+          <target state="translated">Keine Haltestellen nahe</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/PositionMessage_YourPosition" xml:space="preserve">
           <source>Your position</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[DA61F][!!_Ýóúř ρóšįţíôи_!!]</target>
+          <target state="translated">Ihre Position</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/ProgressMessage_AcquiringPosition" xml:space="preserve">
           <source>Acquiring position...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[51AC5][!!_Âĉqùîřįήġ ρõśíţíõη..._!!!!!!]</target>
+          <target state="translated">GPS Position wird gesucht...</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/ProgressMessage_LoadingDepartures" xml:space="preserve">
           <source>Loading departures...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[2E246][!!_Ļóâďîηğ đêрàŕťúřêś..._!!!!!!]</target>
+          <target state="translated">Abfahrtsinformationen werden geladen...</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/ResourceFlowDirection" xml:space="preserve">
           <source>LeftToRight</source>
@@ -201,60 +201,60 @@
         <note from="MultilingualBuild" annotates="source" priority="2">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note></trans-unit>
         <trans-unit translate="yes" id="Resx/ResourceLanguage" xml:space="preserve">
           <source>en-US</source>
-          <target state="translated">qps-ploc</target>
+          <target state="translated">de</target>
           
         <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note></trans-unit>
         <trans-unit translate="yes" id="Resx/Settings_GeolocationForNearbyStations" xml:space="preserve">
           <source>Geolocation for nearby stations</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[257D1][!!_Ģèôļòćâţìòή ƒôѓ ηęàřБý śţâтìóиś_!!!!!!!!!!]</target>
+          <target state="translated">GPS aktivieren für Stationssuche</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Settings_PageTitle" xml:space="preserve">
           <source>settings</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[29D23][!!_şéтţíηġš_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Einstellungen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/StationInfo_AppBar_Favorite" xml:space="preserve">
           <source>favorite</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[68747][!!_ƒáνõŗìτê_!!]</target>
+          <target state="translated">Favorit</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/StationInfo_AppBar_Refresh" xml:space="preserve">
           <source>refresh</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[0E1C2][!!_ŕèƒŗèšĥ_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aktualisieren</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/StationInfo_AppBar_WalkTo" xml:space="preserve">
           <source>walk to</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[965D4][!!_ŵáłĸ ţô_!!]</target>
+          <target state="translated">zu Fuß</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/StationInfo_Departures_Title" xml:space="preserve">
           <source>departures</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[48777][!!_ďęрáŕťûŗèş_!!]</target>
+          <target state="translated">Abfahrten</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_AppBar_Map" xml:space="preserve">
           <source>map</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[AC922][!!_мâþ_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Karte</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_AppBar_Refresh" xml:space="preserve">
           <source>refresh</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[5B8B6][!!_řèƒřêšн_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aktualisieren</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_ListTitle" xml:space="preserve">
           <source>list</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[93E2B][!!_łíšť_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Liste</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_NearbyTitle" xml:space="preserve">
           <source>nearby</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[2AFC5][!!_ηèãѓъŷ_!!]</target>
+          <target state="translated">Nahe</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_PageTitle" xml:space="preserve">
           <source>Stations</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[2D28A][!!_Śťâţíõήś_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stationen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_SearchHowTo_Text" xml:space="preserve">
           <source>Station Name (auto-search after 3 characters)</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[B902A][!!_Şţàťįòй Ńâмę (àûτô-śéàŕċћ ãƒтéř 3 ćĥáѓâčťêѓŝ)_!!!!!!!!!!!!!!]</target>
+          <target state="translated">Stationsname (Suche nach 3 Zeichen)</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_SearchTitle" xml:space="preserve">
           <source>search</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[A5AA8][!!_ŝèàѓćĥ_!!]</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Suche</target>
         </trans-unit>
       </group>
     </body>
