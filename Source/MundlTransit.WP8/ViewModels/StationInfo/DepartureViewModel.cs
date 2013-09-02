@@ -41,7 +41,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
         {
             EnableProgressBar();
 
-            var monitorInfo = await _echtzeitdatenService.RetrieveMonitorInformation(Haltestelle);
+            var monitorInfo = await _echtzeitdatenService.RetrieveMonitorInformationAsync(Haltestelle);
 
             DisableProgressBar();
 

@@ -25,7 +25,7 @@ namespace WienerLinien.Api.Ogd
             _apiKey = apiKey;
         }
 
-        public async Task<MonitorInformation> GetMonitorInformation(List<int> rblList)
+        public async Task<MonitorInformation> GetMonitorInformationAsync(List<int> rblList)
         {
             if (null == rblList || !rblList.Any())
             {
@@ -35,7 +35,7 @@ namespace WienerLinien.Api.Ogd
             var rbls = String.Join("&", rblList.Select(rbl => String.Format("rbl={0}", rbl)));
             var url = String.Format(ApiUrl, rbls, _apiKey, DateTime.Now.Ticks.ToString());
 
-            var response = await PerformHttpGetRequest(url).ConfigureAwait(false);
+            var response = await PerformHttpGetRequestAsync(url).ConfigureAwait(false);
 
             if (null == response)
             {
@@ -169,7 +169,7 @@ namespace WienerLinien.Api.Ogd
             return null;
         }
 
-        private async Task<string> PerformHttpGetRequest(string url)
+        private async Task<string> PerformHttpGetRequestAsync(string url)
         {
             try
             {

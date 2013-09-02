@@ -57,7 +57,7 @@ namespace MundlTransit.WP8.Data.Reference
                                 .Table<Haltestelle>()
                                 .Where(h => h.Bezeichnung.Contains(s));
 
-            var matched = await query.ToListAsync();
+            var matched = await query.ToListAsync().ConfigureAwait(false);
             return matched;
         }
 
@@ -65,7 +65,7 @@ namespace MundlTransit.WP8.Data.Reference
         {
             var query = _connection.Table<Haltestelle>();
 
-            var matched = await query.ToListAsync();
+            var matched = await query.ToListAsync().ConfigureAwait(false);
             return matched;
         }
 
@@ -73,7 +73,7 @@ namespace MundlTransit.WP8.Data.Reference
         {
             var query = _connection.Table<Haltestelle>().Where(h => ids.Contains(h.Id));
 
-            var matched = await query.ToListAsync();
+            var matched = await query.ToListAsync().ConfigureAwait(false);
             return matched;
         }
 
@@ -81,7 +81,7 @@ namespace MundlTransit.WP8.Data.Reference
         {
             var query = _connection.Table<Haltestelle>().Where(h => h.Id == id);
 
-            var matched = await query.ToListAsync();
+            var matched = await query.ToListAsync().ConfigureAwait(false);
             return matched.FirstOrDefault();
         }
 
@@ -91,7 +91,7 @@ namespace MundlTransit.WP8.Data.Reference
                                                                h.Latitude > latP3 && h.Latitude < latP1 &&
                                                                h.Longitude < lonP2 && h.Longitude > lonP4);
 
-            var matched = await query.ToListAsync();
+            var matched = await query.ToListAsync().ConfigureAwait(false);
             return matched;
         }
 
@@ -99,7 +99,7 @@ namespace MundlTransit.WP8.Data.Reference
         {
             var query = _connection.Table<OgdLinie>();
 
-            var matched = await query.ToListAsync();
+            var matched = await query.ToListAsync().ConfigureAwait(false);
             return matched;
         }
 
@@ -111,9 +111,9 @@ namespace MundlTransit.WP8.Data.Reference
                     WHERE OgdLinien.Id = {0}
                     ORDER BY OgdSteige.Richtung, OgdSteige.Reihenfolge";
 
-        public async Task<List<LinienHaltestelleView>> GetHaltestellenForLinie(int linienId)
+        public async Task<List<LinienHaltestelleView>> GetHaltestellenForLinieAsync(int linienId)
         {
-            var result = await _connection.QueryAsync<LinienHaltestelleView>(String.Format(SqlForLineStations, linienId));
+            var result = await _connection.QueryAsync<LinienHaltestelleView>(String.Format(SqlForLineStations, linienId)).ConfigureAwait(false);
             return result;
         }
     }

@@ -40,7 +40,7 @@ namespace MundlTransit.WP8.ViewModels.LineInfo
 
         protected async Task LoadLinienStationsAsync()
         {
-            _haltestellen = await _dataService.GetHaltestellenForLinie(NavigationLineId);
+            _haltestellen = await _dataService.GetHaltestellenForLinieAsync(NavigationLineId);
 
             _richtung = OgdLinie.Retour;
             ChangeDirection();

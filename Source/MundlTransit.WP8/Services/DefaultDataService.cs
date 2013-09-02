@@ -16,7 +16,7 @@ namespace MundlTransit.WP8.Services
         public async Task<List<Data.Reference.Haltestelle>> GetHaltestellenAsync()
         {
             var ctx = new ReferenceDataContext();
-            var hst = await ctx.GetHaltestellenAsync();
+            var hst = await ctx.GetHaltestellenAsync().ConfigureAwait(false);
 
             return hst;
         }
@@ -26,7 +26,7 @@ namespace MundlTransit.WP8.Services
             try
             {
                 var ctx = new ReferenceDataContext();
-                var result = await ctx.GetHaltestellenContainingAsync(s);
+                var result = await ctx.GetHaltestellenContainingAsync(s).ConfigureAwait(false);
 
                 var startingWithString = result
                     .Where(h => h.Bezeichnung.StartsWith(s, StringComparison.CurrentCultureIgnoreCase))
@@ -80,7 +80,7 @@ namespace MundlTransit.WP8.Services
                 var p4 = NearestLocationHelpers.CalculateDerivedPosition(center, mult * radius, 270);
 
                 var db = new ReferenceDataContext();
-                var haltestellen = await db.GetNearestHaltestellenAsync(p3.Latitude, p1.Latitude, p2.Longitude, p4.Longitude);
+                var haltestellen = await db.GetNearestHaltestellenAsync(p3.Latitude, p1.Latitude, p2.Longitude, p4.Longitude).ConfigureAwait(false);
 
                 foreach (var h in haltestellen)
                 {
@@ -100,21 +100,21 @@ namespace MundlTransit.WP8.Services
         public async Task<Haltestelle> GetHaltestelleAsync(int id)
         {
             var db = new ReferenceDataContext();
-            var h = await db.GetHaltestelleAsync(id);
+            var h = await db.GetHaltestelleAsync(id).ConfigureAwait(false);
             return h;
         }
 
         public async Task<List<Haltestelle>> GetHaltestellenAsync(List<int> ids)
         {
             var db = new ReferenceDataContext();
-            var h = await db.GetHaltestellenAsync(ids);
+            var h = await db.GetHaltestellenAsync(ids).ConfigureAwait(false);
             return h;
         }
 
         public async Task<List<Favorite>> GetFavoritesAsync()
         {
             var db = new RuntimeDataContext();
-            var favs = await db.GetFavorites();
+            var favs = await db.GetFavoritesAsync().ConfigureAwait(false);
 
             return favs;
         }
@@ -123,30 +123,30 @@ namespace MundlTransit.WP8.Services
         {
             var db = new RuntimeDataContext();
 
-            bool exists = await db.DoesFavoriteExist(fav.HaltestellenId);
+            bool exists = await db.DoesFavoriteExistAsync(fav.HaltestellenId).ConfigureAwait(false);
             
             if (!exists)
             {
-                await db.InsertFavorite(fav);
+                await db.InsertFavoriteAsync(fav).ConfigureAwait(false);
             }
         }
 
         public async Task DeleteFavoriteAsync(Favorite fav)
         {
             var db = new RuntimeDataContext();
-            await db.DeleteFavorite(fav);
+            await db.DeleteFavoriteAsync(fav).ConfigureAwait(false);
         }
 
         public async Task<List<OgdLinie>> GetLinienAsync()
         {
             var db = new ReferenceDataContext();
-            return await db.GetLinienAsync();
+            return await db.GetLinienAsync().ConfigureAwait(false);
         }
 
-        public async Task<List<LinienHaltestelleView>> GetHaltestellenForLinie(int linienId)
+        public async Task<List<LinienHaltestelleView>> GetHaltestellenForLinieAsync(int linienId)
         {
             var db = new ReferenceDataContext();
-            return await db.GetHaltestellenForLinie(linienId);
+            return await db.GetHaltestellenForLinieAsync(linienId).ConfigureAwait(false);
         }
     }
 }

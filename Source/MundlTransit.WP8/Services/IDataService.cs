@@ -18,7 +18,7 @@ namespace MundlTransit.WP8.Services
         Task<Haltestelle> GetHaltestelleAsync(int id);
         Task<List<Haltestelle>> GetHaltestellenAsync(List<int> ids);
         Task<List<OgdLinie>> GetLinienAsync();
-        Task<List<LinienHaltestelleView>> GetHaltestellenForLinie(int linienId);
+        Task<List<LinienHaltestelleView>> GetHaltestellenForLinieAsync(int linienId);
 
         // Runtime Data
         Task<List<Favorite>> GetFavoritesAsync();

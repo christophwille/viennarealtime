@@ -23,7 +23,7 @@ namespace MundlTransit.WP8.Data.Runtime
         {
             var db = CreateConnection();
 
-            CreateTablesResult favCreateResult = await db.CreateTableAsync<Favorite>();
+            CreateTablesResult favCreateResult = await db.CreateTableAsync<Favorite>().ConfigureAwait(false);
             // CreateTablesResult histCreateResult = await db.CreateTableAsync<StationHistory>();
         }
 
@@ -33,34 +33,34 @@ namespace MundlTransit.WP8.Data.Runtime
             _connection = CreateConnection();
         }
 
-        public async Task<List<Favorite>> GetFavorites()
+        public async Task<List<Favorite>> GetFavoritesAsync()
         {
             var query = _connection
                 .Table<Favorite>()
                 .OrderBy(f => f.Bezeichnung);
 
-            var matched = await query.ToListAsync();
+            var matched = await query.ToListAsync().ConfigureAwait(false);
             return matched;
         }
 
-        public async Task<bool> DoesFavoriteExist(int haltenStellenId)
+        public async Task<bool> DoesFavoriteExistAsync(int haltenStellenId)
         {
             var query = _connection
                 .Table<Favorite>()
                 .Where(f => f.HaltestellenId == haltenStellenId);
 
-            var matched = await query.ToListAsync();
+            var matched = await query.ToListAsync().ConfigureAwait(false);
             return matched.Any();
         }
 
-        public async Task InsertFavorite(Favorite fav)
+        public async Task InsertFavoriteAsync(Favorite fav)
         {
-            int result = await _connection.InsertAsync(fav);
+            int result = await _connection.InsertAsync(fav).ConfigureAwait(false);
         }
 
-        public async Task DeleteFavorite(Favorite fav)
+        public async Task DeleteFavoriteAsync(Favorite fav)
         {
-            int result = await _connection.DeleteAsync(fav);
+            int result = await _connection.DeleteAsync(fav).ConfigureAwait(false);
         }
     }
 }
