@@ -1,17 +1,37 @@
 ﻿
+Feature wish list
+
+* News (top-level next to menu, favorites)
+
+* Traffic information (at stop when showing departure information)
+
+[* Host development blog on github]
+
+
+
+UI ideas
+
 * Add "Home" text menu entry to station info page (nearby - map - station scenario)
 
-* Timeout on HttpWebRequest (does Timeout exist in WP8 at all?)
+* Favorites - also show lines? (secondary information)
+
+
+
+Implementation ideas
+
+
+* Timeout on HttpWebRequest (HttpClient has Timeout property)
 
 * Memory cache for "all stations" / Caching data provider
+
+* Implement a logging solution instead of ad-hoc Debug.WriteLine
+
+
+
+Glitches (Bugs) with low priority
+
+* [Transition to Favorites doesn't work properly at all] disabled in menu atm
 
 * Store scroll position in state on tombstoning
 	http://dotnetapp.com/blog/2012/05/27/how-to-save-listview-and-scrollviewer-family-controls-scroll-position/
 	http://tombstonehelper.codeplex.com/
-
-For later:
-
-* [Transition to Favorites doesn't work properly at all] disabled in menu atm
-* Localization
-* Implement a logging solution instead of ad-hoc Debug.WriteLine
-
