@@ -68,6 +68,7 @@ namespace MundlTransit.WP8
             
             container.PerRequest<MainPageViewModel>();
                 container.PerRequest<MenuViewModel>();
+                container.PerRequest<TrafficInfoViewModel>();
                 container.PerRequest<FavoritesViewModel>();
 
             container.PerRequest<StationsPivotPageViewModel>();

@@ -1,7 +1,7 @@
 ﻿
 Feature wish list
 
-* Traffic information (stoerunglang)
+* Traffic information (stoerunglang): Add note that it is German-only (or Bing-translate?), add date/time last updated
 
 * Traffic information at stop (when showing departure information)
 

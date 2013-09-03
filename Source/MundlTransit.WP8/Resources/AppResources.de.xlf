@@ -8,191 +8,216 @@
       <group id="Resx">
         <trans-unit translate="yes" id="Resx/About_InfoParagraphOne" xml:space="preserve">
           <source>The app uses open data provided by Wiener Linien. To learn more about the data and API they are offering, please visit</source>
-          <target state="translated">Diese App nutzt Open Data der Wiener Linien. Um mehr über die Daten und die APIs zu erfahren, besuchen Sie bitte die Site</target>
+          <target state="signed-off">Diese App nutzt Open Data der Wiener Linien. Um mehr über die Daten und die APIs zu erfahren, besuchen Sie bitte die Site</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_InfoParagraphTwo" xml:space="preserve">
           <source>No personally identifyable information (including location data) is sent by this app.</source>
-          <target state="translated">Diese App überträgt keine persönlich identifizierbaren Informationen (einschließlich Standortdaten).</target>
+          <target state="signed-off">Diese App überträgt keine persönlich identifizierbaren Informationen (einschließlich Standortdaten).</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_PageTitle" xml:space="preserve">
           <source>about</source>
-          <target state="translated">Über</target>
+          <target state="signed-off">Über</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_PrivacyPolicy_LinkText" xml:space="preserve">
           <source>Privacy Policy</source>
-          <target state="translated">Datenschutzerklärung</target>
+          <target state="signed-off">Datenschutzerklärung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_ReviewApp_ButtonText" xml:space="preserve">
           <source>Review this app</source>
-          <target state="translated">Bewerten Sie diese App</target>
+          <target state="signed-off">Bewerten Sie diese App</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_SupportSourceCode_LinkText" xml:space="preserve">
           <source>Support and Source Code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Unterstützung und Quellcode</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Unterstützung und Quellcode</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/About_Version_Text" xml:space="preserve">
           <source>Version:</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Version:</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Version:</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_AlertSince" xml:space="preserve">
+          <source>Since</source>
+          <target state="signed-off">Seit</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_AlertsLoading" xml:space="preserve">
+          <source>Loading...</source>
+          <target state="signed-off">Lade Meldungen über Betriebsstörungen...</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_AppBar_Refresh" xml:space="preserve">
+          <source>refresh</source>
+          <target state="signed-off">Aktualisieren</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_LoadingFailed" xml:space="preserve">
+          <source>Loading of alerts failed.</source>
+          <target state="signed-off">Das Laden der Betriebsstörungen ist fehlgeschlagen.</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_MenuTitle" xml:space="preserve">
+          <source>alerts</source>
+          <target state="signed-off">Meldungen</target>
+          
+        <note from="MultilingualBuild" annotates="source" priority="2">Traffic information part in main page panorama</note></trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_NoAlerts" xml:space="preserve">
+          <source>There are currently no traffic alerts.</source>
+          <target state="signed-off">Aktuell sind keine Betriebsstörungen gemeldet.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/ErrorMessage_Title" xml:space="preserve">
           <source>Error</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fehler</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Fehler</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Favorites_ContextMenu_Remove" xml:space="preserve">
           <source>remove</source>
-          <target state="translated">löschen</target>
+          <target state="signed-off">löschen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Favorites_NoFavoritesYet" xml:space="preserve">
           <source>You do not have any favorites yet.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie haben noch keine Favoriten.</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Sie haben noch keine Favoriten.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Favorites_PageTitle" xml:space="preserve">
           <source>favorites</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Favoriten</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Favoriten</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/LineInfo_AppBar_Direction" xml:space="preserve">
           <source>direction</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Richtung</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Richtung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Lines_Bus" xml:space="preserve">
           <source>bus</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bus</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Bus</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Lines_Metro" xml:space="preserve">
           <source>metro</source>
-          <target state="translated">U-Bahn</target>
+          <target state="signed-off">U-Bahn</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Lines_NightBus" xml:space="preserve">
           <source>night bus</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nachtbus</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Nachtbus</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Lines_PageTitle" xml:space="preserve">
           <source>Lines</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Linien</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Linien</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Lines_Tram" xml:space="preserve">
           <source>tram</source>
-          <target state="translated">Bim</target>
+          <target state="signed-off">Bim</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_About" xml:space="preserve">
           <source>about</source>
-          <target state="translated">Über</target>
+          <target state="signed-off">Über</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_About_Description" xml:space="preserve">
           <source>privacy policy, support</source>
-          <target state="translated">Unterstützung, Datenschutzerklärung</target>
+          <target state="signed-off">Unterstützung, Datenschutzerklärung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Nearby" xml:space="preserve">
           <source>nearby</source>
-          <target state="translated">In meiner Nähe</target>
+          <target state="signed-off">In meiner Nähe</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Nearby_Description" xml:space="preserve">
           <source>stations nearby your current location</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stationen in der Nähe Ihrer aktuellen Position</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Stationen in der Nähe Ihrer aktuellen Position</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Search" xml:space="preserve">
           <source>search</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Suche</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Suche</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Search_Description" xml:space="preserve">
           <source>stations by name (fulltext)</source>
-          <target state="translated">Stationen nach Namen (Volltext)</target>
+          <target state="signed-off">Stationen nach Namen (Volltext)</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Settings" xml:space="preserve">
           <source>settings</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Einstellungen</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Einstellungen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Settings_Description" xml:space="preserve">
           <source>turn on/off geolocation for nearby search</source>
-          <target state="translated">Ein-/ Ausschalten GPS Verwendung</target>
+          <target state="signed-off">Ein-/ Ausschalten GPS Verwendung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_StationList" xml:space="preserve">
           <source>station list</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stationsliste</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Stationsliste</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_StationList_Description" xml:space="preserve">
           <source>complete list of stations</source>
-          <target state="translated">Vollständige Liste der Stationen</target>
+          <target state="signed-off">Vollständige Liste der Stationen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_StationsByLines" xml:space="preserve">
           <source>stations by lines</source>
-          <target state="translated">Stationen nach Linien</target>
+          <target state="signed-off">Stationen nach Linien</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_StationsByLines_Description" xml:space="preserve">
           <source>metro, tram and buses by direction</source>
-          <target state="translated">U-Bahn, Bim und Busse nach Richtung</target>
+          <target state="signed-off">U-Bahn, Bim und Busse nach Richtung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Menu_PageTitle" xml:space="preserve">
           <source>menu</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Menü</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Menü</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Message_FavoriteAdded" xml:space="preserve">
           <source>favorite added</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Favorit hinzugefügt</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Favorit hinzugefügt</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_DownloadingFailed" xml:space="preserve">
           <source>Downloading departure information failed.</source>
-          <target state="translated">Download der Abfahrtsinformationen ist fehlgeschlagen.</target>
+          <target state="signed-off">Download der Abfahrtsinformationen ist fehlgeschlagen.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_FallbackOnErrorToErrorMessageConversion" xml:space="preserve">
           <source>No departure information was sent by the server.</source>
-          <target state="translated">Der Server hat keine Abfahrtsinformationen gesendet.</target>
+          <target state="signed-off">Der Server hat keine Abfahrtsinformationen gesendet.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_GenericError" xml:space="preserve">
           <source>An unexpected error occured, please try again later.</source>
-          <target state="translated">Ein unerwarteter Fehler ist aufgetreten, bitte versuchen Sie es später erneut.</target>
+          <target state="signed-off">Ein unerwarteter Fehler ist aufgetreten, bitte versuchen Sie es später erneut.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_MonitorsEmpty" xml:space="preserve">
           <source>No departures available at this time.</source>
-          <target state="translated">Zu dieser Uhrzeit sind keine Abfahrtsinformationen vorhanden.</target>
+          <target state="signed-off">Zu dieser Uhrzeit sind keine Abfahrtsinformationen vorhanden.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_RblNotSpecified" xml:space="preserve">
           <source>Internal app error: RBL not specified.</source>
-          <target state="translated">Interner App-Fehler: RBL nicht angegeben.</target>
+          <target state="signed-off">Interner App-Fehler: RBL nicht angegeben.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ResponseParsingFailed" xml:space="preserve">
           <source>Parsing the response failed.</source>
-          <target state="translated">Fehler beim Parsen der Antwort vom Server.</target>
+          <target state="signed-off">Fehler beim Parsen der Antwort vom Server.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerAuthenticationFailed" xml:space="preserve">
           <source>This app has failed to authenticate to the Wiener Linien API.</source>
-          <target state="translated">Die App konnte sich nicht am Wiener Linien-API authentifizieren.</target>
+          <target state="signed-off">Die App konnte sich nicht am Wiener Linien-API authentifizieren.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerCallQuotaExceeded" xml:space="preserve">
           <source>This app has exceeded the call quota allowed by Wiener Linien.</source>
-          <target state="translated">Die App hat das Aufruf-Kontingent beim Wiener Linien-API überschritten.</target>
+          <target state="signed-off">Die App hat das Aufruf-Kontingent beim Wiener Linien-API überschritten.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerDatabaseUnavailable" xml:space="preserve">
           <source>Server error reported: Database unavailable.</source>
-          <target state="translated">Serverfehler: Datenbank nicht verfügbar.</target>
+          <target state="signed-off">Serverfehler: Datenbank nicht verfügbar.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerNoDataInDatabase" xml:space="preserve">
           <source>Server error reported: No data in database.</source>
-          <target state="translated">Serverfehler: Keine Daten in der Datenbank.</target>
+          <target state="signed-off">Serverfehler: Keine Daten in der Datenbank.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerQueryStringParameterInvalid" xml:space="preserve">
           <source>This app has failed to send a properly formatted query to the Wiener Linien API.</source>
-          <target state="translated">Die App hat eine falsch formatierte Anfrage an die Wiener Linien-API gesendet.</target>
+          <target state="signed-off">Die App hat eine falsch formatierte Anfrage an die Wiener Linien-API gesendet.</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MonitorError_ServerStopDoesNotExist" xml:space="preserve">
           <source>This stop does not exist (stop database out of date?).</source>
-          <target state="translated">Diese Haltestelle existiert nicht (Haltestellen-Datenbank veraltet?).</target>
+          <target state="signed-off">Diese Haltestelle existiert nicht (Haltestellen-Datenbank veraltet?).</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/PositionMessage_NoStopsFoundNear" xml:space="preserve">
           <source>No stops found near</source>
-          <target state="translated">Keine Haltestellen nahe</target>
+          <target state="signed-off">Keine Haltestellen nahe</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/PositionMessage_YourPosition" xml:space="preserve">
           <source>Your position</source>
-          <target state="translated">Ihre Position</target>
+          <target state="signed-off">Ihre Position</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/ProgressMessage_AcquiringPosition" xml:space="preserve">
           <source>Acquiring position...</source>
-          <target state="translated">GPS Position wird gesucht...</target>
+          <target state="signed-off">GPS Position wird gesucht...</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/ProgressMessage_LoadingDepartures" xml:space="preserve">
           <source>Loading departures...</source>
-          <target state="translated">Abfahrtsinformationen werden geladen...</target>
+          <target state="signed-off">Abfahrtsinformationen werden geladen...</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/ResourceFlowDirection" xml:space="preserve">
           <source>LeftToRight</source>
@@ -206,55 +231,55 @@
         <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note></trans-unit>
         <trans-unit translate="yes" id="Resx/Settings_GeolocationForNearbyStations" xml:space="preserve">
           <source>Geolocation for nearby stations</source>
-          <target state="translated">GPS aktivieren für Stationssuche</target>
+          <target state="signed-off">GPS aktivieren für Stationssuche</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Settings_PageTitle" xml:space="preserve">
           <source>settings</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Einstellungen</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Einstellungen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/StationInfo_AppBar_Favorite" xml:space="preserve">
           <source>favorite</source>
-          <target state="translated">Favorit</target>
+          <target state="signed-off">Favorit</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/StationInfo_AppBar_Refresh" xml:space="preserve">
           <source>refresh</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aktualisieren</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Aktualisieren</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/StationInfo_AppBar_WalkTo" xml:space="preserve">
           <source>walk to</source>
-          <target state="translated">zu Fuß</target>
+          <target state="signed-off">zu Fuß</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/StationInfo_Departures_Title" xml:space="preserve">
           <source>departures</source>
-          <target state="translated">Abfahrten</target>
+          <target state="signed-off">Abfahrten</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_AppBar_Map" xml:space="preserve">
           <source>map</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Karte</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Karte</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_AppBar_Refresh" xml:space="preserve">
           <source>refresh</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aktualisieren</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Aktualisieren</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_ListTitle" xml:space="preserve">
           <source>list</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Liste</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Liste</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_NearbyTitle" xml:space="preserve">
           <source>nearby</source>
-          <target state="translated">Nahe</target>
+          <target state="signed-off">Nahe</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_PageTitle" xml:space="preserve">
           <source>Stations</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stationen</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Stationen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_SearchHowTo_Text" xml:space="preserve">
           <source>Station Name (auto-search after 3 characters)</source>
-          <target state="translated">Stationsname (Suche nach 3 Zeichen)</target>
+          <target state="signed-off">Stationsname (Suche nach 3 Zeichen)</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_SearchTitle" xml:space="preserve">
           <source>search</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Suche</target>
+          <target state="signed-off" state-qualifier="mt-suggestion">Suche</target>
         </trans-unit>
       </group>
     </body>

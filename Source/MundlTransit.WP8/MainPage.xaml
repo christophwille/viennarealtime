@@ -38,16 +38,14 @@
     
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <phone:Panorama x:Name="panoramaMain" Title="{StaticResource ApplicationTitleLowerCased}">
+        <phone:Panorama x:Name="panoramaMain" 
+                        SelectionChanged="PanoramaMain_OnSelectionChanged"
+                        Title="{StaticResource ApplicationTitleLowerCased}">
 
             <phone:PanoramaItem x:Name="Menu" Header="{Binding Path=LocalizedResources.Menu_PageTitle, Source={StaticResource LocalizedStrings}}" />
+            <phone:PanoramaItem x:Name="TrafficInfo" Header="{Binding Path=LocalizedResources.Alerts_MenuTitle, Source={StaticResource LocalizedStrings}}" />
             <phone:PanoramaItem x:Name="Favorites" Header="{Binding Path=LocalizedResources.Favorites_PageTitle, Source={StaticResource LocalizedStrings}}" />
             
-            <!--
-            <phone:PanoramaItem Header="history">
-                <Grid/>
-            </phone:PanoramaItem>
-            -->
         </phone:Panorama>
     </Grid>
 

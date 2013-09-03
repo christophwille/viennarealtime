@@ -22,7 +22,7 @@ namespace WienerLinien.Api.Ogd
 
         // {0}: the Api key
         // {1}: this is a "no-cache" parameter (Ticks)
-        private const string TrafficInfoListApiUrl = "http://www.wienerlinien.at/ogd_realtime/trafficInfoList?name=stoerunglang&sender=&sender={0}&vrtnocache={1}";
+        private const string TrafficInfoListApiUrl = "http://www.wienerlinien.at/ogd_realtime/trafficInfoList?name=stoerunglang&sender={0}&vrtnocache={1}";
 
         private string _apiKey;
 
@@ -199,6 +199,12 @@ namespace WienerLinien.Api.Ogd
                 return new TrafficInformation();
             }
 
+            // There is no traffic information at all (i.e. no alerts)
+            if (null == rootObj.data.trafficInfos)
+            {
+                return new TrafficInformation(succeeded: true);
+            }
+
             var items = new List<TrafficInformationItem>();
             foreach (var ti in rootObj.data.trafficInfos)
             {
@@ -206,7 +212,9 @@ namespace WienerLinien.Api.Ogd
                 {
                     Title = ti.title,
                     Description = ti.description,
-                    RelatedLines = String.Join(", ", ti.relatedLines)
+                    RelatedLines = String.Join(", ", ti.relatedLines),
+                    Start = ToLocalTime(ti.time.start),
+                    End = ToLocalTime(ti.time.end)
                 };
 
                 items.Add(item);

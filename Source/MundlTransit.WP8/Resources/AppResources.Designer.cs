@@ -124,6 +124,60 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Since.
+        /// </summary>
+        public static string Alerts_AlertSince {
+            get {
+                return ResourceManager.GetString("Alerts_AlertSince", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading....
+        /// </summary>
+        public static string Alerts_AlertsLoading {
+            get {
+                return ResourceManager.GetString("Alerts_AlertsLoading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to refresh.
+        /// </summary>
+        public static string Alerts_AppBar_Refresh {
+            get {
+                return ResourceManager.GetString("Alerts_AppBar_Refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading of alerts failed..
+        /// </summary>
+        public static string Alerts_LoadingFailed {
+            get {
+                return ResourceManager.GetString("Alerts_LoadingFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to alerts.
+        /// </summary>
+        public static string Alerts_MenuTitle {
+            get {
+                return ResourceManager.GetString("Alerts_MenuTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There are currently no traffic alerts..
+        /// </summary>
+        public static string Alerts_NoAlerts {
+            get {
+                return ResourceManager.GetString("Alerts_NoAlerts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         public static string ErrorMessage_Title {

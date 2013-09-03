@@ -218,6 +218,7 @@
     <Compile Include="ViewModels\Stations\StationsPivotPageViewModel.cs" />
     <Compile Include="ViewModels\Stations\StationsSearchViewModel.cs" />
     <Compile Include="ViewModels\Stations\StationsViewModelEnum.cs" />
+    <Compile Include="ViewModels\TrafficInfoViewModel.cs" />
     <Compile Include="Views\FavoritesView.xaml.cs">
       <DependentUpon>FavoritesView.xaml</DependentUpon>
     </Compile>
@@ -272,6 +273,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrafficInfoView.xaml.cs">
+      <DependentUpon>TrafficInfoView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -352,6 +356,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Stations\StationsSearchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TrafficInfoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

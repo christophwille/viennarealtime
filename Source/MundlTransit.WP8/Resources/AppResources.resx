@@ -138,6 +138,25 @@
   <data name="About_Version_Text" xml:space="preserve">
     <value>Version:</value>
   </data>
+  <data name="Alerts_AlertSince" xml:space="preserve">
+    <value>Since</value>
+  </data>
+  <data name="Alerts_AlertsLoading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="Alerts_AppBar_Refresh" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="Alerts_LoadingFailed" xml:space="preserve">
+    <value>Loading of alerts failed.</value>
+  </data>
+  <data name="Alerts_MenuTitle" xml:space="preserve">
+    <value>alerts</value>
+    <comment>Traffic information part in main page panorama</comment>
+  </data>
+  <data name="Alerts_NoAlerts" xml:space="preserve">
+    <value>There are currently no traffic alerts.</value>
+  </data>
   <data name="ErrorMessage_Title" xml:space="preserve">
     <value>Error</value>
   </data>

@@ -305,4 +305,23 @@
   <data name="Favorites_ContextMenu_Remove" xml:space="preserve">
     <value>[57821][!!_řêмóνê_!!]</value>
   </data>
+  <data name="Alerts_AlertSince" xml:space="preserve">
+    <value>[B705D][!!_Şíήċé_!!]</value>
+  </data>
+  <data name="Alerts_AppBar_Refresh" xml:space="preserve">
+    <value>[01EB4][!!_řéƒřęŝђ_!!]</value>
+  </data>
+  <data name="Alerts_LoadingFailed" xml:space="preserve">
+    <value>[1B37D][!!_Ļõàďîηģ òƒ âĺéŕτś ƒáìļęď._!!!!!!!!]</value>
+  </data>
+  <data name="Alerts_MenuTitle" xml:space="preserve">
+    <value>[A6F22][!!_áľęřτŝ_!!]</value>
+    <comment>Traffic information part in main page panorama</comment>
+  </data>
+  <data name="Alerts_NoAlerts" xml:space="preserve">
+    <value>[F8B8B][!!_Τĥęŗê àŕê ċúѓѓęήťłý ήó тѓàƒƒìĉ àĺęѓтş._!!!!!!!!!!!!]</value>
+  </data>
+  <data name="Alerts_AlertsLoading" xml:space="preserve">
+    <value>[9980B][!!_Ļòàďîήġ..._!!]</value>
+  </data>
 </root>

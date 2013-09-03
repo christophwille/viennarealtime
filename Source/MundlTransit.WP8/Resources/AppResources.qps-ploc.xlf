@@ -34,6 +34,31 @@
           <source>Version:</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[C235E][!!_Véřśìóй:_!!]</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_AlertSince" xml:space="preserve">
+          <source>Since</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[B705D][!!_Şíήċé_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_AlertsLoading" xml:space="preserve">
+          <source>Loading...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[9980B][!!_Ļòàďîήġ..._!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_AppBar_Refresh" xml:space="preserve">
+          <source>refresh</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[01EB4][!!_řéƒřęŝђ_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_LoadingFailed" xml:space="preserve">
+          <source>Loading of alerts failed.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[1B37D][!!_Ļõàďîηģ òƒ âĺéŕτś ƒáìļęď._!!!!!!!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_MenuTitle" xml:space="preserve">
+          <source>alerts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[A6F22][!!_áľęřτŝ_!!]</target>
+          
+        <note from="MultilingualBuild" annotates="source" priority="2">Traffic information part in main page panorama</note></trans-unit>
+        <trans-unit translate="yes" id="Resx/Alerts_NoAlerts" xml:space="preserve">
+          <source>There are currently no traffic alerts.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[F8B8B][!!_Τĥęŗê àŕê ċúѓѓęήťłý ήó тѓàƒƒìĉ àĺęѓтş._!!!!!!!!!!!!]</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/ErrorMessage_Title" xml:space="preserve">
           <source>Error</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[4A030][!!_Êŕŗôř_!!]</target>

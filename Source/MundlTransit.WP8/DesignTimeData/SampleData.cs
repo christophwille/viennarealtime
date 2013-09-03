@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MundlTransit.WP8.Model;
+using WienerLinien.Api;
 
 namespace MundlTransit.WP8.DesignTimeData
 {
@@ -17,11 +18,14 @@ namespace MundlTransit.WP8.DesignTimeData
 
         public ObservableCollection<MenuItem> MenuItems { get; set; }
 
+        public ObservableCollection<TrafficInformationItem> TrafficInformation { get; set; }
+
         public SampleData()
         {
             Lines = new ObservableCollection<SampleLineData>(CreateLineSampleData());
             Stations = Haltestellen = new ObservableCollection<SampleHaltestelleData>(CreateStationsSampleData());
             MenuItems = new ObservableCollection<MenuItem>(CreateSampleMenuItems());
+            TrafficInformation = new ObservableCollection<TrafficInformationItem>(CreateTrafficInformationItems());
         }
 
         private List<SampleLineData> CreateLineSampleData()
@@ -94,6 +98,27 @@ namespace MundlTransit.WP8.DesignTimeData
             };
 
             return menuitems;
+        }
+
+        private List<TrafficInformationItem> CreateTrafficInformationItems()
+        {
+            var items = new List<TrafficInformationItem>()
+            {
+                new TrafficInformationItem()
+                {
+                    Title = "49 Verspätung",
+                    Description = "Verkehrsbedingt kommt es derzeit bei der Linie 49 in beiden Fahrtrichtungen zu längeren Wartezeiten.",
+                    RelatedLines = "49"
+                },
+                new TrafficInformationItem()
+                {
+                    Title = "66A Verkehrsunfall",
+                    Description = "Nach einer Fahrtbehinderung kommt es derzeit zu längeren Wartezeiten.",
+                    RelatedLines = "66A"
+                }
+            };
+
+            return items;
         }
     }
 }

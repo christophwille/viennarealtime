@@ -305,4 +305,23 @@
   <data name="Favorites_ContextMenu_Remove" xml:space="preserve">
     <value>löschen</value>
   </data>
+  <data name="Alerts_AlertSince" xml:space="preserve">
+    <value>Seit</value>
+  </data>
+  <data name="Alerts_AppBar_Refresh" xml:space="preserve">
+    <value>Aktualisieren</value>
+  </data>
+  <data name="Alerts_LoadingFailed" xml:space="preserve">
+    <value>Das Laden der Betriebsstörungen ist fehlgeschlagen.</value>
+  </data>
+  <data name="Alerts_MenuTitle" xml:space="preserve">
+    <value>Meldungen</value>
+    <comment>Traffic information part in main page panorama</comment>
+  </data>
+  <data name="Alerts_NoAlerts" xml:space="preserve">
+    <value>Aktuell sind keine Betriebsstörungen gemeldet.</value>
+  </data>
+  <data name="Alerts_AlertsLoading" xml:space="preserve">
+    <value>Lade Meldungen über Betriebsstörungen...</value>
+  </data>
 </root>

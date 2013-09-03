@@ -20,5 +20,15 @@ namespace WienerLinien.Api.Tests
             Assert.That(result.Succeeded, Is.EqualTo(true));
             Assert.That(result.Items.Count, Is.EqualTo(7));
         }
+
+        [Test]
+        public void StoerunglangNoStoerungenAvailable()
+        {
+            var schnittstelle = new EchtzeitdatenSchnittstelle();
+            TrafficInformation result = schnittstelle.ParseTrafficInfoListResponse(@"{""data"":{}}");
+
+            Assert.That(result.Succeeded, Is.EqualTo(true));
+            Assert.That(result.Items.Count, Is.EqualTo(0));
+        }
     }
 }

@@ -56,5 +56,15 @@ namespace MundlTransit.WP8.Services
 
             return rbls;
         }
+
+        public async Task<TrafficInformation> RetrieveTrafficInfoListAsync()
+        {
+            var schnittstelle = new WienerLinien.Api.Ogd.EchtzeitdatenSchnittstelle();
+            schnittstelle.InitializeApi(_apiKey);
+
+            TrafficInformation response = await schnittstelle.GetTrafficInfoListAsync().ConfigureAwait(false);
+
+            return response;
+        }
     }
 }
