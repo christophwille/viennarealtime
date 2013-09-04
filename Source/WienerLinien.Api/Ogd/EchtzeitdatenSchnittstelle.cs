@@ -36,7 +36,7 @@ namespace WienerLinien.Api.Ogd
             return DateTime.Now.Ticks.ToString();
         }
 
-        public async Task<MonitorInformation> GetMonitorInformationAsync(List<int> rblList)
+        public async Task<MonitorInformation> GetMonitorInformationAsync(List<int> rblList, IHttpClient client=null)
         {
             if (null == rblList || !rblList.Any())
             {
@@ -46,7 +46,10 @@ namespace WienerLinien.Api.Ogd
             var rbls = String.Join("&", rblList.Select(rbl => String.Format("rbl={0}", rbl)));
             var url = String.Format(MonitorApiUrl, rbls, _apiKey, GenerateVrtNoCacheParameterValue());
 
-            var response = await PerformHttpGetRequestAsync(url).ConfigureAwait(false);
+            if (null == client)
+                client = new DefaultHttpClient();
+
+            var response = await client.GetStringAsync(url).ConfigureAwait(false);
 
             if (null == response)
             {
@@ -69,7 +72,7 @@ namespace WienerLinien.Api.Ogd
         public async Task<TrafficInformation> GetTrafficInfoListAsync()
         {
             var url = String.Format(TrafficInfoListApiUrl, _apiKey, GenerateVrtNoCacheParameterValue());
-            var response = await PerformHttpGetRequestAsync(url).ConfigureAwait(false);
+            var response = await new DefaultHttpClient().GetStringAsync(url).ConfigureAwait(false);
 
             if (null == response)
                 return new TrafficInformation();
@@ -233,22 +236,6 @@ namespace WienerLinien.Api.Ogd
 
             if (ok)
                 return parsed.ToLocalTime();
-
-            return null;
-        }
-
-        private async Task<string> PerformHttpGetRequestAsync(string url)
-        {
-            try
-            {
-                var c = new HttpClient();
-                c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                return await c.GetStringAsync(url).ConfigureAwait(false);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.ToString());
-            }
 
             return null;
         }

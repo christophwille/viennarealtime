@@ -33,8 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DefaultHttpClient.cs" />
     <Compile Include="Departure.cs" />
     <Compile Include="IEchtzeitdatenSchnittstelle.cs" />
+    <Compile Include="IHttpClient.cs" />
     <Compile Include="ILineInformation.cs" />
     <Compile Include="MonitorInformationErrorCode.cs" />
     <Compile Include="MonitorLine.cs" />

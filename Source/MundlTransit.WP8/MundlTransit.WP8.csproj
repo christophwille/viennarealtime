@@ -167,6 +167,7 @@
     <Compile Include="Common\NearestLocationHelpers.cs" />
     <Compile Include="Common\PanoramaExtensions.cs" />
     <Compile Include="Common\ScreenExtensions.cs" />
+    <Compile Include="Common\SocketStreamHttpClient.cs" />
     <Compile Include="DesignTimeData\SampleData.cs" />
     <Compile Include="DesignTimeData\SampleHaltestelleData.cs" />
     <Compile Include="DesignTimeData\SampleLineData.cs" />
