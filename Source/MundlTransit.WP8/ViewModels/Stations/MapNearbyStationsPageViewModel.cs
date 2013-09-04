@@ -31,9 +31,9 @@ namespace MundlTransit.WP8.ViewModels.Stations
 
         public IObservableCollection<MapHaltestelleModel> NearbyStations { get; set; }
 
-        protected override void OnInitialize()
+        protected override void OnActivate()
         {
-            base.OnInitialize();
+            base.OnActivate();
             PopulateMapAsync();
         }
 
