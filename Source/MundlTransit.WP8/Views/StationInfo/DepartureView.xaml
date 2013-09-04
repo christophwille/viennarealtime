@@ -3,10 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
-             xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
-             xmlns:local="clr-namespace:MundlTransit.WP8.Views.StationInfo"
-             mc:Ignorable="d"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+    xmlns:local="clr-namespace:MundlTransit.WP8.Views.StationInfo"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -17,7 +18,7 @@
             <phone:LongListSelector x:Name="TheDepartures" Margin="0,0,-12,0" ItemsSource="{Binding Departures}">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="0,0,0,17">
+                    <StackPanel Margin="0,0,0,17" toolkit:TiltEffect.SuppressTilt="True">
                         <local:LineTypeSelector Content="{Binding}" HorizontalAlignment="Left">
                             <local:LineTypeSelector.Metro>
                                 <DataTemplate>
