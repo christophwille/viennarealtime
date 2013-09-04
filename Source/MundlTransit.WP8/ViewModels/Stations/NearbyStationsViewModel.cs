@@ -91,6 +91,11 @@ namespace MundlTransit.WP8.ViewModels.Stations
 
         public void ShowOnMap()
         {
+            // If you hit the button before the location has been found
+            if (null == MyLocation)
+                return;
+
+            // If there a no stations, why show the map?
             if (null == Haltestellen || !Haltestellen.Any())
                 return;
 
