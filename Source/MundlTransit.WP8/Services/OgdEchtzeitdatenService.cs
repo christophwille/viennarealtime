@@ -32,7 +32,7 @@ namespace MundlTransit.WP8.Services
             schnittstelle.InitializeApi(_apiKey);
 
             IHttpClient client = null;
-            client = new SocketStreamHttpClient();
+            // client = new SocketStreamHttpClient();
 
             MonitorInformation response = await schnittstelle.GetMonitorInformationAsync(rbls, client).ConfigureAwait(false);
 
