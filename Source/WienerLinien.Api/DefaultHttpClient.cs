@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -13,11 +14,25 @@ namespace WienerLinien.Api
     {
         public async Task<string> GetStringAsync(string url)
         {
+            var handler = new HttpClientHandler();
+
+            if (handler.SupportsAutomaticDecompression)
+            {
+                handler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+            }
+
+            var client = new HttpClient(handler);
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
             try
             {
-                var c = new HttpClient();
-                c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                return await c.GetStringAsync(url).ConfigureAwait(false);
+                using (var response = await client.GetAsync(url).ConfigureAwait(false))
+                {
+                    response.EnsureSuccessStatusCode();
+
+                    var body = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    return body;
+                }
             }
             catch (Exception ex)
             {
