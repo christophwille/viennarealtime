@@ -9,6 +9,8 @@ please visit [Wiener Linien - Echtzeitdaten](https://open.wien.at/site/datensatz
 
 [Release History](https://github.com/christophwille/viennarealtime/wiki/Release-History)
 
+[in Windows Phone Store](http://www.windowsphone.com/en-us/store/app/vienna-realtime/7a00e2f6-79b9-43d9-8ad6-0696246435e3)
+
 ## Reporting Bugs, Requesting Features
 
 Send an email to [me](mailto:christoph.wille@gmail.com). Attach a screenshot ([Start + Power button](http://www.windowsphone.com/en-us/how-to/wp8/photos/take-a-screenshot))
