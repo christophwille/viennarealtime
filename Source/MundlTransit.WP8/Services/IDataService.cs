@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Data.Runtime;
 using MundlTransit.WP8.Model;
+using WienerLinien.Api;
 
 namespace MundlTransit.WP8.Services
 {
@@ -17,7 +18,10 @@ namespace MundlTransit.WP8.Services
         Task<List<Haltestelle>> GetNearestHaltestellenAsync(Wgs84Location center, double radius = 500.0);
         Task<Haltestelle> GetHaltestelleAsync(int id);
         Task<List<Haltestelle>> GetHaltestellenAsync(List<int> ids);
+
         Task<List<OgdLinie>> GetLinienAsync();
+        Task<List<OgdLinie>> GetLinienAsync(List<MonitorLineType> mlt);
+
         Task<List<LinienHaltestelleView>> GetHaltestellenForLinieAsync(int linienId);
 
         // Runtime Data

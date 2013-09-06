@@ -10,11 +10,10 @@ namespace WienerLinien.Api
     {
         Metro = 1,
         Tram,
+        TramWLB,
         Bus,
         SBahn,
-        Regionalzug,
         Other,
-        BusB,
         NightBus,
         Unknown = 1000,
     }

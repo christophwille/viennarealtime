@@ -103,6 +103,14 @@ namespace MundlTransit.WP8.Data.Reference
             return matched;
         }
 
+        public async Task<List<OgdLinie>> GetLinienAsync(List<string> vms)
+        {
+            var query = _connection.Table<OgdLinie>().Where(l => vms.Contains(l.Verkehrsmittel.ToLower()));
+
+            var matched = await query.ToListAsync().ConfigureAwait(false);
+            return matched;
+        }
+
         private const string SqlForLineStations = 
                 @"SELECT Haltestellen.*, OgdSteige.Richtung, OgdSteige.Reihenfolge
                     FROM  OgdSteige INNER JOIN

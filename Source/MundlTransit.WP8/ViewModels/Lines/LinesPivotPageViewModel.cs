@@ -12,7 +12,6 @@ using WienerLinien.Api.Ogd;
 
 namespace MundlTransit.WP8.ViewModels.Lines
 {
-    // "list" "search" "nearby" "line" (use expanderview)
     public class LinesPivotPageViewModel : Conductor<IScreen>.Collection.OneActive
     {
         private MetroViewModel mvm;
@@ -40,28 +39,6 @@ namespace MundlTransit.WP8.ViewModels.Lines
             Items.Add(tvm);
             Items.Add(bvm);
             Items.Add(nbvm);
-        }
-
-        protected async override void OnActivate()
-        {
-            base.OnActivate();
-            LoadLinienAsync();
-        }
-
-        protected async Task LoadLinienAsync()
-        {
-            var linien = await _dataService.GetLinienAsync();
-            var modelLinien = linien.Select(l => new LinieModel(l)).ToList();
-
-            var metros = modelLinien.Where(l => l.LineType == MonitorLineType.Metro).OrderBy(l => l.Reihenfolge);
-            var trams = modelLinien.Where(l => l.LineType == MonitorLineType.Tram).OrderBy(l => l.Reihenfolge);
-            var buses = modelLinien.Where(l => l.LineType == MonitorLineType.Bus || l.LineType == MonitorLineType.BusB).OrderBy(l => l.Reihenfolge);
-            var nightbuses = modelLinien.Where(l => l.LineType == MonitorLineType.NightBus).OrderBy(l => l.Reihenfolge);
-
-            mvm.SetLines(metros);
-            tvm.SetLines(trams);
-            bvm.SetLines(buses);
-            nbvm.SetLines(nightbuses);
         }
     }
 }

@@ -8,6 +8,8 @@ using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Data.Runtime;
 using MundlTransit.WP8.Model;
+using WienerLinien.Api;
+using WienerLinien.Api.Ogd;
 
 namespace MundlTransit.WP8.Services
 {
@@ -141,6 +143,14 @@ namespace MundlTransit.WP8.Services
         {
             var db = new ReferenceDataContext();
             return await db.GetLinienAsync().ConfigureAwait(false);
+        }
+
+        public async Task<List<OgdLinie>> GetLinienAsync(List<MonitorLineType> mlt)
+        {
+            var vms = mlt.Select(MonitorLineTypeMapper.TypeToTypeString).ToList();
+
+            var db = new ReferenceDataContext();
+            return await db.GetLinienAsync(vms).ConfigureAwait(false);
         }
 
         public async Task<List<LinienHaltestelleView>> GetHaltestellenForLinieAsync(int linienId)
