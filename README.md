@@ -18,7 +18,7 @@ if you think that will help me track down a bug quicker, or if that includes inf
 
 ## Features
 
-* `Departures` - list all departures by line / direction for a station (selected via one of the previous three options)
+* `Departures` - list all departures by line / direction for a station - selected via one of the following four options:
 * `Nearby` - list / map stations near my current location
 * `Search` - search stations by (partial) name
 * `List` - list all stations
