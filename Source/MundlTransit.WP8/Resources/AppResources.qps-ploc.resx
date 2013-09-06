@@ -324,4 +324,10 @@
   <data name="Alerts_AlertsLoading" xml:space="preserve">
     <value>[9980B][!!_Ļòàďîήġ..._!!]</value>
   </data>
+  <data name="Favorites_ContextMenu_PinToStart" xml:space="preserve">
+    <value>[00D97][!!_рįή τõ śτâѓт_!!]</value>
+  </data>
+  <data name="Favorites_Favorite_AlreadyPinned" xml:space="preserve">
+    <value>[3FEF2][!!_Ỳóù ãľѓéáđŷ þìηηêð_!!!!!!]</value>
+  </data>
 </root>

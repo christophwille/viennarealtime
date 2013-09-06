@@ -63,9 +63,17 @@
           <source>Error</source>
           <target state="signed-off" state-qualifier="mt-suggestion">Fehler</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/Favorites_ContextMenu_PinToStart" xml:space="preserve">
+          <source>pin to start</source>
+          <target state="signed-off">An Start anheften</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/Favorites_ContextMenu_Remove" xml:space="preserve">
           <source>remove</source>
           <target state="signed-off">löschen</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Favorites_Favorite_AlreadyPinned" xml:space="preserve">
+          <source>You already pinned</source>
+          <target state="signed-off">Station bereits angeheftet</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Favorites_NoFavoritesYet" xml:space="preserve">
           <source>You do not have any favorites yet.</source>

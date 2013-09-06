@@ -34,7 +34,8 @@
                                         <!-- You can suppress tilt on indivudal menu items with TiltEffect.SuppressTilt="True" -->
                                         <toolkit:MenuItem Header="{Binding Path=LocalizedResources.Favorites_ContextMenu_Remove, Source={StaticResource LocalizedStrings}}"
                                             cm:Message.Attach="[Event Click] = [Action Remove($source, $datacontext)]" />
-                                        
+                                        <toolkit:MenuItem Header="{Binding Path=LocalizedResources.Favorites_ContextMenu_PinToStart, Source={StaticResource LocalizedStrings}}"
+                                            cm:Message.Attach="[Event Click] = [Action PinToStart($source, $datacontext)]" />
                                     </toolkit:ContextMenu>
                                 </toolkit:ContextMenuService.ContextMenu>
 

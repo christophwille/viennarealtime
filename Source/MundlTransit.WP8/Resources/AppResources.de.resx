@@ -324,4 +324,10 @@
   <data name="Alerts_AlertsLoading" xml:space="preserve">
     <value>Lade Meldungen über Betriebsstörungen...</value>
   </data>
+  <data name="Favorites_ContextMenu_PinToStart" xml:space="preserve">
+    <value>An Start anheften</value>
+  </data>
+  <data name="Favorites_Favorite_AlreadyPinned" xml:space="preserve">
+    <value>Station bereits angeheftet</value>
+  </data>
 </root>

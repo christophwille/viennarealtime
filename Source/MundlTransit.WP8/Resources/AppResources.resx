@@ -160,8 +160,14 @@
   <data name="ErrorMessage_Title" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="Favorites_ContextMenu_PinToStart" xml:space="preserve">
+    <value>pin to start</value>
+  </data>
   <data name="Favorites_ContextMenu_Remove" xml:space="preserve">
     <value>remove</value>
+  </data>
+  <data name="Favorites_Favorite_AlreadyPinned" xml:space="preserve">
+    <value>You already pinned</value>
   </data>
   <data name="Favorites_NoFavoritesYet" xml:space="preserve">
     <value>You do not have any favorites yet.</value>

@@ -63,9 +63,17 @@
           <source>Error</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[4A030][!!_Êŕŗôř_!!]</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/Favorites_ContextMenu_PinToStart" xml:space="preserve">
+          <source>pin to start</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[00D97][!!_рįή τõ śτâѓт_!!]</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/Favorites_ContextMenu_Remove" xml:space="preserve">
           <source>remove</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[57821][!!_řêмóνê_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Favorites_Favorite_AlreadyPinned" xml:space="preserve">
+          <source>You already pinned</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[3FEF2][!!_Ỳóù ãľѓéáđŷ þìηηêð_!!!!!!]</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Favorites_NoFavoritesYet" xml:space="preserve">
           <source>You do not have any favorites yet.</source>
