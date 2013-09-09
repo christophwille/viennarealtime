@@ -18,5 +18,20 @@ namespace WienerLinien.Api
         public int Countdown { get; set; }
         public DateTime? TimePlanned { get; set; }
         public DateTime? TimeReal { get; set; }
+
+        public string DisplayTime
+        {
+            get
+            {
+                // Show minutes if: realtime information available, time to departure less than 60 minutes
+                if (RealtimeSupported && Countdown < 60)
+                {
+                    return Countdown.ToString();
+                }
+
+                // Default
+                return String.Format("{0:H:mm}", TimePlanned);
+            }
+        }
     }
 }

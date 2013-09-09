@@ -20,12 +20,15 @@ namespace MundlTransit.WP8.DesignTimeData
 
         public ObservableCollection<TrafficInformationItem> TrafficInformation { get; set; }
 
+        public ObservableCollection<MonitorLine> Departures { get; set; }
+
         public SampleData()
         {
             Lines = new ObservableCollection<SampleLineData>(CreateLineSampleData());
             Stations = Haltestellen = new ObservableCollection<SampleHaltestelleData>(CreateStationsSampleData());
             MenuItems = new ObservableCollection<MenuItem>(CreateSampleMenuItems());
             TrafficInformation = new ObservableCollection<TrafficInformationItem>(CreateTrafficInformationItems());
+            Departures = new ObservableCollection<MonitorLine>(CreateDepartures());
         }
 
         private List<SampleLineData> CreateLineSampleData()
@@ -119,6 +122,58 @@ namespace MundlTransit.WP8.DesignTimeData
             };
 
             return items;
+        }
+
+        private List<MonitorLine> CreateDepartures()
+        {
+            var deps = new List<MonitorLine>()
+            {
+                new MonitorLine()
+                {
+                    Name = "U4",
+                    Towards = "Heiligenstadt",
+                    Departures = new List<Departure>() {
+                                    new Departure()
+                                    {
+                                        Name = "U4",
+                                        Towards = "Heiligenstadt",
+                                        RealtimeSupported = true,
+                                        BarrierFree = true,
+                                        Countdown = 3,
+                                        Type = MonitorLineType.Metro
+                                    },
+                                    new Departure()
+                                    {
+                                        Name = "U4",
+                                        Towards = "Heiligenstadt",
+                                        RealtimeSupported = true,
+                                        BarrierFree = false,
+                                        Countdown = 7,
+                                        Type = MonitorLineType.Metro
+                                    },
+                                    new Departure()
+                                    {
+                                        Name = "U4",
+                                        Towards = "Heiligenstadt",
+                                        RealtimeSupported = true,
+                                        BarrierFree = true,
+                                        Countdown = 14,
+                                        Type = MonitorLineType.Metro
+                                    },
+                                    new Departure()
+                                    {
+                                        Name = "U4",
+                                        Towards = "Heiligenstadt",
+                                        RealtimeSupported = true,
+                                        BarrierFree = true,
+                                        Countdown = 45,
+                                        Type = MonitorLineType.Metro
+                                    }
+                    }
+                }
+            };
+
+            return deps;
         }
     }
 }

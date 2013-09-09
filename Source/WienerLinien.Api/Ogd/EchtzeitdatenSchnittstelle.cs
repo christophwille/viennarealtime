@@ -128,21 +128,21 @@ namespace WienerLinien.Api.Ogd
 
             foreach (var monitor in rootObj.data.monitors)
             {
-                foreach (var line in monitor.lines)
+                foreach (var ml in monitor.lines)
                 {
-                    var ml = new MonitorLine()
+                    var line = new MonitorLine()
                     {
-                        Name = line.name,
-                        Towards = line.towards,
-                        Type = MonitorLineTypeMapper.TypeStringToType(line.type),
-                        RealtimeSupported = line.realtimeSupported,
-                        BarrierFree = line.barrierFree,
+                        Name = ml.name,
+                        Towards = ml.towards,
+                        Type = MonitorLineTypeMapper.TypeStringToType(ml.type),
+                        RealtimeSupported = ml.realtimeSupported,
+                        BarrierFree = ml.barrierFree,
                         Departures = new List<Api.Departure>()
                     };
 
-                    if (null != line.departures && null != line.departures.departure)
+                    if (null != ml.departures && null != ml.departures.departure)
                     {
-                        foreach (var departure in line.departures.departure)
+                        foreach (var departure in ml.departures.departure)
                         {
                             var dt = departure.departureTime;
 
@@ -155,13 +155,13 @@ namespace WienerLinien.Api.Ogd
                             var timePlanned = ToLocalTime(dt.timePlanned);
                             var timeReal = ToLocalTime(dt.timeReal);
 
-                            var md = new Api.Departure()
+                            var dep = new Api.Departure()
                             {
-                                Name = ml.Name,
-                                Towards = ml.Towards,
-                                Type = ml.Type,
-                                RealtimeSupported = ml.RealtimeSupported,
-                                BarrierFree = ml.BarrierFree,
+                                Name = line.Name,
+                                Towards = line.Towards,
+                                Type = line.Type,
+                                RealtimeSupported = line.RealtimeSupported,
+                                BarrierFree = line.BarrierFree,
                                 Countdown = dt.countdown,
                                 TimeReal = timeReal,
                                 TimePlanned = timePlanned
@@ -170,21 +170,22 @@ namespace WienerLinien.Api.Ogd
                             // Override line defaults for this departure if necessary
                             if (null != departure.vehicle)
                             {
-                                md.OverridesLineInformation = true;
-                                md.Name = departure.vehicle.name;
-                                md.Type = MonitorLineTypeMapper.TypeStringToType(departure.vehicle.type);
-                                md.RealtimeSupported = departure.vehicle.realtimeSupported;
-                                md.BarrierFree = departure.vehicle.barrierFree;
+                                dep.OverridesLineInformation = true;
+                                dep.Name = departure.vehicle.name;
+                                dep.Towards = departure.vehicle.towards;
+                                dep.Type = MonitorLineTypeMapper.TypeStringToType(departure.vehicle.type);
+                                dep.RealtimeSupported = departure.vehicle.realtimeSupported;
+                                dep.BarrierFree = departure.vehicle.barrierFree;
                             }
 
-                            ml.Departures.Add(md);
+                            line.Departures.Add(dep);
                         }
                     }
 
                     // Do not add empty lines (NICHT EINSTEIGEN, ALLE ZÜGE GLEIS 1, &c)
-                    if (ml.Departures.Any())
+                    if (line.Departures.Any())
                     {
-                        parsedMonitorLines.Add(ml);
+                        parsedMonitorLines.Add(line);
                     }
                 }
             }

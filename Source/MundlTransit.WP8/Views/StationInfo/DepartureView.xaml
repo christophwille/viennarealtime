@@ -8,14 +8,20 @@
     xmlns:local="clr-namespace:MundlTransit.WP8.Views.StationInfo"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     mc:Ignorable="d"
+    xmlns:sampleData="clr-namespace:MundlTransit.WP8.DesignTimeData"
+    d:DataContext="{Binding Source={d:DesignInstance Type=sampleData:SampleData, IsDesignTimeCreatable=True}}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="480" d:DesignWidth="480">
-
+    d:DesignHeight="480" 
+    d:DesignWidth="480">
+    
+    <UserControl.Resources>
+        <cm:BooleanToVisibilityConverter x:Key="visConverter" />
+    </UserControl.Resources>
+    
     <Grid x:Name="LayoutRoot" Background="Transparent">
-
-            <phone:LongListSelector x:Name="TheDepartures" Margin="0,0,-12,0" ItemsSource="{Binding Departures}">
+        <phone:LongListSelector x:Name="TheDepartures" Margin="0,0,-12,0" ItemsSource="{Binding Departures}">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
                     <StackPanel Margin="0,0,0,17" toolkit:TiltEffect.SuppressTilt="True">
@@ -38,9 +44,31 @@
                                 </DataTemplate>
                             </local:LineTypeSelector.Default>
                         </local:LineTypeSelector>
-                            
-                        <TextBlock Text="{Binding DepartureTimes}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextNormalStyle}"/>
-                        </StackPanel>
+                        
+                        <ItemsControl Margin="10,0,0,0" ItemsSource="{Binding DeparturesDisplay}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <toolkit:WrapPanel />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding DisplayTime}" 
+                                                   Margin="5,0,10,0" 
+                                                   Style="{StaticResource PhoneTextNormalStyle}"/>
+                                        <TextBlock Text="&#x267F;" 
+                                                   VerticalAlignment="Center"
+                                                   Margin="-8,0,5,0"
+                                                   Visibility="{Binding BarrierFree,Converter={StaticResource visConverter}}"
+                                                   FontFamily="assets/accessibility/DejaVuSans.ttf#DejaVu Sans" 
+                                                   Style="{StaticResource PhoneTextNormalStyle}"
+                                                   />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>
             </phone:LongListSelector>

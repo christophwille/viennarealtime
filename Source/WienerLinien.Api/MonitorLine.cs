@@ -14,7 +14,15 @@ namespace WienerLinien.Api
         public bool RealtimeSupported { get; set; }
         public bool BarrierFree { get; set; }
 
-        public List<Departure> Departures { get; set; } 
+        public List<Departure> Departures { get; set; }
+
+        public List<Departure> DeparturesDisplay
+        {
+            get
+            {
+                return Departures.Take(4).ToList();
+            }
+        }
 
         public virtual string FormatLineInformation()
         {
@@ -41,15 +49,7 @@ namespace WienerLinien.Api
 
                 if (!first) stb.Append(", ");
 
-                // Show minutes if: realtime information available, time to departure less than 60 minutes
-                if (RealtimeSupported && d.Countdown < 60)
-                {
-                    stb.Append(d.Countdown);
-                }
-                else
-                {
-                    stb.AppendFormat("{0:H:mm}", d.TimePlanned);
-                }
+                stb.Append(d.DisplayTime);
 
                 first = false;
             }

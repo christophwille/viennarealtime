@@ -366,6 +366,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Accessibility\DejaVuSans.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
@@ -373,6 +376,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Accessibility\Source.txt" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
