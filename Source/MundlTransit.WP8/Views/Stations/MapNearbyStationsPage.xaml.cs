@@ -47,8 +47,14 @@ namespace MundlTransit.WP8.Views.Stations
             _isZoomed = true;
             var vm = (MapNearbyStationsPageViewModel)DataContext;
 
-            this.UserLocationMarker.GeoCoordinate = new GeoCoordinate(vm.NavigationLatitudeMe, vm.NavigationLongitudeMe);
-            this.UserLocationMarker.Visibility = Visibility.Visible;
+            try
+            {
+                this.UserLocationMarker.GeoCoordinate = new GeoCoordinate(vm.NavigationLatitudeMe, vm.NavigationLongitudeMe);   // this can throw ArgumentOutOfRangeException
+                this.UserLocationMarker.Visibility = Visibility.Visible;
+            }
+            catch (Exception)
+            {
+            }
 
             this.NearbyStationsMapItemsControl.ItemsSource = vm.NearbyStations;
 

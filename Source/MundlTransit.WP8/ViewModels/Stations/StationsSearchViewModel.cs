@@ -54,6 +54,8 @@ namespace MundlTransit.WP8.ViewModels.Stations
 
         private bool CanStartSearch(string searchString)
         {
+            if (String.IsNullOrWhiteSpace(searchString)) return false;
+
             return (searchString.Length >= MinimumSearchStringLength);
         }
 

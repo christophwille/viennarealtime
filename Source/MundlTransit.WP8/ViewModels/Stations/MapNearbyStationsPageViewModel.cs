@@ -8,7 +8,6 @@ using Caliburn.Micro;
 using MundlTransit.WP8.Model;
 using MundlTransit.WP8.Services;
 using MundlTransit.WP8.ViewModels.StationInfo;
-using Windows.Devices.Geolocation;
 
 namespace MundlTransit.WP8.ViewModels.Stations
 {
@@ -43,13 +42,26 @@ namespace MundlTransit.WP8.ViewModels.Stations
             var ids = idsAsString.Select(Int32.Parse).ToList();
 
             var hst = await _dataService.GetHaltestellenAsync(ids);
+            var mapPins = new List<MapHaltestelleModel>();
 
-            var mapPins = hst.Select(h => new MapHaltestelleModel()
+            foreach (var h in hst)
+            {
+                try
+                {
+                    var mapHst = new MapHaltestelleModel()
                                 {
                                     Id = h.Id,
                                     Bezeichnung = h.Bezeichnung,
                                     GeoCoordinate = new GeoCoordinate(h.Latitude, h.Longitude)
-                                });
+                                };
+
+                    mapPins.Add(mapHst);
+                }
+                catch (Exception)
+                {
+                    // ArgumentOutOfRangeException from new GeoCoordinate(..., ...): we then do not show this station
+                }
+            }
 
             NearbyStations = new BindableCollection<MapHaltestelleModel>(mapPins);
             NotifyOfPropertyChange(() => NearbyStations);
