@@ -18,6 +18,7 @@ using MundlTransit.WP8.Data.Runtime;
 using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.ViewModels;
 using MundlTransit.WP8.ViewModels.Lines;
+using MundlTransit.WP8.ViewModels.Routing;
 using MundlTransit.WP8.ViewModels.StationInfo;
 using MundlTransit.WP8.ViewModels.Stations;
 using MundlTransit.WP8.Services;
@@ -89,6 +90,8 @@ namespace MundlTransit.WP8
             container.PerRequest<StationInfoPivotPageViewModel>();
                 container.PerRequest<DepartureViewModel>();
 
+            container.PerRequest<RoutingPivotPageViewModel>();
+                container.PerRequest<NewRouteViewModel>();
 
             container.PerRequest<SettingsPageViewModel>();
             container.PerRequest<AboutPageViewModel>();

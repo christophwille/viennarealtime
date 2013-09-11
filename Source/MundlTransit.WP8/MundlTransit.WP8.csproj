@@ -209,6 +209,8 @@
     <Compile Include="ViewModels\Lines\NightBusViewModel.cs" />
     <Compile Include="ViewModels\Lines\TramViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\Routing\NewRouteViewModel.cs" />
+    <Compile Include="ViewModels\Routing\RoutingPivotPageViewModel.cs" />
     <Compile Include="ViewModels\StationInfo\DepartureViewModel.cs" />
     <Compile Include="ViewModels\StationInfo\StationInfoPivotPageViewModel.cs" />
     <Compile Include="ViewModels\StationInfo\StationInfoViewModelBase.cs" />
@@ -246,6 +248,12 @@
     </Compile>
     <Compile Include="Views\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Routing\NewRouteView.xaml.cs">
+      <DependentUpon>NewRouteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Routing\RoutingPivotPage.xaml.cs">
+      <DependentUpon>RoutingPivotPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StationInfo\DepartureView.xaml.cs">
       <DependentUpon>DepartureView.xaml</DependentUpon>
@@ -329,6 +337,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Routing\NewRouteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Routing\RoutingPivotPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -7,6 +7,7 @@ using Caliburn.Micro;
 using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.ViewModels.Lines;
+using MundlTransit.WP8.ViewModels.Routing;
 using MundlTransit.WP8.ViewModels.Stations;
 using MundlTransit.WP8.Views.Lines;
 using MenuItem = MundlTransit.WP8.Model.MenuItem;
@@ -53,6 +54,14 @@ namespace MundlTransit.WP8.ViewModels
                                         Description=AppResources.MenuItem_StationList_Description, 
                                         Navigate = (n) => n.UriFor<StationsPivotPageViewModel>().Navigate() 
                                     },
+#if DEBUG
+                                    new MenuItem
+                                    { 
+                                        Name = "Routing", 
+                                        Description= "From A to B", 
+                                        Navigate = (n) => n.UriFor<RoutingPivotPageViewModel>().Navigate() 
+                                    },
+#endif
 									new MenuItem
                                     { 
                                         Name = AppResources.MenuItem_StationsByLines, 
