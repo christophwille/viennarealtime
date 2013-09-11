@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StorageHelper.Apollo</name>
+    </assembly>
+    <members>
+        <member name="M:StorageHelper.Apollo.Storage.DeleteState(System.String)">
+            <summary>
+            Removes the element with the specified key from the application's state.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <returns>True if the key has been removed or did not exist.</returns>
+        </member>
+        <member name="M:StorageHelper.Apollo.Storage.SaveState(System.String,System.Object)">
+            <summary>
+            Saves an element with the provided key and value to the application's state.
+            </summary>
+            <param name="key">The key of the element to save.</param>
+            <param name="value">The object to save.</param>
+            <returns>True if the element has been saved.</returns>
+        </member>
+        <member name="M:StorageHelper.Apollo.Storage.LoadState``1(System.String)">
+            <summary>
+            Gets the value associated with the specified key from the application's state.
+            </summary>
+            <typeparam name="T">The type of the object at the specified key.</typeparam>
+            <param name="key">The key of the element to retrieve.</param>
+            <returns>The retrieved element or an empty object of type T if no element was found at the specified key.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:StorageHelper.Apollo.Storage.SaveAsync(System.String,System.Object)" -->
+        <member name="M:StorageHelper.Apollo.Storage.SaveAsync(Windows.Storage.StorageFolder,System.String,System.Object)">
+            <summary>
+            Saves an entry with the provided path and value to the application's persisted specified storage.
+            </summary>
+            <param name="path">The path for the entry to save.</param>
+            <param name="data">The object to save.</param>
+            <returns>True if the entry has been saved.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:StorageHelper.Apollo.Storage.LoadAsync``1(System.String)" -->
+        <member name="M:StorageHelper.Apollo.Storage.LoadAsync``1(Windows.Storage.StorageFolder,System.String)">
+            <summary>
+            Gets the value associated with the specified path from the application's persisted specified storage.
+            </summary>
+            <typeparam name="T">The type of the object at the specified path.</typeparam>
+            <param name="path">The path for the entry to retrieve.</param>
+            <returns>The retrieved element or an empty object of type T if no entry was found at the specified path.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:StorageHelper.Apollo.Storage.DeleteAsync(System.String)" -->
+        <member name="M:StorageHelper.Apollo.Storage.DeleteAsync(Windows.Storage.StorageFolder,System.String)">
+            <summary>
+            Removes the entry with the specified path from the application's persisted specified storage.
+            </summary>
+            <param name="path">The path for the entry to remove.</param>
+            <returns>True if the entry has been removed.</returns>
+        </member>
+    </members>
+</doc>

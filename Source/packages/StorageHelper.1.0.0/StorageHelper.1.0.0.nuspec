@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>StorageHelper</id>
+    <version>1.0.0</version>
+    <authors>Rajen Kishna</authors>
+    <owners>Rajen Kishna</owners>
+    <iconUrl>http://blog.rajenki.com/wp-content/uploads/2013/08/sh.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>StorageHelper is a helper class for Windows Phone and Windows 8 apps to easily save, load and delete data from storage.</description>
+    <releaseNotes>Initial version.</releaseNotes>
+    <tags>storage windowsphone phone wp7 wp8 winrt windows8</tags>
+  </metadata>
+</package>

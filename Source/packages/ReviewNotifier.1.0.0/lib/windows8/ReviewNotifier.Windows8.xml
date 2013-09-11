@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReviewNotifier.Windows8</name>
+    </assembly>
+    <members>
+        <member name="M:ReviewNotifier.Windows8.ReviewNotification.InitializeAsync">
+            <summary>
+            Initialize the ReviewNotifier helper by increasing the startup counter. To be placed in the Application_Launching event in App.xaml.cs
+            </summary>
+        </member>
+        <member name="M:ReviewNotifier.Windows8.ReviewNotification.TriggerAsync(System.String,System.String)">
+            <summary>
+            Trigger the ReviewNotifier helper. A message will be displayed with the passed title and message text after 5 app launches.
+            </summary>
+            <param name="message">The message text of the message pop-up to be displayed to the user</param>
+            <param name="title">The title of the message pop-up to be displayed to the user</param>
+        </member>
+        <member name="M:ReviewNotifier.Windows8.ReviewNotification.TriggerAsync(System.String,System.String,System.Int32)">
+            <summary>
+            Trigger the ReviewNotifier helper. A message will be displayed with the passed title and message text after the specified number of app launches.
+            </summary>
+            <param name="message">The message text of the message pop-up to be displayed to the user</param>
+            <param name="title">The title of the message pop-up to be displayed to the user</param>
+            <param name="count">The number of app launches before displaying the message pop-up</param>
+        </member>
+        <member name="M:ReviewNotifier.Windows8.ReviewNotification.TriggerAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Trigger the ReviewNotifier helper. A message with custom button texts will be displayed with the passed title and message text after 5 app launches.
+            </summary>
+            <param name="message">The message text of the message pop-up to be displayed to the user</param>
+            <param name="title">The title of the message pop-up to be displayed to the user</param>
+            <param name="ok">The text of the accept button</param>
+            <param name="cancel">The text of the cancel button</param>
+        </member>
+        <member name="M:ReviewNotifier.Windows8.ReviewNotification.TriggerAsync(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Trigger the ReviewNotifier helper. A message with custom button texts will be displayed with the passed title and message text after the specified number of app launches.
+            </summary>
+            <param name="message">The message text of the message pop-up to be displayed to the user</param>
+            <param name="title">The title of the message pop-up to be displayed to the user</param>
+            <param name="ok">The text of the accept button</param>
+            <param name="cancel">The text of the cancel button</param>
+            <param name="count">The number of app launches before displaying the message pop-up</param>
+        </member>
+    </members>
+</doc>

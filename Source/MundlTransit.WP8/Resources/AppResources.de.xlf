@@ -237,6 +237,14 @@
           <target state="translated">de</target>
           
         <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note></trans-unit>
+        <trans-unit translate="yes" id="Resx/ReviewNotifications_Title" xml:space="preserve">
+          <source>Please review the app</source>
+          <target state="new">Please review the app</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/ReviewNotifications_Message" xml:space="preserve">
+          <source>Click OK to go to the reviews page in the store (this nag screen won't reappear even if you Cancel)</source>
+          <target state="new">Click OK to go to the reviews page in the store (this nag screen won't reappear even if you Cancel)</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/Routing_SourceStationHintText" xml:space="preserve">
           <source>Select start</source>
           <target state="new">Select start</target>

@@ -13,6 +13,7 @@ using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.ViewModels;
 using MundlTransit.WP8.Views;
+using ReviewNotifier.Apollo;
 using CM = Caliburn.Micro;
 
 namespace MundlTransit.WP8
@@ -55,6 +56,12 @@ namespace MundlTransit.WP8
                 ((PanoramaItem) (((Panorama) sender).SelectedItem)).Content is TrafficInfoView;
             
             ApplicationBar.IsVisible = isTrafficInfoPanoramaItem;
+        }
+
+
+        private async void MainPage_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            ReviewNotification.TriggerAsync(AppResources.ReviewNotifications_Message, AppResources.ReviewNotifications_Title, 5);
         }
     }
 }

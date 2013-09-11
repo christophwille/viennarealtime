@@ -574,6 +574,24 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Click OK to go to the reviews page in the store (this nag screen won&apos;t reappear even if you Cancel).
+        /// </summary>
+        public static string ReviewNotifications_Message {
+            get {
+                return ResourceManager.GetString("ReviewNotifications_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please review the app.
+        /// </summary>
+        public static string ReviewNotifications_Title {
+            get {
+                return ResourceManager.GetString("ReviewNotifications_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select destination.
         /// </summary>
         public static string Routing_DestinationStationHintText {

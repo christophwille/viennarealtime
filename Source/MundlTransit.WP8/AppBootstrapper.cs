@@ -23,6 +23,7 @@ using MundlTransit.WP8.ViewModels.StationInfo;
 using MundlTransit.WP8.ViewModels.Stations;
 using MundlTransit.WP8.Services;
 using MundlTransit.WP8.ViewModels.LineInfo;
+using ReviewNotifier.Apollo;
 
 namespace MundlTransit.WP8
 {
@@ -38,11 +39,12 @@ namespace MundlTransit.WP8
             return new TransitionFrame();
         }
 
-        async Task PerformDatabaseInitializationsAsync()
+        async Task PerformAsyncInitializationsAsync()
         {
             await ReferenceDataContext.CopyDatabaseAsync().ConfigureAwait(continueOnCapturedContext: false);
             await ReferenceDataContext.DeletePreviousDatabasesAsync().ConfigureAwait(continueOnCapturedContext: false);
             await RuntimeDataContext.InitializeDatabaseAsync().ConfigureAwait(continueOnCapturedContext: false);
+            await ReviewNotification.InitializeAsync().ConfigureAwait(continueOnCapturedContext: false);
         }
 
         protected override void Configure()
@@ -55,7 +57,7 @@ namespace MundlTransit.WP8
 
             container.RegisterPhoneServices(RootFrame);
 
-            var initTasks = new Task(() => PerformDatabaseInitializationsAsync());
+            var initTasks = new Task(() => PerformAsyncInitializationsAsync());
             initTasks.RunSynchronously();
 
             container.RegisterPerRequest(typeof(IConfigurationService), null, typeof(DefaultConfigurationService));

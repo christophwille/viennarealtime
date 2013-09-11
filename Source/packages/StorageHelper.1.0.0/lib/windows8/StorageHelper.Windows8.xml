@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StorageHelper.Windows8</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "M:StorageHelper.Windows8.Storage.SaveAsync(System.String,System.Object)" -->
+        <member name="M:StorageHelper.Windows8.Storage.SaveAsync(Windows.Storage.StorageFolder,System.String,System.Object)">
+            <summary>
+            Saves an entry with the provided path and value to the application's persisted specified storage.
+            </summary>
+            <param name="path">The path for the entry to save.</param>
+            <param name="data">The object to save.</param>
+            <returns>True if the entry has been saved.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:StorageHelper.Windows8.Storage.LoadAsync``1(System.String)" -->
+        <member name="M:StorageHelper.Windows8.Storage.LoadAsync``1(Windows.Storage.StorageFolder,System.String)">
+            <summary>
+            Gets the value associated with the specified path from the application's persisted specified storage.
+            </summary>
+            <typeparam name="T">The type of the object at the specified path.</typeparam>
+            <param name="path">The path for the entry to retrieve.</param>
+            <returns>The retrieved element or an empty object of type T if no entry was found at the specified path.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:StorageHelper.Windows8.Storage.DeleteAsync(System.String)" -->
+        <member name="M:StorageHelper.Windows8.Storage.DeleteAsync(Windows.Storage.StorageFolder,System.String)">
+            <summary>
+            Removes the entry with the specified path from the application's persisted specified storage.
+            </summary>
+            <param name="path">The path for the entry to remove.</param>
+            <returns>True if the entry has been removed.</returns>
+        </member>
+    </members>
+</doc>

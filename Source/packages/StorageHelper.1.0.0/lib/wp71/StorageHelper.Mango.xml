@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StorageHelper.Mango</name>
+    </assembly>
+    <members>
+        <member name="M:StorageHelper.Mango.Storage.DeleteState(System.String)">
+            <summary>
+            Removes the element with the specified key from the application's state.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <returns>True if the key has been removed or did not exist.</returns>
+        </member>
+        <member name="M:StorageHelper.Mango.Storage.SaveState(System.String,System.Object)">
+            <summary>
+            Saves an element with the provided key and value to the application's state.
+            </summary>
+            <param name="key">The key of the element to save.</param>
+            <param name="value">The object to save.</param>
+            <returns>True if the element has been saved.</returns>
+        </member>
+        <member name="M:StorageHelper.Mango.Storage.LoadState``1(System.String)">
+            <summary>
+            Gets the value associated with the specified key from the application's state.
+            </summary>
+            <typeparam name="T">The type of the object at the specified key.</typeparam>
+            <param name="key">The key of the element to retrieve.</param>
+            <returns>The retrieved element or an empty object of type T if no element was found at the specified key.</returns>
+        </member>
+        <member name="M:StorageHelper.Mango.Storage.Delete(System.String)">
+            <summary>
+            Removes the entry with the specified key from the application's persisted storage.
+            </summary>
+            <param name="key">The key for the entry to be deleted.</param>
+            <returns>True if the entry has been removed.</returns>
+        </member>
+        <member name="M:StorageHelper.Mango.Storage.Save(System.String,System.Object)">
+            <summary>
+            Saves an entry with the provided key and value to the application's persisted storage.
+            </summary>
+            <param name="key">The key for the entry to save.</param>
+            <param name="value">The object to save.</param>
+            <returns>True if the entry has been saved.</returns>
+        </member>
+        <member name="M:StorageHelper.Mango.Storage.Load``1(System.String)">
+            <summary>
+            Gets the value associated with the specified key from the application's persisted storage.
+            </summary>
+            <typeparam name="T">The type of the object at the specified key.</typeparam>
+            <param name="key">The key for the entry to retrieve.</param>
+            <returns>The retrieved element or an empty object of type T if no entry was found at the specified key.</returns>
+        </member>
+    </members>
+</doc>
