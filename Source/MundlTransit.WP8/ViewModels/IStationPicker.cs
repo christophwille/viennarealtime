@@ -8,6 +8,6 @@ namespace MundlTransit.WP8.ViewModels
 {
     public interface IStationPicker
     {
-        Action<int> OnStationPicked { get; set; }
+        Action<int, string> OnStationPicked { get; set; }
     }
 }

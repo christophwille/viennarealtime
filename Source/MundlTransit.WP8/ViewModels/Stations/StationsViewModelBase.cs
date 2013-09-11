@@ -19,18 +19,18 @@ namespace MundlTransit.WP8.ViewModels.Stations
             StationsViewModel = lvm;
             this.NavigationService = navigationService;
 
-            OnStationPicked = (stationId) => this.NavigationService.UriFor<StationInfoPivotPageViewModel>()
+            OnStationPicked = (stationId, stationName) => this.NavigationService.UriFor<StationInfoPivotPageViewModel>()
                         .WithParam(vm => vm.NavigationStationId, stationId)
                         .Navigate();
         }
 
         public StationsViewModelEnum StationsViewModel { get; set; }
 
-        public Action<int> OnStationPicked { get; set; }
+        public Action<int, string> OnStationPicked { get; set; }
 
         public void ShowStation(object sender)
         {
-            this.WhenSelectionChanged<Haltestelle>(sender, (item) => OnStationPicked(item.Id));
+            this.WhenSelectionChanged<Haltestelle>(sender, (item) => OnStationPicked(item.Id, item.Bezeichnung));
         }
     }
 }

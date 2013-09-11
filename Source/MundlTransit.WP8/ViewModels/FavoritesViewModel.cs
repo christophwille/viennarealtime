@@ -29,7 +29,7 @@ namespace MundlTransit.WP8.ViewModels
 
             DisplayName = AppResources.Favorites_PageTitle;
 
-            OnStationPicked = (stationId) => this._navigationService.UriFor<StationInfoPivotPageViewModel>()
+            OnStationPicked = (stationId, stationName) => this._navigationService.UriFor<StationInfoPivotPageViewModel>()
                     .WithParam(vm => vm.NavigationStationId, stationId)
                     .Navigate();
         }
@@ -52,11 +52,11 @@ namespace MundlTransit.WP8.ViewModels
 
         public IObservableCollection<Favorite> Favorites { get; private set; }
 
-        public Action<int> OnStationPicked { get; set; }
+        public Action<int, string> OnStationPicked { get; set; }
 
         public void ShowFavorite(object sender)
         {
-            this.WhenSelectionChanged<Favorite>(sender, (item) => OnStationPicked(item.HaltestellenId));
+            this.WhenSelectionChanged<Favorite>(sender, (item) => OnStationPicked(item.HaltestellenId, item.Bezeichnung));
         }
 
         public void PinToStart(object sender, Favorite item)

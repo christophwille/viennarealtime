@@ -10,14 +10,18 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     d:DesignHeight="480" d:DesignWidth="480">
-    
+
     <Grid x:Name="LayoutRoot" Background="{StaticResource TransparentBrush}">
         <StackPanel>
-            <TextBlock>From</TextBlock>
-            <TextBox cm:Message.Attach="[Event Tap] = [Action SelectFrom]" IsReadOnly="True" />
-            <TextBlock>To</TextBlock>
-            <TextBox></TextBox>
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}">From</TextBlock>
+            <TextBox x:Name="FromStationName" 
+                     cm:Message.Attach="[Event Tap] = [Action SelectFrom]" 
+                     IsReadOnly="True" />
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}">To</TextBlock>
+            <TextBox x:Name="ToStationName" 
+                     cm:Message.Attach="[Event Tap] = [Action SelectTo]" 
+                     IsReadOnly="True"  />
         </StackPanel>
-        
+
     </Grid>
 </UserControl>
