@@ -40,5 +40,10 @@ namespace MundlTransit.WP8.ViewModels.Routing
         {
             _newRouteViewModel.ReverseFromTo();
         }
+
+        public void SetToNow()
+        {
+            _newRouteViewModel.SetToNow();
+        }
     }
 }

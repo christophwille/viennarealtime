@@ -24,14 +24,23 @@ namespace MundlTransit.WP8.Views.Routing
         {
             ApplicationBar = new ApplicationBar();
 
-            var appBarButton = new CM.AppBarButton()
+            var reverseAppBarButton = new CM.AppBarButton()
             {
                 IconUri = new Uri("/Assets/sort.png", UriKind.Relative),
                 Text = "reverse",
                 Message = "ReverseFromTo"
             };
 
-            ApplicationBar.Buttons.Add(appBarButton);
+            ApplicationBar.Buttons.Add(reverseAppBarButton);
+
+            var nowAppBarButton = new CM.AppBarButton()
+            {
+                IconUri = new Uri("/Assets/time.png", UriKind.Relative),
+                Text = "now",
+                Message = "SetToNow"
+            };
+
+            ApplicationBar.Buttons.Add(nowAppBarButton);
         }
     }
 }

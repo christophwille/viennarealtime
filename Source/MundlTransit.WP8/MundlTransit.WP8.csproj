@@ -423,6 +423,7 @@
     <Content Include="Assets\Tiles\FlipCycleTileMediumSecondaryTile.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\time.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />

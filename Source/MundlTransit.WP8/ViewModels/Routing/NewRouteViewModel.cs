@@ -20,8 +20,7 @@ namespace MundlTransit.WP8.ViewModels.Routing
             FromStationName = AppResources.Routing_SourceStationHintText;
             ToStationName = AppResources.Routing_DestinationStationHintText;
 
-            DateOfTrip = DateTime.Now.Date;
-            TimeOfTrip = DateTime.Now;
+            SetToNow();
         
             RoutingOptions = new List<string>() { "fastest", "fewest changes"};
         }
@@ -34,6 +33,8 @@ namespace MundlTransit.WP8.ViewModels.Routing
         private int? _toStationId;
         private string _fromStationName;
         private string _toStationName;
+        private DateTime? _dateOfTrip;
+        private DateTime? _timeOfTrip;
 
         public string FromStationName
         {
@@ -47,8 +48,17 @@ namespace MundlTransit.WP8.ViewModels.Routing
             set { _toStationName = value; NotifyOfPropertyChange(() => ToStationName); }
         }
 
-        public DateTime DateOfTrip { get; set; }
-        public DateTime TimeOfTrip { get; set; }
+        public DateTime? DateOfTrip
+        {
+            get { return _dateOfTrip; }
+            set { _dateOfTrip = value; NotifyOfPropertyChange(() => DateOfTrip); }
+        }
+
+        public DateTime? TimeOfTrip
+        {
+            get { return _timeOfTrip; }
+            set { _timeOfTrip = value; NotifyOfPropertyChange(() => TimeOfTrip); }
+        }
 
         public void SelectFrom()
         {
@@ -105,6 +115,14 @@ namespace MundlTransit.WP8.ViewModels.Routing
         public void SearchTrips()
         {
             
+        }
+
+        public void SetToNow()
+        {
+            var now = DateTime.Now;
+
+            DateOfTrip = now.Date;
+            TimeOfTrip = now;
         }
     }
 }
