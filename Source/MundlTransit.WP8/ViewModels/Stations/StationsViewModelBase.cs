@@ -10,7 +10,7 @@ using MundlTransit.WP8.ViewModels.StationInfo;
 
 namespace MundlTransit.WP8.ViewModels.Stations
 {
-    public class StationsViewModelBase : Screen
+    public class StationsViewModelBase : Screen, IStationPicker
     {
         protected readonly INavigationService NavigationService;
 
@@ -18,18 +18,19 @@ namespace MundlTransit.WP8.ViewModels.Stations
         {
             StationsViewModel = lvm;
             this.NavigationService = navigationService;
+
+            OnStationPicked = (stationId) => this.NavigationService.UriFor<StationInfoPivotPageViewModel>()
+                        .WithParam(vm => vm.NavigationStationId, stationId)
+                        .Navigate();
         }
 
         public StationsViewModelEnum StationsViewModel { get; set; }
 
+        public Action<int> OnStationPicked { get; set; }
+
         public void ShowStation(object sender)
         {
-            this.WhenSelectionChanged<Haltestelle>(sender, (item) =>
-            {
-                NavigationService.UriFor<StationInfoPivotPageViewModel>()
-                    .WithParam(m => m.NavigationStationId, item.Id)
-                    .Navigate();
-            });
+            this.WhenSelectionChanged<Haltestelle>(sender, (item) => OnStationPicked(item.Id));
         }
     }
 }

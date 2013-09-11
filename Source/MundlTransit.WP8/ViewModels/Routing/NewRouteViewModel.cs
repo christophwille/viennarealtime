@@ -21,6 +21,14 @@ namespace MundlTransit.WP8.ViewModels.Routing
         {
             var vm = IoC.Get<StationSelectorViewModel>();
             _windowManager.ShowDialog(vm);
+
+            vm.Deactivated += (sender, args) =>
+            {
+                if (args.WasClosed)
+                {
+                    var stationId = vm.PickedStation;
+                }
+            };
         }
     }
 }

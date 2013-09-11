@@ -201,6 +201,7 @@
     <Compile Include="StorageHandlers\StationsPivotPageModelStorage.cs" />
     <Compile Include="StorageHandlers\StationsSearchViewModelStorage.cs" />
     <Compile Include="ViewModels\FavoritesViewModel.cs" />
+    <Compile Include="ViewModels\IStationPicker.cs" />
     <Compile Include="ViewModels\LineInfo\LineInfoPageViewModel.cs" />
     <Compile Include="ViewModels\Lines\BusViewModel.cs" />
     <Compile Include="ViewModels\Lines\LinesPivotPageViewModel.cs" />

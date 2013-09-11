@@ -12,9 +12,18 @@ namespace MundlTransit.WP8.ViewModels.Routing
         public StationSelectorViewModel(FavoritesViewModel fvm)
         {
             Favorites = fvm;
+            Favorites.OnStationPicked = OnStationPicked;
 
             DisplayName = "select station for routing";
         }
+
+        private void OnStationPicked(int stationId)
+        {
+            PickedStation = stationId;
+            TryClose();
+        }
+
+        public int? PickedStation { get; protected set; }
 
         public FavoritesViewModel Favorites { get; protected set; }
 

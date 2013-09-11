@@ -15,19 +15,23 @@ using MundlTransit.WP8.ViewModels.StationInfo;
 
 namespace MundlTransit.WP8.ViewModels
 {
-    public class FavoritesViewModel : Screen
+    public class FavoritesViewModel : Screen, IStationPicker
     {
-        private readonly INavigationService navigationService;
+        private readonly INavigationService _navigationService;
         private readonly IDataService _dataService;
         private readonly IUIService _uiService;
 
         public FavoritesViewModel(INavigationService navigationService, IDataService ds, IUIService uisvc)
         {
             _dataService = ds;
-            this.navigationService = navigationService;
+            this._navigationService = navigationService;
             _uiService = uisvc;
 
             DisplayName = AppResources.Favorites_PageTitle;
+
+            OnStationPicked = (stationId) => this._navigationService.UriFor<StationInfoPivotPageViewModel>()
+                    .WithParam(vm => vm.NavigationStationId, stationId)
+                    .Navigate();
         }
 
         public async Task LoadFavoritesAsync()
@@ -48,14 +52,11 @@ namespace MundlTransit.WP8.ViewModels
 
         public IObservableCollection<Favorite> Favorites { get; private set; }
 
+        public Action<int> OnStationPicked { get; set; }
+
         public void ShowFavorite(object sender)
         {
-            this.WhenSelectionChanged<Favorite>(sender, (item) =>
-            {
-                navigationService.UriFor<StationInfoPivotPageViewModel>()
-                    .WithParam(vm => vm.NavigationStationId, item.HaltestellenId)
-                    .Navigate();
-            });
+            this.WhenSelectionChanged<Favorite>(sender, (item) => OnStationPicked(item.HaltestellenId));
         }
 
         public void PinToStart(object sender, Favorite item)
