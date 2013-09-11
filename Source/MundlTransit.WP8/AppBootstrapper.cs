@@ -65,34 +65,34 @@ namespace MundlTransit.WP8
 
             // container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(CreateCampEchtzeitdatenService));
             container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(OgdEchtzeitdatenService));
-            
-            
+
+
             container.PerRequest<MainPageViewModel>();
-                container.PerRequest<MenuViewModel>();
-                container.PerRequest<TrafficInfoViewModel>();
-                container.PerRequest<FavoritesViewModel>();
+            container.PerRequest<MenuViewModel>();
+            container.PerRequest<TrafficInfoViewModel>();
+            container.PerRequest<FavoritesViewModel>();
 
             container.PerRequest<StationsPivotPageViewModel>();
-                container.PerRequest<StationsListViewModel>();
-                container.PerRequest<StationsSearchViewModel>();
-                container.PerRequest<NearbyStationsViewModel>();
+            container.PerRequest<StationsListViewModel>();
+            container.PerRequest<StationsSearchViewModel>();
+            container.PerRequest<NearbyStationsViewModel>();
 
             container.PerRequest<LinesPivotPageViewModel>();
-                container.PerRequest<MetroViewModel>();
-                container.PerRequest<TramViewModel>();
-                container.PerRequest<BusViewModel>();
-                container.PerRequest<NightBusViewModel>();
+            container.PerRequest<MetroViewModel>();
+            container.PerRequest<TramViewModel>();
+            container.PerRequest<BusViewModel>();
+            container.PerRequest<NightBusViewModel>();
 
             container.PerRequest<LineInfoPageViewModel>();
 
             container.PerRequest<MapNearbyStationsPageViewModel>();
 
             container.PerRequest<StationInfoPivotPageViewModel>();
-                container.PerRequest<DepartureViewModel>();
+            container.PerRequest<DepartureViewModel>();
 
             container.PerRequest<RoutingPivotPageViewModel>();
-                container.PerRequest<NewRouteViewModel>();
-                container.PerRequest<StationSelectorViewModel>();
+            container.PerRequest<NewRouteViewModel>();
+            container.PerRequest<StationSelectorViewModel>();
 
             container.PerRequest<TripsViewModel>();
 

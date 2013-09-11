@@ -9,7 +9,7 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="480" d:DesignWidth="480">
+    d:DesignHeight="800" d:DesignWidth="480">
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource TransparentBrush}">
         <StackPanel>
@@ -21,14 +21,36 @@
             <TextBox x:Name="ToStationName" 
                      cm:Message.Attach="[Event Tap] = [Action SelectTo]" 
                      IsReadOnly="True"  />
-            <TextBlock Text="Date" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <toolkit:DatePicker x:Name="DateOfTrip"/>
-            <TextBlock Text="Time" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <StackPanel Orientation="Horizontal">
-                <toolkit:TimePicker x:Name="TimeOfTrip" Margin="0,0,20,0" />
-
-            </StackPanel>
             
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Date" Style="{StaticResource PhoneTextNormalStyle}"/>
+                    <toolkit:DatePicker x:Name="DateOfTrip"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Time" Style="{StaticResource PhoneTextNormalStyle}"/>
+                    <toolkit:TimePicker x:Name="TimeOfTrip" />
+                </StackPanel>
+            </Grid>
+
+            <toolkit:ListPicker x:Name="RoutingOptionsPicked" Header="Routing Option" 
+                                SelectedItem="{Binding SelectedRoutingOption, Mode=TwoWay}"
+                                ItemsSource="{Binding RoutingOptions}">
+                <toolkit:ListPicker.FullModeItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" 
+                                   Margin="0 24 24 24" 
+                                   TextWrapping="Wrap" 
+                                   Style="{StaticResource PhoneTextTitle2Style}" />
+                    </DataTemplate>
+                </toolkit:ListPicker.FullModeItemTemplate>
+            </toolkit:ListPicker>
+
             <Button x:Name="SearchTrips" Content="Search" />
         </StackPanel>
 

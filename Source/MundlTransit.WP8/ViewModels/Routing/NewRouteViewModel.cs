@@ -22,7 +22,13 @@ namespace MundlTransit.WP8.ViewModels.Routing
 
             DateOfTrip = DateTime.Now.Date;
             TimeOfTrip = DateTime.Now;
+        
+            RoutingOptions = new List<string>() { "fastest", "fewest changes"};
         }
+
+        // TEMPORARY
+        public List<string> RoutingOptions { get; set; }
+        public string SelectedRoutingOption { get; set; }
 
         private int? _fromStationId;
         private int? _toStationId;
@@ -86,6 +92,19 @@ namespace MundlTransit.WP8.ViewModels.Routing
             FromStationName = _fromStationId == null ? AppResources.Routing_SourceStationHintText : ToStationName;
             _toStationId = tempStationId;
             ToStationName = _toStationId == null ? AppResources.Routing_DestinationStationHintText : tempStationName;
+        }
+
+        public bool CanSearchTrips
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public void SearchTrips()
+        {
+            
         }
     }
 }
