@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
+using MundlTransit.WP8.Resources;
 
 namespace MundlTransit.WP8.ViewModels.Routing
 {
@@ -16,15 +17,26 @@ namespace MundlTransit.WP8.ViewModels.Routing
             _windowManager = windowManager;
             DisplayName = "new";
 
-            FromStationName = "Select start";
-            ToStationName = "Select destination";
+            FromStationName = AppResources.Routing_SourceStationHintText;
+            ToStationName = AppResources.Routing_DestinationStationHintText;
         }
 
         private int? _fromStationId;
         private int? _toStationId;
+        private string _fromStationName;
+        private string _toStationName;
 
-        public string FromStationName { get; set; }
-        public string ToStationName { get; set; }
+        public string FromStationName
+        {
+            get { return _fromStationName; }
+            set { _fromStationName = value; NotifyOfPropertyChange(() => FromStationName); }
+        }
+
+        public string ToStationName
+        {
+            get { return _toStationName; }
+            set { _toStationName = value; NotifyOfPropertyChange(() => ToStationName); }
+        }
 
         public void SelectFrom()
         {
@@ -32,7 +44,6 @@ namespace MundlTransit.WP8.ViewModels.Routing
             {
                 _fromStationId = i;
                 FromStationName = s;
-                NotifyOfPropertyChange(() => FromStationName);
             });
         }
 
@@ -42,7 +53,6 @@ namespace MundlTransit.WP8.ViewModels.Routing
             {
                 _toStationId = i;
                 ToStationName = s;
-                NotifyOfPropertyChange(() => ToStationName);
             });
         }
 
@@ -59,6 +69,17 @@ namespace MundlTransit.WP8.ViewModels.Routing
                         onSuccess(vm.PickedStation.Value, vm.PickedStationName);
                 }
             };
+        }
+
+        public void ReverseFromTo()
+        {
+            int? tempStationId = _fromStationId;
+            string tempStationName = FromStationName;
+
+            _fromStationId = _toStationId;
+            FromStationName = _fromStationId == null ? AppResources.Routing_SourceStationHintText : ToStationName;
+            _toStationId = tempStationId;
+            ToStationName = _toStationId == null ? AppResources.Routing_DestinationStationHintText : tempStationName;
         }
     }
 }

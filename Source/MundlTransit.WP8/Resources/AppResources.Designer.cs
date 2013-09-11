@@ -574,6 +574,24 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select destination.
+        /// </summary>
+        public static string Routing_DestinationStationHintText {
+            get {
+                return ResourceManager.GetString("Routing_DestinationStationHintText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select start.
+        /// </summary>
+        public static string Routing_SourceStationHintText {
+            get {
+                return ResourceManager.GetString("Routing_SourceStationHintText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Geolocation for nearby stations.
         /// </summary>
         public static string Settings_GeolocationForNearbyStations {

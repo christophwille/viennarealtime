@@ -94,6 +94,8 @@ namespace MundlTransit.WP8
                 container.PerRequest<NewRouteViewModel>();
                 container.PerRequest<StationSelectorViewModel>();
 
+            container.PerRequest<TripsViewModel>();
+
             container.PerRequest<SettingsPageViewModel>();
             container.PerRequest<AboutPageViewModel>();
 

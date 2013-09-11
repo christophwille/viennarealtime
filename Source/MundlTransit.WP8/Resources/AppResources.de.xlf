@@ -237,6 +237,14 @@
           <target state="translated">de</target>
           
         <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note></trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_SourceStationHintText" xml:space="preserve">
+          <source>Select start</source>
+          <target state="new">Select start</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_DestinationStationHintText" xml:space="preserve">
+          <source>Select destination</source>
+          <target state="new">Select destination</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/Settings_GeolocationForNearbyStations" xml:space="preserve">
           <source>Geolocation for nearby stations</source>
           <target state="signed-off">GPS aktivieren für Stationssuche</target>

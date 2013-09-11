@@ -27,7 +27,6 @@ namespace MundlTransit.WP8.ViewModels.Routing
             _newRouteViewModel = newRoute;
         }
 
-
         protected override void OnInitialize()
         {
             base.OnInitialize();
@@ -35,6 +34,11 @@ namespace MundlTransit.WP8.ViewModels.Routing
             Items.Add(_newRouteViewModel);
 
             ActivateItem(_newRouteViewModel);
+        }
+
+        public void ReverseFromTo()
+        {
+            _newRouteViewModel.ReverseFromTo();
         }
     }
 }

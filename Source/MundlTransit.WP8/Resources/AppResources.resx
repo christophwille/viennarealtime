@@ -291,6 +291,12 @@
     <value>en-US</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
+  <data name="Routing_DestinationStationHintText" xml:space="preserve">
+    <value>Select destination</value>
+  </data>
+  <data name="Routing_SourceStationHintText" xml:space="preserve">
+    <value>Select start</value>
+  </data>
   <data name="Settings_GeolocationForNearbyStations" xml:space="preserve">
     <value>Geolocation for nearby stations</value>
   </data>
