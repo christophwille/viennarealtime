@@ -148,6 +148,10 @@ namespace MundlTransit.WP8
 
                     return false;
                 };
+
+
+            ConventionManager.AddElementConvention<DatePicker>(DatePicker.ValueProperty, "Value", "ValueChanged");
+            ConventionManager.AddElementConvention<TimePicker>(TimePicker.ValueProperty, "Value", "ValueChanged");
         }
 
         protected override object GetInstance(Type service, string key)

@@ -15,10 +15,13 @@ namespace MundlTransit.WP8.ViewModels.Routing
         public NewRouteViewModel(IWindowManager windowManager)
         {
             _windowManager = windowManager;
-            DisplayName = "new";
+            DisplayName = "new route";
 
             FromStationName = AppResources.Routing_SourceStationHintText;
             ToStationName = AppResources.Routing_DestinationStationHintText;
+
+            DateOfTrip = DateTime.Now.Date;
+            TimeOfTrip = DateTime.Now;
         }
 
         private int? _fromStationId;
@@ -37,6 +40,9 @@ namespace MundlTransit.WP8.ViewModels.Routing
             get { return _toStationName; }
             set { _toStationName = value; NotifyOfPropertyChange(() => ToStationName); }
         }
+
+        public DateTime DateOfTrip { get; set; }
+        public DateTime TimeOfTrip { get; set; }
 
         public void SelectFrom()
         {

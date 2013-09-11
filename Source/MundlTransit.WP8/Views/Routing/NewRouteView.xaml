@@ -21,6 +21,15 @@
             <TextBox x:Name="ToStationName" 
                      cm:Message.Attach="[Event Tap] = [Action SelectTo]" 
                      IsReadOnly="True"  />
+            <TextBlock Text="Date" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <toolkit:DatePicker x:Name="DateOfTrip"/>
+            <TextBlock Text="Time" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <StackPanel Orientation="Horizontal">
+                <toolkit:TimePicker x:Name="TimeOfTrip" Margin="0,0,20,0" />
+
+            </StackPanel>
+            
+            <Button x:Name="SearchTrips" Content="Search" />
         </StackPanel>
 
     </Grid>
