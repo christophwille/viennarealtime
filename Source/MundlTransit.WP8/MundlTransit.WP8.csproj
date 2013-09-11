@@ -211,6 +211,7 @@
     <Compile Include="ViewModels\MenuViewModel.cs" />
     <Compile Include="ViewModels\Routing\NewRouteViewModel.cs" />
     <Compile Include="ViewModels\Routing\RoutingPivotPageViewModel.cs" />
+    <Compile Include="ViewModels\Routing\StationSelectorViewModel.cs" />
     <Compile Include="ViewModels\StationInfo\DepartureViewModel.cs" />
     <Compile Include="ViewModels\StationInfo\StationInfoPivotPageViewModel.cs" />
     <Compile Include="ViewModels\StationInfo\StationInfoViewModelBase.cs" />
@@ -254,6 +255,9 @@
     </Compile>
     <Compile Include="Views\Routing\RoutingPivotPage.xaml.cs">
       <DependentUpon>RoutingPivotPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Routing\StationSelectorView.xaml.cs">
+      <DependentUpon>StationSelectorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StationInfo\DepartureView.xaml.cs">
       <DependentUpon>DepartureView.xaml</DependentUpon>
@@ -345,6 +349,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Routing\RoutingPivotPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Routing\StationSelectorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

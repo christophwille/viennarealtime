@@ -26,6 +26,8 @@ namespace MundlTransit.WP8.ViewModels
             _dataService = ds;
             this.navigationService = navigationService;
             _uiService = uisvc;
+
+            DisplayName = AppResources.Favorites_PageTitle;
         }
 
         public async Task LoadFavoritesAsync()
