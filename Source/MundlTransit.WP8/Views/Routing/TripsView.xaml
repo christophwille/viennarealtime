@@ -11,6 +11,8 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
+    xmlns:sampleData="clr-namespace:MundlTransit.WP8.DesignTimeData"
+    d:DataContext="{Binding Source={d:DesignInstance Type=sampleData:SampleData, IsDesignTimeCreatable=True}}"
     xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     toolkit:TiltEffect.IsTiltEnabled="True"
@@ -37,22 +39,127 @@
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="TRIPS" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <!-- TODO instead of heading show smaller lines with info on from-to, time &c -->
+            <TextBlock Text="here: trip info" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <!--ContentPanel - place additional content here-->
+        <!-- TODO change from inbox expander sample to real class -->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ListBox ItemsSource="{Binding Trips}" Margin="12,0,0,0">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <toolkit:ExpanderView Margin="0,0,0,8" 
+                                                Header="{Binding}"
+                                                NonExpandableHeader="{Binding}"
+                                                Expander="{Binding}"
+                                                ItemsSource="{Binding}"
+                                                IsNonExpandable="{Binding HasSingleMessage}">
 
+                            <!-- The HeaderTemplate describes the header for an expandable item.
+                                 In the sample, it's the TextBlock for "Anne Wallace".-->
+                            <toolkit:ExpanderView.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding LastMessageReceived.Sender}"  
+                                               Foreground="{StaticResource PhoneForegroundBrush}"
+                                               FontSize="{StaticResource PhoneFontSizeExtraLarge}" 
+                                               FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
+                                </DataTemplate>
+                            </toolkit:ExpanderView.HeaderTemplate>
+
+                            <!-- The ExpanderTemplate describes the template to the right of the line 
+                                 which represents the first sub-item in the expander view.
+                                 In the sample, it's the TextBlock for Anne Wallace's email conversation
+                                 "Where are we going for lunch today?" and the status of "3 messages, 0 unread".-->
+                            <toolkit:ExpanderView.ExpanderTemplate>
+                                <DataTemplate>
+                                    <TextBlock Grid.Row="0" Grid.Column="1"
+                                               LineHeight="25" LineStackingStrategy="BlockLineHeight"
+                                               TextWrapping="Wrap">
+                                        <Run Text="{Binding LastMessageReceived.Subject}"
+                                             Foreground="{StaticResource PhoneSubtleBrush}"
+                                             FontSize="{StaticResource PhoneFontSizeNormal}" 
+                                             FontFamily="{StaticResource PhoneFontFamilySemiBold}"/>
+                                        <LineBreak/>
+                                        <Run Text="{Binding ContentInfo}"   
+                                             Foreground="{StaticResource PhoneSubtleBrush}"
+                                             FontSize="{StaticResource PhoneFontSizeNormal}"
+                                             FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </toolkit:ExpanderView.ExpanderTemplate>
+
+                            <!-- The ItemTemplate describes the template for all items once the expansion
+                                 has occured. In the sample, it's the template for all 3 of Anne Wallace's
+                                 emails in her conversation, where it displays the sender and the first line
+                                 of the message in the accent color. -->
+                            <toolkit:ExpanderView.ItemTemplate>
+                                <DataTemplate>
+                                    <ListBoxItem toolkit:TiltEffect.IsTiltEnabled="True">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Sender}"       
+                                                   Margin="0,8,0,-4"
+                                                   Foreground="{StaticResource PhoneForegroundBrush}"
+                                                   FontSize="{StaticResource PhoneFontSizeExtraLarge}" 
+                                                   FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
+                                            <TextBlock Text="{Binding Body}"
+                                                   TextWrapping="Wrap"
+                                                   Margin="0,0,0,-2"
+                                                   Foreground="{StaticResource PhoneAccentBrush}"
+                                                   FontSize="{StaticResource PhoneFontSizeNormal}" 
+                                                   FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+                                        </StackPanel>
+                                    </ListBoxItem>
+                                </DataTemplate>
+                            </toolkit:ExpanderView.ItemTemplate>
+
+                            <!-- The NonExpandableHeaderTemplate describes the non-expandable case.
+                                 In the sample, it's the StackPanel for "Adriana Giorgi", 
+                                 the subject, and first line of her email.-->
+                            <toolkit:ExpanderView.NonExpandableHeaderTemplate>
+                                <DataTemplate>
+                                    <StackPanel toolkit:TiltEffect.IsTiltEnabled="True">
+                                        <TextBlock Text="{Binding LastMessageReceived.Sender}"       
+                                                   Margin="0,8,0,-4"
+                                                   Foreground="{StaticResource PhoneForegroundBrush}"
+                                                   FontSize="{StaticResource PhoneFontSizeExtraLarge}" 
+                                                   FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
+                                        <TextBlock Text="{Binding LastMessageReceived.Subject}"
+                                                   TextWrapping="Wrap"
+                                                   Margin="0,0,0,-2"
+                                                   Foreground="{StaticResource PhoneAccentBrush}"
+                                                   FontSize="{StaticResource PhoneFontSizeNormal}" 
+                                                   FontFamily="{StaticResource PhoneFontFamilySemiBold}"/>
+                                        <TextBlock Text="{Binding LastMessageReceived.Body}"
+                                                   TextWrapping="Wrap"
+                                                   Margin="0,0,0,-2"
+                                                   Foreground="{StaticResource PhoneSubtleBrush}"
+                                                   FontSize="{StaticResource PhoneFontSizeNormal}" 
+                                                   FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </toolkit:ExpanderView.NonExpandableHeaderTemplate>
+                        </toolkit:ExpanderView>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </Grid>
     </Grid>
 
