@@ -180,6 +180,7 @@
     <Compile Include="Model\MapHaltestelleModel.cs" />
     <Compile Include="Model\PanoramaItemToShowMessage.cs" />
     <Compile Include="Model\RouteTypeOptionModel.cs" />
+    <Compile Include="Model\RoutingTripLegModel.cs" />
     <Compile Include="Model\RoutingTripModel.cs" />
     <Compile Include="Model\Wgs84Location.cs" />
     <Compile Include="Model\LocationResult.cs" />

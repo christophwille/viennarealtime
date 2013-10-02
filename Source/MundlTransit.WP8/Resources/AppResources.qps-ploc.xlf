@@ -325,6 +325,10 @@
           <source>search</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[A5AA8][!!_ŝèàѓćĥ_!!]</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/TripsView_PageTitle" xml:space="preserve">
+          <source>TRIPS</source>
+          <target state="new">TRIPS</target>
+        </trans-unit>
       </group>
     </body>
   </file>

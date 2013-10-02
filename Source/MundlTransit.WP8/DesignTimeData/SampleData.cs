@@ -207,7 +207,7 @@ namespace MundlTransit.WP8.DesignTimeData
                 }
             };
 
-            return trips.Select(t => new RoutingTripModel(t)).ToList();
+            return RoutingTripModel.TripsToTripModels(trips);
         }
     }
 }

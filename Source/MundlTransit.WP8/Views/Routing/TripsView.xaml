@@ -48,7 +48,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="TRIPS" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.TripsView_PageTitle, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
 
             <TextBlock Foreground="{StaticResource PhoneSubtleBrush}" 
                        Style="{StaticResource PhoneTextNormalStyle}">
@@ -117,12 +117,12 @@
                                 <DataTemplate>
                                     <ListBoxItem toolkit:TiltEffect.IsTiltEnabled="True">
                                         <StackPanel>
-                                            <TextBlock Text="{Binding DisplayName}"       
+                                            <TextBlock Text="{Binding Leg.DisplayName}"       
                                                    Margin="0,8,0,-4"
                                                    Foreground="{StaticResource PhoneForegroundBrush}"
                                                    FontSize="{StaticResource PhoneFontSizeExtraLarge}" 
                                                    FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
-                                            <TextBlock Text="{Binding Direction}"
+                                            <TextBlock Text="{Binding Leg.Direction}"
                                                    TextWrapping="Wrap"
                                                    Margin="0,0,0,-2"
                                                    Foreground="{StaticResource PhoneAccentBrush}"

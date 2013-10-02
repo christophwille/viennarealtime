@@ -8,9 +8,14 @@ using WienerLinien.Api.Routing;
 
 namespace MundlTransit.WP8.Model
 {
-    public class RoutingTripModel : ObservableCollection<TripLeg>
+    public class RoutingTripModel : List<RoutingTripLegModel>
     {
-        public RoutingTripModel(Trip t) : base(t.Legs)
+        public static List<RoutingTripModel> TripsToTripModels(List<Trip> trips)
+        {
+            return trips.Select(t => new RoutingTripModel(t)).ToList();
+        }
+
+        public RoutingTripModel(Trip t) : base(t.Legs.Select(l => l.ToModel()))
         {
             Trip = t;
         }

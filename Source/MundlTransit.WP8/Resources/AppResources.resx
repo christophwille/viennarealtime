@@ -357,4 +357,7 @@
   <data name="Stations_SearchTitle" xml:space="preserve">
     <value>search</value>
   </data>
+  <data name="TripsView_PageTitle" xml:space="preserve">
+    <value>TRIPS</value>
+  </data>
 </root>

@@ -325,6 +325,10 @@
           <source>search</source>
           <target state="signed-off" state-qualifier="mt-suggestion">Suche</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/TripsView_PageTitle" xml:space="preserve">
+          <source>TRIPS</source>
+          <target state="new">TRIPS</target>
+        </trans-unit>
       </group>
     </body>
   </file>

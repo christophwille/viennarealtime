@@ -40,7 +40,7 @@ namespace MundlTransit.WP8.ViewModels.Routing
 
             if (response.Succeeded)
             {
-                Trips = new BindableCollection<RoutingTripModel>(response.Trips.Select(t => new RoutingTripModel(t)));
+                Trips = new BindableCollection<RoutingTripModel>(RoutingTripModel.TripsToTripModels(response.Trips));
                 NotifyOfPropertyChange(() => Trips);
             }
             else
