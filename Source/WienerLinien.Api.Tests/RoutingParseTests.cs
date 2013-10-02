@@ -13,7 +13,7 @@ namespace WienerLinien.Api.Tests
     public class RoutingParseTests
     {
         [Test]
-        public void SimpleRoutingParseTest()
+        public void BuggyXmlRoutingParseTest()
         {
             //var schnittstelle = new RoutingSchnittstelle();
             //bool ok = schnittstelle.ParseRoutingRequestResponse(ResponseFiles.Load(ResponseFiles.RoutingFahrtoptionen8));
@@ -21,6 +21,15 @@ namespace WienerLinien.Api.Tests
             var ok = MessageSerializationHelper.DeserializeFromString<WienerLinien.Api.Routing.Messages2.itdRequestType>(ResponseFiles.Load(ResponseFiles.RoutingFahrtoptionen8));
             // HResult=-2146233079
             // Message=Unable to generate a temporary class (result=1).
+
+            Assert.That(ok, Is.EqualTo(true));
+        }
+
+        [Test]
+        public void SimpleRoutingParseTest()
+        {
+            var schnittstelle = new RoutingSchnittstelle();
+            bool ok = schnittstelle.ParseRoutingRequestResponse(ResponseFiles.LoadJson(ResponseFiles.RoutingFahrtoptionen8Json));
 
             Assert.That(ok, Is.EqualTo(true));
         }

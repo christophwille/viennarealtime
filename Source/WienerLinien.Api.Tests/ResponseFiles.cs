@@ -37,5 +37,8 @@ namespace WienerLinien.Api.Tests
 
         // p56 5.2 Fahrtoptionen (8): http://www.wienerlinien.at/ogd_routing/XML_TRIP_REQUEST2?locationServerActive=1&type_origin=any&name_origin=Westbahnhof&type_destination=any&name_destination=Stephansplatz&ptOptionsActive=1&excludedMeans=4
         public static readonly string RoutingFahrtoptionen8 = "RoutingFahrtoptionen8.xml";
+
+        // p56 5.2 Fahrtoptionen (8): http://www.wienerlinien.at/ogd_routing/XML_TRIP_REQUEST2?locationServerActive=1&type_origin=any&name_origin=Westbahnhof&type_destination=any&name_destination=Stephansplatz&ptOptionsActive=1&excludedMeans=4&outputFormat=json
+        public static readonly string RoutingFahrtoptionen8Json = "RoutingFahrtoptionen8.json";
     }
 }

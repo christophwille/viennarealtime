@@ -49,6 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\Messages\Messages.cs" />
     <Compile Include="Routing\Messages\MessageSerializationHelper.cs" />
+    <Compile Include="Routing\RoutingProxies.cs" />
     <Compile Include="Routing\RoutingSchnittstelle.cs" />
     <Compile Include="TrafficInformationItem.cs" />
     <Compile Include="TrafficInformation.cs" />
