@@ -52,10 +52,10 @@
 
             <TextBlock Foreground="{StaticResource PhoneSubtleBrush}" 
                        Style="{StaticResource PhoneTextNormalStyle}">
-                <Run Text="From:"/>
+                <Run Text="{Binding FromLabel}"/>
                 <Run Text="{Binding From}"/>
                 <LineBreak/>
-                <Run Text="To:"/>
+                <Run Text="{Binding ToLabel}"/>
                 <Run Text="{Binding To}"/>
             </TextBlock>
         </StackPanel>
@@ -152,7 +152,7 @@
                                 </DataTemplate>
                             </toolkit:ExpanderView.ItemTemplate>
 
-                            <!-- The NonExpandableHeaderTemplate describes the non-expandable case.-->
+                            <!-- NOT USED, NOT ADAPTED !!!! The NonExpandableHeaderTemplate describes the non-expandable case.-->
                             <toolkit:ExpanderView.NonExpandableHeaderTemplate>
                                 <DataTemplate>
                                     <StackPanel toolkit:TiltEffect.IsTiltEnabled="True">

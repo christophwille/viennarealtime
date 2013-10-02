@@ -330,4 +330,79 @@
   <data name="Favorites_Favorite_AlreadyPinned" xml:space="preserve">
     <value>Station bereits angeheftet</value>
   </data>
+  <data name="MenuItem_Routing_Description" xml:space="preserve">
+    <value>Wie komme ich von A nach B</value>
+  </data>
+  <data name="MenuItem_Routing" xml:space="preserve">
+    <value>Routenberechnung</value>
+  </data>
+  <data name="NewRouteView_Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="NewRouteView_DisplayName" xml:space="preserve">
+    <value>Neue Route</value>
+  </data>
+  <data name="NewRouteView_RoutingOption" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="NewRouteView_From" xml:space="preserve">
+    <value>Von</value>
+  </data>
+  <data name="NewRouteView_RoutingType_FewestChanges" xml:space="preserve">
+    <value>wenigste Umstiege</value>
+  </data>
+  <data name="NewRouteView_To" xml:space="preserve">
+    <value>Nach</value>
+  </data>
+  <data name="NewRouteView_Time" xml:space="preserve">
+    <value>Zeit</value>
+  </data>
+  <data name="NewRouteView_Search_Button" xml:space="preserve">
+    <value>Suchen</value>
+  </data>
+  <data name="NewRouteView_RoutingType_Fastest" xml:space="preserve">
+    <value>am schnellsten</value>
+  </data>
+  <data name="ReviewNotifications_Title" xml:space="preserve">
+    <value>Bitten bewerten Sie die App</value>
+  </data>
+  <data name="Routing_AppBar_Reverse" xml:space="preserve">
+    <value>umkehren</value>
+  </data>
+  <data name="Routing_AppBar_Now" xml:space="preserve">
+    <value>jetzt</value>
+  </data>
+  <data name="Routing_Changes" xml:space="preserve">
+    <value>Umstiege</value>
+  </data>
+  <data name="ReviewNotifications_Message" xml:space="preserve">
+    <value>Lassen Sie andere wissen was Sie über diese App denken - und reviewen Sie bitte!</value>
+  </data>
+  <data name="Routing_SourceStationHintText" xml:space="preserve">
+    <value>Abfahrt auswählen</value>
+  </data>
+  <data name="Routing_Type_Walk" xml:space="preserve">
+    <value>Gehstrecke</value>
+  </data>
+  <data name="Routing_Trip" xml:space="preserve">
+    <value>Fahrt</value>
+  </data>
+  <data name="Routing_DestinationStationHintText" xml:space="preserve">
+    <value>Ankunft auswählen</value>
+  </data>
+  <data name="Routing_Error_RoutesCouldNotBeRetrieved" xml:space="preserve">
+    <value>Routenvorschläge konnten nicht abgerufen werden</value>
+  </data>
+  <data name="Routing_Minutes" xml:space="preserve">
+    <value>Minuten</value>
+  </data>
+  <data name="TripsView_FromLabel" xml:space="preserve">
+    <value>Von:</value>
+  </data>
+  <data name="TripsView_PageTitle" xml:space="preserve">
+    <value>FAHRTEN</value>
+  </data>
+  <data name="TripsView_ToLabel" xml:space="preserve">
+    <value>Nach:</value>
+  </data>
 </root>

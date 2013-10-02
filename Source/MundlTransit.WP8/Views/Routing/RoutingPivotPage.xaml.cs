@@ -27,7 +27,7 @@ namespace MundlTransit.WP8.Views.Routing
             var reverseAppBarButton = new CM.AppBarButton()
             {
                 IconUri = new Uri("/Assets/sort.png", UriKind.Relative),
-                Text = "reverse",
+                Text = AppResources.Routing_AppBar_Reverse,
                 Message = "ReverseFromTo"
             };
 
@@ -36,7 +36,7 @@ namespace MundlTransit.WP8.Views.Routing
             var nowAppBarButton = new CM.AppBarButton()
             {
                 IconUri = new Uri("/Assets/time.png", UriKind.Relative),
-                Text = "now",
+                Text = AppResources.Routing_AppBar_Now,
                 Message = "SetToNow"
             };
 

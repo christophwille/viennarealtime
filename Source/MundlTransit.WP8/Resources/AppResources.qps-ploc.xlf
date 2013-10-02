@@ -219,13 +219,37 @@
           <source>This stop does not exist (stop database out of date?).</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[2791D][!!_Τħíš ŝţóр đòéś ήóт èхįśτ (şţõþ đãτàъãşè òùť òƒ đâтę?)._!!!!!!!!!!!!!!!!]</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_Date" xml:space="preserve">
+          <source>Date</source>
+          <target state="new">Date</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/NewRouteView_DisplayName" xml:space="preserve">
           <source>new route</source>
           <target state="new">new route</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_RoutingOption" xml:space="preserve">
+          <source>Routing option</source>
+          <target state="new">Routing option</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_From" xml:space="preserve">
+          <source>From</source>
+          <target state="new">From</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/NewRouteView_RoutingType_FewestChanges" xml:space="preserve">
           <source>fewest changes</source>
           <target state="new">fewest changes</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_To" xml:space="preserve">
+          <source>To</source>
+          <target state="new">To</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_Time" xml:space="preserve">
+          <source>Time</source>
+          <target state="new">Time</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_Search_Button" xml:space="preserve">
+          <source>Search</source>
+          <target state="new">Search</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/NewRouteView_RoutingType_Fastest" xml:space="preserve">
           <source>fastest</source>
@@ -261,17 +285,45 @@
           <source>Please review the app</source>
           <target state="new">Please review the app</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_AppBar_Reverse" xml:space="preserve">
+          <source>reverse</source>
+          <target state="new">reverse</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_AppBar_Now" xml:space="preserve">
+          <source>now</source>
+          <target state="new">now</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_Changes" xml:space="preserve">
+          <source>changes</source>
+          <target state="new">changes</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/ReviewNotifications_Message" xml:space="preserve">
-          <source>Click OK to go to the reviews page in the store (this nag screen won't reappear even if you Cancel)</source>
-          <target state="new">Click OK to go to the reviews page in the store (this nag screen won't reappear even if you Cancel)</target>
+          <source>Click OK to be taken to the Store review page. Let others know what you think about this app!</source>
+          <target state="new">Click OK to be taken to the Store review page. Let others know what you think about this app!</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Routing_SourceStationHintText" xml:space="preserve">
           <source>Select start</source>
           <target state="new">Select start</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_Type_Walk" xml:space="preserve">
+          <source>Walk</source>
+          <target state="new">Walk</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_Trip" xml:space="preserve">
+          <source>Trip</source>
+          <target state="new">Trip</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/Routing_DestinationStationHintText" xml:space="preserve">
           <source>Select destination</source>
           <target state="new">Select destination</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_Error_RoutesCouldNotBeRetrieved" xml:space="preserve">
+          <source>Routes could not be retrieved</source>
+          <target state="new">Routes could not be retrieved</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_Minutes" xml:space="preserve">
+          <source>minutes</source>
+          <target state="new">minutes</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Settings_GeolocationForNearbyStations" xml:space="preserve">
           <source>Geolocation for nearby stations</source>
@@ -296,6 +348,10 @@
         <trans-unit translate="yes" id="Resx/StationInfo_Departures_Title" xml:space="preserve">
           <source>departures</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[48777][!!_ďęрáŕťûŗèş_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/StationSelector_DisplayName" xml:space="preserve">
+          <source>select station for routing</source>
+          <target state="new">select station for routing</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_AppBar_Map" xml:space="preserve">
           <source>map</source>
@@ -325,9 +381,17 @@
           <source>search</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[A5AA8][!!_ŝèàѓćĥ_!!]</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/TripsView_FromLabel" xml:space="preserve">
+          <source>From:</source>
+          <target state="new">From:</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/TripsView_PageTitle" xml:space="preserve">
           <source>TRIPS</source>
           <target state="new">TRIPS</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/TripsView_ToLabel" xml:space="preserve">
+          <source>To:</source>
+          <target state="new">To:</target>
         </trans-unit>
       </group>
     </body>

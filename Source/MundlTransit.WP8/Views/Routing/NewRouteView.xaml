@@ -13,11 +13,11 @@
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource TransparentBrush}">
         <StackPanel>
-            <TextBlock Style="{StaticResource PhoneTextNormalStyle}">From</TextBlock>
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Path=LocalizedResources.NewRouteView_From, Source={StaticResource LocalizedStrings}}"/>
             <TextBox x:Name="FromStationName" 
                      cm:Message.Attach="[Event Tap] = [Action SelectFrom]" 
                      IsReadOnly="True" />
-            <TextBlock Style="{StaticResource PhoneTextNormalStyle}">To</TextBlock>
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Path=LocalizedResources.NewRouteView_To, Source={StaticResource LocalizedStrings}}"/>
             <TextBox x:Name="ToStationName" 
                      cm:Message.Attach="[Event Tap] = [Action SelectTo]" 
                      IsReadOnly="True"  />
@@ -29,17 +29,17 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0">
-                    <TextBlock Text="Date" Style="{StaticResource PhoneTextNormalStyle}"/>
+                    <TextBlock Text="{Binding Path=LocalizedResources.NewRouteView_Date, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
                     <toolkit:DatePicker x:Name="DateOfTrip"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
-                    <TextBlock Text="Time" Style="{StaticResource PhoneTextNormalStyle}"/>
+                    <TextBlock Text="{Binding Path=LocalizedResources.NewRouteView_Time, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
                     <toolkit:TimePicker x:Name="TimeOfTrip" />
                 </StackPanel>
             </Grid>
 
             <toolkit:ListPicker x:Name="RoutingOptionsPicked" 
-                                Header="Routing Option" 
+                                Header="{Binding Path=LocalizedResources.NewRouteView_RoutingOption, Source={StaticResource LocalizedStrings}}" 
                                 ExpansionMode="FullScreenOnly"
                                 SelectedItem="{Binding SelectedRoutingOption, Mode=TwoWay}"
                                 ItemsSource="{Binding RoutingOptions}">
@@ -55,15 +55,15 @@
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="16 21 0 20">
                             <TextBlock Text="{Binding DisplayName}"
-                                       Margin="0 0 0 0"
+                                       Margin="0"
                                        FontSize="43" 
-                                       FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                                       Style="{StaticResource PhoneTextTitle2Style}"/>
                         </StackPanel>
                     </DataTemplate>
                 </toolkit:ListPicker.FullModeItemTemplate>
             </toolkit:ListPicker>
 
-            <Button x:Name="SearchTrips" Content="Search" />
+            <Button x:Name="SearchTrips" Content="{Binding Path=LocalizedResources.NewRouteView_Search_Button, Source={StaticResource LocalizedStrings}}" />
         </StackPanel>
 
     </Grid>

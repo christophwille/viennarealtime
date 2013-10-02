@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MundlTransit.WP8.Resources;
 using WienerLinien.Api.Routing;
 
 namespace MundlTransit.WP8.Model
@@ -26,7 +27,7 @@ namespace MundlTransit.WP8.Model
         {
             get
             {
-                return "Trip " + Trip.Number.ToString();
+                return AppResources.Routing_Trip + " " + Trip.Number.ToString();
             }
         }
 
@@ -41,7 +42,7 @@ namespace MundlTransit.WP8.Model
                 {
                     if (d.Seconds == 0)
                     {
-                        ts = d.Minutes.ToString() + " minutes";
+                        ts = d.Minutes.ToString() + " " + AppResources.Routing_Minutes;
                     }
                     else
                     {
@@ -62,7 +63,7 @@ namespace MundlTransit.WP8.Model
             get
             {
                 string legs = String.Join(", ", this.Select(l => l.DisplayName));
-                return String.Format("{0} ({1} changes)", legs, this.Count);
+                return String.Format("{0} ({1} {2})", legs, this.Count, AppResources.Routing_Changes);
             }
         }
 

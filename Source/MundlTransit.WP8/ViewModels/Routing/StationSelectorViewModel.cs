@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.ViewModels.Stations;
 
 namespace MundlTransit.WP8.ViewModels.Routing
@@ -29,7 +30,7 @@ namespace MundlTransit.WP8.ViewModels.Routing
             nearbyStations = nearby;
             nearbyStations.OnStationPicked = OnStationPicked;
 
-            DisplayName = "select station for routing";
+            DisplayName = AppResources.StationSelector_DisplayName;
         }
 
         private void OnStationPicked(int stationId, string stationName)

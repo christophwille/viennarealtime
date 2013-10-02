@@ -538,11 +538,38 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string NewRouteView_Date {
+            get {
+                return ResourceManager.GetString("NewRouteView_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to new route.
         /// </summary>
         public static string NewRouteView_DisplayName {
             get {
                 return ResourceManager.GetString("NewRouteView_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From.
+        /// </summary>
+        public static string NewRouteView_From {
+            get {
+                return ResourceManager.GetString("NewRouteView_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Routing option.
+        /// </summary>
+        public static string NewRouteView_RoutingOption {
+            get {
+                return ResourceManager.GetString("NewRouteView_RoutingOption", resourceCulture);
             }
         }
         
@@ -561,6 +588,33 @@ namespace MundlTransit.WP8.Resources {
         public static string NewRouteView_RoutingType_FewestChanges {
             get {
                 return ResourceManager.GetString("NewRouteView_RoutingType_FewestChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string NewRouteView_Search_Button {
+            get {
+                return ResourceManager.GetString("NewRouteView_Search_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string NewRouteView_Time {
+            get {
+                return ResourceManager.GetString("NewRouteView_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To.
+        /// </summary>
+        public static string NewRouteView_To {
+            get {
+                return ResourceManager.GetString("NewRouteView_To", resourceCulture);
             }
         }
         
@@ -619,7 +673,7 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Click OK to go to the reviews page in the store (this nag screen won&apos;t reappear even if you Cancel).
+        ///   Looks up a localized string similar to Click OK to be taken to the Store review page. Let others know what you think about this app!.
         /// </summary>
         public static string ReviewNotifications_Message {
             get {
@@ -637,6 +691,33 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to now.
+        /// </summary>
+        public static string Routing_AppBar_Now {
+            get {
+                return ResourceManager.GetString("Routing_AppBar_Now", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to reverse.
+        /// </summary>
+        public static string Routing_AppBar_Reverse {
+            get {
+                return ResourceManager.GetString("Routing_AppBar_Reverse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to changes.
+        /// </summary>
+        public static string Routing_Changes {
+            get {
+                return ResourceManager.GetString("Routing_Changes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select destination.
         /// </summary>
         public static string Routing_DestinationStationHintText {
@@ -646,11 +727,47 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Routes could not be retrieved.
+        /// </summary>
+        public static string Routing_Error_RoutesCouldNotBeRetrieved {
+            get {
+                return ResourceManager.GetString("Routing_Error_RoutesCouldNotBeRetrieved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to minutes.
+        /// </summary>
+        public static string Routing_Minutes {
+            get {
+                return ResourceManager.GetString("Routing_Minutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select start.
         /// </summary>
         public static string Routing_SourceStationHintText {
             get {
                 return ResourceManager.GetString("Routing_SourceStationHintText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trip.
+        /// </summary>
+        public static string Routing_Trip {
+            get {
+                return ResourceManager.GetString("Routing_Trip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Walk.
+        /// </summary>
+        public static string Routing_Type_Walk {
+            get {
+                return ResourceManager.GetString("Routing_Type_Walk", resourceCulture);
             }
         }
         
@@ -772,11 +889,38 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to select station for routing.
+        /// </summary>
+        public static string StationSelector_DisplayName {
+            get {
+                return ResourceManager.GetString("StationSelector_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From:.
+        /// </summary>
+        public static string TripsView_FromLabel {
+            get {
+                return ResourceManager.GetString("TripsView_FromLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TRIPS.
         /// </summary>
         public static string TripsView_PageTitle {
             get {
                 return ResourceManager.GetString("TripsView_PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To:.
+        /// </summary>
+        public static string TripsView_ToLabel {
+            get {
+                return ResourceManager.GetString("TripsView_ToLabel", resourceCulture);
             }
         }
     }

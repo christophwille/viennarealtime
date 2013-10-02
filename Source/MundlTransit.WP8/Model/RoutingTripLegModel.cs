@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MundlTransit.WP8.Resources;
 using WienerLinien.Api.Routing;
 
 namespace MundlTransit.WP8.Model
@@ -23,7 +24,7 @@ namespace MundlTransit.WP8.Model
                 if (Leg.TypeOfTransportation != RoutingTypeOfTransportation.Walk)
                     return Leg.DisplayName;
 
-                return "Walk";
+                return AppResources.Routing_Type_Walk;
             }
         }
 

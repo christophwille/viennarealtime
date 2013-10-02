@@ -277,14 +277,32 @@
   <data name="MonitorError_ServerStopDoesNotExist" xml:space="preserve">
     <value>This stop does not exist (stop database out of date?).</value>
   </data>
+  <data name="NewRouteView_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
   <data name="NewRouteView_DisplayName" xml:space="preserve">
     <value>new route</value>
+  </data>
+  <data name="NewRouteView_From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="NewRouteView_RoutingOption" xml:space="preserve">
+    <value>Routing option</value>
   </data>
   <data name="NewRouteView_RoutingType_Fastest" xml:space="preserve">
     <value>fastest</value>
   </data>
   <data name="NewRouteView_RoutingType_FewestChanges" xml:space="preserve">
     <value>fewest changes</value>
+  </data>
+  <data name="NewRouteView_Search_Button" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="NewRouteView_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="NewRouteView_To" xml:space="preserve">
+    <value>To</value>
   </data>
   <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
     <value>No stops found near</value>
@@ -307,16 +325,37 @@
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ReviewNotifications_Message" xml:space="preserve">
-    <value>Click OK to go to the reviews page in the store (this nag screen won't reappear even if you Cancel)</value>
+    <value>Click OK to be taken to the Store review page. Let others know what you think about this app!</value>
   </data>
   <data name="ReviewNotifications_Title" xml:space="preserve">
     <value>Please review the app</value>
   </data>
+  <data name="Routing_AppBar_Now" xml:space="preserve">
+    <value>now</value>
+  </data>
+  <data name="Routing_AppBar_Reverse" xml:space="preserve">
+    <value>reverse</value>
+  </data>
+  <data name="Routing_Changes" xml:space="preserve">
+    <value>changes</value>
+  </data>
   <data name="Routing_DestinationStationHintText" xml:space="preserve">
     <value>Select destination</value>
   </data>
+  <data name="Routing_Error_RoutesCouldNotBeRetrieved" xml:space="preserve">
+    <value>Routes could not be retrieved</value>
+  </data>
+  <data name="Routing_Minutes" xml:space="preserve">
+    <value>minutes</value>
+  </data>
   <data name="Routing_SourceStationHintText" xml:space="preserve">
     <value>Select start</value>
+  </data>
+  <data name="Routing_Trip" xml:space="preserve">
+    <value>Trip</value>
+  </data>
+  <data name="Routing_Type_Walk" xml:space="preserve">
+    <value>Walk</value>
   </data>
   <data name="Settings_GeolocationForNearbyStations" xml:space="preserve">
     <value>Geolocation for nearby stations</value>
@@ -335,6 +374,9 @@
   </data>
   <data name="StationInfo_Departures_Title" xml:space="preserve">
     <value>departures</value>
+  </data>
+  <data name="StationSelector_DisplayName" xml:space="preserve">
+    <value>select station for routing</value>
   </data>
   <data name="Stations_AppBar_Map" xml:space="preserve">
     <value>map</value>
@@ -357,7 +399,13 @@
   <data name="Stations_SearchTitle" xml:space="preserve">
     <value>search</value>
   </data>
+  <data name="TripsView_FromLabel" xml:space="preserve">
+    <value>From:</value>
+  </data>
   <data name="TripsView_PageTitle" xml:space="preserve">
     <value>TRIPS</value>
+  </data>
+  <data name="TripsView_ToLabel" xml:space="preserve">
+    <value>To:</value>
   </data>
 </root>

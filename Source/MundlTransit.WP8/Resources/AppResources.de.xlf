@@ -125,11 +125,11 @@
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Routing_Description" xml:space="preserve">
           <source>getting from A to B</source>
-          <target state="new">getting from A to B</target>
+          <target state="signed-off">Wie komme ich von A nach B</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Routing" xml:space="preserve">
           <source>routing</source>
-          <target state="new">routing</target>
+          <target state="signed-off">Routenberechnung</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Search" xml:space="preserve">
           <source>search</source>
@@ -219,17 +219,41 @@
           <source>This stop does not exist (stop database out of date?).</source>
           <target state="signed-off">Diese Haltestelle existiert nicht (Haltestellen-Datenbank veraltet?).</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_Date" xml:space="preserve">
+          <source>Date</source>
+          <target state="signed-off">Datum</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/NewRouteView_DisplayName" xml:space="preserve">
           <source>new route</source>
-          <target state="new">new route</target>
+          <target state="signed-off">Neue Route</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_RoutingOption" xml:space="preserve">
+          <source>Routing option</source>
+          <target state="signed-off">Optionen</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_From" xml:space="preserve">
+          <source>From</source>
+          <target state="signed-off">Von</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/NewRouteView_RoutingType_FewestChanges" xml:space="preserve">
           <source>fewest changes</source>
-          <target state="new">fewest changes</target>
+          <target state="signed-off">wenigste Umstiege</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_To" xml:space="preserve">
+          <source>To</source>
+          <target state="signed-off">Nach</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_Time" xml:space="preserve">
+          <source>Time</source>
+          <target state="signed-off">Zeit</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_Search_Button" xml:space="preserve">
+          <source>Search</source>
+          <target state="signed-off">Suchen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/NewRouteView_RoutingType_Fastest" xml:space="preserve">
           <source>fastest</source>
-          <target state="new">fastest</target>
+          <target state="signed-off">am schnellsten</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/PositionMessage_NoStopsFoundNear" xml:space="preserve">
           <source>No stops found near</source>
@@ -259,19 +283,47 @@
         <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note></trans-unit>
         <trans-unit translate="yes" id="Resx/ReviewNotifications_Title" xml:space="preserve">
           <source>Please review the app</source>
-          <target state="new">Please review the app</target>
+          <target state="signed-off">Bitten bewerten Sie die App</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_AppBar_Reverse" xml:space="preserve">
+          <source>reverse</source>
+          <target state="signed-off">umkehren</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_AppBar_Now" xml:space="preserve">
+          <source>now</source>
+          <target state="signed-off">jetzt</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_Changes" xml:space="preserve">
+          <source>changes</source>
+          <target state="signed-off">Umstiege</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/ReviewNotifications_Message" xml:space="preserve">
-          <source>Click OK to go to the reviews page in the store (this nag screen won't reappear even if you Cancel)</source>
-          <target state="new">Click OK to go to the reviews page in the store (this nag screen won't reappear even if you Cancel)</target>
+          <source>Click OK to be taken to the Store review page. Let others know what you think about this app!</source>
+          <target state="signed-off">Lassen Sie andere wissen was Sie über diese App denken - und reviewen Sie bitte!</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Routing_SourceStationHintText" xml:space="preserve">
           <source>Select start</source>
-          <target state="new">Select start</target>
+          <target state="signed-off">Abfahrt auswählen</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_Type_Walk" xml:space="preserve">
+          <source>Walk</source>
+          <target state="signed-off">Gehstrecke</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_Trip" xml:space="preserve">
+          <source>Trip</source>
+          <target state="signed-off">Fahrt</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Routing_DestinationStationHintText" xml:space="preserve">
           <source>Select destination</source>
-          <target state="new">Select destination</target>
+          <target state="signed-off">Ankunft auswählen</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_Error_RoutesCouldNotBeRetrieved" xml:space="preserve">
+          <source>Routes could not be retrieved</source>
+          <target state="signed-off">Routenvorschläge konnten nicht abgerufen werden</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Routing_Minutes" xml:space="preserve">
+          <source>minutes</source>
+          <target state="signed-off">Minuten</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Settings_GeolocationForNearbyStations" xml:space="preserve">
           <source>Geolocation for nearby stations</source>
@@ -296,6 +348,10 @@
         <trans-unit translate="yes" id="Resx/StationInfo_Departures_Title" xml:space="preserve">
           <source>departures</source>
           <target state="signed-off">Abfahrten</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/StationSelector_DisplayName" xml:space="preserve">
+          <source>select station for routing</source>
+          <target state="signed-off">Station auswählen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/Stations_AppBar_Map" xml:space="preserve">
           <source>map</source>
@@ -325,9 +381,17 @@
           <source>search</source>
           <target state="signed-off" state-qualifier="mt-suggestion">Suche</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/TripsView_FromLabel" xml:space="preserve">
+          <source>From:</source>
+          <target state="signed-off">Von:</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/TripsView_PageTitle" xml:space="preserve">
           <source>TRIPS</source>
-          <target state="new">TRIPS</target>
+          <target state="signed-off">FAHRTEN</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/TripsView_ToLabel" xml:space="preserve">
+          <source>To:</source>
+          <target state="signed-off">Nach:</target>
         </trans-unit>
       </group>
     </body>
