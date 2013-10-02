@@ -405,4 +405,7 @@
   <data name="TripsView_ToLabel" xml:space="preserve">
     <value>Nach:</value>
   </data>
+  <data name="StationSelector_DisplayName" xml:space="preserve">
+    <value>Station auswählen</value>
+  </data>
 </root>

@@ -11,13 +11,9 @@ namespace WienerLinien.Api.Routing
 {
     public class RoutingSchnittstelle
     {
-        public const string BaseUrl = "http://www.wienerlinien.at/ogd_routing/XML_TRIP_REQUEST2?";
         public async Task<RoutingInformation> GetRoutingAsync(RoutingRequest request)
         {
-            const string urlFormatString = BaseUrl + 
-                "type_origin=stopID&name_origin={0}&type_destination=stopID&name_destination={1}&ptOptionsActive=1&outputFormat=JSON";
-
-            var url = String.Format(urlFormatString, request.FromStation, request.ToStation);
+            var url = RoutingUrlBuilder.Build(request);
             Debug.WriteLine(url);
 
             var client = new DefaultHttpClient();
@@ -76,7 +72,7 @@ namespace WienerLinien.Api.Routing
                     {
                         var tt = RoutingTypeOfTransportation.Walk;
 
-                        if (leg.mode != null && Enum.TryParse(leg.mode.code, out tt))
+                        if (leg.mode != null && Enum.TryParse(leg.mode.type, out tt))
                         {
                             // For RoutingTypeOfTransportation.Walk, .number ("U3") and .destination ("Ottakring") are empty strings
                             var rLeg = new TripLeg(tt, leg.mode.number, leg.mode.destination);

@@ -56,6 +56,7 @@
     <Compile Include="Routing\RoutingRequest.cs" />
     <Compile Include="Routing\RoutingSchnittstelle.cs" />
     <Compile Include="Routing\RoutingTypeOfTransportation.cs" />
+    <Compile Include="Routing\RoutingUrlBuilder.cs" />
     <Compile Include="Routing\Trip.cs" />
     <Compile Include="Routing\TripLeg.cs" />
     <Compile Include="TrafficInformationItem.cs" />
