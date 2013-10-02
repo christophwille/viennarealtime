@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MundlTransit.WP8.Data.Reference;
 using WienerLinien.Api;
-using WienerLinien.Api.Ogd;
+using WienerLinien.Api.Realtime;
 
 namespace MundlTransit.WP8.Model
 {

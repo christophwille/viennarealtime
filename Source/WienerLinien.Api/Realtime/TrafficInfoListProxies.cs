@@ -4,7 +4,7 @@ using System.Collections.Generic;
 //
 // Generated with: http://json2csharp.com/
 //
-namespace WienerLinien.Api.Ogd.TrafficInfoListProxies
+namespace WienerLinien.Api.Realtime.TrafficInfoListProxies
 {
     public class TrafficInfoCategory
     {

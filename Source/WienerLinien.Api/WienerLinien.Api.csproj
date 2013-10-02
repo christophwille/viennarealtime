@@ -42,10 +42,10 @@
     <Compile Include="MonitorLine.cs" />
     <Compile Include="MonitorLineType.cs" />
     <Compile Include="MonitorInformation.cs" />
-    <Compile Include="Ogd\EchtzeitdatenSchnittstelle.cs" />
-    <Compile Include="Ogd\MonitorLineTypeMapper.cs" />
-    <Compile Include="Ogd\MonitorProxies.cs" />
-    <Compile Include="Ogd\TrafficInfoListProxies.cs" />
+    <Compile Include="Realtime\EchtzeitdatenSchnittstelle.cs" />
+    <Compile Include="Realtime\MonitorLineTypeMapper.cs" />
+    <Compile Include="Realtime\MonitorProxies.cs" />
+    <Compile Include="Realtime\TrafficInfoListProxies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\Messages\Messages.cs" />
     <Compile Include="TrafficInformationItem.cs" />

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 //
 // Generated with: http://json2csharp.com/
 //
-namespace WienerLinien.Api.Ogd.MonitorProxies
+namespace WienerLinien.Api.Realtime.MonitorProxies
 {
 public class Geometry
 {

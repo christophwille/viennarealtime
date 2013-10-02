@@ -28,7 +28,7 @@ namespace MundlTransit.WP8.Services
             if (!rbls.Any())
                 return new MonitorInformation(MonitorInformationErrorCode.RblNotSpecified);
 
-            var schnittstelle = new WienerLinien.Api.Ogd.EchtzeitdatenSchnittstelle();
+            var schnittstelle = new WienerLinien.Api.Realtime.EchtzeitdatenSchnittstelle();
             schnittstelle.InitializeApi(_apiKey);
 
             IHttpClient client = null;
@@ -62,7 +62,7 @@ namespace MundlTransit.WP8.Services
 
         public async Task<TrafficInformation> RetrieveTrafficInfoListAsync()
         {
-            var schnittstelle = new WienerLinien.Api.Ogd.EchtzeitdatenSchnittstelle();
+            var schnittstelle = new WienerLinien.Api.Realtime.EchtzeitdatenSchnittstelle();
             schnittstelle.InitializeApi(_apiKey);
 
             TrafficInformation response = await schnittstelle.GetTrafficInfoListAsync().ConfigureAwait(false);

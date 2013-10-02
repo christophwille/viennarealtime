@@ -9,7 +9,7 @@ using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Data.Runtime;
 using MundlTransit.WP8.Model;
 using WienerLinien.Api;
-using WienerLinien.Api.Ogd;
+using WienerLinien.Api.Realtime;
 
 namespace MundlTransit.WP8.Services
 {

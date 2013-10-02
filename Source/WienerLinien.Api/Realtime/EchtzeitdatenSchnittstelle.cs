@@ -8,10 +8,10 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using MP = WienerLinien.Api.Ogd.MonitorProxies;
-using TILP = WienerLinien.Api.Ogd.TrafficInfoListProxies;
+using MP = WienerLinien.Api.Realtime.MonitorProxies;
+using TILP = WienerLinien.Api.Realtime.TrafficInfoListProxies;
 
-namespace WienerLinien.Api.Ogd
+namespace WienerLinien.Api.Realtime
 {
     public class EchtzeitdatenSchnittstelle : IEchtzeitdatenSchnittstelle
     {

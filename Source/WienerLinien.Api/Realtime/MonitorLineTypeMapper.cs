@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WienerLinien.Api.Ogd
+namespace WienerLinien.Api.Realtime
 {
     public static class MonitorLineTypeMapper
     {
