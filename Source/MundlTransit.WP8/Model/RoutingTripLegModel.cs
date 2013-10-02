@@ -15,6 +15,45 @@ namespace MundlTransit.WP8.Model
         }
 
         public TripLeg Leg { get; set; }
+
+        public string DisplayName
+        {
+            get
+            {
+                if (Leg.TypeOfTransportation != RoutingTypeOfTransportation.Walk)
+                    return Leg.DisplayName;
+
+                return "Walk";
+            }
+        }
+
+        public string DisplayNameWithDirection
+        {
+            get
+            {
+                if (String.IsNullOrWhiteSpace(Leg.Direction))
+                    return DisplayName;
+
+                return String.Format("{0} ({1})", DisplayName, Leg.Direction);
+            }
+        }
+
+
+        public string LegStartTime
+        {
+            get
+            {
+                return Leg.Departure.Time;
+            }
+        }
+
+        public string LegEndTime
+        {
+            get
+            {
+                return Leg.Arrival.Time;
+            }
+        }
     }
 
     public static class TripLegExtensions

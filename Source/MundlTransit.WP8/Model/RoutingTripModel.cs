@@ -34,8 +34,26 @@ namespace MundlTransit.WP8.Model
         {
             get
             {
-                // TODO: Better formatting depending on "are there seconds at all" &c
-                return Trip.Duration.ToString();
+                var d = Trip.Duration;
+                string ts;
+
+                if (d.Hours == 0)
+                {
+                    if (d.Seconds == 0)
+                    {
+                        ts = d.Minutes.ToString() + " minutes";
+                    }
+                    else
+                    {
+                        ts = String.Format("{0:mm:ss}", d);
+                    }
+                }
+                else
+                {
+                    ts = d.ToString("g");
+                }
+
+                return String.Format("{0} ({1} - {2})", ts, TripStartTime, TripEndTime);
             }
         }
 
@@ -43,7 +61,26 @@ namespace MundlTransit.WP8.Model
         {
             get
             {
-                return "# of legs: " + Trip.Legs.Count().ToString();
+                string legs = String.Join(", ", this.Select(l => l.DisplayName));
+                return String.Format("{0} ({1} changes)", legs, this.Count);
+            }
+        }
+
+        public string TripStartTime
+        {
+            get
+            {
+                var leg = this.First();
+                return leg.Leg.Departure.Time;
+            }
+        }
+
+        public string TripEndTime
+        {
+            get
+            {
+                var leg = this.Last();
+                return leg.Leg.Arrival.Time;
             }
         }
     }

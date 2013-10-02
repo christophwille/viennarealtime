@@ -117,17 +117,36 @@
                                 <DataTemplate>
                                     <ListBoxItem toolkit:TiltEffect.IsTiltEnabled="True">
                                         <StackPanel>
-                                            <TextBlock Text="{Binding Leg.DisplayName}"       
+                                            <TextBlock Text="{Binding DisplayNameWithDirection}"       
                                                    Margin="0,8,0,-4"
-                                                   Foreground="{StaticResource PhoneForegroundBrush}"
-                                                   FontSize="{StaticResource PhoneFontSizeExtraLarge}" 
-                                                   FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
-                                            <TextBlock Text="{Binding Leg.Direction}"
-                                                   TextWrapping="Wrap"
-                                                   Margin="0,0,0,-2"
-                                                   Foreground="{StaticResource PhoneAccentBrush}"
-                                                   FontSize="{StaticResource PhoneFontSizeNormal}" 
-                                                   FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
+                                                   Style="{StaticResource PhoneTextLargeStyle}"/>
+                                            
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="3*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                </Grid.RowDefinitions>
+
+                                                <TextBlock Text="{Binding LegStartTime}" HorizontalAlignment="Left"
+                                                           Grid.Row="0" Grid.Column="0"
+                                                           Style="{StaticResource PhoneTextSmallStyle}" />
+
+                                                <TextBlock Text="{Binding LegEndTime}"  HorizontalAlignment="Left"
+                                                           Grid.Row="1" Grid.Column="0"
+                                                           Style="{StaticResource PhoneTextSmallStyle}" />
+
+                                                <TextBlock Text="{Binding Leg.Departure.Name}"  HorizontalAlignment="Left"
+                                                           Grid.Row="0" Grid.Column="1" TextWrapping="Wrap"
+                                                           Style="{StaticResource PhoneTextSmallStyle}" />
+
+                                                <TextBlock Text="{Binding Leg.Arrival.Name}"  HorizontalAlignment="Left"
+                                                           Grid.Row="1" Grid.Column="1" TextWrapping="Wrap"
+                                                           Style="{StaticResource PhoneTextSmallStyle}" />
+                                            </Grid>
                                         </StackPanel>
                                     </ListBoxItem>
                                 </DataTemplate>
