@@ -1,0 +1,1617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<itdRequest xsi:noNamespaceSchemaLocation="http://ogd.vor.at/ogd/schema/9_16/itd.xsd" language="de" sessionID="0" client="NC6" serverID="VOR-OGDR01" clientIP="192.168.75.9" version="9.16.29.30" virtDir="ogd_routing" now="2013-10-02T08:49:28" nowWD="4" lengthUnit="METER" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <itdTripRequest requestID="0">
+    <itdPrintConfiguration active="-1" layout="" shading="1" serverInfo="" serverAddress="" outputFormat="pdf" printerDirect="0" fontSizeNormal="1" commuterFaresOutput="0" fareUnitOrientation="left"></itdPrintConfiguration>
+    <itdAddress name="" place="" street="" addressExt1="" addressExt2=""></itdAddress>
+    <itdOdv type="any" usage="origin" anyObjFilter="0">
+      <itdOdvPlace state="identified" method="itp">
+        <odvPlaceElem omc="49000000" value="49000000:50" placeID="50" mainPlace="1" span="0" type="remote">Wien</odvPlaceElem>
+        <odvPlaceInput></odvPlaceInput>
+      </itdOdvPlace>
+      <itdOdvName state="identified" method="itp">
+        <odvNameElem streetName="" omc="49000000" placeID="50" x="750410" y="660195" mapName="GIP1" id="60201468" anyType="stop" nameKey="" locality="Wien" postCode="" objectName="Westbahnhof" buildingName="" buildingNumber="" posttown="Wien">Wien, Westbahnhof</odvNameElem>
+        <odvNameInput>Westbahnhof</odvNameInput>
+      </itdOdvName>
+      <itdOdvAssignedStops select="0">
+        <itdOdvAssignedStop stopID="60201468" x="750410" y="660195" mapName="GIP1" value="60201468:Westbahnhof" place="Wien" nameWithPlace="Westbahnhof" distanceTime="0" isTransferStop="0">Westbahnhof</itdOdvAssignedStop>
+      </itdOdvAssignedStops>
+    </itdOdv>
+    <itdOdv type="any" usage="destination" anyObjFilter="0">
+      <itdOdvPlace state="identified" method="itp">
+        <odvPlaceElem omc="49000000" value="49000000:50" placeID="50" mainPlace="1" span="0" type="remote">Wien</odvPlaceElem>
+        <odvPlaceInput></odvPlaceInput>
+      </itdOdvPlace>
+      <itdOdvName state="identified" method="itp">
+        <odvNameElem streetName="" omc="49000000" placeID="50" x="752936" y="658918" mapName="GIP1" id="60201320" anyType="stop" nameKey="" locality="Wien" postCode="" objectName="Stephansplatz" buildingName="" buildingNumber="" posttown="Wien">Wien, Stephansplatz</odvNameElem>
+        <odvNameInput>Stephansplatz</odvNameInput>
+      </itdOdvName>
+      <itdOdvAssignedStops select="0">
+        <itdOdvAssignedStop stopID="60201320" x="752936" y="658918" mapName="GIP1" value="60201320:Stephansplatz" place="Wien" nameWithPlace="Stephansplatz" distanceTime="0" isTransferStop="0">Stephansplatz</itdOdvAssignedStop>
+      </itdOdvAssignedStops>
+    </itdOdv>
+    <itdTripDateTime deparr="dep" ttpFrom="20121112" ttpTo="20131214">
+      <itdDateTime ttpFrom="20121112" ttpTo="20131214">
+        <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+        <itdTime hour="8" minute="49"></itdTime>
+      </itdDateTime>
+      <itdDateRange>
+        <itdDate day="02" month="10" year="2013" weekday="4"></itdDate>
+        <itdDate day="03" month="10" year="2013" weekday="5"></itdDate>
+        <itdDate day="04" month="10" year="2013" weekday="6"></itdDate>
+        <itdDate day="05" month="10" year="2013" weekday="7"></itdDate>
+        <itdDate day="06" month="10" year="2013" weekday="1"></itdDate>
+        <itdDate day="07" month="10" year="2013" weekday="2"></itdDate>
+        <itdDate day="08" month="10" year="2013" weekday="3"></itdDate>
+        <itdDate day="09" month="10" year="2013" weekday="4"></itdDate>
+        <itdDate day="10" month="10" year="2013" weekday="5"></itdDate>
+        <itdDate day="11" month="10" year="2013" weekday="6"></itdDate>
+        <itdDate day="12" month="10" year="2013" weekday="7"></itdDate>
+        <itdDate day="13" month="10" year="2013" weekday="1"></itdDate>
+        <itdDate day="14" month="10" year="2013" weekday="2"></itdDate>
+        <itdDate day="15" month="10" year="2013" weekday="3"></itdDate>
+        <itdDate day="16" month="10" year="2013" weekday="4"></itdDate>
+      </itdDateRange>
+    </itdTripDateTime>
+    <itdTripOptions userDefined="0">
+      <itdPtOptions active="1" maxChanges="9" changeSpeed="normal" lineRestriction="400" routeType="LEASTTIME" plane="0" bike="0" noSolidStairs="0" noEscalators="0" noElevators="0" lowPlatformVhcl="0" wheelchair="0" SOSAvail="0" noCrowded="0" illumTransfer="0" noInsecurePlaces="0" overgroundTransfer="0" maxTime="360" maxWait="120" noLonelyTransfer="0" useProxFootSearch="0" useProxFootSearchOrigin="0" useProxFootSearchDestination="0" privateTransport="0">
+        <excludedMeans>
+          <meansElem value="0" selected="0">Zug</meansElem>
+          <meansElem value="1" selected="0">S-Bahn</meansElem>
+          <meansElem value="2" selected="0">U-Bahn</meansElem>
+          <meansElem value="3" selected="0">Stadtbahn</meansElem>
+          <meansElem value="4" selected="1">Straßen-/Trambahn</meansElem>
+          <meansElem value="5" selected="0">Stadtbus</meansElem>
+          <meansElem value="6" selected="0">Regionalbus</meansElem>
+          <meansElem value="7" selected="0">Schnellbus</meansElem>
+          <meansElem value="8" selected="0">Seil-/Zahnradbahn</meansElem>
+          <meansElem value="9" selected="0">Schiff</meansElem>
+          <meansElem value="10" selected="0">AST/Rufbus</meansElem>
+          <meansElem value="11" selected="0">Sonstige</meansElem>
+        </excludedMeans>
+        <specialTickets></specialTickets>
+        <tariffZones>
+          <itdTariffzones net="" fromPR="-1" toPR="-1" neutralZone=""></itdTariffzones>
+        </tariffZones>
+      </itdPtOptions>
+      <itdItOptions>
+        <itRouter logASCII="false" logSVG="false" />
+        <itPedestrian computeMonomodalTrip="false" computationType="PT_AND_IT" itIncidentData="false" speedFactor="100" costFactor="0" distanceFactor="50" traveltimeFactor="50" noTunnel="false" noBridge="false" noFerry="false" useElevation="false" maxTime="120" maxLength="2147483647"></itPedestrian>
+        <itBicycle computeMonomodalTrip="false" computationType="PT_AND_IT" itIncidentData="false" speedFactor="100" costFactor="0" distanceFactor="50" traveltimeFactor="50" noTunnel="false" noBridge="false" noFerry="false" useElevation="false" maxTime="120" maxLength="2147483647" preferAsphaltTracks="false" preferGreenTracks="false" usePseudoRouting="false" cycleSpeed="20"></itBicycle>
+        <mitCar computeMonomodalTrip="false" computationType="PT_AND_IT" itIncidentData="false" speedFactor="100" costFactor="0" distanceFactor="10" traveltimeFactor="90" noTunnel="false" noBridge="false" noFerry="false" useElevation="false" maxTime="120" maxLength="2147483647" mitProfileData="false" mitIncidentData="false" mitOnlineData="false" noHighway="false" noTollRoad="false"></mitCar>
+        <departureTransport>
+          <individualTransport meansCode="100" value="10" speed="normal" selected="1"></individualTransport>
+          <individualTransport meansCode="101" value="10" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="102" value="10" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="103" value="10" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="104" value="10" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="105" value="10" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="106" value="120" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="107" value="120" speed="normal" selected="0"></individualTransport>
+        </departureTransport>
+        <arrivalTransport>
+          <individualTransport meansCode="100" value="10" speed="normal" selected="1"></individualTransport>
+          <individualTransport meansCode="101" value="10" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="102" value="10" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="103" value="10" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="104" value="10" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="105" value="10" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="106" value="120" speed="normal" selected="0"></individualTransport>
+          <individualTransport meansCode="107" value="120" speed="normal" selected="0"></individualTransport>
+        </arrivalTransport>
+      </itdItOptions>
+      <itdUsedOptions calcNumberOfTrips="4" dwellTime="00:00" nextDepsPerLeg="0" calcCO2="0" />
+    </itdTripOptions>
+    <itdItinerary>
+      <itdRouteList>
+        <itdRoute active="1" delete="0" changes="0" distance="-2" alternative="0" publicDuration="00:07" print="0" routeIndex="1" routeTripIndex="1" cTime="20131002084928210" searchMode="-1" vehicleTime="7" method="drs" selected="1">
+          <itdMapItemList>
+            <itdMapItem text="" type="RM">
+              <itdImage src="FILELOAD?Filename=aut_524BC1F80.pdf"></itdImage>
+            </itdMapItem>
+          </itdMapItemList>
+          <itdPartialRouteList>
+            <itdPartialRoute active="1" timeMinute="7" type="PT" bookingCode="S0R0T0PR0" partialRouteType="normalPartialRoute">
+              <itdPoint stopID="60201468" area="2" usage="departure" name="Westbahnhof" nameWO="Westbahnhof" platform="U3-H" platformName="" x="750469" y="660283" mapName="GIP1" omc="49000000" placeID="50" locality="Wien">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=aut_524BC1F81.pdf"></itdImage>
+                  </itdMapItem>
+                </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="47"></itdTime>
+                </itdDateTime>
+                <itdDateTimeTarget>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="47"></itdTime>
+                </itdDateTimeTarget>
+              </itdPoint>
+              <itdPoint stopID="60201320" area="2" usage="arrival" name="Stephansplatz" nameWO="Stephansplatz" platform="U3-H" platformName="" x="752926" y="658933" mapName="GIP1" omc="49000000" placeID="50" locality="Wien">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=aut_524BC1F82.pdf"></itdImage>
+                  </itdMapItem>
+                </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="54"></itdTime>
+                </itdDateTime>
+                <itdDateTimeTarget>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="54"></itdTime>
+                </itdDateTimeTarget>
+              </itdPoint>
+              <itdMeansOfTransport name="U-Bahn U3" type="1" shortname="U3" destination="Simmering" symbol="U3" network="vor" productName="U-Bahn" motType="2" TTB="1" STT="1" ROP="1" destID="60201260">
+                <motDivaParams project="j13" network="vor" line="210U3" supplement=" " direction="H"></motDivaParams>
+                <itdOperator>
+                  <code>04</code>
+                  <name>Wiener Linien</name>
+                </itdOperator>
+              </itdMeansOfTransport>
+              <itdStopSeq>
+                <itdPoint stopID="60201468" area="2" usage="" name="Westbahnhof" platform="U3-H" platformName="" x="750469" y="660283" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1"></itdDate>
+                    <itdTime hour="0" minute="-1"></itdTime>
+                  </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="47"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201530" area="3" usage="" name="Zieglergasse" platform="U3-H" platformName="" x="751032" y="660128" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="48"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60200056" area="9" usage="" name="Neubaugasse" platform="U3-H" platformName="" x="751516" y="659915" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="49"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201430" area="3" usage="" name="Volkstheater" platform="U3-H" platformName="" x="752009" y="659202" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="51"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60200506" area="1" usage="" name="Herrengasse" platform="U3-H" platformName="" x="752452" y="658789" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="52"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201320" area="2" usage="" name="Stephansplatz" platform="U3-H" platformName="" x="752926" y="658933" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="54"></itdTime>
+                  </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1"></itdDate>
+                    <itdTime hour="0" minute="-1"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+              </itdStopSeq>
+              <itdPathCoordinates>
+                <coordEllipsoid>DHDN_RAUENBERG_BESSEL_1841</coordEllipsoid>
+                <coordType>PROJECTION_MDV</coordType>
+                <itdCoordinateBaseElemList>
+                  <itdCoordinateBaseElem>
+                    <x>750469.00000</x>
+                    <y>660278.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750521.00000</x>
+                    <y>660276.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750578.00000</x>
+                    <y>660271.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750629.00000</x>
+                    <y>660260.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750719.00000</x>
+                    <y>660232.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750930.00000</x>
+                    <y>660178.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750984.00000</x>
+                    <y>660161.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751037.00000</x>
+                    <y>660145.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751037.00000</x>
+                    <y>660145.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750984.00000</x>
+                    <y>660161.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750930.00000</x>
+                    <y>660178.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750719.00000</x>
+                    <y>660232.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750882.00000</x>
+                    <y>660194.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750929.00000</x>
+                    <y>660182.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750985.00000</x>
+                    <y>660164.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751092.00000</x>
+                    <y>660130.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751142.00000</x>
+                    <y>660111.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751186.00000</x>
+                    <y>660092.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751235.00000</x>
+                    <y>660068.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751343.00000</x>
+                    <y>660011.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751398.00000</x>
+                    <y>659982.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751433.00000</x>
+                    <y>659958.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751515.00000</x>
+                    <y>659913.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751515.00000</x>
+                    <y>659913.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751692.00000</x>
+                    <y>659815.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751725.00000</x>
+                    <y>659789.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751758.00000</x>
+                    <y>659755.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751788.00000</x>
+                    <y>659703.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751800.00000</x>
+                    <y>659678.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751810.00000</x>
+                    <y>659648.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751821.00000</x>
+                    <y>659596.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751829.00000</x>
+                    <y>659520.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751835.00000</x>
+                    <y>659476.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751849.00000</x>
+                    <y>659422.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751860.00000</x>
+                    <y>659396.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751874.00000</x>
+                    <y>659366.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751893.00000</x>
+                    <y>659334.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751939.00000</x>
+                    <y>659283.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752005.00000</x>
+                    <y>659199.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752005.00000</x>
+                    <y>659199.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752072.00000</x>
+                    <y>659115.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752080.00000</x>
+                    <y>659104.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752123.00000</x>
+                    <y>659038.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752149.00000</x>
+                    <y>658987.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752173.00000</x>
+                    <y>658945.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752196.00000</x>
+                    <y>658912.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752218.00000</x>
+                    <y>658888.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752245.00000</x>
+                    <y>658864.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752280.00000</x>
+                    <y>658839.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752316.00000</x>
+                    <y>658821.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752360.00000</x>
+                    <y>658806.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752395.00000</x>
+                    <y>658797.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752451.00000</x>
+                    <y>658786.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752451.00000</x>
+                    <y>658786.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752508.00000</x>
+                    <y>658775.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752527.00000</x>
+                    <y>658771.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752560.00000</x>
+                    <y>658767.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752600.00000</x>
+                    <y>658767.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752643.00000</x>
+                    <y>658772.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752680.00000</x>
+                    <y>658783.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752707.00000</x>
+                    <y>658796.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752731.00000</x>
+                    <y>658812.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752751.00000</x>
+                    <y>658827.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752837.00000</x>
+                    <y>658887.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752875.00000</x>
+                    <y>658908.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752916.00000</x>
+                    <y>658927.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752923.00000</x>
+                    <y>658930.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752927.00000</x>
+                    <y>658932.00000</y>
+                  </itdCoordinateBaseElem>
+                </itdCoordinateBaseElemList>
+                <itdCoordinateReductionList></itdCoordinateReductionList>
+              </itdPathCoordinates>
+            </itdPartialRoute>
+          </itdPartialRouteList>
+          <itdFare></itdFare>
+          <itdDaysOfService></itdDaysOfService>
+          <itdResTL RVB="000000004C9F3E0079F3E7CE0F3E7CF91F3E7CF933E7CF9E5CF1F2E60F9F3E7C73E7CF9F3E7CB9F327CF9F3E79F3E7CF1F3E7CF800001F3E"></itdResTL>
+          <seqRoutes />
+        </itdRoute>
+        <itdRoute active="1" delete="0" changes="0" distance="-2" alternative="0" publicDuration="00:07" print="0" routeIndex="1" routeTripIndex="2" cTime="20131002084928195" searchMode="-1" vehicleTime="7" method="drs" selected="1">
+          <itdMapItemList>
+            <itdMapItem text="" type="RM">
+              <itdImage src="FILELOAD?Filename=aut_524BC1F80.pdf"></itdImage>
+            </itdMapItem>
+          </itdMapItemList>
+          <itdPartialRouteList>
+            <itdPartialRoute active="1" timeMinute="7" type="PT" bookingCode="S0R0T1PR0" partialRouteType="normalPartialRoute">
+              <itdPoint stopID="60201468" area="2" usage="departure" name="Westbahnhof" nameWO="Westbahnhof" platform="U3-H" platformName="" x="750469" y="660283" mapName="GIP1" omc="49000000" placeID="50" locality="Wien">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=aut_524BC1F81.pdf"></itdImage>
+                  </itdMapItem>
+                </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="50"></itdTime>
+                </itdDateTime>
+                <itdDateTimeTarget>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="50"></itdTime>
+                </itdDateTimeTarget>
+              </itdPoint>
+              <itdPoint stopID="60201320" area="2" usage="arrival" name="Stephansplatz" nameWO="Stephansplatz" platform="U3-H" platformName="" x="752926" y="658933" mapName="GIP1" omc="49000000" placeID="50" locality="Wien">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=aut_524BC1F82.pdf"></itdImage>
+                  </itdMapItem>
+                </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="57"></itdTime>
+                </itdDateTime>
+                <itdDateTimeTarget>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="57"></itdTime>
+                </itdDateTimeTarget>
+              </itdPoint>
+              <itdMeansOfTransport name="U-Bahn U3" type="1" shortname="U3" destination="Simmering" symbol="U3" network="vor" productName="U-Bahn" motType="2" TTB="1" STT="1" ROP="1" destID="60201260">
+                <motDivaParams project="j13" network="vor" line="210U3" supplement=" " direction="H"></motDivaParams>
+                <itdOperator>
+                  <code>04</code>
+                  <name>Wiener Linien</name>
+                </itdOperator>
+              </itdMeansOfTransport>
+              <itdStopSeq>
+                <itdPoint stopID="60201468" area="2" usage="" name="Westbahnhof" platform="U3-H" platformName="" x="750469" y="660283" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1"></itdDate>
+                    <itdTime hour="0" minute="-1"></itdTime>
+                  </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="50"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201530" area="3" usage="" name="Zieglergasse" platform="U3-H" platformName="" x="751032" y="660128" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="51"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60200056" area="9" usage="" name="Neubaugasse" platform="U3-H" platformName="" x="751516" y="659915" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="52"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201430" area="3" usage="" name="Volkstheater" platform="U3-H" platformName="" x="752009" y="659202" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="54"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60200506" area="1" usage="" name="Herrengasse" platform="U3-H" platformName="" x="752452" y="658789" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="55"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201320" area="2" usage="" name="Stephansplatz" platform="U3-H" platformName="" x="752926" y="658933" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="57"></itdTime>
+                  </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1"></itdDate>
+                    <itdTime hour="0" minute="-1"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+              </itdStopSeq>
+              <itdPathCoordinates>
+                <coordEllipsoid>DHDN_RAUENBERG_BESSEL_1841</coordEllipsoid>
+                <coordType>PROJECTION_MDV</coordType>
+                <itdCoordinateBaseElemList>
+                  <itdCoordinateBaseElem>
+                    <x>750469.00000</x>
+                    <y>660278.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750521.00000</x>
+                    <y>660276.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750578.00000</x>
+                    <y>660271.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750629.00000</x>
+                    <y>660260.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750719.00000</x>
+                    <y>660232.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750930.00000</x>
+                    <y>660178.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750984.00000</x>
+                    <y>660161.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751037.00000</x>
+                    <y>660145.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751037.00000</x>
+                    <y>660145.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750984.00000</x>
+                    <y>660161.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750930.00000</x>
+                    <y>660178.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750719.00000</x>
+                    <y>660232.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750882.00000</x>
+                    <y>660194.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750929.00000</x>
+                    <y>660182.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750985.00000</x>
+                    <y>660164.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751092.00000</x>
+                    <y>660130.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751142.00000</x>
+                    <y>660111.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751186.00000</x>
+                    <y>660092.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751235.00000</x>
+                    <y>660068.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751343.00000</x>
+                    <y>660011.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751398.00000</x>
+                    <y>659982.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751433.00000</x>
+                    <y>659958.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751515.00000</x>
+                    <y>659913.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751515.00000</x>
+                    <y>659913.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751692.00000</x>
+                    <y>659815.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751725.00000</x>
+                    <y>659789.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751758.00000</x>
+                    <y>659755.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751788.00000</x>
+                    <y>659703.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751800.00000</x>
+                    <y>659678.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751810.00000</x>
+                    <y>659648.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751821.00000</x>
+                    <y>659596.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751829.00000</x>
+                    <y>659520.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751835.00000</x>
+                    <y>659476.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751849.00000</x>
+                    <y>659422.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751860.00000</x>
+                    <y>659396.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751874.00000</x>
+                    <y>659366.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751893.00000</x>
+                    <y>659334.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751939.00000</x>
+                    <y>659283.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752005.00000</x>
+                    <y>659199.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752005.00000</x>
+                    <y>659199.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752072.00000</x>
+                    <y>659115.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752080.00000</x>
+                    <y>659104.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752123.00000</x>
+                    <y>659038.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752149.00000</x>
+                    <y>658987.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752173.00000</x>
+                    <y>658945.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752196.00000</x>
+                    <y>658912.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752218.00000</x>
+                    <y>658888.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752245.00000</x>
+                    <y>658864.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752280.00000</x>
+                    <y>658839.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752316.00000</x>
+                    <y>658821.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752360.00000</x>
+                    <y>658806.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752395.00000</x>
+                    <y>658797.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752451.00000</x>
+                    <y>658786.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752451.00000</x>
+                    <y>658786.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752508.00000</x>
+                    <y>658775.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752527.00000</x>
+                    <y>658771.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752560.00000</x>
+                    <y>658767.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752600.00000</x>
+                    <y>658767.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752643.00000</x>
+                    <y>658772.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752680.00000</x>
+                    <y>658783.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752707.00000</x>
+                    <y>658796.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752731.00000</x>
+                    <y>658812.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752751.00000</x>
+                    <y>658827.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752837.00000</x>
+                    <y>658887.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752875.00000</x>
+                    <y>658908.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752916.00000</x>
+                    <y>658927.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752923.00000</x>
+                    <y>658930.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752927.00000</x>
+                    <y>658932.00000</y>
+                  </itdCoordinateBaseElem>
+                </itdCoordinateBaseElemList>
+                <itdCoordinateReductionList></itdCoordinateReductionList>
+              </itdPathCoordinates>
+            </itdPartialRoute>
+          </itdPartialRouteList>
+          <itdFare></itdFare>
+          <itdDaysOfService></itdDaysOfService>
+          <itdResTL RVB="00000000001F3E0079F3E7C00F3E7C01003E7CF933E7CF9C5CE1F2E60F9F3E7C000000000000000027CF9F3E79F3E7CF1F3E3CF800001F3E"></itdResTL>
+          <seqRoutes />
+        </itdRoute>
+        <itdRoute active="1" delete="0" changes="0" distance="-2" alternative="0" publicDuration="00:07" print="0" routeIndex="1" routeTripIndex="3" cTime="20131002084928195" searchMode="-1" vehicleTime="7" method="drs" selected="1">
+          <itdMapItemList>
+            <itdMapItem text="" type="RM">
+              <itdImage src="FILELOAD?Filename=aut_524BC1F80.pdf"></itdImage>
+            </itdMapItem>
+          </itdMapItemList>
+          <itdPartialRouteList>
+            <itdPartialRoute active="1" timeMinute="7" type="PT" bookingCode="S0R0T2PR0" partialRouteType="normalPartialRoute">
+              <itdPoint stopID="60201468" area="2" usage="departure" name="Westbahnhof" nameWO="Westbahnhof" platform="U3-H" platformName="" x="750469" y="660283" mapName="GIP1" omc="49000000" placeID="50" locality="Wien">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=aut_524BC1F81.pdf"></itdImage>
+                  </itdMapItem>
+                </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="53"></itdTime>
+                </itdDateTime>
+                <itdDateTimeTarget>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="53"></itdTime>
+                </itdDateTimeTarget>
+              </itdPoint>
+              <itdPoint stopID="60201320" area="2" usage="arrival" name="Stephansplatz" nameWO="Stephansplatz" platform="U3-H" platformName="" x="752926" y="658933" mapName="GIP1" omc="49000000" placeID="50" locality="Wien">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=aut_524BC1F82.pdf"></itdImage>
+                  </itdMapItem>
+                </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="9" minute="0"></itdTime>
+                </itdDateTime>
+                <itdDateTimeTarget>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="9" minute="0"></itdTime>
+                </itdDateTimeTarget>
+              </itdPoint>
+              <itdMeansOfTransport name="U-Bahn U3" type="1" shortname="U3" destination="Simmering" symbol="U3" network="vor" productName="U-Bahn" motType="2" TTB="1" STT="1" ROP="1" destID="60201260">
+                <motDivaParams project="j13" network="vor" line="210U3" supplement=" " direction="H"></motDivaParams>
+                <itdOperator>
+                  <code>04</code>
+                  <name>Wiener Linien</name>
+                </itdOperator>
+              </itdMeansOfTransport>
+              <itdStopSeq>
+                <itdPoint stopID="60201468" area="2" usage="" name="Westbahnhof" platform="U3-H" platformName="" x="750469" y="660283" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1"></itdDate>
+                    <itdTime hour="0" minute="-1"></itdTime>
+                  </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="53"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201530" area="3" usage="" name="Zieglergasse" platform="U3-H" platformName="" x="751032" y="660128" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="54"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60200056" area="9" usage="" name="Neubaugasse" platform="U3-H" platformName="" x="751516" y="659915" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="55"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201430" area="3" usage="" name="Volkstheater" platform="U3-H" platformName="" x="752009" y="659202" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="57"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60200506" area="1" usage="" name="Herrengasse" platform="U3-H" platformName="" x="752452" y="658789" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="58"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201320" area="2" usage="" name="Stephansplatz" platform="U3-H" platformName="" x="752926" y="658933" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="9" minute="0"></itdTime>
+                  </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1"></itdDate>
+                    <itdTime hour="0" minute="-1"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+              </itdStopSeq>
+              <itdPathCoordinates>
+                <coordEllipsoid>DHDN_RAUENBERG_BESSEL_1841</coordEllipsoid>
+                <coordType>PROJECTION_MDV</coordType>
+                <itdCoordinateBaseElemList>
+                  <itdCoordinateBaseElem>
+                    <x>750469.00000</x>
+                    <y>660278.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750521.00000</x>
+                    <y>660276.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750578.00000</x>
+                    <y>660271.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750629.00000</x>
+                    <y>660260.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750719.00000</x>
+                    <y>660232.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750930.00000</x>
+                    <y>660178.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750984.00000</x>
+                    <y>660161.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751037.00000</x>
+                    <y>660145.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751037.00000</x>
+                    <y>660145.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750984.00000</x>
+                    <y>660161.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750930.00000</x>
+                    <y>660178.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750719.00000</x>
+                    <y>660232.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750882.00000</x>
+                    <y>660194.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750929.00000</x>
+                    <y>660182.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750985.00000</x>
+                    <y>660164.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751092.00000</x>
+                    <y>660130.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751142.00000</x>
+                    <y>660111.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751186.00000</x>
+                    <y>660092.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751235.00000</x>
+                    <y>660068.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751343.00000</x>
+                    <y>660011.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751398.00000</x>
+                    <y>659982.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751433.00000</x>
+                    <y>659958.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751515.00000</x>
+                    <y>659913.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751515.00000</x>
+                    <y>659913.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751692.00000</x>
+                    <y>659815.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751725.00000</x>
+                    <y>659789.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751758.00000</x>
+                    <y>659755.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751788.00000</x>
+                    <y>659703.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751800.00000</x>
+                    <y>659678.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751810.00000</x>
+                    <y>659648.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751821.00000</x>
+                    <y>659596.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751829.00000</x>
+                    <y>659520.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751835.00000</x>
+                    <y>659476.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751849.00000</x>
+                    <y>659422.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751860.00000</x>
+                    <y>659396.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751874.00000</x>
+                    <y>659366.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751893.00000</x>
+                    <y>659334.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751939.00000</x>
+                    <y>659283.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752005.00000</x>
+                    <y>659199.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752005.00000</x>
+                    <y>659199.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752072.00000</x>
+                    <y>659115.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752080.00000</x>
+                    <y>659104.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752123.00000</x>
+                    <y>659038.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752149.00000</x>
+                    <y>658987.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752173.00000</x>
+                    <y>658945.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752196.00000</x>
+                    <y>658912.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752218.00000</x>
+                    <y>658888.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752245.00000</x>
+                    <y>658864.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752280.00000</x>
+                    <y>658839.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752316.00000</x>
+                    <y>658821.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752360.00000</x>
+                    <y>658806.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752395.00000</x>
+                    <y>658797.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752451.00000</x>
+                    <y>658786.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752451.00000</x>
+                    <y>658786.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752508.00000</x>
+                    <y>658775.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752527.00000</x>
+                    <y>658771.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752560.00000</x>
+                    <y>658767.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752600.00000</x>
+                    <y>658767.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752643.00000</x>
+                    <y>658772.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752680.00000</x>
+                    <y>658783.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752707.00000</x>
+                    <y>658796.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752731.00000</x>
+                    <y>658812.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752751.00000</x>
+                    <y>658827.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752837.00000</x>
+                    <y>658887.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752875.00000</x>
+                    <y>658908.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752916.00000</x>
+                    <y>658927.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752923.00000</x>
+                    <y>658930.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752927.00000</x>
+                    <y>658932.00000</y>
+                  </itdCoordinateBaseElem>
+                </itdCoordinateBaseElemList>
+                <itdCoordinateReductionList></itdCoordinateReductionList>
+              </itdPathCoordinates>
+            </itdPartialRoute>
+          </itdPartialRouteList>
+          <itdFare></itdFare>
+          <itdDaysOfService></itdDaysOfService>
+          <itdResTL RVB="00000000001F3E0079F3E7C00F3E7C01003E7CF933E7CF9C5CE1F2E60F9F3E7C000000000000000027CF9F3E79F3E7CF1F3E3CF800001F3E"></itdResTL>
+          <seqRoutes />
+        </itdRoute>
+        <itdRoute active="1" delete="0" changes="0" distance="-2" alternative="0" publicDuration="00:07" print="0" routeIndex="1" routeTripIndex="4" cTime="20131002084928210" searchMode="-1" vehicleTime="7" method="drs" selected="1">
+          <itdMapItemList>
+            <itdMapItem text="" type="RM">
+              <itdImage src="FILELOAD?Filename=aut_524BC1F80.pdf"></itdImage>
+            </itdMapItem>
+          </itdMapItemList>
+          <itdPartialRouteList>
+            <itdPartialRoute active="1" timeMinute="7" type="PT" bookingCode="S0R0T3PR0" partialRouteType="normalPartialRoute">
+              <itdPoint stopID="60201468" area="2" usage="departure" name="Westbahnhof" nameWO="Westbahnhof" platform="U3-H" platformName="" x="750469" y="660283" mapName="GIP1" omc="49000000" placeID="50" locality="Wien">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=aut_524BC1F81.pdf"></itdImage>
+                  </itdMapItem>
+                </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="56"></itdTime>
+                </itdDateTime>
+                <itdDateTimeTarget>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="8" minute="56"></itdTime>
+                </itdDateTimeTarget>
+              </itdPoint>
+              <itdPoint stopID="60201320" area="2" usage="arrival" name="Stephansplatz" nameWO="Stephansplatz" platform="U3-H" platformName="" x="752926" y="658933" mapName="GIP1" omc="49000000" placeID="50" locality="Wien">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=aut_524BC1F82.pdf"></itdImage>
+                  </itdMapItem>
+                </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="9" minute="3"></itdTime>
+                </itdDateTime>
+                <itdDateTimeTarget>
+                  <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                  <itdTime hour="9" minute="3"></itdTime>
+                </itdDateTimeTarget>
+              </itdPoint>
+              <itdMeansOfTransport name="U-Bahn U3" type="1" shortname="U3" destination="Simmering" symbol="U3" network="vor" productName="U-Bahn" motType="2" TTB="1" STT="1" ROP="1" destID="60201260">
+                <motDivaParams project="j13" network="vor" line="210U3" supplement=" " direction="H"></motDivaParams>
+                <itdOperator>
+                  <code>04</code>
+                  <name>Wiener Linien</name>
+                </itdOperator>
+              </itdMeansOfTransport>
+              <itdStopSeq>
+                <itdPoint stopID="60201468" area="2" usage="" name="Westbahnhof" platform="U3-H" platformName="" x="750469" y="660283" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1"></itdDate>
+                    <itdTime hour="0" minute="-1"></itdTime>
+                  </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="56"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201530" area="3" usage="" name="Zieglergasse" platform="U3-H" platformName="" x="751032" y="660128" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="57"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60200056" area="9" usage="" name="Neubaugasse" platform="U3-H" platformName="" x="751516" y="659915" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="8" minute="58"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201430" area="3" usage="" name="Volkstheater" platform="U3-H" platformName="" x="752009" y="659202" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="9" minute="0"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60200506" area="1" usage="" name="Herrengasse" platform="U3-H" platformName="" x="752452" y="658789" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="9" minute="1"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+                <itdPoint stopID="60201320" area="2" usage="" name="Stephansplatz" platform="U3-H" platformName="" x="752926" y="658933" mapName="GIP1" omc="49000000" placeID="50">
+                  <itdDateTime>
+                    <itdDate day="2" month="10" year="2013" weekday="4"></itdDate>
+                    <itdTime hour="9" minute="3"></itdTime>
+                  </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1"></itdDate>
+                    <itdTime hour="0" minute="-1"></itdTime>
+                  </itdDateTime>
+                </itdPoint>
+              </itdStopSeq>
+              <itdPathCoordinates>
+                <coordEllipsoid>DHDN_RAUENBERG_BESSEL_1841</coordEllipsoid>
+                <coordType>PROJECTION_MDV</coordType>
+                <itdCoordinateBaseElemList>
+                  <itdCoordinateBaseElem>
+                    <x>750469.00000</x>
+                    <y>660278.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750521.00000</x>
+                    <y>660276.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750578.00000</x>
+                    <y>660271.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750629.00000</x>
+                    <y>660260.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750719.00000</x>
+                    <y>660232.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750930.00000</x>
+                    <y>660178.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750984.00000</x>
+                    <y>660161.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751037.00000</x>
+                    <y>660145.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751037.00000</x>
+                    <y>660145.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750984.00000</x>
+                    <y>660161.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750930.00000</x>
+                    <y>660178.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750719.00000</x>
+                    <y>660232.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750882.00000</x>
+                    <y>660194.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750929.00000</x>
+                    <y>660182.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>750985.00000</x>
+                    <y>660164.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751092.00000</x>
+                    <y>660130.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751142.00000</x>
+                    <y>660111.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751186.00000</x>
+                    <y>660092.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751235.00000</x>
+                    <y>660068.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751343.00000</x>
+                    <y>660011.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751398.00000</x>
+                    <y>659982.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751433.00000</x>
+                    <y>659958.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751515.00000</x>
+                    <y>659913.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751515.00000</x>
+                    <y>659913.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751692.00000</x>
+                    <y>659815.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751725.00000</x>
+                    <y>659789.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751758.00000</x>
+                    <y>659755.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751788.00000</x>
+                    <y>659703.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751800.00000</x>
+                    <y>659678.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751810.00000</x>
+                    <y>659648.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751821.00000</x>
+                    <y>659596.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751829.00000</x>
+                    <y>659520.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751835.00000</x>
+                    <y>659476.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751849.00000</x>
+                    <y>659422.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751860.00000</x>
+                    <y>659396.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751874.00000</x>
+                    <y>659366.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751893.00000</x>
+                    <y>659334.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>751939.00000</x>
+                    <y>659283.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752005.00000</x>
+                    <y>659199.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752005.00000</x>
+                    <y>659199.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752072.00000</x>
+                    <y>659115.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752080.00000</x>
+                    <y>659104.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752123.00000</x>
+                    <y>659038.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752149.00000</x>
+                    <y>658987.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752173.00000</x>
+                    <y>658945.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752196.00000</x>
+                    <y>658912.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752218.00000</x>
+                    <y>658888.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752245.00000</x>
+                    <y>658864.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752280.00000</x>
+                    <y>658839.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752316.00000</x>
+                    <y>658821.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752360.00000</x>
+                    <y>658806.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752395.00000</x>
+                    <y>658797.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752451.00000</x>
+                    <y>658786.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752451.00000</x>
+                    <y>658786.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752508.00000</x>
+                    <y>658775.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752527.00000</x>
+                    <y>658771.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752560.00000</x>
+                    <y>658767.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752600.00000</x>
+                    <y>658767.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752643.00000</x>
+                    <y>658772.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752680.00000</x>
+                    <y>658783.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752707.00000</x>
+                    <y>658796.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752731.00000</x>
+                    <y>658812.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752751.00000</x>
+                    <y>658827.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752837.00000</x>
+                    <y>658887.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752875.00000</x>
+                    <y>658908.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752916.00000</x>
+                    <y>658927.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752923.00000</x>
+                    <y>658930.00000</y>
+                  </itdCoordinateBaseElem>
+                  <itdCoordinateBaseElem>
+                    <x>752927.00000</x>
+                    <y>658932.00000</y>
+                  </itdCoordinateBaseElem>
+                </itdCoordinateBaseElemList>
+                <itdCoordinateReductionList></itdCoordinateReductionList>
+              </itdPathCoordinates>
+            </itdPartialRoute>
+          </itdPartialRouteList>
+          <itdFare></itdFare>
+          <itdDaysOfService></itdDaysOfService>
+          <itdResTL RVB="00000000001F3E0079F3E7C00F3E7C01003E7CF933E7CF9C5CE1F2E60F9F3E7C000000000000000027CF9F3E79F3E7CF1F3E3CF800001F3E"></itdResTL>
+          <seqRoutes />
+        </itdRoute>
+      </itdRouteList>
+    </itdItinerary>
+  </itdTripRequest>
+</itdRequest>

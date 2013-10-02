@@ -8,9 +8,14 @@ namespace WienerLinien.Api.Tests
 {
     public static class ResponseFiles
     {
-        internal static string LoadJson(string filename)
+        internal static string Load(string filename)
         {
             return System.IO.File.ReadAllText(filename);
+        }
+
+        internal static string LoadJson(string filename)
+        {
+            return Load(filename);
         }
 
         public static readonly string InvalidKeyResponse = "InvalidKeyResponse.json";
@@ -25,5 +30,12 @@ namespace WienerLinien.Api.Tests
 
         // Stoerunglang: http://www.wienerlinien.at/ogd_realtime/trafficInfoList?name=stoerunglang&sender=
         public static readonly string Stoerunglang = "Stoerunglang.json";
+
+
+
+        // ROUTING
+
+        // p56 5.2 Fahrtoptionen (8): http://www.wienerlinien.at/ogd_routing/XML_TRIP_REQUEST2?locationServerActive=1&type_origin=any&name_origin=Westbahnhof&type_destination=any&name_destination=Stephansplatz&ptOptionsActive=1&excludedMeans=4
+        public static readonly string RoutingFahrtoptionen8 = "RoutingFahrtoptionen8.xml";
     }
 }
