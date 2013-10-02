@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,9 +8,9 @@ using WienerLinien.Api.Routing;
 
 namespace MundlTransit.WP8.Model
 {
-    public class RoutingTripModel
+    public class RoutingTripModel : ObservableCollection<TripLeg>
     {
-        public RoutingTripModel(Trip t)
+        public RoutingTripModel(Trip t) : base(t.Legs)
         {
             Trip = t;
         }

@@ -49,8 +49,15 @@
 
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="TRIPS" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <!-- TODO instead of heading show smaller lines with info on from-to, time &c -->
-            <TextBlock Text="here: trip info" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+
+            <TextBlock Foreground="{StaticResource PhoneSubtleBrush}" 
+                       Style="{StaticResource PhoneTextNormalStyle}">
+                <Run Text="From:"/>
+                <Run Text="{Binding From}"/>
+                <LineBreak/>
+                <Run Text="To:"/>
+                <Run Text="{Binding To}"/>
+            </TextBlock>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
@@ -110,12 +117,12 @@
                                 <DataTemplate>
                                     <ListBoxItem toolkit:TiltEffect.IsTiltEnabled="True">
                                         <StackPanel>
-                                            <TextBlock Text="{Binding Sender}"       
+                                            <TextBlock Text="{Binding DisplayName}"       
                                                    Margin="0,8,0,-4"
                                                    Foreground="{StaticResource PhoneForegroundBrush}"
                                                    FontSize="{StaticResource PhoneFontSizeExtraLarge}" 
                                                    FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
-                                            <TextBlock Text="{Binding Body}"
+                                            <TextBlock Text="{Binding Direction}"
                                                    TextWrapping="Wrap"
                                                    Margin="0,0,0,-2"
                                                    Foreground="{StaticResource PhoneAccentBrush}"
