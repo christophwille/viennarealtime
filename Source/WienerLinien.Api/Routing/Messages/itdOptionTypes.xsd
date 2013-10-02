@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Jürgen Hillmann (Mentz Datenverarbeitung GmbH) -->
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by MU (Mentz Datenverarbeitung GmbH) -->
+<!-- $Id$ -->
+<!-- Copyright (C) 2000-2004 Mentz Datenverarbeitung GmbH -->
+<!-- Grillparzerstrasse 18, 81675 Munich, Germany  (www.mentzdv.de) -->
+<!-- itd interface descripton version 9.11.0 last update 2004/08/04 -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="itdComplexTypes.xsd"/>
+	<xsd:include schemaLocation="itdFareTypes.xsd"/>
+	<xsd:complexType name="itdPtOptionsType">
+		<xsd:annotation>
+			<xsd:documentation>represents public transport options</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="excludedMeans" type="excludedMeansType"/>
+			<xsd:element name="specialTickets" type="specialTicketsType" minOccurs="0"/>
+			<xsd:element name="tariffZones" type="tariffZonesType" minOccurs="0"/>
+			<xsd:element name="advancedOptions" type="advancedOptionsType" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="active" type="yesnounknownType" default="1">
+			<xsd:annotation>
+				<xsd:documentation>consider the public transport options during trip computation</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="maxChanges" type="xsd:string" default="9">
+			<xsd:annotation>
+				<xsd:documentation>limitation of changes for trip computation</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="changeSpeed" type="motSpeedType" default="normal">
+			<xsd:annotation>
+				<xsd:documentation>describes the interchange speed in percent between the partial routes</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="lineRestriction" default="400">
+			<xsd:annotation>
+				<xsd:documentation>limitation in the use of certain lines:
+All allowed                    = 400
+Without ICE                  = 401
+No supplement             = 402
+No long distance trains = 403
+</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:NMTOKEN">
+					<xsd:enumeration value="400"/>
+					<xsd:enumeration value="401"/>
+					<xsd:enumeration value="402"/>
+					<xsd:enumeration value="403"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="routeType" default="LEASTTIME">
+			<xsd:annotation>
+				<xsd:documentation>optimisation of trips:
+LEASTTIME
+LEASTINTERCHANGE
+LEASTWALKING</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:NMTOKEN">
+					<xsd:enumeration value="LEASTTIME"/>
+					<xsd:enumeration value="LEASTINTERCHANGE"/>
+					<xsd:enumeration value="LEASTWALKING"/>
+					<xsd:enumeration value="LEASTEXPENSIVE"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="plane" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>use planes as well</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="bike" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>take bike along</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noSolidStairs" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>use no solid stairs</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noEscalators" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>use no escalators</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noElevators" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>use no elevators</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="lowPlatformVhcl" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>use only low-platform vehicles</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="wheelchair" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>boarding without steps</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="SOSAvail" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>transfer only where SOS available</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noCrowded" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>use no crwoded vehicles</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="illumTransfer" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>transfer only at illuminated places or during daylight</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noInsecurePlaces" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>transfer not at insecure places (drug dealers, ...)</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noLonleyTransfer" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>transfer only where people present</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="overgroundTransfer" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>transfer only overground</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="maxTime" type="xsd:integer">
+			<xsd:annotation>
+				<xsd:documentation>factor maximum time for a complete trip</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="maxWait" type="xsd:integer">
+			<xsd:annotation>
+				<xsd:documentation>maximum time for inter changing</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noLonelyTransfer" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>transfer only where people present</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="useProxFootSearch" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>use proximity footpath search</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="useProxFootSearchOrigin" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>use proximity footpath search for origin</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="useProxFootSearchDestination" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>use proximity footpath search for destination</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="privateTransport" type="xsd:integer" default="0">
+			<xsd:annotation>
+				<xsd:documentation>additional private transport, e. g. only for school</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="excludedMeansType">
+		<xsd:annotation>
+			<xsd:documentation>represents excluded means of transport</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="meansElem" type="meansElemType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="meansElemType">
+		<xsd:annotation>
+			<xsd:documentation>description means of transport</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="value" type="xsd:string" use="required">
+					<xsd:annotation>
+						<xsd:documentation>represents value for a means of transport</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="selected" type="yesnoType" default="0">
+					<xsd:annotation>
+						<xsd:documentation>represents selection for a means of transport</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="specialTicketsType">
+		<xsd:annotation>
+			<xsd:documentation>represents a list of special tickets, e. g. Isarcard, Greecard </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ticketList" type="ticketListType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ticketListType">
+		<xsd:annotation>
+			<xsd:documentation>represents a list of special tickes</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="itdSpecialTicket" type="itdSpecialTicketType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="advancedOptionsType">
+		<xsd:annotation>
+			<xsd:documentation>represents container for advanced options</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="advOpt" type="advOptType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="advOptType">
+		<xsd:annotation>
+			<xsd:documentation>represents advanced options e. g. carry bike rule</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="selected" type="yesnounknownType" use="required">
+					<xsd:annotation>
+						<xsd:documentation>selection of advanced option</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="itdItOptionsType">
+		<xsd:annotation>
+			<xsd:documentation>represents individual transport options</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="itRouter" type="itdITRouterOptionType"/>
+			<xsd:element name="itPedestrian" type="itdPedestrianOptionType"/>
+			<xsd:element name="itBicycle" type="itdBicycleOptionType"/>
+			<xsd:element name="mitCar" type="itdCarOptionType"/>
+			<xsd:element name="itParking" type="itdParkingOptionType" minOccurs="0"/>
+			<xsd:element name="departureTransport" type="departureTransportType"/>
+			<xsd:element name="arrivalTransport" type="arrivalTransportType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="itdITRouterOptionType">
+		<xsd:annotation>
+			<xsd:documentation>represents additional routing information</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="logASCII" type="xsd:boolean" use="required">
+			<xsd:annotation>
+				<xsd:documentation>new ITRouter algorithm write ASCII log</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="logSVG" type="xsd:boolean" use="required">
+			<xsd:annotation>
+				<xsd:documentation>new ITRouter algorithm write SVG log</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="itdITOptionType">
+		<xsd:annotation>
+			<xsd:documentation>represents individual transport routing options</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="genParamList" type="itdGenericParamListType" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="computeMonomodalTrip" type="xsd:boolean" use="required">
+			<xsd:annotation>
+				<xsd:documentation>compute monomodal journey</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="computationType" type="computationType" use="required">
+			<xsd:annotation>
+				<xsd:documentation>represents type of request: PT and IT or only IT</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="itIncidentData" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Use inicident data like AddInfo messages during trip calculation</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="speedFactor" type="xsd:unsignedShort" use="required">
+			<xsd:annotation>
+				<xsd:documentation>speed factor [0-200] 100 = normal,  less than 100 = faster, more than 100 = slower</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="costFactor" type="xsd:unsignedShort" use="required">
+			<xsd:annotation>
+				<xsd:documentation>cost factor [0-100]  including monetary costs in cost function of it algorithm</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="distanceFactor" type="xsd:unsignedShort" use="required">
+			<xsd:annotation>
+				<xsd:documentation>distance factor [0-100] including distance in cost function of it algorithm</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="traveltimeFactor" type="xsd:unsignedShort" use="required">
+			<xsd:annotation>
+				<xsd:documentation>travel time [0-100]  including traveltime in cost function of it algorithm</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noTunnel" type="xsd:boolean" use="required">
+			<xsd:annotation>
+				<xsd:documentation>no tunnel in desired trip</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noBridge" type="xsd:boolean" use="required">
+			<xsd:annotation>
+				<xsd:documentation>no bridge in desired trip</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noFerry" type="xsd:boolean" use="required">
+			<xsd:annotation>
+				<xsd:documentation>no ferry in desired trip</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="useElevation" type="xsd:boolean" use="required">
+			<xsd:annotation>
+				<xsd:documentation>use elevation for trip</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="maxTime" type="xsd:integer" use="required">
+			<xsd:annotation>
+				<xsd:documentation>maximum time in desired trip</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="maxLength" type="xsd:integer" use="required">
+			<xsd:annotation>
+				<xsd:documentation>maximum length in desired trip</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="ignoreRestrictions" type="xsd:boolean" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="itdPedestrianOptionType">
+		<xsd:annotation>
+			<xsd:documentation>represents individual pedestrian transport options</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="itdITOptionType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="itdBicycleOptionType">
+		<xsd:annotation>
+			<xsd:documentation>represents individual bike transport options</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="itdITOptionType">
+				<xsd:attribute name="preferAsphaltTracks" type="xsd:boolean" use="required">
+					<xsd:annotation>
+						<xsd:documentation>Prefer asphalt tracks for cycle routing</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="preferGreenTracks" type="xsd:boolean" use="required">
+					<xsd:annotation>
+						<xsd:documentation>Prefer tracks in green for cycle routing</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="usePseudoRouting" type="xsd:boolean" use="required">
+					<xsd:annotation>
+						<xsd:documentation>Use pseudo cycle routing</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="useSignedRoute" type="xsd:boolean" use="required">
+					<xsd:annotation>
+						<xsd:documentation>Prefer signed bicycle route</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="cycleSpeed" type="xsd:unsignedShort" use="required">
+					<xsd:annotation>
+						<xsd:documentation>Cycle speed</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="itdMITOptionType">
+		<xsd:annotation>
+			<xsd:documentation>represents individual motorised transport options</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="itdITOptionType">
+				<xsd:attribute name="mitProfileData" type="xsd:boolean" use="required">
+					<xsd:annotation>
+						<xsd:documentation>profile date included in  trip calculation</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="mitIncidentData" type="xsd:boolean" use="required">
+					<xsd:annotation>
+						<xsd:documentation>obsolete, replaced by itIncidentData: incident data included in  trip calculation</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="mitOnlineData" type="xsd:boolean" use="required">
+					<xsd:annotation>
+						<xsd:documentation>online data included in  trip calculation</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="noHighway" type="xsd:boolean" use="required">
+					<xsd:annotation>
+						<xsd:documentation>no highway in desired trip</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="noTollRoad" type="xsd:boolean" use="required">
+					<xsd:annotation>
+						<xsd:documentation>no toll road in desired trip</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="itdCarOptionType">
+		<xsd:annotation>
+			<xsd:documentation>represents individual car transport options</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="itdMITOptionType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="departureTransportType">
+		<xsd:annotation>
+			<xsd:documentation>represents the individual transport for departure</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="individualTransport" type="individualTransportType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="arrivalTransportType">
+		<xsd:annotation>
+			<xsd:documentation>represents the individual transport for arrival</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="individualTransport" type="individualTransportType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="individualTransportType">
+		<xsd:annotation>
+			<xsd:documentation>represents routing definitions for types of individual transport</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="meansCode" type="xsd:string" use="required">
+					<xsd:annotation>
+						<xsd:documentation>describes the individual transport code, e. g.
+IT_WALK		= 100
+IT_PARK_BIKE	= 101
+IT_CARRY_BIKE	= 102
+IT_KISS_RIDE	= 103
+IT_PARK_RIDE	= 104
+IT_TAXI		= 105
+IT_CAR                   = 106
+IT_BIKE                   = 107</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="value" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>routing time for the individual transport</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="speed" type="motSpeedType" default="normal">
+					<xsd:annotation>
+						<xsd:documentation>speed for the individual transport</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="selected" type="yesnoType" default="0">
+					<xsd:annotation>
+						<xsd:documentation>selection for the individual transport</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="itdMMOptionsType">
+		<xsd:sequence>
+			<xsd:element name="itdMMMeansOfTranportCombination" type="itdMMMeansOfTranportCombinationType"/>
+		</xsd:sequence>
+		<xsd:attribute name="active" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="itdMMMeansOfTranportCombinationType">
+		<xsd:sequence>
+			<xsd:element name="itdMMMeansOfTranportCombinationElement" type="itdMMMeansOfTranportCombinationElementType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="itdMMMeansOfTranportCombinationElementType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="type" type="mmMeansOfTransportType" use="required"/>
+				<xsd:attribute name="selected" type="yesnoType" use="required"/>
+				<xsd:attribute name="maxTime" type="xsd:string" use="optional"/>
+				<xsd:attribute name="maxLength" type="xsd:string" use="optional"/>
+				<xsd:attribute name="speed" type="mmSpeedType" use="optional" default="fast"/>
+				<xsd:attribute name="optimisation" type="mmOptimisationType" use="optional" default="fastest"/>
+				<xsd:attribute name="changeSpeed" type="motSpeedType" use="optional" default="normal"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="itdCustomizedOptionsType">
+		<xsd:annotation>
+			<xsd:documentation>represents customized means of transport</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="includedCustomizedMeans" type="excludedMeansType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="itdUsedOptionsType">
+		<xsd:annotation>
+			<xsd:documentation>represents used options for JP engine</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="calcNumberOfTrips" type="xsd:unsignedByte" default="4">
+			<xsd:annotation>
+				<xsd:documentation>calculate number of trips</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="dwellTime" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>dwell time in hh::mm</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="nextDepsPerLeg" type="xsd:unsignedByte" default="0">
+			<xsd:annotation>
+				<xsd:documentation>nect departures per leg</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="calcCO2" type="yesnoType" default="0">
+			<xsd:annotation>
+				<xsd:documentation>additional CO2 calculation</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="itdParkingOptionType">
+		<xsd:annotation>
+			<xsd:documentation>represents individual parking options</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="parkingType" type="parkingType" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>prefer parking near start or near destination</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="parkingObjectType" type="xsd:unsignedByte" default="0">
+			<xsd:annotation>
+				<xsd:documentation>describes parking object types</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="parkingCharge" type="parkingChargeType" default="UNKNOWN">
+			<xsd:annotation>
+				<xsd:documentation>describes parking object charge</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="outputOptionsType">
+		<xsd:attribute name="noElevationProfile" type="yesnoType" use="optional" default="0">
+			<xsd:annotation>
+				<xsd:documentation>no elevation output via PDF output</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="noElevationSummary" type="yesnoType" use="optional" default="0">
+			<xsd:annotation>
+				<xsd:documentation>no elevation summary via PDF output</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="itdCarriersType">
+		<xsd:attribute name="name" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>carrier name</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="code" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>carrier code</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="selected" type="yesnoType" use="optional" default="0">
+			<xsd:annotation>
+				<xsd:documentation>selected carrier</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>

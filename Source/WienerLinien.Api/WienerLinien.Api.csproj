@@ -47,11 +47,45 @@
     <Compile Include="Ogd\MonitorProxies.cs" />
     <Compile Include="Ogd\TrafficInfoListProxies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routing\Messages\Messages.cs" />
     <Compile Include="TrafficInformationItem.cs" />
     <Compile Include="TrafficInformation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Routing\Messages\appInfo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Routing\Messages\itd.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Routing\Messages\itdAddInfo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Routing\Messages\itdComplexTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Routing\Messages\itdFareTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Routing\Messages\itdOdvType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Routing\Messages\itdOptionTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Routing\Messages\itdPersonalProfileType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Routing\Messages\itdServingLine.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Routing\Messages\itdSimpleTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Routing\Messages\legTT.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -66,6 +100,9 @@
     <Reference Include="System.Net.Http.Primitives">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Routing\Messages\HowToGenerate.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />

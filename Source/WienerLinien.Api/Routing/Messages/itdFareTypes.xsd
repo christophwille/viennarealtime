@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id$ -->
+<!-- Copyright (C) 2000-2004 Mentz Datenverarbeitung GmbH -->
+<!-- Grillparzerstrasse 18, 81675 Munich, Germany  (www.mentzdv.de) -->
+<!-- itd interface descripton version 9.11.0 last update 2004/08/04 -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="itdSimpleTypes.xsd"/>
+	<xsd:complexType name="itdFareType">
+		<xsd:sequence>
+			<xsd:element name="itdSingleTicket" type="itdSingleTicketType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="itdSpecialTicket" type="itdSpecialTicketType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="itdCommuterFares" type="itdCommuterFaresType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="itdTariffzones" type="itdTariffzonesType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="itdFarePathList" type="itdFarePathListType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="itdGenericTicketListType">
+		<xsd:annotation>
+			<xsd:documentation>represents a list of customized special tickets</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="itdGenericTicket" type="itdGenericTicketType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="itdGenericTicketGroup" type="itdGenericTicketGroupType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="itdGenericTicketType">
+		<xsd:annotation>
+			<xsd:documentation>represents a single customized special ticket</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ticket" type="xsd:string"/>
+			<xsd:element name="value" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="itdGenericTicketGroupType">
+		<xsd:annotation>
+			<xsd:documentation>represents a list of customized special ticket groups</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="itdGenericTicket" type="itdGenericTicketType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="itdSingleTicketType" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="itdGenericTicketList" type="itdGenericTicketListType" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="net" type="xsd:string"/>
+		<xsd:attribute name="fromPR" type="xsd:string"/>
+		<xsd:attribute name="toPR" type="xsd:string"/>
+		<xsd:attribute name="currency" type="xsd:string"/>
+		<xsd:attribute name="fareAdult" type="xsd:string"/>
+		<xsd:attribute name="fareChild" type="xsd:string"/>
+		<xsd:attribute name="fareBikeAdult" type="xsd:string"/>
+		<xsd:attribute name="fareBikeChild" type="xsd:string"/>
+		<xsd:attribute name="unitName" type="xsd:string"/>
+		<xsd:attribute name="unitsAdult" type="xsd:string"/>
+		<xsd:attribute name="unitsChild" type="xsd:string"/>
+		<xsd:attribute name="unitsBikeAdult" type="xsd:string"/>
+		<xsd:attribute name="unitsBikeChild" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="itdSpecialTicketType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="code" type="xsd:string"/>
+				<xsd:attribute name="name" type="xsd:string"/>
+				<xsd:attribute name="currency" type="xsd:string"/>
+				<xsd:attribute name="price" type="xsd:string"/>
+				<xsd:attribute name="area" type="xsd:string"/>
+				<xsd:attribute name="entitled" type="xsd:string"/>
+				<xsd:attribute name="selected" type="yesnoType" default="0"/>
+				<xsd:attribute name="tariffLevelAdult" type="xsd:string"/>
+				<xsd:attribute name="tariffLevelChildren" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="itdCommuterFaresType">
+		<xsd:sequence>
+			<xsd:element name="itdGenericTicketList" type="itdGenericTicketListType" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="net" type="xsd:string"/>
+		<xsd:attribute name="fromPR" type="xsd:string"/>
+		<xsd:attribute name="toPR" type="xsd:string"/>
+		<xsd:attribute name="currency" type="xsd:string"/>
+		<xsd:attribute name="monthAdult" type="xsd:string"/>
+		<xsd:attribute name="monthChild" type="xsd:string"/>
+		<xsd:attribute name="monthEducation" type="xsd:string"/>
+		<xsd:attribute name="weekAdult" type="xsd:string"/>
+		<xsd:attribute name="weekChild" type="xsd:string"/>
+		<xsd:attribute name="weekEducation" type="xsd:string"/>
+		<xsd:attribute name="dayAdults" type="xsd:string"/>
+		<xsd:attribute name="yearAdults" type="xsd:string"/>
+		<xsd:attribute name="dayChildren" type="xsd:string"/>
+		<xsd:attribute name="dayStudents" type="xsd:string"/>
+		<xsd:attribute name="yearChildren" type="xsd:string"/>
+		<xsd:attribute name="yearStudents" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="tariffZonesType">
+		<xsd:sequence>
+			<xsd:element name="itdTariffzones" type="itdTariffzonesType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="itdTariffzonesType">
+		<xsd:sequence>
+			<xsd:element name="itdZones" type="itdZonesType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="net" type="xsd:string"/>
+		<xsd:attribute name="fromPR" type="xsd:string"/>
+		<xsd:attribute name="toPR" type="xsd:string"/>
+		<xsd:attribute name="neutralZone" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="itdZonesType">
+		<xsd:sequence>
+			<xsd:element name="zoneElem" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="value" type="xsd:string" default="0"/>
+		<xsd:attribute name="selected" type="yesnoType" default="0"/>
+	</xsd:complexType>
+	<xsd:complexType name="itdFarePathListType">
+		<xsd:sequence>
+			<xsd:element name="itdFarePath" type="itdFarePathType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="itdFarePathType">
+		<xsd:sequence>
+			<xsd:element name="itdTicketGroup" type="itdTicketGroupType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="tariffLevel" type="xsd:string"/>
+		<xsd:attribute name="viaName" type="xsd:string"/>
+		<xsd:attribute name="viaZone" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="itdTicketGroupType">
+		<xsd:sequence>
+			<xsd:element name="itdZoneList" type="itdZoneListType"/>
+			<xsd:element name="itdTicket" type="itdTicketType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="type" default="unknown">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:NMTOKEN">
+					<xsd:enumeration value="single"/>
+					<xsd:enumeration value="season"/>
+					<xsd:enumeration value="unknown"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="selected" type="yesnoType" default="0"/>
+	</xsd:complexType>
+	<xsd:complexType name="itdZoneListType">
+		<xsd:sequence>
+			<xsd:element name="itdZoneElem" type="itdZoneElemType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--	<xsd:element name="itdZone" type="xsd:string"/> -->
+	<xsd:complexType name="itdTicketType">
+		<xsd:sequence>
+			<xsd:element name="itdEntitledPersons" type="itdEntitledPersonsType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string"/>
+		<xsd:attribute name="description" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="itdZoneElemType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="value" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="itdEntitledPersonsType">
+		<xsd:sequence>
+			<xsd:element name="itdPrice" type="itdPriceType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="type" default="unknown">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:NMTOKEN">
+					<xsd:enumeration value="adult"/>
+					<xsd:enumeration value="child"/>
+					<xsd:enumeration value="apprentice"/>
+					<xsd:enumeration value="any"/>
+					<xsd:enumeration value="unknown"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="itdPriceType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="currency" type="xsd:string" use="required"/>
+				<xsd:attribute name="value" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>

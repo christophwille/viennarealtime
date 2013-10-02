@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp1 (http://www.altova.com) by Günther Gruber (Mentz Datenverarbeitung GmbH) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="itdComplexTypes.xsd"/>
+	<xsd:complexType name="appInfo">
+		<xsd:annotation>
+			<xsd:documentation>Comment describing your root element for updating application information</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="app" type="appType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="appType">
+		<xsd:sequence>
+			<xsd:element name="genAttrList" type="genAttrListType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name that uniquely identifies the application.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>The name that uniquely identifies the application.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="version" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>The current version of the application the repository server. The format is usually "X.X.X.X", but may differ if the application understands the format.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="updateLink" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>The update link to the ncurrent version on the repository. The link may contain placeholders (for exampel the MSISDN) if necessary.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>
