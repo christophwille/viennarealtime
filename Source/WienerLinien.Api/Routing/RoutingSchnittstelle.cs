@@ -58,6 +58,8 @@ namespace WienerLinien.Api.Routing
             }
 
             var rTrips = new List<Trip>();
+            int tripNumber = 1;
+
             foreach (RP.Trip outerTrip in rootObj.trips)
             {
                 if (null != outerTrip.trip)
@@ -68,7 +70,7 @@ namespace WienerLinien.Api.Routing
                     bool durationParseOk = TimeSpan.TryParse(trip.duration, out duration);
                     bool interchange = 0 == String.Compare("1", trip.interchange, StringComparison.OrdinalIgnoreCase);
 
-                    var rTrip = new Trip(duration, interchange);
+                    var rTrip = new Trip(tripNumber++, duration, interchange);
 
                     foreach (RP.Leg leg in trip.legs)
                     {

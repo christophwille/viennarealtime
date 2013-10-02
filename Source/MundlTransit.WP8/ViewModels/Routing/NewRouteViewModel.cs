@@ -155,7 +155,8 @@ namespace MundlTransit.WP8.ViewModels.Routing
             };
 
             _navigationService.UriFor<TripsViewModel>()
-                // .WithParam(m => m.FromStationName, FromStationName)
+                .WithParam(m => m.From, FromStationName)
+                .WithParam(m => m.To, ToStationName)
                 .Navigate();
         }
 

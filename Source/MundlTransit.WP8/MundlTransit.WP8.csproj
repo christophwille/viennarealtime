@@ -180,6 +180,7 @@
     <Compile Include="Model\MapHaltestelleModel.cs" />
     <Compile Include="Model\PanoramaItemToShowMessage.cs" />
     <Compile Include="Model\RouteTypeOptionModel.cs" />
+    <Compile Include="Model\RoutingTripModel.cs" />
     <Compile Include="Model\Wgs84Location.cs" />
     <Compile Include="Model\LocationResult.cs" />
     <Compile Include="Model\MenuItem.cs" />
@@ -190,11 +191,13 @@
     <Compile Include="Services\DefaultMonitorErrorToErrorMessageService.cs" />
     <Compile Include="Services\DefaultUIService.cs" />
     <Compile Include="Services\IConfigurationService.cs" />
+    <Compile Include="Services\IRoutingService.cs" />
     <Compile Include="Services\IUIService.cs" />
     <Compile Include="Services\OgdEchtzeitdatenService.cs" />
     <Compile Include="Services\IDataService.cs" />
     <Compile Include="Services\ILocationService.cs" />
     <Compile Include="Services\IEchtzeitdatenService.cs" />
+    <Compile Include="Services\OgdRoutingService.cs" />
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>

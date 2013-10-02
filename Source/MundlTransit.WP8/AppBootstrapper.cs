@@ -67,7 +67,7 @@ namespace MundlTransit.WP8
 
             // container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(CreateCampEchtzeitdatenService));
             container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(OgdEchtzeitdatenService));
-
+            container.RegisterPerRequest(typeof(IRoutingService), null, typeof(OgdRoutingService));
 
             container.PerRequest<MainPageViewModel>();
             container.PerRequest<MenuViewModel>();

@@ -16,7 +16,9 @@
     xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     toolkit:TiltEffect.IsTiltEnabled="True"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True"    
+    d:DesignHeight="800" 
+    d:DesignWidth="480">
 
     <toolkit:TransitionService.NavigationInTransition>
         <toolkit:NavigationInTransition>
@@ -51,7 +53,6 @@
             <TextBlock Text="here: trip info" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <!-- TODO change from inbox expander sample to real class -->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <ListBox ItemsSource="{Binding Trips}" Margin="12,0,0,0">
                 <ListBox.ItemContainerStyle>
@@ -73,11 +74,10 @@
                                                 ItemsSource="{Binding}"
                                                 IsNonExpandable="{Binding HasSingleMessage}">
 
-                            <!-- The HeaderTemplate describes the header for an expandable item.
-                                 In the sample, it's the TextBlock for "Anne Wallace".-->
+                            <!-- The HeaderTemplate describes the header for an expandable item.-->
                             <toolkit:ExpanderView.HeaderTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding LastMessageReceived.Sender}"  
+                                    <TextBlock Text="{Binding TripName}"  
                                                Foreground="{StaticResource PhoneForegroundBrush}"
                                                FontSize="{StaticResource PhoneFontSizeExtraLarge}" 
                                                FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
@@ -85,20 +85,18 @@
                             </toolkit:ExpanderView.HeaderTemplate>
 
                             <!-- The ExpanderTemplate describes the template to the right of the line 
-                                 which represents the first sub-item in the expander view.
-                                 In the sample, it's the TextBlock for Anne Wallace's email conversation
-                                 "Where are we going for lunch today?" and the status of "3 messages, 0 unread".-->
+                                 which represents the first sub-item in the expander view.-->
                             <toolkit:ExpanderView.ExpanderTemplate>
                                 <DataTemplate>
                                     <TextBlock Grid.Row="0" Grid.Column="1"
                                                LineHeight="25" LineStackingStrategy="BlockLineHeight"
                                                TextWrapping="Wrap">
-                                        <Run Text="{Binding LastMessageReceived.Subject}"
+                                        <Run Text="{Binding Duration}"
                                              Foreground="{StaticResource PhoneSubtleBrush}"
                                              FontSize="{StaticResource PhoneFontSizeNormal}" 
                                              FontFamily="{StaticResource PhoneFontFamilySemiBold}"/>
                                         <LineBreak/>
-                                        <Run Text="{Binding ContentInfo}"   
+                                        <Run Text="{Binding LegInfo}"   
                                              Foreground="{StaticResource PhoneSubtleBrush}"
                                              FontSize="{StaticResource PhoneFontSizeNormal}"
                                              FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
@@ -107,9 +105,7 @@
                             </toolkit:ExpanderView.ExpanderTemplate>
 
                             <!-- The ItemTemplate describes the template for all items once the expansion
-                                 has occured. In the sample, it's the template for all 3 of Anne Wallace's
-                                 emails in her conversation, where it displays the sender and the first line
-                                 of the message in the accent color. -->
+                                 has occured.  -->
                             <toolkit:ExpanderView.ItemTemplate>
                                 <DataTemplate>
                                     <ListBoxItem toolkit:TiltEffect.IsTiltEnabled="True">
@@ -130,9 +126,7 @@
                                 </DataTemplate>
                             </toolkit:ExpanderView.ItemTemplate>
 
-                            <!-- The NonExpandableHeaderTemplate describes the non-expandable case.
-                                 In the sample, it's the StackPanel for "Adriana Giorgi", 
-                                 the subject, and first line of her email.-->
+                            <!-- The NonExpandableHeaderTemplate describes the non-expandable case.-->
                             <toolkit:ExpanderView.NonExpandableHeaderTemplate>
                                 <DataTemplate>
                                     <StackPanel toolkit:TiltEffect.IsTiltEnabled="True">

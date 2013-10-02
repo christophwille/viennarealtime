@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MundlTransit.WP8.Model;
 using WienerLinien.Api;
+using WienerLinien.Api.Routing;
 
 namespace MundlTransit.WP8.DesignTimeData
 {
@@ -22,6 +23,8 @@ namespace MundlTransit.WP8.DesignTimeData
 
         public ObservableCollection<MonitorLine> Departures { get; set; }
 
+        public ObservableCollection<RoutingTripModel> Trips { get; set; }
+
         public SampleData()
         {
             Lines = new ObservableCollection<SampleLineData>(CreateLineSampleData());
@@ -29,6 +32,7 @@ namespace MundlTransit.WP8.DesignTimeData
             MenuItems = new ObservableCollection<MenuItem>(CreateSampleMenuItems());
             TrafficInformation = new ObservableCollection<TrafficInformationItem>(CreateTrafficInformationItems());
             Departures = new ObservableCollection<MonitorLine>(CreateDepartures());
+            Trips = new ObservableCollection<RoutingTripModel>(CreateTrips());
         }
 
         private List<SampleLineData> CreateLineSampleData()
@@ -174,6 +178,36 @@ namespace MundlTransit.WP8.DesignTimeData
             };
 
             return deps;
+        }
+
+        private List<RoutingTripModel> CreateTrips()
+        {
+            var trips = new List<Trip>()
+            {
+                new Trip(1, new TimeSpan(0,21,0), true)
+                {
+                    Legs = new List<TripLeg>()
+                    {
+                        new TripLeg(RoutingTypeOfTransportation.Tram, "1", "Stefan-Fadinger-Platz")
+                        {
+                            Departure = new LegPoint("02.10.2013", "13:45", "Salztorbrücke"),
+                            Arrival = new LegPoint("02.10.2013", "13:55", "Dr.-Karl-Renner-Ring"),
+                        },
+                        new TripLeg(RoutingTypeOfTransportation.Walk,"", "")
+                        {
+                            Departure = new LegPoint("02.10.2013", "13:55", "Dr.-Karl-Renner-Ring"),
+                            Arrival = new LegPoint("02.10.2013", "13:59", "Volkstheater"),
+                        },
+                        new TripLeg(RoutingTypeOfTransportation.UBahn, "U3", "Ottakring")
+                        {
+                            Departure = new LegPoint("02.10.2013", "14:02", "Volkstheater"),
+                            Arrival = new LegPoint("02.10.2013", "14:06", "Westbahnhof"),
+                        }
+                    }
+                }
+            };
+
+            return trips.Select(t => new RoutingTripModel(t)).ToList();
         }
     }
 }
