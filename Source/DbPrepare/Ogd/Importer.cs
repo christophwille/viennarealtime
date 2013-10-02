@@ -55,6 +55,7 @@ namespace DbPrepare.Ogd
             var toInsert = haltestellen.Select(hsCsv => new OgdHaltestelle()
                                 {
                                     Id = hsCsv.HALTESTELLEN_ID,
+                                    Diva = hsCsv.DIVA,
                                     Bezeichnung = hsCsv.NAME,
                                     Longitude = hsCsv.WGS84_LON,
                                     Latitude = hsCsv.WGS84_LAT,

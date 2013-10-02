@@ -13,6 +13,7 @@ namespace MundlTransit.WP8.Data.Reference
         // We use the OGD-provided OBJECTID as primary key
         [PrimaryKey]
         public int Id { get; set; }
+        public int Diva { get; set; }
 
         [Indexed(Name="StationSearchIndex")]
         public string Bezeichnung { get; set; }

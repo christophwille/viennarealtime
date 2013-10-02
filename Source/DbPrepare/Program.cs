@@ -26,6 +26,8 @@ namespace DbPrepare
             importer.Import(db);
 
             CreateLookupTable(db);
+
+            Console.Read();
         }
 
         private static string JoinQuery =
@@ -73,6 +75,7 @@ namespace DbPrepare
                     var haltstelle = new Haltestelle()
                     {
                         Id = h.Id,
+                        Diva = h.Diva,
                         Bezeichnung = h.Bezeichnung,
                         Longitude = h.Longitude,
                         Latitude = h.Latitude,

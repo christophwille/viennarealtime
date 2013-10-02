@@ -38,15 +38,27 @@
                 </StackPanel>
             </Grid>
 
-            <toolkit:ListPicker x:Name="RoutingOptionsPicked" Header="Routing Option" 
+            <toolkit:ListPicker x:Name="RoutingOptionsPicked" 
+                                Header="Routing Option" 
+                                ExpansionMode="FullScreenOnly"
                                 SelectedItem="{Binding SelectedRoutingOption, Mode=TwoWay}"
                                 ItemsSource="{Binding RoutingOptions}">
+                <toolkit:ListPicker.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="0">
+                            <TextBlock Text="{Binding DisplayName}" Margin="0"
+                                   Style="{StaticResource PhoneTextTitle2Style}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </toolkit:ListPicker.ItemTemplate>
                 <toolkit:ListPicker.FullModeItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding}" 
-                                   Margin="0 24 24 24" 
-                                   TextWrapping="Wrap" 
-                                   Style="{StaticResource PhoneTextTitle2Style}" />
+                        <StackPanel Orientation="Horizontal" Margin="16 21 0 20">
+                            <TextBlock Text="{Binding DisplayName}"
+                                       Margin="0 0 0 0"
+                                       FontSize="43" 
+                                       FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                        </StackPanel>
                     </DataTemplate>
                 </toolkit:ListPicker.FullModeItemTemplate>
             </toolkit:ListPicker>

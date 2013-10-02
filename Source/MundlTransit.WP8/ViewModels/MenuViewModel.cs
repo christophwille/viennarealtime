@@ -54,14 +54,12 @@ namespace MundlTransit.WP8.ViewModels
                                         Description=AppResources.MenuItem_StationList_Description, 
                                         Navigate = (n) => n.UriFor<StationsPivotPageViewModel>().Navigate() 
                                     },
-#if DEBUG
                                     new MenuItem
                                     { 
-                                        Name = "Routing", 
-                                        Description= "From A to B", 
+                                        Name = AppResources.MenuItem_Routing, 
+                                        Description= AppResources.MenuItem_Routing_Description, 
                                         Navigate = (n) => n.UriFor<RoutingPivotPageViewModel>().Navigate() 
                                     },
-#endif
 									new MenuItem
                                     { 
                                         Name = AppResources.MenuItem_StationsByLines, 

@@ -29,9 +29,9 @@ namespace WienerLinien.Api.Tests
         public void SimpleRoutingParseTest()
         {
             var schnittstelle = new RoutingSchnittstelle();
-            bool ok = schnittstelle.ParseRoutingRequestResponse(ResponseFiles.LoadJson(ResponseFiles.RoutingFahrtoptionen8Json));
+            var result = schnittstelle.ParseRoutingRequestResponse(ResponseFiles.LoadJson(ResponseFiles.RoutingFahrtoptionen8Json));
 
-            Assert.That(ok, Is.EqualTo(true));
+            Assert.That(result.Succeeded, Is.EqualTo(false));
         }
     }
 }

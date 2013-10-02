@@ -205,6 +205,12 @@
   <data name="MenuItem_Nearby_Description" xml:space="preserve">
     <value>stations nearby your current location</value>
   </data>
+  <data name="MenuItem_Routing" xml:space="preserve">
+    <value>routing</value>
+  </data>
+  <data name="MenuItem_Routing_Description" xml:space="preserve">
+    <value>getting from A to B</value>
+  </data>
   <data name="MenuItem_Search" xml:space="preserve">
     <value>search</value>
   </data>
@@ -270,6 +276,15 @@
   </data>
   <data name="MonitorError_ServerStopDoesNotExist" xml:space="preserve">
     <value>This stop does not exist (stop database out of date?).</value>
+  </data>
+  <data name="NewRouteView_DisplayName" xml:space="preserve">
+    <value>new route</value>
+  </data>
+  <data name="NewRouteView_RoutingType_Fastest" xml:space="preserve">
+    <value>fastest</value>
+  </data>
+  <data name="NewRouteView_RoutingType_FewestChanges" xml:space="preserve">
+    <value>fewest changes</value>
   </data>
   <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
     <value>No stops found near</value>

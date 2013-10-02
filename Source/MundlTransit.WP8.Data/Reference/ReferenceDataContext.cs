@@ -9,11 +9,11 @@ namespace MundlTransit.WP8.Data.Reference
 {
     public partial class ReferenceDataContext
     {
-        public const string DatabaseName = "referencedata20130829.db3";
+        public const string DatabaseName = "referencedata20131001.db3";
 
         private static readonly List<string> PreviousDatabases = new List<string>()
         {
-            // "referencedata20130701.db3",
+            "referencedata20130829.db3",
         }; 
 
         #region DbPrepare functions

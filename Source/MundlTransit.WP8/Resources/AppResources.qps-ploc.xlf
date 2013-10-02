@@ -123,6 +123,14 @@
           <source>stations nearby your current location</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[44537][!!_śтàтíòήś иèářъÿ ÿôúѓ ċúřřèήт ļòċãţìôи_!!!!!!!!!!!!]</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/MenuItem_Routing_Description" xml:space="preserve">
+          <source>getting from A to B</source>
+          <target state="new">getting from A to B</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/MenuItem_Routing" xml:space="preserve">
+          <source>routing</source>
+          <target state="new">routing</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/MenuItem_Search" xml:space="preserve">
           <source>search</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[36D4C][!!_şéáѓčħ_!!]</target>
@@ -210,6 +218,18 @@
         <trans-unit translate="yes" id="Resx/MonitorError_ServerStopDoesNotExist" xml:space="preserve">
           <source>This stop does not exist (stop database out of date?).</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[2791D][!!_Τħíš ŝţóр đòéś ήóт èхįśτ (şţõþ đãτàъãşè òùť òƒ đâтę?)._!!!!!!!!!!!!!!!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_DisplayName" xml:space="preserve">
+          <source>new route</source>
+          <target state="new">new route</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_RoutingType_FewestChanges" xml:space="preserve">
+          <source>fewest changes</source>
+          <target state="new">fewest changes</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_RoutingType_Fastest" xml:space="preserve">
+          <source>fastest</source>
+          <target state="new">fastest</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/PositionMessage_NoStopsFoundNear" xml:space="preserve">
           <source>No stops found near</source>

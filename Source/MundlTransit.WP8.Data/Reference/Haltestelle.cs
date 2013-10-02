@@ -12,6 +12,7 @@ namespace MundlTransit.WP8.Data.Reference
     {
         [PrimaryKey]
         public int Id { get; set; }
+        public int Diva { get; set; }
 
         [Indexed(Name = "StationSearchIndex")]
         public string Bezeichnung { get; set; }

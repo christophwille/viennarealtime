@@ -179,6 +179,7 @@
     <Compile Include="Model\LinieModel.cs" />
     <Compile Include="Model\MapHaltestelleModel.cs" />
     <Compile Include="Model\PanoramaItemToShowMessage.cs" />
+    <Compile Include="Model\RouteTypeOptionModel.cs" />
     <Compile Include="Model\Wgs84Location.cs" />
     <Compile Include="Model\LocationResult.cs" />
     <Compile Include="Model\MenuItem.cs" />

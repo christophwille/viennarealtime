@@ -331,6 +331,24 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to routing.
+        /// </summary>
+        public static string MenuItem_Routing {
+            get {
+                return ResourceManager.GetString("MenuItem_Routing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to getting from A to B.
+        /// </summary>
+        public static string MenuItem_Routing_Description {
+            get {
+                return ResourceManager.GetString("MenuItem_Routing_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to search.
         /// </summary>
         public static string MenuItem_Search {
@@ -516,6 +534,33 @@ namespace MundlTransit.WP8.Resources {
         public static string MonitorError_ServerStopDoesNotExist {
             get {
                 return ResourceManager.GetString("MonitorError_ServerStopDoesNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to new route.
+        /// </summary>
+        public static string NewRouteView_DisplayName {
+            get {
+                return ResourceManager.GetString("NewRouteView_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to fastest.
+        /// </summary>
+        public static string NewRouteView_RoutingType_Fastest {
+            get {
+                return ResourceManager.GetString("NewRouteView_RoutingType_Fastest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to fewest changes.
+        /// </summary>
+        public static string NewRouteView_RoutingType_FewestChanges {
+            get {
+                return ResourceManager.GetString("NewRouteView_RoutingType_FewestChanges", resourceCulture);
             }
         }
         

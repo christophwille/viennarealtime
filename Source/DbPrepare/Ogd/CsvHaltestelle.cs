@@ -11,7 +11,7 @@ namespace DbPrepare.Ogd
     {
         public int HALTESTELLEN_ID { get; set; }
         public string TYP { get; set; }
-        public string DIVA { get; set; }
+        public int DIVA { get; set; }
         public string NAME { get; set; }
         public string GEMEINDE { get; set; }
         public int GEMEINDE_ID { get; set; }

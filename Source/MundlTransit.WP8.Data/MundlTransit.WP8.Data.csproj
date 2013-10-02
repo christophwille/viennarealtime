@@ -161,7 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="referencedata20130829.db3" />
+    <Content Include="referencedata20131001.db3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\sqlite-net-wp8\Sqlite.vcxproj">
