@@ -15,7 +15,7 @@ namespace WienerLinien.Api.Routing
         {
             const string urlFormatString = BaseUrl +
                 "type_origin=stopID&name_origin={0}&type_destination=stopID&name_destination={1}&ptOptionsActive=1&itOptionsActive=1" +
-                "&itdDate={2:yyyyddMM}&idtTime={2:HHmm}&routeType={3}" +
+                "&itdDate={2:yyyyMMdd}&itdTime={2:HHmm}&routeType={3}" +
                 "&outputFormat=JSON";
 
             // &itdTripDateTimeDepArr={4}
