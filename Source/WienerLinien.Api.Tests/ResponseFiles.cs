@@ -40,5 +40,9 @@ namespace WienerLinien.Api.Tests
 
         // p56 5.2 Fahrtoptionen (8): http://www.wienerlinien.at/ogd_routing/XML_TRIP_REQUEST2?locationServerActive=1&type_origin=any&name_origin=Westbahnhof&type_destination=any&name_destination=Stephansplatz&ptOptionsActive=1&excludedMeans=4&outputFormat=json
         public static readonly string RoutingFahrtoptionen8Json = "RoutingFahrtoptionen8.json";
+
+        // Salztorbrücke -> Westbahnhof
+        // http://www.wienerlinien.at/ogd_routing/XML_TRIP_REQUEST2?type_origin=stopID&name_origin=60201145&type_destination=stopID&name_destination=60201468&ptOptionsActive=1&outputFormat=JSON
+        public static readonly string RoutingSalztorbrueckeWestbahnhofJson = "RoutingSalztorbrueckeWestbahnhof.json";
     }
 }

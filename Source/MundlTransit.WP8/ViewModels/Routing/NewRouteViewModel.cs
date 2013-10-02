@@ -149,7 +149,7 @@ namespace MundlTransit.WP8.ViewModels.Routing
             {
                 FromStation = fromStation.Diva,
                 ToStation = toStation.Diva,
-                RouteType = SelectedRoutingOption.RouteType,
+                RouteType = SelectedRoutingOption == null ? RouteTypeOption.LeastTime : SelectedRoutingOption.RouteType,
                 When = new DateTime(_dateOfTrip.Value.Year, _dateOfTrip.Value.Month, _dateOfTrip.Value.Day,
                     _timeOfTrip.Value.Hour, _timeOfTrip.Value.Minute, 0)
             };

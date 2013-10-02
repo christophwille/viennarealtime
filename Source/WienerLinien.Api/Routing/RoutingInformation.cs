@@ -8,6 +8,12 @@ namespace WienerLinien.Api.Routing
 {
     public class RoutingInformation
     {
+        public RoutingInformation(List<Trip> trips)
+        {
+            Trips = trips;
+            Succeeded = true;
+        }
+
         public RoutingInformation(RoutingInformationErrorCode errorCode)
         {
             ErrorCode = errorCode;
@@ -16,5 +22,6 @@ namespace WienerLinien.Api.Routing
 
         public bool Succeeded { get; set; }
         public RoutingInformationErrorCode ErrorCode { get; set; }
+        public List<Trip> Trips { get; set; } 
     }
 }

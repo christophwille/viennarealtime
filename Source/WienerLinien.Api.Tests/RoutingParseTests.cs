@@ -13,6 +13,7 @@ namespace WienerLinien.Api.Tests
     public class RoutingParseTests
     {
         [Test]
+        [Ignore]
         public void BuggyXmlRoutingParseTest()
         {
             //var schnittstelle = new RoutingSchnittstelle();
@@ -31,7 +32,17 @@ namespace WienerLinien.Api.Tests
             var schnittstelle = new RoutingSchnittstelle();
             var result = schnittstelle.ParseRoutingRequestResponse(ResponseFiles.LoadJson(ResponseFiles.RoutingFahrtoptionen8Json));
 
-            Assert.That(result.Succeeded, Is.EqualTo(false));
+            Assert.That(result.Succeeded, Is.EqualTo(true));
+        }
+
+        [Test]
+        public void SalztorbrueckeWestbahnhofTest()
+        {
+            var schnittstelle = new RoutingSchnittstelle();
+            var result = schnittstelle.ParseRoutingRequestResponse(ResponseFiles.LoadJson(ResponseFiles.RoutingSalztorbrueckeWestbahnhofJson));
+
+            Assert.That(result.Succeeded, Is.EqualTo(true));
+            Assert.That(result.Trips.Count, Is.EqualTo(4));
         }
     }
 }
