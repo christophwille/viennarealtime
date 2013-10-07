@@ -78,6 +78,9 @@
     <None Include="RoutingFahrtoptionen8.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="RoutingKleistgasseWaidhausenstrasse.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="RoutingSalztorbrueckeWestbahnhof.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
