@@ -408,4 +408,7 @@
   <data name="StationSelector_DisplayName" xml:space="preserve">
     <value>Station auswählen</value>
   </data>
+  <data name="NewRouteView_RoutingType_LeastWalking" xml:space="preserve">
+    <value>kürzeste Gehdistanzen</value>
+  </data>
 </root>

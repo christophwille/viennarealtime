@@ -8,8 +8,9 @@ namespace WienerLinien.Api.Routing
 {
     public class Trip
     {
-        public Trip(int number, TimeSpan duration, int interchanges)
+        public Trip(int tripGroupId, int number, TimeSpan duration, int interchanges)
         {
+            TripGroupId = tripGroupId;
             Number = number;
             Duration = duration;
             Interchanges = interchanges;
@@ -17,6 +18,7 @@ namespace WienerLinien.Api.Routing
             Legs = new List<TripLeg>();
         }
 
+        public int TripGroupId { get; set; }
         public int Number { get; set; }
         public TimeSpan Duration { get; set; }
         public int Interchanges { get; set; }

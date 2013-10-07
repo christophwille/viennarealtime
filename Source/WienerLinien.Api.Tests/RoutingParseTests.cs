@@ -29,5 +29,15 @@ namespace WienerLinien.Api.Tests
             Assert.That(result.Succeeded, Is.EqualTo(true));
             Assert.That(result.Trips.Count, Is.EqualTo(4));
         }
+
+        [Test]
+        public void KleistgasseWaidhausenstrasseTest()
+        {
+            var schnittstelle = new RoutingSchnittstelle();
+            var result = schnittstelle.ParseRoutingRequestResponse(ResponseFiles.LoadJson(ResponseFiles.RoutingKleistgasseWaidhausenstrasseJson));
+
+            Assert.That(result.Succeeded, Is.EqualTo(true));
+            Assert.That(result.Trips.Count, Is.EqualTo(8));
+        }
     }
 }

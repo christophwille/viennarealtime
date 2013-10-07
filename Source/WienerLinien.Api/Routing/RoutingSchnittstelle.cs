@@ -63,12 +63,13 @@ namespace WienerLinien.Api.Routing
                     RP.Trip2 trip = outerTrip.trip;
 
                     var duration = new TimeSpan();
-                    int interchanges = 0;
+                    int interchanges, tripGroudId = 0;
 
                     bool durationParseOk = TimeSpan.TryParse(trip.duration, out duration);
                     bool interchangeParseOk = Int32.TryParse(trip.interchange, out interchanges);
+                    bool descParseOk = Int32.TryParse(trip.desc, out tripGroudId);
 
-                    var rTrip = new Trip(tripNumber++, duration, interchanges);
+                    var rTrip = new Trip(tripGroudId, tripNumber++, duration, interchanges);
 
                     foreach (RP.Leg leg in trip.legs)
                     {

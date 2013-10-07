@@ -1,6 +1,8 @@
 ﻿
 Feature wish list
 
+	-- ECHTZEIT
+
 * Traffic information (stoerunglang): Add note that it is German-only (or Bing-translate?), add date/time last updated
 
 * Traffic information at stop (when showing departure information)
@@ -17,6 +19,14 @@ Feature wish list
 
 * Download of station / line updates instead of DbPrepare (background task) - would need some information to know "is there something new?"
 
+
+	-- ROUTING
+
+* Grouping by TripGroudId (currently all trip options are ordered sequentially)
+
+* Arrival / Departures selection for time (arr / dep) [UI?]
+
+* Earlier / Later: needs session support (potentially a lot of work)
 
 
 UI ideas

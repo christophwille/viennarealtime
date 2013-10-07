@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="de" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="MundlTransit.WP8" product-version="3.0.0.0" build-num="0">
+  <file datatype="xml" source-language="en-US" target-language="de" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="MundlTransit.WP8" product-version="3.1.0.0" build-num="0">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.1100.0" tool-company="Microsoft" />
     </header>
@@ -241,7 +241,7 @@
         </trans-unit>
         <trans-unit translate="yes" id="Resx/NewRouteView_RoutingType_LeastWalking" xml:space="preserve">
           <source>least walking</source>
-          <target state="new">least walking</target>
+          <target state="signed-off">kürzeste Gehdistanzen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/NewRouteView_To" xml:space="preserve">
           <source>To</source>
