@@ -14,14 +14,43 @@
     <Grid x:Name="LayoutRoot" Background="{StaticResource TransparentBrush}">
         <StackPanel>
             <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Path=LocalizedResources.NewRouteView_From, Source={StaticResource LocalizedStrings}}"/>
-            <TextBox x:Name="FromStationName" 
-                     cm:Message.Attach="[Event Tap] = [Action SelectFrom]" 
-                     IsReadOnly="True" />
+            <Grid Background="Transparent" cm:Message.Attach="[Event Tap] = [Action SelectFrom]">
+                <Border BorderBrush="{StaticResource PhoneTextBoxBrush}"
+                                BorderThickness="{StaticResource PhoneBorderThickness}"
+                                Background="{StaticResource PhoneTextBoxBrush}" 
+                                Margin="{StaticResource PhoneTouchTargetOverhang}"
+                                Visibility="Visible"/>
+                <Border BorderBrush="Transparent" BorderThickness="{StaticResource PhoneBorderThickness}"
+                            Background="Transparent"
+                            Margin="{StaticResource PhoneTouchTargetOverhang}">
+                <TextBlock 
+                    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                    FontSize="{StaticResource PhoneFontSizeMediumLarge}"
+                    Foreground="{StaticResource PhoneTextBoxReadOnlyBrush}" 
+                    Margin="5,5,5,5" 
+                    x:Name="FromStationName" />
+                </Border>
+            </Grid>
+
             <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Path=LocalizedResources.NewRouteView_To, Source={StaticResource LocalizedStrings}}"/>
-            <TextBox x:Name="ToStationName" 
-                     cm:Message.Attach="[Event Tap] = [Action SelectTo]" 
-                     IsReadOnly="True"  />
-            
+            <Grid Background="Transparent" cm:Message.Attach="[Event Tap] = [Action SelectTo]">
+                <Border BorderBrush="{StaticResource PhoneTextBoxBrush}"
+                                BorderThickness="{StaticResource PhoneBorderThickness}"
+                                Background="{StaticResource PhoneTextBoxBrush}" 
+                                Margin="{StaticResource PhoneTouchTargetOverhang}"
+                                Visibility="Visible"/>
+                <Border BorderBrush="Transparent" BorderThickness="{StaticResource PhoneBorderThickness}"
+                            Background="Transparent"
+                            Margin="{StaticResource PhoneTouchTargetOverhang}">
+                    <TextBlock 
+                    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                    FontSize="{StaticResource PhoneFontSizeMediumLarge}"
+                    Foreground="{StaticResource PhoneTextBoxReadOnlyBrush}" 
+                    Margin="5,5,5,5" 
+                    x:Name="ToStationName" />
+                </Border>
+            </Grid>
+
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
