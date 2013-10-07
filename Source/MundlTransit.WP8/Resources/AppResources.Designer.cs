@@ -592,6 +592,15 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to least walking.
+        /// </summary>
+        public static string NewRouteView_RoutingType_LeastWalking {
+            get {
+                return ResourceManager.GetString("NewRouteView_RoutingType_LeastWalking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search.
         /// </summary>
         public static string NewRouteView_Search_Button {

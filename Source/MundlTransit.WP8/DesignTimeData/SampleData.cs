@@ -24,6 +24,7 @@ namespace MundlTransit.WP8.DesignTimeData
         public ObservableCollection<MonitorLine> Departures { get; set; }
 
         public ObservableCollection<RoutingTripModel> Trips { get; set; }
+        public ObservableCollection<RouteTypeOptionModel> RoutingOptions { get; set; }
 
         public SampleData()
         {
@@ -33,6 +34,7 @@ namespace MundlTransit.WP8.DesignTimeData
             TrafficInformation = new ObservableCollection<TrafficInformationItem>(CreateTrafficInformationItems());
             Departures = new ObservableCollection<MonitorLine>(CreateDepartures());
             Trips = new ObservableCollection<RoutingTripModel>(CreateTrips());
+            RoutingOptions = new ObservableCollection<RouteTypeOptionModel>(CreateRoutingOptions());
         }
 
         private List<SampleLineData> CreateLineSampleData()
@@ -101,7 +103,7 @@ namespace MundlTransit.WP8.DesignTimeData
                 {
                     Name = "station list",
                     Description = "complete list of stations",
-               }
+                }
             };
 
             return menuitems;
@@ -114,7 +116,8 @@ namespace MundlTransit.WP8.DesignTimeData
                 new TrafficInformationItem()
                 {
                     Title = "49 Verspätung",
-                    Description = "Verkehrsbedingt kommt es derzeit bei der Linie 49 in beiden Fahrtrichtungen zu längeren Wartezeiten.",
+                    Description =
+                        "Verkehrsbedingt kommt es derzeit bei der Linie 49 in beiden Fahrtrichtungen zu längeren Wartezeiten.",
                     RelatedLines = "49"
                 },
                 new TrafficInformationItem()
@@ -136,43 +139,44 @@ namespace MundlTransit.WP8.DesignTimeData
                 {
                     Name = "U4",
                     Towards = "Heiligenstadt",
-                    Departures = new List<Departure>() {
-                                    new Departure()
-                                    {
-                                        Name = "U4",
-                                        Towards = "Heiligenstadt",
-                                        RealtimeSupported = true,
-                                        BarrierFree = true,
-                                        Countdown = 3,
-                                        Type = MonitorLineType.Metro
-                                    },
-                                    new Departure()
-                                    {
-                                        Name = "U4",
-                                        Towards = "Heiligenstadt",
-                                        RealtimeSupported = true,
-                                        BarrierFree = false,
-                                        Countdown = 7,
-                                        Type = MonitorLineType.Metro
-                                    },
-                                    new Departure()
-                                    {
-                                        Name = "U4",
-                                        Towards = "Heiligenstadt",
-                                        RealtimeSupported = true,
-                                        BarrierFree = true,
-                                        Countdown = 14,
-                                        Type = MonitorLineType.Metro
-                                    },
-                                    new Departure()
-                                    {
-                                        Name = "U4",
-                                        Towards = "Heiligenstadt",
-                                        RealtimeSupported = true,
-                                        BarrierFree = true,
-                                        Countdown = 45,
-                                        Type = MonitorLineType.Metro
-                                    }
+                    Departures = new List<Departure>()
+                    {
+                        new Departure()
+                        {
+                            Name = "U4",
+                            Towards = "Heiligenstadt",
+                            RealtimeSupported = true,
+                            BarrierFree = true,
+                            Countdown = 3,
+                            Type = MonitorLineType.Metro
+                        },
+                        new Departure()
+                        {
+                            Name = "U4",
+                            Towards = "Heiligenstadt",
+                            RealtimeSupported = true,
+                            BarrierFree = false,
+                            Countdown = 7,
+                            Type = MonitorLineType.Metro
+                        },
+                        new Departure()
+                        {
+                            Name = "U4",
+                            Towards = "Heiligenstadt",
+                            RealtimeSupported = true,
+                            BarrierFree = true,
+                            Countdown = 14,
+                            Type = MonitorLineType.Metro
+                        },
+                        new Departure()
+                        {
+                            Name = "U4",
+                            Towards = "Heiligenstadt",
+                            RealtimeSupported = true,
+                            BarrierFree = true,
+                            Countdown = 45,
+                            Type = MonitorLineType.Metro
+                        }
                     }
                 }
             };
@@ -184,7 +188,7 @@ namespace MundlTransit.WP8.DesignTimeData
         {
             var trips = new List<Trip>()
             {
-                new Trip(1, new TimeSpan(0,21,0), true)
+                new Trip(1, new TimeSpan(0, 21, 0), true)
                 {
                     Legs = new List<TripLeg>()
                     {
@@ -193,7 +197,7 @@ namespace MundlTransit.WP8.DesignTimeData
                             Departure = new LegPoint("02.10.2013", "13:45", "Salztorbrücke"),
                             Arrival = new LegPoint("02.10.2013", "13:55", "Dr.-Karl-Renner-Ring"),
                         },
-                        new TripLeg(RoutingTypeOfTransportation.Walk,"", "")
+                        new TripLeg(RoutingTypeOfTransportation.Walk, "", "")
                         {
                             Departure = new LegPoint("02.10.2013", "13:55", "Dr.-Karl-Renner-Ring"),
                             Arrival = new LegPoint("02.10.2013", "13:59", "Volkstheater"),
@@ -208,6 +212,18 @@ namespace MundlTransit.WP8.DesignTimeData
             };
 
             return RoutingTripModel.TripsToTripModels(trips);
+        }
+
+        private List<RouteTypeOptionModel> CreateRoutingOptions()
+        {
+            return new List<RouteTypeOptionModel>()
+            {
+                new RouteTypeOptionModel()
+                {
+                    RouteType = RouteTypeOption.LeastTime,
+                    DisplayName = "just a test option"
+                },
+            };
         }
     }
 }

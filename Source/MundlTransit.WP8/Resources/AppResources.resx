@@ -295,6 +295,9 @@
   <data name="NewRouteView_RoutingType_FewestChanges" xml:space="preserve">
     <value>fewest changes</value>
   </data>
+  <data name="NewRouteView_RoutingType_LeastWalking" xml:space="preserve">
+    <value>least walking</value>
+  </data>
   <data name="NewRouteView_Search_Button" xml:space="preserve">
     <value>Search</value>
   </data>

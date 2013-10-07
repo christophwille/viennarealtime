@@ -4,12 +4,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:sampleData="clr-namespace:MundlTransit.WP8.DesignTimeData"
+    d:DataContext="{Binding Source={d:DesignInstance Type=sampleData:SampleData, IsDesignTimeCreatable=True}}"
     xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="800" d:DesignWidth="480">
+    d:DesignHeight="800" 
+    d:DesignWidth="480">
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource TransparentBrush}">
         <StackPanel>
@@ -76,7 +79,7 @@
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="0">
                             <TextBlock Text="{Binding DisplayName}" Margin="0"
-                                   Style="{StaticResource PhoneTextTitle2Style}" />
+                                   Style="{StaticResource PhoneTextNormalStyle}" />
                         </StackPanel>
                     </DataTemplate>
                 </toolkit:ListPicker.ItemTemplate>

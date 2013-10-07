@@ -239,6 +239,10 @@
           <source>fewest changes</source>
           <target state="new">fewest changes</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/NewRouteView_RoutingType_LeastWalking" xml:space="preserve">
+          <source>least walking</source>
+          <target state="new">least walking</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/NewRouteView_To" xml:space="preserve">
           <source>To</source>
           <target state="new">To</target>

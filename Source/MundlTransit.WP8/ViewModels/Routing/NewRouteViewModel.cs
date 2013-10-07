@@ -40,6 +40,11 @@ namespace MundlTransit.WP8.ViewModels.Routing
                 {
                     RouteType = RouteTypeOption.LeastInterchange,
                     DisplayName = AppResources.NewRouteView_RoutingType_FewestChanges
+                },
+                new RouteTypeOptionModel()
+                {
+                    RouteType = RouteTypeOption.LeastWalking,
+                    DisplayName = AppResources.NewRouteView_RoutingType_LeastWalking
                 }
             };
 
