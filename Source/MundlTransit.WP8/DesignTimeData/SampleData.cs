@@ -188,7 +188,7 @@ namespace MundlTransit.WP8.DesignTimeData
         {
             var trips = new List<Trip>()
             {
-                new Trip(1, new TimeSpan(0, 21, 0), true)
+                new Trip(1, new TimeSpan(0, 21, 0), 1)
                 {
                     Legs = new List<TripLeg>()
                     {

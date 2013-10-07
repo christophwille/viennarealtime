@@ -44,5 +44,13 @@ namespace WienerLinien.Api.Tests
         // Salztorbrücke -> Westbahnhof
         // http://www.wienerlinien.at/ogd_routing/XML_TRIP_REQUEST2?type_origin=stopID&name_origin=60201145&type_destination=stopID&name_destination=60201468&ptOptionsActive=1&outputFormat=JSON
         public static readonly string RoutingSalztorbrueckeWestbahnhofJson = "RoutingSalztorbrueckeWestbahnhof.json";
+
+        // Kleistgasse - Waidhausenstrasse
+        // http://www.wienerlinien.at/ogd_routing/XML_TRIP_REQUEST2?type_origin=stopID&name_origin=60200688&type_destination=stopID&name_destination=60201438&ptOptionsActive=1&itOptionsActive=1&itdDate=20131007&itdTime=1225&routeType=LEASTTIME&outputFormat=JSON
+        // TODO: Add Test
+
+
+
+
     }
 }

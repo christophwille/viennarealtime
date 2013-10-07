@@ -63,7 +63,7 @@ namespace MundlTransit.WP8.Model
             get
             {
                 string legs = String.Join(", ", this.Select(l => l.DisplayName));
-                return String.Format("{0} ({1} {2})", legs, this.Count, AppResources.Routing_Changes);
+                return String.Format("{0} ({1} {2})", legs, Trip.Interchanges, AppResources.Routing_Changes);
             }
         }
 

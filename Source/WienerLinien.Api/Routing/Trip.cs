@@ -8,18 +8,18 @@ namespace WienerLinien.Api.Routing
 {
     public class Trip
     {
-        public Trip(int number, TimeSpan duration, bool interchange)
+        public Trip(int number, TimeSpan duration, int interchanges)
         {
             Number = number;
             Duration = duration;
-            Interchange = interchange;
+            Interchanges = interchanges;
 
             Legs = new List<TripLeg>();
         }
 
         public int Number { get; set; }
         public TimeSpan Duration { get; set; }
-        public bool Interchange { get; set; }
+        public int Interchanges { get; set; }
         public List<TripLeg> Legs { get; set; }
     }
 }
