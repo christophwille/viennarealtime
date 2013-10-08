@@ -6,6 +6,7 @@ The source code is released under the MIT License.
 
 The app uses open data provided by Wiener Linien. To learn more about the data and API they are offering,
 please visit [Wiener Linien - Echtzeitdaten](https://open.wien.at/site/datensatz/?id=add66f20-d033-4eee-b9a0-47019828e698)
+as well as [Wiener Linien - Routingservice](https://open.wien.at/site/datensatz/?id=9c203fec-dc0d-412c-a7a3-7fd77d0346f1)
 
 [Release History](https://github.com/christophwille/viennarealtime/wiki/Release-History)
 
