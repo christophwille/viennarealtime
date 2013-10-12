@@ -25,14 +25,14 @@ namespace MundlTransit.WP8.ViewModels.Stations
 
         public List<AlphaKeyGroup<Haltestelle>> Haltestellen { get; set; }
 
-	    protected override void OnInitialize()
+	    protected async override void OnInitialize()
 	    {
             base.OnInitialize();
 
 	        LoadHaltestellenAsync();
 	    }
 
-        protected async void LoadHaltestellenAsync()
+        protected async Task LoadHaltestellenAsync()
         {
             var hst = await _dataService.GetHaltestellenAsync();
 

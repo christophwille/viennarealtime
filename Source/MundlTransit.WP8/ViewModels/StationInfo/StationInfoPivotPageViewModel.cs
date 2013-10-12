@@ -40,7 +40,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
             ActivateItem(departureViewModel);
         }
 
-        protected override void OnActivate()
+        protected async override void OnActivate()
         {
             base.OnActivate();
             LoadStationAsync();
@@ -60,7 +60,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
             NotifyOfPropertyChange(() => StationName);
         }
 
-        public void AddToFavorites()
+        public async void AddToFavorites()
         {
             if (null == _haltestelle) return;
 
@@ -85,7 +85,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
             var success = await Windows.System.Launcher.LaunchUriAsync(uri);
         }
 
-        public void RefreshDepartureInformation()
+        public async void RefreshDepartureInformation()
         {
             departureViewModel.RefreshDepartureInformationAsync();
         }

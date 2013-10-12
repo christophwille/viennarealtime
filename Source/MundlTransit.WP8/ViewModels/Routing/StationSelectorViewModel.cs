@@ -58,7 +58,7 @@ namespace MundlTransit.WP8.ViewModels.Routing
             ActivateItem(listStations);
         }
 
-        protected override void OnActivate()
+        protected async override void OnActivate()
         {
             base.OnActivate();
             favorites.LoadFavoritesAsync();

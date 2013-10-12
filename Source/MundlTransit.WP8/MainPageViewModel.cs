@@ -22,7 +22,7 @@ namespace MundlTransit.WP8
         public FavoritesViewModel Favorites { get; protected set; }
         public TrafficInfoViewModel TrafficInfo { get; protected set; }
 
-        protected override void OnViewReady(object view)
+        protected async override void OnViewReady(object view)
         {
             base.OnViewReady(view);
 
@@ -30,7 +30,7 @@ namespace MundlTransit.WP8
             TrafficInfo.LoadTrafficInfoAsync();
         }
 
-        public void RefreshAlerts()
+        public async void RefreshAlerts()
         {
             TrafficInfo.ClearTrafficInformation();
             TrafficInfo.LoadTrafficInfoAsync();

@@ -89,7 +89,7 @@ namespace MundlTransit.WP8.ViewModels
             return shellTile;
         }
 
-        public void Remove(object sender, Favorite item)
+        public async void Remove(object sender, Favorite item)
         {
             FixUpBindingIssue(sender);
             PerformRemovalAsync(item);
