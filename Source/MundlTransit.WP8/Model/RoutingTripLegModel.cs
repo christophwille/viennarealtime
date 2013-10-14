@@ -17,14 +17,27 @@ namespace MundlTransit.WP8.Model
 
         public TripLeg Leg { get; set; }
 
+        public bool IsWalkingLeg
+        {
+            get
+            {
+                return Leg.TypeOfTransportation == RoutingTypeOfTransportation.Walk;
+            }
+        }
+
+        public bool IsNormalLeg
+        {
+            get
+            {
+                return !IsWalkingLeg;
+            }
+        }
+
         public string DisplayName
         {
             get
             {
-                if (Leg.TypeOfTransportation != RoutingTypeOfTransportation.Walk)
-                    return Leg.DisplayName;
-
-                return AppResources.Routing_Type_Walk;
+                return !IsWalkingLeg ? Leg.DisplayName : AppResources.Routing_Type_Walk;
             }
         }
 

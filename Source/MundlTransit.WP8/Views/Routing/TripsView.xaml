@@ -41,6 +41,10 @@
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
 
+    <UserControl.Resources>
+        <cm:BooleanToVisibilityConverter x:Key="visConverter" />
+    </UserControl.Resources>
+    
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -84,10 +88,39 @@
                             <!-- The HeaderTemplate describes the header for an expandable item.-->
                             <toolkit:ExpanderView.HeaderTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding TripName}"  
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding TripName}"  
                                                Foreground="{StaticResource PhoneForegroundBrush}"
                                                FontSize="{StaticResource PhoneFontSizeExtraLarge}" 
                                                FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
+                                        <TextBlock Text=":" Margin="0,0,20,0"
+                                                Visibility="{Binding IsNormalLeg,Converter={StaticResource visConverter}}"
+                                                Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                                        <ItemsControl ItemsSource="{Binding}">
+                                            <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <toolkit:WrapPanel />
+                                                </ItemsPanelTemplate>
+                                            </ItemsControl.ItemsPanel>
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding DisplayName}" 
+                                                            Margin="5,0,10,0" 
+                                                            Visibility="{Binding IsNormalLeg,Converter={StaticResource visConverter}}"
+                                                            Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                                                        <TextBlock Text="&#xE13e;" 
+                                                            Margin="5,0,10,0"
+                                                            VerticalAlignment="Center"
+                                                            Visibility="{Binding IsWalkingLeg,Converter={StaticResource visConverter}}"
+                                                            FontFamily="assets/fonts/LigatureSymbols-2.11.ttf#LigatureSymbols"  
+                                                            FontSize="{StaticResource PhoneFontSizeExtraLarge}" />
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </StackPanel>
+
                                 </DataTemplate>
                             </toolkit:ExpanderView.HeaderTemplate>
 
@@ -95,15 +128,14 @@
                                  which represents the first sub-item in the expander view.-->
                             <toolkit:ExpanderView.ExpanderTemplate>
                                 <DataTemplate>
-                                    <TextBlock Grid.Row="0" Grid.Column="1"
-                                               LineHeight="25" LineStackingStrategy="BlockLineHeight"
+                                    <TextBlock LineHeight="25" LineStackingStrategy="BlockLineHeight"
                                                TextWrapping="Wrap">
                                         <Run Text="{Binding Duration}"
                                              Foreground="{StaticResource PhoneSubtleBrush}"
                                              FontSize="{StaticResource PhoneFontSizeNormal}" 
                                              FontFamily="{StaticResource PhoneFontFamilySemiBold}"/>
                                         <LineBreak/>
-                                        <Run Text="{Binding LegInfo}"   
+                                        <Run Text="{Binding ChangesInformation}"   
                                              Foreground="{StaticResource PhoneSubtleBrush}"
                                              FontSize="{StaticResource PhoneFontSizeNormal}"
                                              FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
