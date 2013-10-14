@@ -168,6 +168,9 @@
     <Compile Include="Common\PanoramaExtensions.cs" />
     <Compile Include="Common\ScreenExtensions.cs" />
     <Compile Include="Common\SocketStreamHttpClient.cs" />
+    <Compile Include="Common\WalkSymbol.xaml.cs">
+      <DependentUpon>WalkSymbol.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DesignTimeData\SampleData.cs" />
     <Compile Include="DesignTimeData\SampleHaltestelleData.cs" />
     <Compile Include="DesignTimeData\SampleLineData.cs" />
@@ -311,6 +314,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Common\WalkSymbol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -406,9 +413,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Fonts\DejaVuSans.ttf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\Fonts\LigatureSymbols.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
