@@ -405,8 +405,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Fonts\DejaVuSans.ttf" />
-    <Content Include="Assets\Fonts\LigatureSymbols-2.11.ttf" />
+    <Content Include="Assets\Fonts\DejaVuSans.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\LigatureSymbols.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
