@@ -405,9 +405,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Accessibility\DejaVuSans.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Assets\Fonts\DejaVuSans.ttf" />
+    <Content Include="Assets\Fonts\LigatureSymbols-2.11.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
@@ -415,7 +414,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Accessibility\Source.txt" />
+    <None Include="Assets\Fonts\Source.txt" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
