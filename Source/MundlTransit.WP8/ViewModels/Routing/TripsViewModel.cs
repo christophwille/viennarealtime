@@ -9,6 +9,8 @@ using Microsoft.Phone.Shell;
 using MundlTransit.WP8.Model;
 using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
+using Newtonsoft.Json;
+using WienerLinien.Api.Routing;
 
 namespace MundlTransit.WP8.ViewModels.Routing
 {
@@ -28,8 +30,10 @@ namespace MundlTransit.WP8.ViewModels.Routing
         }
 
         public IObservableCollection<RoutingTripModel> Trips { get; set; }
+
         public string From { get; set; }    // navigation property
         public string To { get; set; }      // navigation property
+        public string CurrentRoutingRequest { get; set; }      // navigation property
 
         protected async override void OnActivate()
         {
@@ -37,12 +41,17 @@ namespace MundlTransit.WP8.ViewModels.Routing
             LoadTripsAsync();
         }
 
+        protected RoutingRequest GetCurrentRoutingRequest()
+        {
+            return JsonConvert.DeserializeObject<RoutingRequest>(CurrentRoutingRequest);
+        }
+
         protected async Task LoadTripsAsync()
         {
             EnableProgressBar();
 
-            var request = NewRouteViewModel.CurrentRoutingRequest;
-            var response = await _routingService.RetrieveRouteAsync(request);
+            var routingRequest = GetCurrentRoutingRequest();
+            var response = await _routingService.RetrieveRouteAsync(routingRequest);
 
             DisableProgressBar();
 

@@ -8,6 +8,7 @@ using MundlTransit.WP8.Model;
 using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
 using MundlTransit.WP8.Views.Routing;
+using Newtonsoft.Json;
 using WienerLinien.Api.Routing;
 
 namespace MundlTransit.WP8.ViewModels.Routing
@@ -143,14 +144,12 @@ namespace MundlTransit.WP8.ViewModels.Routing
             }
         }
 
-        public static RoutingRequest CurrentRoutingRequest { get; set; }
-
         public async void SearchTrips()
         {
             var fromStation = await _dataService.GetHaltestelleAsync(_fromStationId.Value);
             var toStation = await _dataService.GetHaltestelleAsync(_toStationId.Value);
 
-            CurrentRoutingRequest = new RoutingRequest()
+            var currentRequest = new RoutingRequest()
             {
                 FromStation = fromStation.Diva,
                 ToStation = toStation.Diva,
@@ -159,9 +158,12 @@ namespace MundlTransit.WP8.ViewModels.Routing
                     _timeOfTrip.Value.Hour, _timeOfTrip.Value.Minute, 0)
             };
 
+            string jsonRoutingRequest = JsonConvert.SerializeObject(currentRequest);
+
             _navigationService.UriFor<TripsViewModel>()
                 .WithParam(m => m.From, FromStationName)
                 .WithParam(m => m.To, ToStationName)
+                .WithParam(m => m.CurrentRoutingRequest, jsonRoutingRequest)
                 .Navigate();
         }
 
