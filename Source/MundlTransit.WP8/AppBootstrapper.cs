@@ -92,7 +92,7 @@ namespace MundlTransit.WP8
             container.PerRequest<StationInfoPivotPageViewModel>();
             container.PerRequest<DepartureViewModel>();
 
-            container.PerRequest<RoutingPivotPageViewModel>();
+            container.PerRequest<RoutingPageViewModel>();
             container.PerRequest<NewRouteViewModel>();
             container.PerRequest<StationSelectorViewModel>();
 

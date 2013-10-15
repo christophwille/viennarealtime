@@ -10,14 +10,14 @@ using MundlTransit.WP8.ViewModels.StationInfo;
 
 namespace MundlTransit.WP8.ViewModels.Routing
 {
-    public class RoutingPivotPageViewModel : Conductor<IScreen>.Collection.OneActive
+    public class RoutingPageViewModel : Conductor<IScreen>.Collection.OneActive
     {
         private readonly NewRouteViewModel _newRouteViewModel;
         private readonly IDataService _dataService;
         private readonly INavigationService _navigationService;
         private readonly IUIService _uiService;
 
-        public RoutingPivotPageViewModel(INavigationService navigationService, IDataService ds, IUIService uisvc, NewRouteViewModel newRoute)
+        public RoutingPageViewModel(INavigationService navigationService, IDataService ds, IUIService uisvc, NewRouteViewModel newRoute)
         {
             _navigationService = navigationService;
             _dataService = ds;

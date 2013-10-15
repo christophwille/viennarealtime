@@ -58,7 +58,7 @@ namespace MundlTransit.WP8.ViewModels
                                     { 
                                         Name = AppResources.MenuItem_Routing, 
                                         Description= AppResources.MenuItem_Routing_Description, 
-                                        Navigate = (n) => n.UriFor<RoutingPivotPageViewModel>().Navigate() 
+                                        Navigate = (n) => n.UriFor<RoutingPageViewModel>().Navigate() 
                                     },
 									new MenuItem
                                     { 

@@ -12,9 +12,9 @@ using MundlTransit.WP8.Resources;
 
 namespace MundlTransit.WP8.Views.Routing
 {
-    public partial class RoutingPivotPage : PhoneApplicationPage
+    public partial class RoutingPage : PhoneApplicationPage
     {
-        public RoutingPivotPage()
+        public RoutingPage()
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
