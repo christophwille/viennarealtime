@@ -333,6 +333,12 @@
   <data name="ReviewNotifications_Title" xml:space="preserve">
     <value>Please review the app</value>
   </data>
+  <data name="RouteHistory_DisplayName" xml:space="preserve">
+    <value>history</value>
+  </data>
+  <data name="RoutingPageView_DisplayName" xml:space="preserve">
+    <value>Routing</value>
+  </data>
   <data name="Routing_AppBar_Now" xml:space="preserve">
     <value>now</value>
   </data>

@@ -190,6 +190,11 @@
     <Compile Include="Model\LocationResult.cs" />
     <Compile Include="Model\MenuItem.cs" />
     <Compile Include="Model\ZoomMapToPinsMessage.cs" />
+    <Compile Include="Resources\AppResources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services\DefaultConfigurationService.cs" />
     <Compile Include="Services\DefaultDataService.cs" />
     <Compile Include="Services\DefaultLocationService.cs" />
@@ -223,6 +228,7 @@
     <Compile Include="ViewModels\Lines\TramViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
     <Compile Include="ViewModels\Routing\NewRouteViewModel.cs" />
+    <Compile Include="ViewModels\Routing\RouteHistoryViewModel.cs" />
     <Compile Include="ViewModels\Routing\RoutingPageViewModel.cs" />
     <Compile Include="ViewModels\Routing\StationSelectorViewModel.cs" />
     <Compile Include="ViewModels\Routing\TripsViewModel.cs" />
@@ -267,6 +273,9 @@
     <Compile Include="Views\Routing\NewRouteView.xaml.cs">
       <DependentUpon>NewRouteView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Routing\RouteHistoryView.xaml.cs">
+      <DependentUpon>RouteHistoryView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Routing\RoutingPage.xaml.cs">
       <DependentUpon>RoutingPage.xaml</DependentUpon>
     </Compile>
@@ -299,11 +308,6 @@
       <DependentUpon>StationsSearchView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\AppResources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AppResources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Views\TrafficInfoView.xaml.cs">
       <DependentUpon>TrafficInfoView.xaml</DependentUpon>
     </Compile>
@@ -366,6 +370,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Routing\NewRouteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Routing\RouteHistoryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -482,7 +490,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <LastGenOutput>AppResources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

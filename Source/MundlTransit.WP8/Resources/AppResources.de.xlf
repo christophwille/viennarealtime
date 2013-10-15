@@ -289,6 +289,14 @@
           <source>Please review the app</source>
           <target state="signed-off">Bitten bewerten Sie die App</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/RouteHistory_DisplayName" xml:space="preserve">
+          <source>history</source>
+          <target state="new">history</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/RoutingPageView_DisplayName" xml:space="preserve">
+          <source>Routing</source>
+          <target state="new">Routing</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/Routing_AppBar_Reverse" xml:space="preserve">
           <source>reverse</source>
           <target state="signed-off">umkehren</target>

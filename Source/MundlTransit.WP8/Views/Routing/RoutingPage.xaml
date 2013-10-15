@@ -37,20 +37,21 @@
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
 
-        <phone:Pivot x:Name="Items"
-						Title="{Binding DisplayName}"
-						SelectedItem="{Binding ActiveItem, Mode=TwoWay}">
-            <phone:Pivot.HeaderTemplate>
+        <phone:Panorama Title="{Binding Path=LocalizedResources.RoutingPageView_DisplayName, Source={StaticResource LocalizedStrings}}">
+            <!-- this gets rid of the title altogehter -->
+            <phone:Panorama.TitleTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding DisplayName}" />
                 </DataTemplate>
-            </phone:Pivot.HeaderTemplate>
-        </phone:Pivot>
+            </phone:Panorama.TitleTemplate>
+            
+            <phone:PanoramaItem x:Name="NewRoute" 
+                                Header="{Binding Path=LocalizedResources.NewRouteView_DisplayName, Source={StaticResource LocalizedStrings}}" />
+            <phone:PanoramaItem x:Name="RouteHistory" 
+                                Header="{Binding Path=LocalizedResources.RouteHistory_DisplayName, Source={StaticResource LocalizedStrings}}" />
 
+        </phone:Panorama>
     </Grid>
-
 
 </phone:PhoneApplicationPage>

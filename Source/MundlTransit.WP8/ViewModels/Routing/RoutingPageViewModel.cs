@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
 using MundlTransit.WP8.Data.Reference;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
 using MundlTransit.WP8.ViewModels.StationInfo;
 
@@ -12,38 +13,34 @@ namespace MundlTransit.WP8.ViewModels.Routing
 {
     public class RoutingPageViewModel : Conductor<IScreen>.Collection.OneActive
     {
-        private readonly NewRouteViewModel _newRouteViewModel;
         private readonly IDataService _dataService;
         private readonly INavigationService _navigationService;
         private readonly IUIService _uiService;
 
-        public RoutingPageViewModel(INavigationService navigationService, IDataService ds, IUIService uisvc, NewRouteViewModel newRoute)
+        public RoutingPageViewModel(INavigationService navigationService, IDataService ds, IUIService uisvc, 
+            NewRouteViewModel newRouteVm, RouteHistoryViewModel historyVm)
         {
             _navigationService = navigationService;
             _dataService = ds;
             _uiService = uisvc;
-            
-            DisplayName = "Routing";
-            _newRouteViewModel = newRoute;
+
+            DisplayName = AppResources.RoutingPageView_DisplayName;
+
+            NewRoute = newRouteVm;
+            RouteHistory = historyVm;
         }
 
-        protected override void OnInitialize()
-        {
-            base.OnInitialize();
-
-            Items.Add(_newRouteViewModel);
-
-            ActivateItem(_newRouteViewModel);
-        }
+        public NewRouteViewModel NewRoute { get; protected set; }
+        public RouteHistoryViewModel RouteHistory { get; protected set; }
 
         public void ReverseFromTo()
         {
-            _newRouteViewModel.ReverseFromTo();
+            NewRoute.ReverseFromTo();
         }
 
         public void SetToNow()
         {
-            _newRouteViewModel.SetToNow();
+            NewRoute.SetToNow();
         }
     }
 }
