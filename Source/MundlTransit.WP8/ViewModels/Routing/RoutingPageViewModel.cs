@@ -33,6 +33,13 @@ namespace MundlTransit.WP8.ViewModels.Routing
         public NewRouteViewModel NewRoute { get; protected set; }
         public RouteHistoryViewModel RouteHistory { get; protected set; }
 
+        protected async override void OnViewReady(object view)
+        {
+            base.OnViewReady(view);
+
+            RouteHistory.LoadRouteHistoryAsync();
+        }
+
         public void ReverseFromTo()
         {
             NewRoute.ReverseFromTo();

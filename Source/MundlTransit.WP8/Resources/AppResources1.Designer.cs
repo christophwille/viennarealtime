@@ -709,6 +709,15 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have no route history entries..
+        /// </summary>
+        public static string RouteHistory_NoHistoryEntries {
+            get {
+                return ResourceManager.GetString("RouteHistory_NoHistoryEntries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to now.
         /// </summary>
         public static string Routing_AppBar_Now {

@@ -158,5 +158,19 @@ namespace MundlTransit.WP8.Services
             var db = new ReferenceDataContext();
             return await db.GetHaltestellenForLinieAsync(linienId).ConfigureAwait(false);
         }
+
+        public async Task<List<RouteHistoryItem>> GetRouteHistoryItemsAsync()
+        {
+            var db = new RuntimeDataContext();
+            var rhi = await db.GetRouteHistoryItemsAsync().ConfigureAwait(false);
+
+            return rhi;
+        }
+
+        public async Task InsertRouteHistoryItemAsync(RouteHistoryItem rhi)
+        {
+            var db = new RuntimeDataContext();
+            await db.InsertRouteHistoryItemAsync(rhi).ConfigureAwait(false);
+        }
     }
 }

@@ -28,5 +28,8 @@ namespace MundlTransit.WP8.Services
         Task<List<Favorite>> GetFavoritesAsync();
         Task InsertFavoriteIfNotExistsAsync(Favorite fav);
         Task DeleteFavoriteAsync(Favorite fav);
+
+        Task<List<RouteHistoryItem>> GetRouteHistoryItemsAsync();
+        Task InsertRouteHistoryItemAsync(RouteHistoryItem rhi);
     }
 }

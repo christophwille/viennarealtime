@@ -4,12 +4,40 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     d:DesignHeight="800" d:DesignWidth="480">
+
+    <UserControl.Resources>
+        <cm:BooleanToVisibilityConverter x:Key="visConverter" />
+    </UserControl.Resources>
     
     <Grid x:Name="LayoutRoot" Background="{StaticResource TransparentBrush}">
+        <phone:LongListSelector Margin="0,0,-12,0" 
+                                Visibility="{Binding ResultsFound,Converter={StaticResource visConverter}}"
+                                cm:Message.Attach="[Event SelectionChanged] = [Action ShowRouteHistoryItem($source)]"
+                                ItemsSource="{Binding RouteHistoryItems}">
+            <phone:LongListSelector.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0,0,0,17" Width="432">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding From}" Style="{StaticResource PhoneTextLargeStyle}" />
+                            <TextBlock Text="{Binding To}" Style="{StaticResource PhoneTextLargeStyle}" />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </phone:LongListSelector.ItemTemplate>
+        </phone:LongListSelector>
 
+        <TextBlock 
+                Style="{StaticResource PhoneTextLargeStyle}"
+                TextWrapping="Wrap"
+                Visibility="{Binding NoResultsFound,Converter={StaticResource visConverter}}"
+                Text="{Binding Path=LocalizedResources.RouteHistory_NoHistoryEntries, Source={StaticResource LocalizedStrings}}" />
     </Grid>
 </UserControl>

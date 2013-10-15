@@ -151,6 +151,7 @@
     <Compile Include="Reference\ReferenceDataContext.cs" />
     <Compile Include="Reference\OgdSteig.cs" />
     <Compile Include="Runtime\Favorite.cs" />
+    <Compile Include="Runtime\RouteHistoryItem.cs" />
     <Compile Include="Runtime\RuntimeDataContext.cs" />
     <Compile Include="Runtime\StationHistory.cs" />
     <Compile Include="SQLite.cs" />

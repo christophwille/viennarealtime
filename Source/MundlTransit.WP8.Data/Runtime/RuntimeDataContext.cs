@@ -24,7 +24,7 @@ namespace MundlTransit.WP8.Data.Runtime
             var db = CreateConnection();
 
             CreateTablesResult favCreateResult = await db.CreateTableAsync<Favorite>().ConfigureAwait(false);
-            // CreateTablesResult histCreateResult = await db.CreateTableAsync<StationHistory>();
+            CreateTablesResult histCreateResult = await db.CreateTableAsync<RouteHistoryItem>().ConfigureAwait(false);
         }
 
         private readonly SQLiteAsyncConnection _connection;
@@ -61,6 +61,21 @@ namespace MundlTransit.WP8.Data.Runtime
         public async Task DeleteFavoriteAsync(Favorite fav)
         {
             int result = await _connection.DeleteAsync(fav).ConfigureAwait(false);
+        }
+
+        public async Task<List<RouteHistoryItem>> GetRouteHistoryItemsAsync()
+        {
+            var query = _connection
+                .Table<RouteHistoryItem>()
+                .OrderByDescending(r => r.Id);
+
+            var matched = await query.ToListAsync().ConfigureAwait(false);
+            return matched;
+        }
+
+        public async Task InsertRouteHistoryItemAsync(RouteHistoryItem rhi)
+        {
+            int result = await _connection.InsertAsync(rhi).ConfigureAwait(false);
         }
     }
 }
