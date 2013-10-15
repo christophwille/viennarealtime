@@ -186,6 +186,7 @@
     <Compile Include="Model\RoutingTripGroupModel.cs" />
     <Compile Include="Model\RoutingTripLegModel.cs" />
     <Compile Include="Model\RoutingTripModel.cs" />
+    <Compile Include="Model\ShowNewRouteViewMessage.cs" />
     <Compile Include="Model\Wgs84Location.cs" />
     <Compile Include="Model\LocationResult.cs" />
     <Compile Include="Model\MenuItem.cs" />

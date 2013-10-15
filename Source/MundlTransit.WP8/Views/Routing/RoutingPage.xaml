@@ -39,7 +39,7 @@
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
 
-        <phone:Panorama Title="{Binding Path=LocalizedResources.RoutingPageView_DisplayName, Source={StaticResource LocalizedStrings}}">
+        <phone:Panorama x:Name="RoutingPanorama" Title="{Binding Path=LocalizedResources.RoutingPageView_DisplayName, Source={StaticResource LocalizedStrings}}">
             <!-- this gets rid of the title altogehter -->
             <phone:Panorama.TitleTemplate>
                 <DataTemplate>

@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
+using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Data.Runtime;
+using MundlTransit.WP8.Model;
 using MundlTransit.WP8.Services;
 
 namespace MundlTransit.WP8.ViewModels.Routing
@@ -12,10 +14,12 @@ namespace MundlTransit.WP8.ViewModels.Routing
     public class RouteHistoryViewModel : Screen
     {
         private readonly IDataService _dataService;
+        private readonly IEventAggregator eventAggregator;
 
-        public RouteHistoryViewModel(IDataService ds)
+        public RouteHistoryViewModel(IDataService ds, IEventAggregator events)
         {
             _dataService = ds;
+            eventAggregator = events;
         }
 
         public async Task LoadRouteHistoryAsync()
@@ -36,7 +40,13 @@ namespace MundlTransit.WP8.ViewModels.Routing
 
         public void ShowRouteHistoryItem(object sender)
         {
-            // TODO: switch panorama to "New Route" item and set the properties to respective values from history item
+            this.WhenSelectionChanged<RouteHistoryItem>(sender, (item) =>
+            {
+                var msg = new ShowNewRouteViewMessage(item);
+
+                // TODO: weird animation effect in RoutingPage/Panorama
+                eventAggregator.Publish(msg);
+            });
         }
 
         public IObservableCollection<RouteHistoryItem> RouteHistoryItems { get; private set; }

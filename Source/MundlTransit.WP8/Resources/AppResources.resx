@@ -336,8 +336,14 @@
   <data name="RouteHistory_DisplayName" xml:space="preserve">
     <value>history</value>
   </data>
+  <data name="RouteHistory_From" xml:space="preserve">
+    <value>from:</value>
+  </data>
   <data name="RouteHistory_NoHistoryEntries" xml:space="preserve">
     <value>You have no route history entries.</value>
+  </data>
+  <data name="RouteHistory_To" xml:space="preserve">
+    <value>to:</value>
   </data>
   <data name="RoutingPageView_DisplayName" xml:space="preserve">
     <value>Routing</value>

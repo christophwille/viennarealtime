@@ -293,9 +293,17 @@
           <source>history</source>
           <target state="new">history</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/RouteHistory_From" xml:space="preserve">
+          <source>from:</source>
+          <target state="new">from:</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/RouteHistory_NoHistoryEntries" xml:space="preserve">
           <source>You have no route history entries.</source>
           <target state="new">You have no route history entries.</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/RouteHistory_To" xml:space="preserve">
+          <source>to:</source>
+          <target state="new">to:</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/RoutingPageView_DisplayName" xml:space="preserve">
           <source>Routing</source>

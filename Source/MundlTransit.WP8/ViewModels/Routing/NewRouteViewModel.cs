@@ -14,14 +14,16 @@ using WienerLinien.Api.Routing;
 
 namespace MundlTransit.WP8.ViewModels.Routing
 {
-    public class NewRouteViewModel : Screen
+    public class NewRouteViewModel : Screen, IHandle<ShowNewRouteViewMessage>
     {
         private readonly IWindowManager _windowManager;
         private readonly INavigationService _navigationService;
         private readonly IDataService _dataService;
 
-        public NewRouteViewModel(IWindowManager windowManager, INavigationService navigationService, IDataService dataService)
+        public NewRouteViewModel(IWindowManager windowManager, INavigationService navigationService, IDataService dataService, IEventAggregator eventAggregator)
         {
+            eventAggregator.Subscribe(this);
+
             _windowManager = windowManager;
             _navigationService = navigationService;
             _dataService = dataService;
@@ -188,6 +190,18 @@ namespace MundlTransit.WP8.ViewModels.Routing
 
             DateOfTrip = now.Date;
             TimeOfTrip = now;
+        }
+
+        public void Handle(ShowNewRouteViewMessage message)
+        {
+            var rhi = message.RouteHistory;
+
+            FromStationId = rhi.FromHaltestelleId;
+            ToStationId = rhi.ToHaltestelleId;
+            FromStationName = rhi.From;
+            ToStationName = rhi.To;
+
+            SetToNow();
         }
     }
 }

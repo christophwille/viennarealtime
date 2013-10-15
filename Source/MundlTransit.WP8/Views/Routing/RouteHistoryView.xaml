@@ -25,10 +25,13 @@
             <phone:LongListSelector.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="0,0,0,17" Width="432">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="{Binding From}" Style="{StaticResource PhoneTextLargeStyle}" />
-                            <TextBlock Text="{Binding To}" Style="{StaticResource PhoneTextLargeStyle}" />
-                        </StackPanel>
+                        <TextBlock Style="{StaticResource PhoneTextNormalStyle}">
+                            <Run Text="{Binding Path=LocalizedResources.RouteHistory_From, Source={StaticResource LocalizedStrings}}" />
+                            <Run Text="{Binding From}" />
+                            <LineBreak />
+                            <Run Text="{Binding Path=LocalizedResources.RouteHistory_To, Source={StaticResource LocalizedStrings}}" />
+                            <Run Text="{Binding To}" />
+                        </TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </phone:LongListSelector.ItemTemplate>

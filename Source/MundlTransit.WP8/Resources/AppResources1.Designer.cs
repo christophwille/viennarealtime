@@ -709,11 +709,29 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to from:.
+        /// </summary>
+        public static string RouteHistory_From {
+            get {
+                return ResourceManager.GetString("RouteHistory_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You have no route history entries..
         /// </summary>
         public static string RouteHistory_NoHistoryEntries {
             get {
                 return ResourceManager.GetString("RouteHistory_NoHistoryEntries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to to:.
+        /// </summary>
+        public static string RouteHistory_To {
+            get {
+                return ResourceManager.GetString("RouteHistory_To", resourceCulture);
             }
         }
         
