@@ -61,8 +61,10 @@ namespace MundlTransit.WP8.ViewModels.Routing
             set { _routeType = value; NotifyOfPropertyChange(() => SelectedRoutingOption); }
         }
 
-        private int? _fromStationId;
-        private int? _toStationId;
+        public int? FromStationId { get; set; }
+        public int? ToStationId { get; set; }
+
+        // Backing fields for bindable properties
         private string _fromStationName;
         private string _toStationName;
         private DateTime? _dateOfTrip;
@@ -96,7 +98,7 @@ namespace MundlTransit.WP8.ViewModels.Routing
         {
             PerformStationSelection((i, s) =>
             {
-                _fromStationId = i;
+                FromStationId = i;
                 FromStationName = s;
             });
         }
@@ -105,7 +107,7 @@ namespace MundlTransit.WP8.ViewModels.Routing
         {
             PerformStationSelection((i, s) =>
             {
-                _toStationId = i;
+                ToStationId = i;
                 ToStationName = s;
             });
         }
@@ -127,27 +129,27 @@ namespace MundlTransit.WP8.ViewModels.Routing
 
         public void ReverseFromTo()
         {
-            int? tempStationId = _fromStationId;
+            int? tempStationId = FromStationId;
             string tempStationName = FromStationName;
 
-            _fromStationId = _toStationId;
-            FromStationName = _fromStationId == null ? AppResources.Routing_SourceStationHintText : ToStationName;
-            _toStationId = tempStationId;
-            ToStationName = _toStationId == null ? AppResources.Routing_DestinationStationHintText : tempStationName;
+            FromStationId = ToStationId;
+            FromStationName = FromStationId == null ? AppResources.Routing_SourceStationHintText : ToStationName;
+            ToStationId = tempStationId;
+            ToStationName = ToStationId == null ? AppResources.Routing_DestinationStationHintText : tempStationName;
         }
 
         public bool CanSearchTrips
         {
             get
             {
-                return (_fromStationId != null && _toStationId != null && _dateOfTrip != null && _timeOfTrip != null);
+                return (FromStationId != null && ToStationId != null && _dateOfTrip != null && _timeOfTrip != null);
             }
         }
 
         public async void SearchTrips()
         {
-            var fromStation = await _dataService.GetHaltestelleAsync(_fromStationId.Value);
-            var toStation = await _dataService.GetHaltestelleAsync(_toStationId.Value);
+            var fromStation = await _dataService.GetHaltestelleAsync(FromStationId.Value);
+            var toStation = await _dataService.GetHaltestelleAsync(ToStationId.Value);
 
             var currentRequest = new RoutingRequest()
             {
