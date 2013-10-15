@@ -207,6 +207,7 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="SettingsPageViewModel.cs" />
+    <Compile Include="StorageHandlers\StationInfoPivotPageViewModelStorage.cs" />
     <Compile Include="StorageHandlers\StationsPivotPageModelStorage.cs" />
     <Compile Include="StorageHandlers\StationsSearchViewModelStorage.cs" />
     <Compile Include="ViewModels\FavoritesViewModel.cs" />
