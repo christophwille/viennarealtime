@@ -73,9 +73,26 @@ namespace MundlTransit.WP8.Data.Runtime
             return matched;
         }
 
+        public const int MaxHistoryItems = 24;
         public async Task InsertRouteHistoryItemAsync(RouteHistoryItem rhi)
         {
+            // First, cull the oldest history items
+            await RemoveRouteHistoryItemsAsync(MaxHistoryItems).ConfigureAwait(false);
+
             int result = await _connection.InsertAsync(rhi).ConfigureAwait(false);
         }
+
+        private const string SqlForRouteHistoryItemsCutoff =
+            @"DELETE FROM RouteHistoryItems WHERE Id NOT IN (
+              SELECT Id FROM RouteHistoryItems ORDER BY Id DESC LIMIT {0}
+              )";
+
+        public async Task RemoveRouteHistoryItemsAsync(int maxCutOff)
+        {
+            var result = await _connection
+                .ExecuteAsync(String.Format(SqlForRouteHistoryItemsCutoff, maxCutOff))
+                .ConfigureAwait(false);
+
+         }
     }
 }
