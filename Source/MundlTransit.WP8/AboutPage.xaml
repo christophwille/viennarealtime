@@ -76,7 +76,11 @@
                     <RichTextBox>
                         <Paragraph>
                             <Run Text="{Binding Path=AboutParagraphOne}" />
-                            <Hyperlink TargetName="_new" NavigateUri="{Binding WienerLinienOgdCatalogPage}">Wiener Linien - Echtzeitdaten</Hyperlink>
+                        </Paragraph>
+                        <Paragraph>
+                            <Hyperlink TargetName="_new" NavigateUri="{Binding WienerLinienRealtimeUrl}">Wiener Linien - Echtzeitdaten</Hyperlink>
+                            <LineBreak />
+                            <Hyperlink TargetName="_new" NavigateUri="{Binding WienerLinienRoutingUrl}">Wiener Linien - Routingservice</Hyperlink>
                         </Paragraph>
                         <Paragraph></Paragraph>
                         <Paragraph>
