@@ -25,6 +25,7 @@ if you think that will help me track down a bug quicker, or if that includes inf
 * `List` - list all stations
 * `Lines` - list all lines by line type, show stations with changeable direction
 * `Alerts` - traffic information (all lines)
+* `Routing` - find your way from A to B
 
 ## Screenshots
 
