@@ -24,15 +24,9 @@ namespace MundlTransit.WP8.ViewModels.Stations
         {
             _dataService = ds;
             DisplayName = AppResources.Stations_SearchTitle;
-        }
-
-        protected override void OnInitialize()
-        {
-            base.OnInitialize();
 
             _delayTimer = new DispatcherTimer();
             _delayTimer.Tick += OnInputDelayElapsed;
-
             _delayTimer.Interval = TimeSpan.FromMilliseconds(TimerDelayForAutoSearchInMilliseconds);
         }
 

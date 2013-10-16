@@ -28,6 +28,10 @@ namespace MundlTransit.WP8.StorageHandlers
                 .InPhoneState()
                 .RestoreAfterViewLoad();
 
+            Property(vm => vm.SelectedRoutingOptionIndex)
+                .InPhoneState()
+                .RestoreAfterViewLoad();
+
             // Date / Time of trip is intentionally not stored (SetToNow *is* a good idea)
         }
     }

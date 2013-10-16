@@ -70,11 +70,12 @@
                 </StackPanel>
             </Grid>
 
+            <!-- Important note: property order matters! ItemsSource *must* appear before SelectedXX properties -->
             <toolkit:ListPicker x:Name="RoutingOptionsPicked" 
                                 Header="{Binding Path=LocalizedResources.NewRouteView_RoutingOption, Source={StaticResource LocalizedStrings}}" 
                                 ExpansionMode="FullScreenOnly"
-                                SelectedItem="{Binding SelectedRoutingOption, Mode=TwoWay}"
-                                ItemsSource="{Binding RoutingOptions}">
+                                ItemsSource="{Binding RoutingOptions}"
+                                SelectedIndex="{Binding SelectedRoutingOptionIndex, Mode=TwoWay}">
                 <toolkit:ListPicker.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="0">

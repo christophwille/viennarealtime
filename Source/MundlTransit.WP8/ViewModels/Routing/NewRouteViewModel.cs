@@ -51,17 +51,18 @@ namespace MundlTransit.WP8.ViewModels.Routing
                     DisplayName = AppResources.NewRouteView_RoutingType_LeastWalking
                 }
             };
+            NotifyOfPropertyChange(() => RoutingOptions);
 
-            // SelectedRoutingOption = RoutingOptions.First();
+            SelectedRoutingOptionIndex = 0;
         }
 
         public IObservableCollection<RouteTypeOptionModel> RoutingOptions { get; set; }
 
-        private RouteTypeOptionModel _routeType;
-        public RouteTypeOptionModel SelectedRoutingOption
+        private int _selectedRoutingOptionIndex;
+        public int SelectedRoutingOptionIndex
         {
-            get { return _routeType; }
-            set { _routeType = value; NotifyOfPropertyChange(() => SelectedRoutingOption); }
+            get { return _selectedRoutingOptionIndex; }
+            set { _selectedRoutingOptionIndex = value; NotifyOfPropertyChange(() => SelectedRoutingOptionIndex); }
         }
 
         public int? FromStationId { get; set; }
@@ -156,11 +157,13 @@ namespace MundlTransit.WP8.ViewModels.Routing
             var toStation = await _dataService.GetHaltestelleAsync(ToStationId.Value);
 
             // Create a routing request and convert it to JSON
+            RouteTypeOptionModel optionModel = RoutingOptions[SelectedRoutingOptionIndex];
+
             var currentRequest = new RoutingRequest()
             {
                 FromStation = fromStation.Diva,
                 ToStation = toStation.Diva,
-                RouteType = SelectedRoutingOption == null ? RouteTypeOption.LeastTime : SelectedRoutingOption.RouteType,
+                RouteType = optionModel.RouteType,
                 When = new DateTime(_dateOfTrip.Value.Year, _dateOfTrip.Value.Month, _dateOfTrip.Value.Day,
                     _timeOfTrip.Value.Hour, _timeOfTrip.Value.Minute, 0)
             };
@@ -173,7 +176,8 @@ namespace MundlTransit.WP8.ViewModels.Routing
                         From = FromStationName,
                         To = ToStationName,
                         FromHaltestelleId = FromStationId.Value,
-                        ToHaltestelleId = ToStationId.Value
+                        ToHaltestelleId = ToStationId.Value,
+                        RouteType = (int)currentRequest.RouteType
                     });
 
             // Navigate
@@ -201,6 +205,20 @@ namespace MundlTransit.WP8.ViewModels.Routing
             FromStationName = rhi.From;
             ToStationName = rhi.To;
 
+            // Find the index in our RouteTypeOptionModel collection and set SelectedRoutingOptionIndex
+            var routeOption = (RouteTypeOption)rhi.RouteType;
+            int index = 0;
+            foreach (var rom in RoutingOptions)
+            {
+                if (rom.RouteType == routeOption)
+                {
+                    SelectedRoutingOptionIndex = index;
+                    break;
+                }
+                index++;
+            }
+
+            // Always use the current date / time
             SetToNow();
         }
     }

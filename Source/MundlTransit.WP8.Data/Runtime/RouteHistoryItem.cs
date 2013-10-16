@@ -18,5 +18,7 @@ namespace MundlTransit.WP8.Data.Runtime
 
         public string From { get; set; }
         public string To { get; set; }
+
+        public int RouteType { get; set; }
     }
 }
