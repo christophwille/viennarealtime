@@ -411,4 +411,19 @@
   <data name="NewRouteView_RoutingType_LeastWalking" xml:space="preserve">
     <value>kürzeste Gehdistanzen</value>
   </data>
+  <data name="RouteHistory_DisplayName" xml:space="preserve">
+    <value>Historie</value>
+  </data>
+  <data name="RouteHistory_From" xml:space="preserve">
+    <value>von:</value>
+  </data>
+  <data name="RouteHistory_NoHistoryEntries" xml:space="preserve">
+    <value>Sie haben keine gespeicherten Routen.</value>
+  </data>
+  <data name="RouteHistory_To" xml:space="preserve">
+    <value>nach:</value>
+  </data>
+  <data name="RoutingPageView_DisplayName" xml:space="preserve">
+    <value>Routen</value>
+  </data>
 </root>

@@ -52,5 +52,12 @@ namespace MundlTransit.WP8.Views.Routing
 
             ApplicationBar.Buttons.Add(nowAppBarButton);
         }
+
+        private void RoutingPanorama_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            bool isNewRouteView = ((PanoramaItem)(((Panorama)sender).SelectedItem)).Content is NewRouteView;
+
+            ApplicationBar.IsVisible = isNewRouteView;
+        }
     }
 }
