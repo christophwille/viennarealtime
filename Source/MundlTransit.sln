@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbPrepare", "DbPrepare\DbPrepare.csproj", "{91427962-4311-482B-B3FC-638AB942D6B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundlTransit.WP8", "MundlTransit.WP8\MundlTransit.WP8.csproj", "{77C4E411-C07D-4D3B-9323-2E95A8437610}"
@@ -12,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WienerLinien.Api.Tests", "WienerLinien.Api.Tests\WienerLinien.Api.Tests.csproj", "{D1EE558B-3307-4AD4-A316-910F790F304F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sqlite", "sqlite-net-wp8\Sqlite.vcxproj", "{59B35F6C-E062-4F0E-88D8-13F3F82A24F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundlTransit.ProtocolTester", "MundlTransit.ProtocolTester\MundlTransit.ProtocolTester.csproj", "{EA664269-CD4C-4236-8322-825E6A81EB21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -257,6 +261,66 @@ Global
 		{59B35F6C-E062-4F0E-88D8-13F3F82A24F3}.Release|Win32.Build.0 = Release|Win32
 		{59B35F6C-E062-4F0E-88D8-13F3F82A24F3}.Release|x86.ActiveCfg = Release|Win32
 		{59B35F6C-E062-4F0E-88D8-13F3F82A24F3}.Release|x86.Build.0 = Release|Win32
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|Any CPU.Build.0 = Debug|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|Any CPU.Deploy.0 = Debug|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|ARM.ActiveCfg = Debug|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|ARM.Build.0 = Debug|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|ARM.Deploy.0 = Debug|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|Mixed Platforms.ActiveCfg = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|Mixed Platforms.Build.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|Mixed Platforms.Deploy.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|Win32.ActiveCfg = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|Win32.Build.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|Win32.Deploy.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|x86.ActiveCfg = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|x86.Build.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug ARM|x86.Deploy.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|ARM.ActiveCfg = Debug|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|ARM.Build.0 = Debug|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|ARM.Deploy.0 = Debug|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|Win32.ActiveCfg = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|Win32.Build.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|Win32.Deploy.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|x86.ActiveCfg = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|x86.Build.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Debug|x86.Deploy.0 = Debug|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|Any CPU.ActiveCfg = Release|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|Any CPU.Build.0 = Release|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|Any CPU.Deploy.0 = Release|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|ARM.ActiveCfg = Release|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|ARM.Build.0 = Release|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|ARM.Deploy.0 = Release|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|Mixed Platforms.ActiveCfg = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|Mixed Platforms.Build.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|Mixed Platforms.Deploy.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|Win32.ActiveCfg = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|Win32.Build.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|Win32.Deploy.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|x86.ActiveCfg = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|x86.Build.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release ARM|x86.Deploy.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|ARM.ActiveCfg = Release|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|ARM.Build.0 = Release|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|ARM.Deploy.0 = Release|ARM
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|Mixed Platforms.Build.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|Mixed Platforms.Deploy.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|Win32.ActiveCfg = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|Win32.Build.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|Win32.Deploy.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|x86.ActiveCfg = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|x86.Build.0 = Release|x86
+		{EA664269-CD4C-4236-8322-825E6A81EB21}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -257,6 +257,9 @@ namespace MundlTransit.WP8
             if (phoneApplicationInitialized)
                 return;
 
+            // Assign the URI-mapper class to the application frame.
+            RootFrame.UriMapper = new AssociationUriMapper();
+
             // Handle navigation failures
             RootFrame.NavigationFailed += RootFrame_NavigationFailed;
 

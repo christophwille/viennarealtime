@@ -160,6 +160,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="AssociationUriMapper.cs" />
     <Compile Include="Common\AlphaKeyGroup.cs" />
     <Compile Include="Common\BindableRuns.cs" />
     <Compile Include="Common\DataTemplateSelector.cs" />
