@@ -42,23 +42,37 @@ namespace MundlTransit.WP8.ViewModels.LineInfo
         {
             _haltestellen = await _dataService.GetHaltestellenForLinieAsync(NavigationLineId);
 
-            Richtung = OgdLinie.Retour;
+            if (String.IsNullOrWhiteSpace(Richtung))
+            {
+                Richtung = OgdLinie.Retour;
+            }
+            else
+            {
+                // We come from Storage - invert, so ChangeDirection reverts it back to what was stored
+                InvertDirectionProperty();
+            }
+
             ChangeDirection();
         }
 
         public void ChangeDirection()
         {
-            Richtung = (Richtung == OgdLinie.Retour) ? OgdLinie.Hin : OgdLinie.Retour;
+            InvertDirectionProperty();
 
             var stations = _haltestellen.Where(h => h.Richtung == Richtung).OrderBy(h => h.Reihenfolge).ToList();
 
             Stations = new BindableCollection<LinienHaltestelleView>(stations);
             NotifyOfPropertyChange(() => Stations);
 
-            // There could be no stations
+            // There could be no stations in collection
             LineDirection = stations.Any() ? stations.Last().Bezeichnung : "";
             
             NotifyOfPropertyChange(() => LineDirection);
+        }
+
+        private void InvertDirectionProperty()
+        {
+            Richtung = (Richtung == OgdLinie.Retour) ? OgdLinie.Hin : OgdLinie.Retour;
         }
 
         public void ShowStation(object sender)

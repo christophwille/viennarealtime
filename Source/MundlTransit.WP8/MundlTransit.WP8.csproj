@@ -214,6 +214,7 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="SettingsPageViewModel.cs" />
+    <Compile Include="StorageHandlers\LineInfoPageViewModelStorage.cs" />
     <Compile Include="StorageHandlers\NewRouteViewModelStorage.cs" />
     <Compile Include="StorageHandlers\StationInfoPivotPageViewModelStorage.cs" />
     <Compile Include="StorageHandlers\StationsPivotPageModelStorage.cs" />
