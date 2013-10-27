@@ -24,7 +24,7 @@ namespace MundlTransit.WP8.ViewModels.LineInfo
         }
 
         public int NavigationLineId { get; set; }
-        public string LineName { get; set; }
+        public string NavigationLineName { get; set; }
         public string LineDirection { get; set; }
 
         public BindableCollection<LinienHaltestelleView> Stations { get; set; }
@@ -36,26 +36,28 @@ namespace MundlTransit.WP8.ViewModels.LineInfo
         }
 
         private List<LinienHaltestelleView> _haltestellen;
-        private string _richtung;
+        public string Richtung { get; set; }
 
         protected async Task LoadLinienStationsAsync()
         {
             _haltestellen = await _dataService.GetHaltestellenForLinieAsync(NavigationLineId);
 
-            _richtung = OgdLinie.Retour;
+            Richtung = OgdLinie.Retour;
             ChangeDirection();
         }
 
         public void ChangeDirection()
         {
-            _richtung = (_richtung == OgdLinie.Retour) ? OgdLinie.Hin : OgdLinie.Retour;
+            Richtung = (Richtung == OgdLinie.Retour) ? OgdLinie.Hin : OgdLinie.Retour;
 
-            var stations = _haltestellen.Where(h => h.Richtung == _richtung).OrderBy(h => h.Reihenfolge).ToList();
+            var stations = _haltestellen.Where(h => h.Richtung == Richtung).OrderBy(h => h.Reihenfolge).ToList();
 
             Stations = new BindableCollection<LinienHaltestelleView>(stations);
             NotifyOfPropertyChange(() => Stations);
 
-            LineDirection = stations.Last().Bezeichnung;
+            // There could be no stations
+            LineDirection = stations.Any() ? stations.Last().Bezeichnung : "";
+            
             NotifyOfPropertyChange(() => LineDirection);
         }
 

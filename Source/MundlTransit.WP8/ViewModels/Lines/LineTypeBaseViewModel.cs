@@ -56,7 +56,7 @@ namespace MundlTransit.WP8.ViewModels.Lines
             {
                 _navigationService.UriFor<LineInfoPageViewModel>()
                     .WithParam(vm => vm.NavigationLineId, item.Id)
-                    .WithParam(vm => vm.LineName, item.Bezeichnung)
+                    .WithParam(vm => vm.NavigationLineName, item.Bezeichnung)
                     .Navigate();
             });
         }

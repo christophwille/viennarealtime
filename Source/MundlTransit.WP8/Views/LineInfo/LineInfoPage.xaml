@@ -49,7 +49,7 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="{Binding LineName}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="{Binding NavigationLineName}" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="{Binding LineDirection}" 
                         cm:Message.Attach="[Event Tap] = [Action ChangeDirection]"
                        Margin="9,-7,0,0" 
