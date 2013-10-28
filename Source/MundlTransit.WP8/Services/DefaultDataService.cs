@@ -106,6 +106,13 @@ namespace MundlTransit.WP8.Services
             return h;
         }
 
+        public async Task<Haltestelle> GetHaltestelleAsync(string name)
+        {
+            var db = new ReferenceDataContext();
+            var h = await db.GetHaltestelleAsync(name).ConfigureAwait(false);
+            return h;
+        }
+
         public async Task<List<Haltestelle>> GetHaltestellenAsync(List<int> ids)
         {
             var db = new ReferenceDataContext();

@@ -5,6 +5,7 @@ using System.Net;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
+using Windows.System;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
@@ -19,7 +20,12 @@ namespace MundlTransit.ProtocolTester
 
         private void StationLauncher_Click(object sender, RoutedEventArgs e)
         {
-            Windows.System.Launcher.LaunchUriAsync(new System.Uri("vie-pt:Departures?StationId=214460793"));  // Kleistgasse
+            Launcher.LaunchUriAsync(new Uri("vie-pt:Departures?StationId=214460793"));  // Kleistgasse
+        }
+
+        private void StationLauncherByName_Click(object sender, RoutedEventArgs e)
+        {
+            Launcher.LaunchUriAsync(new Uri("vie-pt:Departures?Station=Schwedenplatz"));
         }
     }
 }

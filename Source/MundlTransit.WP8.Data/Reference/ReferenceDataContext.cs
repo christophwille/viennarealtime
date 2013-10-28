@@ -85,6 +85,14 @@ namespace MundlTransit.WP8.Data.Reference
             return matched.FirstOrDefault();
         }
 
+        public async Task<Haltestelle> GetHaltestelleAsync(string name)
+        {
+            var query = _connection.Table<Haltestelle>().Where(h => h.Bezeichnung == name);
+
+            var matched = await query.ToListAsync().ConfigureAwait(false);
+            return matched.FirstOrDefault();
+        }
+
         public async Task<List<Haltestelle>> GetNearestHaltestellenAsync(double latP3, double latP1, double lonP2, double lonP4)
         {
             var query = _connection.Table<Haltestelle>().Where(h =>

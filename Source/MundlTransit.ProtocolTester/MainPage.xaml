@@ -30,8 +30,16 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Button x:Name="StationLauncher" 
-                    Content="Launch with StationId" 
-                    HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="StationLauncher_Click"/>
+                    Content="Launch with Station Id" 
+                    HorizontalAlignment="Left" 
+                    Margin="10,10,0,0" 
+                    VerticalAlignment="Top" 
+                    Click="StationLauncher_Click"/>
+            <Button x:Name="StationLauncherByName" 
+                    Content="Launch with Station Name" 
+                    HorizontalAlignment="Left" 
+                    Margin="10,103,0,0" 
+                    VerticalAlignment="Top" Click="StationLauncherByName_Click"/>
 
         </Grid>
 

@@ -17,6 +17,7 @@ namespace MundlTransit.WP8.Services
         Task<List<Haltestelle>> GetHaltestellenAsync();
         Task<List<Haltestelle>> GetNearestHaltestellenAsync(Wgs84Location center, double radius = 500.0);
         Task<Haltestelle> GetHaltestelleAsync(int id);
+        Task<Haltestelle> GetHaltestelleAsync(string name);
         Task<List<Haltestelle>> GetHaltestellenAsync(List<int> ids);
 
         Task<List<OgdLinie>> GetLinienAsync();

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Navigation;
 using Windows.Foundation;
+using Caliburn.Micro;
+using MundlTransit.WP8.Data.Reference;
+using MundlTransit.WP8.Services;
 
 namespace MundlTransit.WP8
 {
@@ -18,6 +21,7 @@ namespace MundlTransit.WP8
         private const string ProtocolQueryStringParameterName = "encodedLaunchUri=";
         private const string NavigateToDepartures = "Departures";
         private const string StationIdParameterName = "StationId";
+        private const string StationNameParameterName = "Station";
 
         public override Uri MapUri(Uri uri)
         {
@@ -42,11 +46,36 @@ namespace MundlTransit.WP8
                         // Path: Departures
                         if (0 == String.Compare(NavigateToDepartures, launchUri.LocalPath, StringComparison.InvariantCultureIgnoreCase))
                         {
-                            string stationIdValue = qsParameters[StationIdParameterName]; // throws Exception if not found
-                            int stationId = Int32.Parse(stationIdValue);    // throws too
+                            int stationId = 0;
+                            if (qsParameters.ContainsKey(StationIdParameterName))
+                            {
+                                string stationIdValue = qsParameters[StationIdParameterName];
+                                Int32.TryParse(stationIdValue, out stationId);
+                            }
+                            else if (qsParameters.ContainsKey(StationNameParameterName))
+                            {
+                                var haltestelle = GetHaltestelleSync(qsParameters[StationNameParameterName]);
 
-                            return new Uri("/Views/StationInfo/StationInfoPivotPage.xaml?NavigationStationId=" + stationId,
-                                UriKind.Relative);
+                                if (null != haltestelle)
+                                {
+                                    stationId = haltestelle.Id;
+                                }
+                                else
+                                {
+                                    Debug.WriteLine("AssociationUriMapper: station not found by name");
+
+                                    // TODO (maybe): send user to station search page with passed station name as textbox content
+                                }
+                            }
+
+                            // If no stationId found, fall through to default behavior
+                            if (0 != stationId)
+                            {
+                                return
+                                    new Uri(
+                                        "/Views/StationInfo/StationInfoPivotPage.xaml?NavigationStationId=" + stationId,
+                                        UriKind.Relative);
+                            }
                         }
                     }
                 }
@@ -59,6 +88,22 @@ namespace MundlTransit.WP8
             // Default: perform normal launch
             return uri;
         }
+
+        private Haltestelle GetHaltestelleSync(string name)
+        {
+            var dataSvc = IoC.Get<IDataService>();
+            Haltestelle haltestelle = null;
+
+            var t = Task.Run(async () =>
+            {
+                haltestelle = await dataSvc.GetHaltestelleAsync(name).ConfigureAwait(false);
+            });
+
+            t.Wait();
+
+            return haltestelle;
+        }
+
 
         // Adapted from http://stackoverflow.com/questions/15888883/is-there-a-simple-way-to-get-query-string-parameters-from-a-uri-in-windows-phone?lq=1
         public static Dictionary<string, string> ParseQueryString(Uri uri)
