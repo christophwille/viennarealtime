@@ -12,17 +12,11 @@ namespace MundlTransit.WP8.StorageHandlers
     {
         public override void Configure()
         {
-            Property(vm => vm.NavigationLineId)
-                .InPhoneState()
-                .RestoreAfterViewLoad();
-
-            Property(vm => vm.NavigationLineName)
-                .InPhoneState()
-                .RestoreAfterViewLoad();
+            // No need to store navigation properties
 
             Property(vm => vm.Richtung)
                 .InPhoneState()
-                .RestoreAfterViewLoad();
+                .RestoreAfterActivation();  // this property is needed in OnActivate
         }
     }
 }
