@@ -308,7 +308,7 @@
     <value>To</value>
   </data>
   <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
-    <value>No stops found near</value>
+    <value>No stops were found near your current location. Coordinates (longitude and latitude)</value>
   </data>
   <data name="PositionMessage_YourPosition" xml:space="preserve">
     <value>Your position</value>

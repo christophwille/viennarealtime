@@ -251,9 +251,6 @@
   <data name="MonitorError_ServerStopDoesNotExist" xml:space="preserve">
     <value>[2791D][!!_Τħíš ŝţóр đòéś ήóт èхįśτ (şţõþ đãτàъãşè òùť òƒ đâтę?)._!!!!!!!!!!!!!!!!]</value>
   </data>
-  <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
-    <value>[1E0CF][!!_Ňõ ŝτòрš ƒóûйď йèâѓ_!!!!!!]</value>
-  </data>
   <data name="PositionMessage_YourPosition" xml:space="preserve">
     <value>[DA61F][!!_Ýóúř ρóšįţíôи_!!]</value>
   </data>

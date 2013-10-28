@@ -260,8 +260,8 @@
           <target state="signed-off">am schnellsten</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/PositionMessage_NoStopsFoundNear" xml:space="preserve">
-          <source>No stops found near</source>
-          <target state="signed-off">Keine Haltestellen nahe</target>
+          <source>No stops were found near your current location. Coordinates (longitude and latitude)</source>
+          <target state="signed-off">Es wurden keine Stationen in der Nähe Ihrer Position gefunden. Aktuelle Position (geog. Länge und Breite)</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/PositionMessage_YourPosition" xml:space="preserve">
           <source>Your position</source>

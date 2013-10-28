@@ -251,9 +251,6 @@
   <data name="MonitorError_ServerStopDoesNotExist" xml:space="preserve">
     <value>Diese Haltestelle existiert nicht (Haltestellen-Datenbank veraltet?).</value>
   </data>
-  <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
-    <value>Keine Haltestellen nahe</value>
-  </data>
   <data name="PositionMessage_YourPosition" xml:space="preserve">
     <value>Ihre Position</value>
   </data>
@@ -425,5 +422,8 @@
   </data>
   <data name="RoutingPageView_DisplayName" xml:space="preserve">
     <value>Routen</value>
+  </data>
+  <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
+    <value>Es wurden keine Stationen in der Nähe Ihrer Position gefunden. Aktuelle Position (geog. Länge und Breite)</value>
   </data>
 </root>

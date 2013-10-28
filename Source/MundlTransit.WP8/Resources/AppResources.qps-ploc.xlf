@@ -260,8 +260,8 @@
           <target state="new">fastest</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/PositionMessage_NoStopsFoundNear" xml:space="preserve">
-          <source>No stops found near</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">[1E0CF][!!_Ňõ ŝτòрš ƒóûйď йèâѓ_!!!!!!]</target>
+          <source>No stops were found near your current location. Coordinates (longitude and latitude)</source>
+          <target state="new" state-qualifier="mt-suggestion">No stops were found near your current location. Coordinates (longitude and latitude)</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/PositionMessage_YourPosition" xml:space="preserve">
           <source>Your position</source>
