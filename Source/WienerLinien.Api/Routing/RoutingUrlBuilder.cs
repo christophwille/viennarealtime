@@ -33,13 +33,10 @@ namespace WienerLinien.Api.Routing
             {
                 case RouteTypeOption.LeastTime:
                     return "LEASTTIME";
-                    break;
                 case RouteTypeOption.LeastInterchange:
                     return "LEASTINTERCHANGE";
-                    break;
                 case RouteTypeOption.LeastWalking:
                     return "LEASTWALKING";
-                    break;
                 default:
                     throw new ArgumentOutOfRangeException("option");
             }

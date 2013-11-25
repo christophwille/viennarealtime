@@ -16,37 +16,26 @@ namespace MundlTransit.WP8.Services
             {
                 case MonitorInformationErrorCode.RblNotSpecified:
                     return AppResources.MonitorError_RblNotSpecified;
-                    break;
                 case MonitorInformationErrorCode.DownloadingFailed:
                     return AppResources.MonitorError_DownloadingFailed;
-                    break;
                 case MonitorInformationErrorCode.ResponseParsingFailed:
                     return AppResources.MonitorError_ResponseParsingFailed;
-                    break;
                 case MonitorInformationErrorCode.MonitorsEmpty:
                     return AppResources.MonitorError_MonitorsEmpty;
-                    break;
                 case MonitorInformationErrorCode.ServerDatabaseUnavailable:
                     return AppResources.MonitorError_ServerDatabaseUnavailable;
-                    break;
                 case MonitorInformationErrorCode.ServerStopDoesNotExist:
                     return AppResources.MonitorError_ServerStopDoesNotExist;
-                    break;
                 case MonitorInformationErrorCode.ServerCallQuotaExceeded:
                     return AppResources.MonitorError_ServerCallQuotaExceeded;
-                    break;
                 case MonitorInformationErrorCode.ServerAuthenticationFailed:
                     return AppResources.MonitorError_ServerAuthenticationFailed;
-                    break;
                 case MonitorInformationErrorCode.ServerQueryStringParameterInvalid:
                     return AppResources.MonitorError_ServerQueryStringParameterInvalid;
-                    break;
                 case MonitorInformationErrorCode.ServerNoDataInDatabase:
                     return AppResources.MonitorError_ServerNoDataInDatabase;
-                    break;
                 default:
                     return AppResources.MonitorError_GenericError;
-                    break;
             }
         }
     }
