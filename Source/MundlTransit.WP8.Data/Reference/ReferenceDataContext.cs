@@ -16,30 +16,6 @@ namespace MundlTransit.WP8.Data.Reference
             "referencedata20130829.db3",
         }; 
 
-        #region DbPrepare functions
-        public static SQLiteConnection CreateConnection()
-        {
-            return new SQLiteConnection(DatabaseName);
-        }
-
-        public static void InitializeDatabase()
-        {
-            using (var db = CreateConnection())
-            {
-                InitializeDatabase(db);
-            }
-        }
-
-        public static void InitializeDatabase(SQLiteConnection db)
-        {
-            db.CreateTable<Haltestelle>();
-
-            db.CreateTable<OgdLinie>();
-            db.CreateTable<OgdSteig>();
-            db.CreateTable<OgdHaltestelle>();
-        }
-        #endregion
-
         private static SQLiteAsyncConnection CreateAsyncConnection()
         {
             return new SQLiteAsyncConnection(DatabaseName);

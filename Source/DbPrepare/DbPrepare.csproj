@@ -69,6 +69,21 @@
     <Compile Include="..\MundlTransit.WP8.Data\Reference\Haltestelle.cs">
       <Link>Data\Haltestelle.cs</Link>
     </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\Import\CsvHaltestelle.cs">
+      <Link>WP8.Data.Reference\Import\CsvHaltestelle.cs</Link>
+    </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\Import\CsvLinie.cs">
+      <Link>WP8.Data.Reference\Import\CsvLinie.cs</Link>
+    </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\Import\CsvSteig.cs">
+      <Link>WP8.Data.Reference\Import\CsvSteig.cs</Link>
+    </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\Import\CsvToOgd.cs">
+      <Link>WP8.Data.Reference\Import\CsvToOgd.cs</Link>
+    </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\LinienAtHaltestelleModel.cs">
+      <Link>Data\LinienAtHaltestelleModel.cs</Link>
+    </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\LinienHaltestelleView.cs">
       <Link>Data\LinienHaltestelleView.cs</Link>
     </Compile>
@@ -84,10 +99,10 @@
     <Compile Include="..\MundlTransit.WP8.Data\Reference\ReferenceDataContext.cs">
       <Link>Data\ReferenceDataContext.cs</Link>
     </Compile>
+    <Compile Include="..\MundlTransit.WP8.Data\Reference\ReferenceDataContext.Import.cs">
+      <Link>Data\ReferenceDataContext.Import.cs</Link>
+    </Compile>
     <Compile Include="Common\OgdDownloader.cs" />
-    <Compile Include="Ogd\CsvHaltestelle.cs" />
-    <Compile Include="Ogd\CsvLinie.cs" />
-    <Compile Include="Ogd\CsvSteig.cs" />
     <Compile Include="Ogd\Importer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

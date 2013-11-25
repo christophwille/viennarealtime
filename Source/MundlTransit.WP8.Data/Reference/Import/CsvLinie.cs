@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DbPrepare.Ogd
+namespace MundlTransit.WP8.Data.Reference.Import
 {
     //
     // "LINIEN_ID";"BEZEICHNUNG";"REIHENFOLGE";"ECHTZEIT";"VERKEHRSMITTEL";"STAND"
     //
-    class CsvLinie
+    public class CsvLinie
     {
         public int LINIEN_ID { get; set; }
         public string BEZEICHNUNG { get; set; }

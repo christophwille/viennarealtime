@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Globalization;
 
-namespace DbPrepare.Ogd
+namespace MundlTransit.WP8.Data.Reference.Import
 {
     //
     // "HALTESTELLEN_ID";"TYP";"DIVA";"NAME";"GEMEINDE";"GEMEINDE_ID";"WGS84_LAT";"WGS84_LON";"STAND"
     //
-    class CsvHaltestelle
+    public class CsvHaltestelle
     {
         public int HALTESTELLEN_ID { get; set; }
         public string TYP { get; set; }

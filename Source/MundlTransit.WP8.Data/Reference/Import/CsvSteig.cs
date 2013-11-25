@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DbPrepare.Ogd
+namespace MundlTransit.WP8.Data.Reference.Import
 {
     //
     // "STEIG_ID";"FK_LINIEN_ID";"FK_HALTESTELLEN_ID";"RICHTUNG";"REIHENFOLGE";"RBL_NUMMER";"BEREICH";"STEIG";"STEIG_WGS84_LAT";"STEIG_WGS84_LON";"STAND"
     // 
-    class CsvSteig
+    public class CsvSteig
     {
         public int STEIG_ID { get; set; }
         public int FK_LINIEN_ID { get; set; }

@@ -143,6 +143,11 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Reference\Import\CsvHaltestelle.cs" />
+    <Compile Include="Reference\Import\CsvLinie.cs" />
+    <Compile Include="Reference\Import\CsvSteig.cs" />
+    <Compile Include="Reference\Import\CsvToOgd.cs" />
+    <Compile Include="Reference\LinienAtHaltestelleModel.cs" />
     <Compile Include="Reference\LinienHaltestelleView.cs" />
     <Compile Include="Reference\OgdHaltestelle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,6 +155,7 @@
     <Compile Include="Reference\OgdLinie.cs" />
     <Compile Include="Reference\ReferenceDataContext.cs" />
     <Compile Include="Reference\OgdSteig.cs" />
+    <Compile Include="Reference\ReferenceDataContext.Import.cs" />
     <Compile Include="Runtime\Favorite.cs" />
     <Compile Include="Runtime\RouteHistoryItem.cs" />
     <Compile Include="Runtime\RuntimeDataContext.cs" />
