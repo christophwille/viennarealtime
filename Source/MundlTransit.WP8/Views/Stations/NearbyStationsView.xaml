@@ -20,7 +20,9 @@
         </Grid.RowDefinitions>
 
         <StackPanel Margin="12,0,12,0" Grid.Row="0">
-            <TextBlock x:Name="InfoMessage" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="InfoMessage" 
+                       TextWrapping="Wrap"
+                       Style="{StaticResource PhoneTextNormalStyle}"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
