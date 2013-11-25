@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,14 +11,33 @@ namespace DbPrepare.Common
 {
     public class OgdDownloader
     {
-        public static string DownloadFile(string url)
+        public static async Task<string> GetAsStringAsync(string url)
         {
-            var client = new WebClient();
+            var handler = new HttpClientHandler();
 
-            byte[] rawData = client.DownloadData(url);
-            
-            var enc = Encoding.GetEncoding("ISO-8859-1");
-            return enc.GetString(rawData, 0, rawData.Count());
+            if (handler.SupportsAutomaticDecompression)
+            {
+                handler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+            }
+
+            var client = new HttpClient(handler);
+
+            try
+            {
+                using (var response = await client.GetAsync(url).ConfigureAwait(false))
+                {
+                    response.EnsureSuccessStatusCode();
+
+                    var body = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    return body;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+
+            return null;
         }
     }
 }

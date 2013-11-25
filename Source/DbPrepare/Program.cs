@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
+using DbPrepare.Common;
 using MundlTransit.WP8.Data.Reference;
 
 namespace DbPrepare
@@ -13,6 +14,8 @@ namespace DbPrepare
             System.IO.File.Delete(ReferenceDataContext.DatabaseName);   // delete old database first
 
             PerformImportActionsAsync().Wait();
+
+            Console.WriteLine("All operations completed. Press any key to continue...");
             Console.Read();
         }
 
@@ -24,10 +27,10 @@ namespace DbPrepare
             await ctx.InitializeDatabaseAsync();
 
             // Perform import
-            var importer = new Ogd.Importer();
+            var importer = new Ogd.Importer(ctx);
 
-            await importer.ImportAsync(ctx);
-            await ctx.CreateLookupTableAsync();
+            await importer.ImportAsync();
+            await importer.CreateLookupTableAsync();
         }
     }
 }
