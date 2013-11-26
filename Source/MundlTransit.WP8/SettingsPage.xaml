@@ -51,9 +51,23 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel>
             <toolkit:ToggleSwitch 
                 IsChecked="{Binding Checked, Mode=TwoWay}"
                 Header="{Binding Path=LocalizedResources.Settings_GeolocationForNearbyStations, Source={StaticResource LocalizedStrings}}"/>
+
+                <TextBlock 
+                    Style="{StaticResource PhoneTextNormalStyle}"
+                    Text="Manual database update (WIP)"/>
+                
+                <Button x:Name="BuildUserDatabase" Content="Download &amp; Build"></Button>
+
+                <TextBlock 
+                    Style="{StaticResource PhoneTextNormalStyle}"
+                    TextWrapping="Wrap"
+                    Text="This will download 3 files from the Internet (~1MB) and create a new lines / stops database"/>
+
+            </StackPanel>
         </Grid>
     </Grid>
 

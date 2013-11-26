@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -8,14 +9,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using CsvHelper;
 using CsvHelper.Configuration;
-using DbPrepare.Common;
+using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Data.Reference.Import;
 
-namespace DbPrepare.Ogd
+namespace MundlTransit.WP8.Services
 {
     // http://data.gv.at/datensatz/?id=add66f20-d033-4eee-b9a0-47019828e698
-    public class Importer
+    public class DefaultImportService
     {
         const string HaltestellenUrl = "http://data.wien.gv.at/csv/wienerlinien-ogd-haltestellen.csv";
         const string LinienUrl = "http://data.wien.gv.at/csv/wienerlinien-ogd-linien.csv";
@@ -24,25 +25,41 @@ namespace DbPrepare.Ogd
         private CsvConfiguration _csvConfiguration;
         private ReferenceDataContext _ctx;
 
-        public Importer(ReferenceDataContext ctx)
+        public DefaultImportService(ReferenceDataContext ctx)
         {
             _ctx = ctx;
 
             _csvConfiguration = new CsvConfiguration()
             {
-                Delimiter = ";"
+                Delimiter = ";",
+                CultureInfo = new CultureInfo("en")
             };
         }
 
-        public async Task ImportAsync()
+        public async Task<string> DownloadHaltestellenAsync()
         {
-            string haltestellen = await OgdDownloader.GetAsStringAsync(HaltestellenUrl).ConfigureAwait(false);
-            string linien = await OgdDownloader.GetAsStringAsync(LinienUrl).ConfigureAwait(false);
-            string steige = await OgdDownloader.GetAsStringAsync(SteigeUrl).ConfigureAwait(false);
+            return await DownloadClient.GetAsStringAsync(HaltestellenUrl).ConfigureAwait(false);
+        }
+
+        public async Task<string> DownloadLinienAsync()
+        {
+            return await DownloadClient.GetAsStringAsync(LinienUrl).ConfigureAwait(false);
+        }
+
+        public async Task<string> DownloadSteigeAsync()
+        {
+            return await DownloadClient.GetAsStringAsync(SteigeUrl).ConfigureAwait(false);
+        }
+
+        public async Task ImportBatchAsync()
+        {
+            string haltestellen = await DownloadHaltestellenAsync().ConfigureAwait(false);
+            string linien = await DownloadLinienAsync().ConfigureAwait(false);
+            string steige = await DownloadSteigeAsync().ConfigureAwait(false);
 
             if (null == haltestellen || null == linien || null == steige)
             {
-                Console.WriteLine("Error downloading reference CSV files from data.wien.gv.at");
+                Debug.WriteLine("Error downloading reference CSV files from data.wien.gv.at");
                 return;
             }
 
@@ -58,12 +75,10 @@ namespace DbPrepare.Ogd
 
         private TextReader GetAsTextReader(string data)
         {
-            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en");
-
             return new StringReader(data);
         }
 
-        private async Task ImportHaltestellenAsync(string data)
+        public async Task ImportHaltestellenAsync(string data)
         {
             var csv = new CsvReader(GetAsTextReader(data), _csvConfiguration);
             var haltestellen = csv.GetRecords<CsvHaltestelle>().ToList();
@@ -73,7 +88,7 @@ namespace DbPrepare.Ogd
             await _ctx.InsertAsync(toInsert).ConfigureAwait(false);
         }
 
-        private async Task ImportLinienAsync(string data)
+        public async Task ImportLinienAsync(string data)
         {
             var csv = new CsvReader(GetAsTextReader(data), _csvConfiguration);
             var linien = csv.GetRecords<CsvLinie>().ToList();
@@ -83,7 +98,7 @@ namespace DbPrepare.Ogd
             await _ctx.InsertAsync(toInsert).ConfigureAwait(false);
         }
 
-        private async Task ImportSteigeAsync(string data)
+        public async Task ImportSteigeAsync(string data)
         {
             var csv = new CsvReader(GetAsTextReader(data), _csvConfiguration);
             var steige = csv.GetRecords<CsvSteig>().ToList();

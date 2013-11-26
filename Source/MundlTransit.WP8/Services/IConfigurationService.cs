@@ -15,5 +15,7 @@ namespace MundlTransit.WP8.Services
 
         string MapApplicationId { get; }
         string MapAuthenticationToken { get; }
+
+        bool UsingDefaultReferenceDatabase { get; set; }
     }
 }

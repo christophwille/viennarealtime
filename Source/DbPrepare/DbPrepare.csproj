@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\Haltestelle.cs">
-      <Link>Data\Haltestelle.cs</Link>
+      <Link>WP8.Data.Reference\Haltestelle.cs</Link>
     </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\Import\CsvHaltestelle.cs">
       <Link>WP8.Data.Reference\Import\CsvHaltestelle.cs</Link>
@@ -90,28 +90,32 @@
       <Link>WP8.Data.Reference\Import\CsvToOgd.cs</Link>
     </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\LinienAtHaltestelleModel.cs">
-      <Link>Data\LinienAtHaltestelleModel.cs</Link>
+      <Link>WP8.Data.Reference\LinienAtHaltestelleModel.cs</Link>
     </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\LinienHaltestelleView.cs">
-      <Link>Data\LinienHaltestelleView.cs</Link>
+      <Link>WP8.Data.Reference\LinienHaltestelleView.cs</Link>
     </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\OgdHaltestelle.cs">
-      <Link>Data\OgdHaltestelle.cs</Link>
+      <Link>WP8.Data.Reference\OgdHaltestelle.cs</Link>
     </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\OgdLinie.cs">
-      <Link>Data\OgdLinie.cs</Link>
+      <Link>WP8.Data.Reference\OgdLinie.cs</Link>
     </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\OgdSteig.cs">
-      <Link>Data\OgdSteig.cs</Link>
+      <Link>WP8.Data.Reference\OgdSteig.cs</Link>
     </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\ReferenceDataContext.cs">
-      <Link>Data\ReferenceDataContext.cs</Link>
+      <Link>WP8.Data.Reference\ReferenceDataContext.cs</Link>
     </Compile>
     <Compile Include="..\MundlTransit.WP8.Data\Reference\ReferenceDataContext.Import.cs">
-      <Link>Data\ReferenceDataContext.Import.cs</Link>
+      <Link>WP8.Data.Reference\ReferenceDataContext.Import.cs</Link>
     </Compile>
-    <Compile Include="Common\OgdDownloader.cs" />
-    <Compile Include="Ogd\Importer.cs" />
+    <Compile Include="..\MundlTransit.WP8\Common\DownloadClient.cs">
+      <Link>WP8.Common\DownloadClient.cs</Link>
+    </Compile>
+    <Compile Include="..\MundlTransit.WP8\Services\DefaultImportService.cs">
+      <Link>WP8.Services\DefaultImportService.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLite.cs" />

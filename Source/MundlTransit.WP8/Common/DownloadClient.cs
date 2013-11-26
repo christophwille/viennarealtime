@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DbPrepare.Common
+namespace MundlTransit.WP8.Common
 {
-    public class OgdDownloader
+    public class DownloadClient
     {
         public static async Task<string> GetAsStringAsync(string url)
         {

@@ -2,8 +2,8 @@
 using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
-using DbPrepare.Common;
 using MundlTransit.WP8.Data.Reference;
+using MundlTransit.WP8.Services;
 
 namespace DbPrepare
 {
@@ -27,9 +27,9 @@ namespace DbPrepare
             await ctx.InitializeDatabaseAsync();
 
             // Perform import
-            var importer = new Ogd.Importer(ctx);
+            var importer = new DefaultImportService(ctx);
 
-            await importer.ImportAsync();
+            await importer.ImportBatchAsync();
             await importer.CreateLookupTableAsync();
         }
     }

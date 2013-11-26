@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,44 @@ namespace MundlTransit.WP8.Services
         public string MapAuthenticationToken
         {
             get { return (string)App.Current.Resources["MapAuthenticationToken"]; }
+        }
+
+        #region Isolated Storage Helpers
+        private T GetValue<T>(string settingName)
+        {
+            return (T)IsolatedStorageSettings.ApplicationSettings[settingName];
+        }
+
+        public Nullable<T> TryGetValue<T>(string settingName) where T : struct
+        {
+            if (IsolatedStorageSettings.ApplicationSettings.Contains(settingName))
+            {
+                return GetValue<T>(settingName);
+            }
+
+            return (Nullable<T>)null;
+        }
+
+        public void SetValue<T>(string settingName, T value)
+        {
+            IsolatedStorageSettings.ApplicationSettings[settingName] = value;
+            IsolatedStorageSettings.ApplicationSettings.Save();
+        }
+        #endregion
+
+        private const string SettingUsingDefaultReferenceDatabase = "UsingDefaultReferenceDatabase";
+
+        public bool UsingDefaultReferenceDatabase
+        {
+            get
+            {
+                var result = TryGetValue<bool>(SettingUsingDefaultReferenceDatabase);
+                return (result == null || result.Value == true);
+            }
+            set
+            {
+                SetValue<bool>(SettingUsingDefaultReferenceDatabase, value);
+            }
         }
     }
 }

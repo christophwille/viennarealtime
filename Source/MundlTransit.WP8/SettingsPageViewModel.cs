@@ -11,10 +11,12 @@ namespace MundlTransit.WP8
     public class SettingsPageViewModel : Screen
     {
         private readonly ILocationService _locationService;
+        private readonly IConfigurationService _configurationService;
 
-        public SettingsPageViewModel(ILocationService locsvc)
+        public SettingsPageViewModel(ILocationService locsvc, IConfigurationService configurationService)
         {
             _locationService = locsvc;
+            _configurationService = configurationService;
         }
 
         // OnInitialize is called only once, we want to do it on every activation of this screen
@@ -40,6 +42,11 @@ namespace MundlTransit.WP8
                     NotifyOfPropertyChange(() => Checked);
                 }
             }
+        }
+
+        public async void BuildUserDatabase()
+        {
+            
         }
     }
 }
