@@ -97,8 +97,10 @@ namespace MundlTransit.WP8
 
                 _configurationService.UsingDefaultReferenceDatabase = false;
                 _configurationService.CustomReferenceDatabaseName = dbName;
+                _configurationService.ReferenceDatabaseBuildDate = DateTime.Now.Date;
 
                 NotifyOfPropertyChange(() => CanRevertToDefault);
+                NotifyOfPropertyChange(() => DatabaseBuildDateMessage);
             }
             catch (Exception ex)
             {
@@ -115,13 +117,23 @@ namespace MundlTransit.WP8
             }
         }
 
+        public string DatabaseBuildDateMessage
+        {
+            get
+            {
+                return _configurationService.ReferenceDatabaseBuildDate.ToShortDateString();
+            }
+        }
+
         public void RevertToDefault()
         {
             _configurationService.UsingDefaultReferenceDatabase = true;
             _configurationService.CustomReferenceDatabaseName = String.Empty;
+            _configurationService.ReferenceDatabaseBuildDate = ReferenceDataContext.ReferenceDatabaseBuildDate;
 
             ProgressMessage = "";
             NotifyOfPropertyChange(() => CanRevertToDefault);
+            NotifyOfPropertyChange(() => DatabaseBuildDateMessage);
         }
     }
 }

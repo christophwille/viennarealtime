@@ -18,5 +18,6 @@ namespace MundlTransit.WP8.Services
 
         bool UsingDefaultReferenceDatabase { get; set; }
         string CustomReferenceDatabaseName { get; set; }
+        DateTime ReferenceDatabaseBuildDate { get; set; }
     }
 }

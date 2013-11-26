@@ -844,6 +844,15 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Database built on:.
+        /// </summary>
+        public static string Settings_Database_DateInfo {
+            get {
+                return ResourceManager.GetString("Settings_Database_DateInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Geolocation for nearby stations.
         /// </summary>
         public static string Settings_GeolocationForNearbyStations {

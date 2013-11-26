@@ -381,6 +381,9 @@
   <data name="Settings_BuildUserDatabase_Button" xml:space="preserve">
     <value>Download data and rebuild</value>
   </data>
+  <data name="Settings_Database_DateInfo" xml:space="preserve">
+    <value>Database built on:</value>
+  </data>
   <data name="Settings_GeolocationForNearbyStations" xml:space="preserve">
     <value>Geolocation for nearby stations</value>
   </data>

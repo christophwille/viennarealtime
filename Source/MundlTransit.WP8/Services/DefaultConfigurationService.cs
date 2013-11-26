@@ -4,6 +4,7 @@ using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MundlTransit.WP8.Data.Reference;
 
 namespace MundlTransit.WP8.Services
 {
@@ -69,6 +70,7 @@ namespace MundlTransit.WP8.Services
 
         private const string SettingUsingDefaultReferenceDatabase = "UsingDefaultReferenceDatabase";
         private const string SettingCustomReferenceDatabaseName = "CustomReferenceDatabaseName";
+        private const string SettingReferenceDatabaseBuildDate = "ReferenceDatabaseBuildDate";
 
         public bool UsingDefaultReferenceDatabase
         {
@@ -92,6 +94,22 @@ namespace MundlTransit.WP8.Services
             set
             {
                 SetValue<string>(SettingCustomReferenceDatabaseName, value);
+            }
+        }
+
+        public DateTime ReferenceDatabaseBuildDate
+        {
+            get
+            {
+                var result = TryGetValue<DateTime>(SettingReferenceDatabaseBuildDate);
+                if (null != result) 
+                    return result.Value;
+
+                return ReferenceDataContext.ReferenceDatabaseBuildDate;
+            }
+            set
+            {
+                SetValue<DateTime>(SettingReferenceDatabaseBuildDate, value);
             }
         }
     }

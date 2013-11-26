@@ -51,6 +51,7 @@ namespace MundlTransit.WP8
             {
                 cfgSvc.CustomReferenceDatabaseName = String.Empty;
                 cfgSvc.UsingDefaultReferenceDatabase = true;
+                cfgSvc.ReferenceDatabaseBuildDate = ReferenceDataContext.ReferenceDatabaseBuildDate;
             }
             else
             {

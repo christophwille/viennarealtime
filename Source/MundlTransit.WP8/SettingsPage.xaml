@@ -59,6 +59,15 @@
                 <TextBlock 
                     Style="{StaticResource PhoneTextTitle2Style}"
                     Text="{Binding Path=LocalizedResources.Settings_StationsDatabase_Header, Source={StaticResource LocalizedStrings}}"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock 
+                        Style="{StaticResource PhoneTextNormalStyle}"
+                        Text="{Binding Path=LocalizedResources.Settings_Database_DateInfo, Source={StaticResource LocalizedStrings}}" />
+                    <TextBlock 
+                        Style="{StaticResource PhoneTextNormalStyle}"
+                        x:Name="DatabaseBuildDateMessage" />
+                </StackPanel>
                 
                 <Button x:Name="RevertToDefault" 
                         Content="{Binding Path=LocalizedResources.Settings_RevertToDefault_Button, Source={StaticResource LocalizedStrings}}" />
