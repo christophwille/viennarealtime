@@ -40,14 +40,24 @@ namespace MundlTransit.WP8.Services
             return (T)IsolatedStorageSettings.ApplicationSettings[settingName];
         }
 
-        public Nullable<T> TryGetValue<T>(string settingName) where T : struct
+        public T? TryGetValue<T>(string settingName) where T : struct
         {
             if (IsolatedStorageSettings.ApplicationSettings.Contains(settingName))
             {
                 return GetValue<T>(settingName);
             }
 
-            return (Nullable<T>)null;
+            return (T?)null;
+        }
+
+        public string TryGetString(string settingName)
+        {
+            if (IsolatedStorageSettings.ApplicationSettings.Contains(settingName))
+            {
+                return GetValue<string>(settingName);
+            }
+
+            return String.Empty;
         }
 
         public void SetValue<T>(string settingName, T value)
@@ -58,6 +68,7 @@ namespace MundlTransit.WP8.Services
         #endregion
 
         private const string SettingUsingDefaultReferenceDatabase = "UsingDefaultReferenceDatabase";
+        private const string SettingCustomReferenceDatabaseName = "CustomReferenceDatabaseName";
 
         public bool UsingDefaultReferenceDatabase
         {
@@ -69,6 +80,18 @@ namespace MundlTransit.WP8.Services
             set
             {
                 SetValue<bool>(SettingUsingDefaultReferenceDatabase, value);
+            }
+        }
+
+        public string CustomReferenceDatabaseName
+        {
+            get
+            {
+                return TryGetString(SettingCustomReferenceDatabaseName);
+            }
+            set
+            {
+                SetValue<string>(SettingCustomReferenceDatabaseName, value);
             }
         }
     }

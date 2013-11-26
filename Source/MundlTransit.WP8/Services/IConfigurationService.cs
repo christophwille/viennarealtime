@@ -17,5 +17,6 @@ namespace MundlTransit.WP8.Services
         string MapAuthenticationToken { get; }
 
         bool UsingDefaultReferenceDatabase { get; set; }
+        string CustomReferenceDatabaseName { get; set; }
     }
 }

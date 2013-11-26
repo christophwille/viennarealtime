@@ -15,6 +15,13 @@ namespace MundlTransit.WP8.Services
 {
     public class DefaultDataService : IDataService
     {
+        private readonly IConfigurationService _configurationService;
+
+        public DefaultDataService(IConfigurationService configurationService)
+        {
+            _configurationService = configurationService;
+        }
+
         private ReferenceDataContext GetReferenceDataContext()
         {
             return new ReferenceDataContext();

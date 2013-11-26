@@ -67,6 +67,9 @@
                     TextWrapping="Wrap"
                     Text="This will download 3 files from the Internet (~1MB) and create a new lines / stops database"/>
 
+                <TextBlock 
+                    Style="{StaticResource PhoneTextNormalStyle}"
+                    x:Name="ProgressMessage" />
             </StackPanel>
         </Grid>
     </Grid>

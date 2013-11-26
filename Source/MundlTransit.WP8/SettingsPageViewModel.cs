@@ -59,9 +59,11 @@ namespace MundlTransit.WP8
 
         public async void BuildUserDatabase()
         {
+            string dbName = "UserRefDb" + Guid.NewGuid().ToString() + ".db3";
+
             try
             {
-                var ctx = new ReferenceDataContext("TempTestDatabase.db3");
+                var ctx = new ReferenceDataContext(dbName);
 
                 // Re-initialize all tables
                 await ctx.InitializeDatabaseAsync();
@@ -91,6 +93,9 @@ namespace MundlTransit.WP8
 
                 ProgressMessage = String.Format("Import completed successfully. {0} Haltestellen, {1} Linien, {2} Steige",
                     countOfHaltestellen, countOfLinien, countOfSteige);
+
+                _configurationService.UsingDefaultReferenceDatabase = false;
+                _configurationService.CustomReferenceDatabaseName = dbName;
             }
             catch (Exception ex)
             {
