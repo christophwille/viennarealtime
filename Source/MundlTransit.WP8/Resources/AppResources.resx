@@ -375,11 +375,44 @@
   <data name="Routing_Type_Walk" xml:space="preserve">
     <value>Walk</value>
   </data>
+  <data name="Settings_BuildInfoText" xml:space="preserve">
+    <value>This will download 3 files from the Internet (~1MB) and create a new lines / stops database</value>
+  </data>
+  <data name="Settings_BuildUserDatabase_Button" xml:space="preserve">
+    <value>Download data and rebuild</value>
+  </data>
   <data name="Settings_GeolocationForNearbyStations" xml:space="preserve">
     <value>Geolocation for nearby stations</value>
   </data>
   <data name="Settings_PageTitle" xml:space="preserve">
     <value>settings</value>
+  </data>
+  <data name="Settings_Progress_ErrorDownloading" xml:space="preserve">
+    <value>Error downloading reference CSV files from data.wien.gv.at</value>
+  </data>
+  <data name="Settings_Progress_ImportFailed" xml:space="preserve">
+    <value>Import failed. Error message:</value>
+  </data>
+  <data name="Settings_Progress_ImportSuccessMessage" xml:space="preserve">
+    <value>Import completed successfully. {0} stops, {1} lines, {2} platforms</value>
+  </data>
+  <data name="Settings_Progress_InsertingInDb" xml:space="preserve">
+    <value>Inserting data into database...</value>
+  </data>
+  <data name="Settings_Progress_LoadingLines" xml:space="preserve">
+    <value>Loading lines... (2 of 3)</value>
+  </data>
+  <data name="Settings_Progress_LoadingPlatforms" xml:space="preserve">
+    <value>Loading platforms... (3 of 3)</value>
+  </data>
+  <data name="Settings_Progress_LoadingStops" xml:space="preserve">
+    <value>Loading stops... (1 of 3)</value>
+  </data>
+  <data name="Settings_RevertToDefault_Button" xml:space="preserve">
+    <value>Revert to default database</value>
+  </data>
+  <data name="Settings_StationsDatabase_Header" xml:space="preserve">
+    <value>Station database</value>
   </data>
   <data name="StationInfo_AppBar_Favorite" xml:space="preserve">
     <value>favorite</value>

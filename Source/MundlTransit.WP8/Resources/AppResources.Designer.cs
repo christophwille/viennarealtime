@@ -826,6 +826,24 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This will download 3 files from the Internet (~1MB) and create a new lines / stops database.
+        /// </summary>
+        public static string Settings_BuildInfoText {
+            get {
+                return ResourceManager.GetString("Settings_BuildInfoText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download data and rebuild.
+        /// </summary>
+        public static string Settings_BuildUserDatabase_Button {
+            get {
+                return ResourceManager.GetString("Settings_BuildUserDatabase_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Geolocation for nearby stations.
         /// </summary>
         public static string Settings_GeolocationForNearbyStations {
@@ -840,6 +858,87 @@ namespace MundlTransit.WP8.Resources {
         public static string Settings_PageTitle {
             get {
                 return ResourceManager.GetString("Settings_PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error downloading reference CSV files from data.wien.gv.at.
+        /// </summary>
+        public static string Settings_Progress_ErrorDownloading {
+            get {
+                return ResourceManager.GetString("Settings_Progress_ErrorDownloading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import failed. Error message:.
+        /// </summary>
+        public static string Settings_Progress_ImportFailed {
+            get {
+                return ResourceManager.GetString("Settings_Progress_ImportFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import completed successfully. {0} stops, {1} lines, {2} platforms.
+        /// </summary>
+        public static string Settings_Progress_ImportSuccessMessage {
+            get {
+                return ResourceManager.GetString("Settings_Progress_ImportSuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserting data into database....
+        /// </summary>
+        public static string Settings_Progress_InsertingInDb {
+            get {
+                return ResourceManager.GetString("Settings_Progress_InsertingInDb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading lines... (2 of 3).
+        /// </summary>
+        public static string Settings_Progress_LoadingLines {
+            get {
+                return ResourceManager.GetString("Settings_Progress_LoadingLines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading platforms... (3 of 3).
+        /// </summary>
+        public static string Settings_Progress_LoadingPlatforms {
+            get {
+                return ResourceManager.GetString("Settings_Progress_LoadingPlatforms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading stops... (1 of 3).
+        /// </summary>
+        public static string Settings_Progress_LoadingStops {
+            get {
+                return ResourceManager.GetString("Settings_Progress_LoadingStops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revert to default database.
+        /// </summary>
+        public static string Settings_RevertToDefault_Button {
+            get {
+                return ResourceManager.GetString("Settings_RevertToDefault_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Station database.
+        /// </summary>
+        public static string Settings_StationsDatabase_Header {
+            get {
+                return ResourceManager.GetString("Settings_StationsDatabase_Header", resourceCulture);
             }
         }
         

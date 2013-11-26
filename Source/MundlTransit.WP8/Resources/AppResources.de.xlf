@@ -333,6 +333,14 @@
           <source>Walk</source>
           <target state="signed-off">Gehstrecke</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_BuildUserDatabase_Button" xml:space="preserve">
+          <source>Download data and rebuild</source>
+          <target state="translated">Datendownload %%amp; Datenbankimport</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_BuildInfoText" xml:space="preserve">
+          <source>This will download 3 files from the Internet (~1MB) and create a new lines / stops database</source>
+          <target state="signed-off">Die Neugenerierung lädt drei Dateien aus dem Internet (~1MB) und erzeugt eine neue Linien / Haltepunktedatenbank</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/Routing_Trip" xml:space="preserve">
           <source>Trip</source>
           <target state="signed-off">Fahrt</target>
@@ -356,6 +364,42 @@
         <trans-unit translate="yes" id="Resx/Settings_PageTitle" xml:space="preserve">
           <source>settings</source>
           <target state="signed-off" state-qualifier="mt-suggestion">Einstellungen</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_Progress_LoadingStops" xml:space="preserve">
+          <source>Loading stops... (1 of 3)</source>
+          <target state="signed-off">Haltestellen downloaden... (1 von 3)</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_Progress_LoadingPlatforms" xml:space="preserve">
+          <source>Loading platforms... (3 of 3)</source>
+          <target state="signed-off">Steige downloaden... (3 von 3)</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_Progress_LoadingLines" xml:space="preserve">
+          <source>Loading lines... (2 of 3)</source>
+          <target state="signed-off">Linien downloaden... (2 von 3)</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_Progress_ErrorDownloading" xml:space="preserve">
+          <source>Error downloading reference CSV files from data.wien.gv.at</source>
+          <target state="signed-off">Fehler beim Download der CSV Dateien von data.wien.gv.at</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_Progress_InsertingInDb" xml:space="preserve">
+          <source>Inserting data into database...</source>
+          <target state="signed-off">Einfügen der Daten in die Datenbank...</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_Progress_ImportSuccessMessage" xml:space="preserve">
+          <source>Import completed successfully. {0} stops, {1} lines, {2} platforms</source>
+          <target state="signed-off">Import erfolgreich beendet. {0} Haltestellen, {1} Linien, {2} Steige</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_Progress_ImportFailed" xml:space="preserve">
+          <source>Import failed. Error message:</source>
+          <target state="signed-off">Import fehlgeschlagen. Interne Fehlermeldung:</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_StationsDatabase_Header" xml:space="preserve">
+          <source>Station database</source>
+          <target state="signed-off">Stationsdatenbank</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Settings_RevertToDefault_Button" xml:space="preserve">
+          <source>Revert to default database</source>
+          <target state="signed-off">Auslieferungszustand wiederherstellen</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/StationInfo_AppBar_Favorite" xml:space="preserve">
           <source>favorite</source>

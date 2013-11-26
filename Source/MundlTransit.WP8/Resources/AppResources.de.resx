@@ -426,4 +426,37 @@
   <data name="PositionMessage_NoStopsFoundNear" xml:space="preserve">
     <value>Es wurden keine Stationen in der Nähe Ihrer Position gefunden. Aktuelle Position (geog. Länge und Breite)</value>
   </data>
+  <data name="Settings_BuildUserDatabase_Button" xml:space="preserve">
+    <value>Datendownload &amp; Datenbankimport</value>
+  </data>
+  <data name="Settings_BuildInfoText" xml:space="preserve">
+    <value>Die Neugenerierung lädt drei Dateien aus dem Internet (~1MB) und erzeugt eine neue Linien / Haltepunktedatenbank</value>
+  </data>
+  <data name="Settings_Progress_LoadingStops" xml:space="preserve">
+    <value>Haltestellen downloaden... (1 von 3)</value>
+  </data>
+  <data name="Settings_Progress_LoadingPlatforms" xml:space="preserve">
+    <value>Steige downloaden... (3 von 3)</value>
+  </data>
+  <data name="Settings_Progress_LoadingLines" xml:space="preserve">
+    <value>Linien downloaden... (2 von 3)</value>
+  </data>
+  <data name="Settings_Progress_ErrorDownloading" xml:space="preserve">
+    <value>Fehler beim Download der CSV Dateien von data.wien.gv.at</value>
+  </data>
+  <data name="Settings_Progress_InsertingInDb" xml:space="preserve">
+    <value>Einfügen der Daten in die Datenbank...</value>
+  </data>
+  <data name="Settings_Progress_ImportSuccessMessage" xml:space="preserve">
+    <value>Import erfolgreich beendet. {0} Haltestellen, {1} Linien, {2} Steige</value>
+  </data>
+  <data name="Settings_Progress_ImportFailed" xml:space="preserve">
+    <value>Import fehlgeschlagen. Interne Fehlermeldung:</value>
+  </data>
+  <data name="Settings_StationsDatabase_Header" xml:space="preserve">
+    <value>Stationsdatenbank</value>
+  </data>
+  <data name="Settings_RevertToDefault_Button" xml:space="preserve">
+    <value>Auslieferungszustand wiederherstellen</value>
+  </data>
 </root>

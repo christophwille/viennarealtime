@@ -193,7 +193,7 @@
     <Compile Include="Model\LocationResult.cs" />
     <Compile Include="Model\MenuItem.cs" />
     <Compile Include="Model\ZoomMapToPinsMessage.cs" />
-    <Compile Include="Resources\AppResources1.Designer.cs">
+    <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
@@ -495,7 +495,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources1.Designer.cs</LastGenOutput>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

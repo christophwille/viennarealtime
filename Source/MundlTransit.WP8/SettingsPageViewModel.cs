@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Caliburn.Micro;
 using MundlTransit.WP8.Data.Reference;
+using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
 using System;
 using System.Collections.Generic;
@@ -71,27 +72,27 @@ namespace MundlTransit.WP8
                 // Perform import
                 var importer = new DefaultImportService(ctx);
 
-                ProgressMessage = "Loading Haltestellen... (1 of 3)";
+                ProgressMessage = AppResources.Settings_Progress_LoadingLines;
                 string haltestellen = await importer.DownloadHaltestellenAsync();
-                ProgressMessage = "Loading Linien... (2 of 3)";
+                ProgressMessage = AppResources.Settings_Progress_LoadingLines;
                 string linien = await importer.DownloadLinienAsync();
-                ProgressMessage = "Loading Steige... (3 of 3)";
+                ProgressMessage = AppResources.Settings_Progress_LoadingPlatforms;
                 string steige = await importer.DownloadSteigeAsync();
 
                 if (null == haltestellen || null == linien || null == steige)
                 {
-                    ProgressMessage = "Error downloading reference CSV files from data.wien.gv.at";
+                    ProgressMessage = AppResources.Settings_Progress_ErrorDownloading;
                     return;
                 }
 
-                ProgressMessage = "Inserting data into database...";
+                ProgressMessage = AppResources.Settings_Progress_InsertingInDb;
                 int countOfHaltestellen = await importer.ImportHaltestellenAsync(haltestellen);
                 int countOfLinien = await importer.ImportLinienAsync(linien);
                 int countOfSteige = await importer.ImportSteigeAsync(steige);
 
                 await importer.CreateLookupTableAsync();
 
-                ProgressMessage = String.Format("Import completed successfully. {0} Haltestellen, {1} Linien, {2} Steige",
+                ProgressMessage = String.Format(AppResources.Settings_Progress_ImportSuccessMessage,
                     countOfHaltestellen, countOfLinien, countOfSteige);
 
                 _configurationService.UsingDefaultReferenceDatabase = false;
@@ -101,7 +102,7 @@ namespace MundlTransit.WP8
             }
             catch (Exception ex)
             {
-                ProgressMessage = "Import failed. Error message: " + ex.Message;
+                ProgressMessage = AppResources.Settings_Progress_ImportFailed + ex.Message;
                 Debug.WriteLine(ex.ToString());
             }
         }
@@ -119,6 +120,7 @@ namespace MundlTransit.WP8
             _configurationService.UsingDefaultReferenceDatabase = true;
             _configurationService.CustomReferenceDatabaseName = String.Empty;
 
+            ProgressMessage = "";
             NotifyOfPropertyChange(() => CanRevertToDefault);
         }
     }
