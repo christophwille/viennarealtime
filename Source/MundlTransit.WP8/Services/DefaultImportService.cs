@@ -78,7 +78,7 @@ namespace MundlTransit.WP8.Services
             return new StringReader(data);
         }
 
-        public async Task ImportHaltestellenAsync(string data)
+        public async Task<int> ImportHaltestellenAsync(string data)
         {
             var csv = new CsvReader(GetAsTextReader(data), _csvConfiguration);
             var haltestellen = csv.GetRecords<CsvHaltestelle>().ToList();
@@ -86,9 +86,11 @@ namespace MundlTransit.WP8.Services
             var toInsert = CsvToOgd.ConvertHaltestellen(haltestellen);
 
             await _ctx.InsertAsync(toInsert).ConfigureAwait(false);
+
+            return toInsert.Count;
         }
 
-        public async Task ImportLinienAsync(string data)
+        public async Task<int> ImportLinienAsync(string data)
         {
             var csv = new CsvReader(GetAsTextReader(data), _csvConfiguration);
             var linien = csv.GetRecords<CsvLinie>().ToList();
@@ -96,9 +98,11 @@ namespace MundlTransit.WP8.Services
             var toInsert = CsvToOgd.ConvertLinien(linien);
 
             await _ctx.InsertAsync(toInsert).ConfigureAwait(false);
+
+            return toInsert.Count;
         }
 
-        public async Task ImportSteigeAsync(string data)
+        public async Task<int> ImportSteigeAsync(string data)
         {
             var csv = new CsvReader(GetAsTextReader(data), _csvConfiguration);
             var steige = csv.GetRecords<CsvSteig>().ToList();
@@ -106,6 +110,8 @@ namespace MundlTransit.WP8.Services
             var toInsert = CsvToOgd.ConvertSteige(steige);
 
             await _ctx.InsertAsync(toInsert).ConfigureAwait(false);
+
+            return toInsert.Count;
         }
     }
 }

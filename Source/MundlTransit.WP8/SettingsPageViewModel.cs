@@ -1,4 +1,6 @@
-﻿using Caliburn.Micro;
+﻿using System.Diagnostics;
+using Caliburn.Micro;
+using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Services;
 using System;
 using System.Collections.Generic;
@@ -44,9 +46,57 @@ namespace MundlTransit.WP8
             }
         }
 
+        private string _progressMessage;
+        public string ProgressMessage
+        {
+            get { return _progressMessage; }
+            set
+            {
+                _progressMessage = value;
+                NotifyOfPropertyChange(() => ProgressMessage);
+            }
+        }
+
         public async void BuildUserDatabase()
         {
-            
+            try
+            {
+                var ctx = new ReferenceDataContext("TempTestDatabase.db3");
+
+                // Re-initialize all tables
+                await ctx.InitializeDatabaseAsync();
+
+                // Perform import
+                var importer = new DefaultImportService(ctx);
+
+                ProgressMessage = "Loading Haltestellen... (1 of 3)";
+                string haltestellen = await importer.DownloadHaltestellenAsync();
+                ProgressMessage = "Loading Linien... (2 of 3)";
+                string linien = await importer.DownloadLinienAsync();
+                ProgressMessage = "Loading Steige... (3 of 3)";
+                string steige = await importer.DownloadSteigeAsync();
+
+                if (null == haltestellen || null == linien || null == steige)
+                {
+                    ProgressMessage = "Error downloading reference CSV files from data.wien.gv.at";
+                    return;
+                }
+
+                ProgressMessage = "Inserting data into database...";
+                int countOfHaltestellen = await importer.ImportHaltestellenAsync(haltestellen);
+                int countOfLinien = await importer.ImportLinienAsync(linien);
+                int countOfSteige = await importer.ImportSteigeAsync(steige);
+
+                await importer.CreateLookupTableAsync();
+
+                ProgressMessage = String.Format("Import completed successfully. {0} Haltestellen, {1} Linien, {2} Steige",
+                    countOfHaltestellen, countOfLinien, countOfSteige);
+            }
+            catch (Exception ex)
+            {
+                ProgressMessage = "Import failed. Error message: " + ex.Message;
+                Debug.WriteLine(ex.ToString());
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ namespace MundlTransit.WP8.Data.Reference
 
             try
             {
-                StorageFile storageFile = await ApplicationData.Current.LocalFolder.GetFileAsync(DatabaseName);
+                StorageFile storageFile = await ApplicationData.Current.LocalFolder.GetFileAsync(ReferenceDatabaseName);
                 isDatabaseExisting = true;
             }
             catch
@@ -29,7 +29,7 @@ namespace MundlTransit.WP8.Data.Reference
 
             if (!isDatabaseExisting)
             {
-                StorageFile databaseFile = await Package.Current.InstalledLocation.GetFileAsync(DatabaseName);
+                StorageFile databaseFile = await Package.Current.InstalledLocation.GetFileAsync(ReferenceDatabaseName);
                 await databaseFile.CopyAsync(ApplicationData.Current.LocalFolder);
             }
         }
@@ -40,7 +40,7 @@ namespace MundlTransit.WP8.Data.Reference
             {
                 try
                 {
-                    StorageFile storageFile = await ApplicationData.Current.LocalFolder.GetFileAsync(DatabaseName);
+                    StorageFile storageFile = await ApplicationData.Current.LocalFolder.GetFileAsync(ReferenceDatabaseName);
                     await storageFile.DeleteAsync();
                 }
                 catch

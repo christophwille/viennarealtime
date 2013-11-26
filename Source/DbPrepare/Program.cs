@@ -11,7 +11,7 @@ namespace DbPrepare
     {
         static void Main(string[] args)
         {
-            System.IO.File.Delete(ReferenceDataContext.DatabaseName);   // delete old database first
+            System.IO.File.Delete(ReferenceDataContext.ReferenceDatabaseName);   // delete old database first
 
             PerformImportActionsAsync().Wait();
 

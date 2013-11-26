@@ -9,22 +9,24 @@ namespace MundlTransit.WP8.Data.Reference
 {
     public partial class ReferenceDataContext
     {
-        public const string DatabaseName = "referencedata20131001.db3";
+        public const string ReferenceDatabaseName = "referencedata20131001.db3";
 
         private static readonly List<string> PreviousDatabases = new List<string>()
         {
             "referencedata20130829.db3",
-        }; 
+        };
 
-        private static SQLiteAsyncConnection CreateAsyncConnection()
+        private static SQLiteAsyncConnection CreateAsyncConnection(string databaseName)
         {
-            return new SQLiteAsyncConnection(DatabaseName);
+            return new SQLiteAsyncConnection(databaseName);
         }
 
         private readonly SQLiteAsyncConnection _connection;
-        public ReferenceDataContext()
+        public ReferenceDataContext() : this(ReferenceDatabaseName) { }
+
+        public ReferenceDataContext(string databaseName)
         {
-            _connection = CreateAsyncConnection();
+            _connection = CreateAsyncConnection(databaseName);
         }
 
         public async Task<List<Haltestelle>> GetHaltestellenContainingAsync(string s)
