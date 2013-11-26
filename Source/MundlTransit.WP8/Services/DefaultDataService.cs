@@ -15,9 +15,14 @@ namespace MundlTransit.WP8.Services
 {
     public class DefaultDataService : IDataService
     {
+        private ReferenceDataContext GetReferenceDataContext()
+        {
+            return new ReferenceDataContext();
+        }
+
         public async Task<List<Data.Reference.Haltestelle>> GetHaltestellenAsync()
         {
-            var ctx = new ReferenceDataContext();
+            var ctx = GetReferenceDataContext();
             var hst = await ctx.GetHaltestellenAsync().ConfigureAwait(false);
 
             return hst;
@@ -27,7 +32,7 @@ namespace MundlTransit.WP8.Services
         {
             try
             {
-                var ctx = new ReferenceDataContext();
+                var ctx = GetReferenceDataContext();
                 var result = await ctx.GetHaltestellenContainingAsync(s).ConfigureAwait(false);
 
                 var startingWithString = result
@@ -81,7 +86,7 @@ namespace MundlTransit.WP8.Services
                 var p3 = NearestLocationHelpers.CalculateDerivedPosition(center, mult * radius, 180);
                 var p4 = NearestLocationHelpers.CalculateDerivedPosition(center, mult * radius, 270);
 
-                var db = new ReferenceDataContext();
+                var db = GetReferenceDataContext();
                 var haltestellen = await db.GetNearestHaltestellenAsync(p3.Latitude, p1.Latitude, p2.Longitude, p4.Longitude).ConfigureAwait(false);
 
                 foreach (var h in haltestellen)
@@ -101,21 +106,21 @@ namespace MundlTransit.WP8.Services
 
         public async Task<Haltestelle> GetHaltestelleAsync(int id)
         {
-            var db = new ReferenceDataContext();
+            var db = GetReferenceDataContext();
             var h = await db.GetHaltestelleAsync(id).ConfigureAwait(false);
             return h;
         }
 
         public async Task<Haltestelle> GetHaltestelleAsync(string name)
         {
-            var db = new ReferenceDataContext();
+            var db = GetReferenceDataContext();
             var h = await db.GetHaltestelleAsync(name).ConfigureAwait(false);
             return h;
         }
 
         public async Task<List<Haltestelle>> GetHaltestellenAsync(List<int> ids)
         {
-            var db = new ReferenceDataContext();
+            var db = GetReferenceDataContext();
             var h = await db.GetHaltestellenAsync(ids).ConfigureAwait(false);
             return h;
         }
@@ -148,7 +153,7 @@ namespace MundlTransit.WP8.Services
 
         public async Task<List<OgdLinie>> GetLinienAsync()
         {
-            var db = new ReferenceDataContext();
+            var db = GetReferenceDataContext();
             return await db.GetLinienAsync().ConfigureAwait(false);
         }
 
@@ -156,13 +161,13 @@ namespace MundlTransit.WP8.Services
         {
             var vms = mlt.Select(MonitorLineTypeMapper.TypeToTypeString).ToList();
 
-            var db = new ReferenceDataContext();
+            var db = GetReferenceDataContext();
             return await db.GetLinienAsync(vms).ConfigureAwait(false);
         }
 
         public async Task<List<LinienHaltestelleView>> GetHaltestellenForLinieAsync(int linienId)
         {
-            var db = new ReferenceDataContext();
+            var db = GetReferenceDataContext();
             return await db.GetHaltestellenForLinieAsync(linienId).ConfigureAwait(false);
         }
 
