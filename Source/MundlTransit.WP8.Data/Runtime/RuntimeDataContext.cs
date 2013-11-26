@@ -10,7 +10,7 @@ namespace MundlTransit.WP8.Data.Runtime
 {
     public class RuntimeDataContext
     {
-        private const string DatabaseName = "runtime.db3";
+        public const string DatabaseName = "runtime.db3";
 
         // Explicitly request the Local folder (Reference data: not necessary as it is expressly copied to this location)
         private static SQLiteAsyncConnection CreateConnection()

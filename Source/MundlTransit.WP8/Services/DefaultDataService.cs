@@ -24,7 +24,16 @@ namespace MundlTransit.WP8.Services
 
         private ReferenceDataContext GetReferenceDataContext()
         {
-            return new ReferenceDataContext();
+            bool useDefaultDb = _configurationService.UsingDefaultReferenceDatabase;
+            string customDbName = _configurationService.CustomReferenceDatabaseName;
+            string dbName = ReferenceDataContext.ReferenceDatabaseName;
+
+            if (!useDefaultDb && !String.IsNullOrWhiteSpace(customDbName))
+            {
+                dbName = customDbName;
+            }
+
+            return new ReferenceDataContext(dbName);
         }
 
         public async Task<List<Data.Reference.Haltestelle>> GetHaltestellenAsync()

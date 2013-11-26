@@ -57,10 +57,11 @@
                 Header="{Binding Path=LocalizedResources.Settings_GeolocationForNearbyStations, Source={StaticResource LocalizedStrings}}"/>
 
                 <TextBlock 
-                    Style="{StaticResource PhoneTextNormalStyle}"
-                    Text="Manual database update (WIP)"/>
+                    Style="{StaticResource PhoneTextTitle2Style}"
+                    Text="Station database"/>
                 
-                <Button x:Name="BuildUserDatabase" Content="Download &amp; Build"></Button>
+                <Button x:Name="BuildUserDatabase" 
+                        Content="Download data and rebuild" />
 
                 <TextBlock 
                     Style="{StaticResource PhoneTextNormalStyle}"
@@ -69,7 +70,11 @@
 
                 <TextBlock 
                     Style="{StaticResource PhoneTextNormalStyle}"
+                    TextWrapping="Wrap"
                     x:Name="ProgressMessage" />
+
+                <Button x:Name="RevertToDefault" 
+                        Content="Revert to default database" />
             </StackPanel>
         </Grid>
     </Grid>

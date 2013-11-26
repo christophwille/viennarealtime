@@ -11,11 +11,6 @@ namespace MundlTransit.WP8.Data.Reference
     {
         public const string ReferenceDatabaseName = "referencedata20131001.db3";
 
-        private static readonly List<string> PreviousDatabases = new List<string>()
-        {
-            "referencedata20130829.db3",
-        };
-
         private static SQLiteAsyncConnection CreateAsyncConnection(string databaseName)
         {
             return new SQLiteAsyncConnection(databaseName);

@@ -41,8 +41,23 @@ namespace MundlTransit.WP8
 
         async Task PerformAsyncInitializationsAsync()
         {
-            await ReferenceDataContext.CopyDatabaseAsync().ConfigureAwait(continueOnCapturedContext: false);
-            await ReferenceDataContext.DeletePreviousDatabasesAsync().ConfigureAwait(continueOnCapturedContext: false);
+            string customDbToKeep = String.Empty;
+            bool wasDatabaseCopied = await ReferenceDataContext.CopyDatabaseAsync().ConfigureAwait(continueOnCapturedContext: false);
+
+            IConfigurationService cfgSvc = new DefaultConfigurationService();
+
+            // Database will be copied only if a new version of the app was installed (which shipped with a new version of the database)
+            if (wasDatabaseCopied)
+            {
+                cfgSvc.CustomReferenceDatabaseName = String.Empty;
+                cfgSvc.UsingDefaultReferenceDatabase = true;
+            }
+            else
+            {
+                customDbToKeep = cfgSvc.CustomReferenceDatabaseName;
+            }
+
+            await ReferenceDataContext.DeletePreviousDatabasesAsync(customDbToKeep).ConfigureAwait(continueOnCapturedContext: false);
             await RuntimeDataContext.InitializeDatabaseAsync().ConfigureAwait(continueOnCapturedContext: false);
             await ReviewNotification.InitializeAsync().ConfigureAwait(continueOnCapturedContext: false);
         }

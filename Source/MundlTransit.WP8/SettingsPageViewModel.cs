@@ -96,12 +96,30 @@ namespace MundlTransit.WP8
 
                 _configurationService.UsingDefaultReferenceDatabase = false;
                 _configurationService.CustomReferenceDatabaseName = dbName;
+
+                NotifyOfPropertyChange(() => CanRevertToDefault);
             }
             catch (Exception ex)
             {
                 ProgressMessage = "Import failed. Error message: " + ex.Message;
                 Debug.WriteLine(ex.ToString());
             }
+        }
+
+        public bool CanRevertToDefault
+        {
+            get
+            {
+                return !_configurationService.UsingDefaultReferenceDatabase;
+            }
+        }
+
+        public void RevertToDefault()
+        {
+            _configurationService.UsingDefaultReferenceDatabase = true;
+            _configurationService.CustomReferenceDatabaseName = String.Empty;
+
+            NotifyOfPropertyChange(() => CanRevertToDefault);
         }
     }
 }
