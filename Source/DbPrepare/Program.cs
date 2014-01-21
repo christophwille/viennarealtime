@@ -3,7 +3,9 @@ using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using MundlTransit.WP8.Data.Reference;
+using MundlTransit.WP8.Model;
 using MundlTransit.WP8.Services;
+using SQLite;
 
 namespace DbPrepare
 {
@@ -19,7 +21,7 @@ namespace DbPrepare
             Console.Read();
         }
 
-        private static async Task PerformImportActionsAsync()
+        private static async Task<ImportResults> PerformImportActionsAsync()
         {
             var ctx = new ReferenceDataContext();
             
@@ -29,8 +31,15 @@ namespace DbPrepare
             // Perform import
             var importer = new DefaultImportService(ctx);
 
-            await importer.ImportBatchAsync();
-            await importer.CreateLookupTableAsync();
+            var result = await importer.ImportBatchAsync();
+            result.LookupCount = await importer.CreateLookupTableAsync();
+
+            Debug.WriteLine("# of Haltestellen: " + result.HaltestellenCount);
+            Debug.WriteLine("# of Linien: " + result.LinienCount);
+            Debug.WriteLine("# of Steige: " + result.SteigeCount);
+            Debug.WriteLine("# of Lookups: " + result.LookupCount);
+
+            return result;
         }
     }
 }

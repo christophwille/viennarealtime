@@ -181,6 +181,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPageViewModel.cs" />
+    <Compile Include="Model\ImportResults.cs" />
     <Compile Include="Model\LinieModel.cs" />
     <Compile Include="Model\MapHaltestelleModel.cs" />
     <Compile Include="Model\PanoramaItemToShowMessage.cs" />

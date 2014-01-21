@@ -113,6 +113,9 @@
     <Compile Include="..\MundlTransit.WP8\Common\DownloadClient.cs">
       <Link>WP8.Common\DownloadClient.cs</Link>
     </Compile>
+    <Compile Include="..\MundlTransit.WP8\Model\ImportResults.cs">
+      <Link>WP8.Model\ImportResults.cs</Link>
+    </Compile>
     <Compile Include="..\MundlTransit.WP8\Services\DefaultImportService.cs">
       <Link>WP8.Services\DefaultImportService.cs</Link>
     </Compile>

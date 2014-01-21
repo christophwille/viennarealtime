@@ -178,7 +178,9 @@ namespace MundlTransit.WP8.Services
             var vms = mlt.Select(MonitorLineTypeMapper.TypeToTypeString).ToList();
 
             var db = GetReferenceDataContext();
-            return await db.GetLinienAsync(vms).ConfigureAwait(false);
+            var linien = await db.GetLinienAsync(vms).ConfigureAwait(false);
+
+            return linien.OrderBy(l => l.Reihenfolge).ToList();
         }
 
         public async Task<List<LinienHaltestelleView>> GetHaltestellenForLinieAsync(int linienId)

@@ -33,7 +33,7 @@ namespace MundlTransit.WP8.Data.Reference
 
         // GROUP BY OgdLinien.Id, OgdLinien.Bezeichnung
 
-        public async Task CreateLookupTableAsync()
+        public async Task<int> CreateLookupTableAsync()
         {
             var haltestellen = await _connection.Table<OgdHaltestelle>()
                 .ToListAsync()
@@ -83,7 +83,7 @@ namespace MundlTransit.WP8.Data.Reference
                 }
             }
 
-            await _connection.InsertAllAsync(toInsert).ConfigureAwait(false);
+            return await _connection.InsertAllAsync(toInsert).ConfigureAwait(false);
         }
     }
 }
