@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="qps-ploc" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="MundlTransit.WP8" product-version="4.1.0.0" build-num="0">
+  <file datatype="xml" source-language="en-US" target-language="qps-ploc" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="MundlTransit.WP8" product-version="4.2.0.0" build-num="0">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.2010.0" tool-company="Microsoft" />
     </header>
@@ -401,6 +401,14 @@
           <source>Station database</source>
           <target state="new">Station database</target>
         </trans-unit>
+        <trans-unit translate="yes" id="Resx/ShareDeparture_Message" xml:space="preserve">
+          <source>Clicking the link will take you to Vienna RealTime which will show public transport departure information</source>
+          <target state="new">Clicking the link will take you to Vienna RealTime which will show public transport departure information</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/ShareDeparture_Departures" xml:space="preserve">
+          <source>Departures from</source>
+          <target state="new">Departures from</target>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/Settings_RevertToDefault_Button" xml:space="preserve">
           <source>Revert to default database</source>
           <target state="new">Revert to default database</target>
@@ -412,6 +420,10 @@
         <trans-unit translate="yes" id="Resx/StationInfo_AppBar_Refresh" xml:space="preserve">
           <source>refresh</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[0E1C2][!!_ŕèƒŗèšĥ_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/StationInfo_AppBar_Share" xml:space="preserve">
+          <source>share</source>
+          <target state="new">share</target>
         </trans-unit>
         <trans-unit translate="yes" id="Resx/StationInfo_AppBar_WalkTo" xml:space="preserve">
           <source>walk to</source>

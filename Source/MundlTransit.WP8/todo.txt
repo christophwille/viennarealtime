@@ -9,15 +9,13 @@ Feature wish list
 
 * News (top-level next to menu, favorites)
 
-[* Host development blog on github]
+[* Host development blog on github, Jekyll / Github Pages]
 
 * Station history (how often did I check departures at station X?)
 
 * Search by line (tap on stop to go either to departures or list of other lines at station)
 
 * Station history (useful?)
-
-* Download of station / line updates instead of DbPrepare (background task) - would need some information to know "is there something new?"
 
 
 	-- ROUTING

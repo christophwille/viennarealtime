@@ -448,6 +448,7 @@
     <Content Include="Assets\map.centerme.png" />
     <Content Include="Assets\outline.squares.png" />
     <Content Include="Assets\refresh.png" />
+    <Content Include="Assets\share.png" />
     <Content Include="Assets\sort.png" />
     <None Include="Resources\L10n.txt" />
     <Content Include="Assets\Tiles\FlipCycleTileMediumSecondaryTile.png">

@@ -33,6 +33,15 @@ namespace MundlTransit.WP8.Views.StationInfo
 
             ApplicationBar.Buttons.Add(addToFavsAppBarButton);
 
+            var shareAppBarButton = new CM.AppBarButton()
+            {
+                IconUri = new Uri("/Assets/share.png", UriKind.Relative),
+                Text = AppResources.StationInfo_AppBar_Share,
+                Message = "Share"
+            };
+
+            ApplicationBar.Buttons.Add(shareAppBarButton);
+
             var walkToAppBarButton = new CM.AppBarButton()
             {
                 IconUri = new Uri("/Assets/map.centerme.png", UriKind.Relative),

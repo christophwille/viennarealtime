@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
+using Microsoft.Phone.Tasks;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Data.Runtime;
 using MundlTransit.WP8.Resources;
@@ -73,6 +74,23 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
             _dataService.InsertFavoriteIfNotExistsAsync(fav);
 
             _uiService.ShowTextToast(AppResources.Message_FavoriteAdded, _haltestelle.Bezeichnung);
+        }
+
+        public void Share()
+        {
+            if (null == _haltestelle) return;
+
+            string title = String.Format("{0} {1}", AppResources.ShareDeparture_Departures, _haltestelle.Bezeichnung);
+            string link = String.Format("vie-pt:Departures?StationId={0}", _haltestelle.Id);
+
+            var task = new ShareLinkTask()
+            {
+                Title = title,
+                LinkUri = new Uri(link, UriKind.Absolute),
+                Message = AppResources.ShareDeparture_Message
+            };
+
+            task.Show();
         }
 
         public async void WalkTo()

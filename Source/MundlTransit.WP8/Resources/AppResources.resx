@@ -417,11 +417,20 @@
   <data name="Settings_StationsDatabase_Header" xml:space="preserve">
     <value>Station database</value>
   </data>
+  <data name="ShareDeparture_Departures" xml:space="preserve">
+    <value>Departures from</value>
+  </data>
+  <data name="ShareDeparture_Message" xml:space="preserve">
+    <value>Clicking the link will take you to Vienna RealTime which will show public transport departure information</value>
+  </data>
   <data name="StationInfo_AppBar_Favorite" xml:space="preserve">
     <value>favorite</value>
   </data>
   <data name="StationInfo_AppBar_Refresh" xml:space="preserve">
     <value>refresh</value>
+  </data>
+  <data name="StationInfo_AppBar_Share" xml:space="preserve">
+    <value>share</value>
   </data>
   <data name="StationInfo_AppBar_WalkTo" xml:space="preserve">
     <value>walk to</value>

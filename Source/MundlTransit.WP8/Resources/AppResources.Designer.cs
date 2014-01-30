@@ -952,6 +952,24 @@ namespace MundlTransit.WP8.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Departures from.
+        /// </summary>
+        public static string ShareDeparture_Departures {
+            get {
+                return ResourceManager.GetString("ShareDeparture_Departures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clicking the link will take you to Vienna RealTime which will show public transport departure information.
+        /// </summary>
+        public static string ShareDeparture_Message {
+            get {
+                return ResourceManager.GetString("ShareDeparture_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to favorite.
         /// </summary>
         public static string StationInfo_AppBar_Favorite {
@@ -966,6 +984,15 @@ namespace MundlTransit.WP8.Resources {
         public static string StationInfo_AppBar_Refresh {
             get {
                 return ResourceManager.GetString("StationInfo_AppBar_Refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to share.
+        /// </summary>
+        public static string StationInfo_AppBar_Share {
+            get {
+                return ResourceManager.GetString("StationInfo_AppBar_Share", resourceCulture);
             }
         }
         
