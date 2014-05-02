@@ -23,6 +23,8 @@ namespace MundlTransit.WP8.Services
         const string LinienUrl = "http://data.wien.gv.at/csv/wienerlinien-ogd-linien.csv";
         const string SteigeUrl = "http://data.wien.gv.at/csv/wienerlinien-ogd-steige.csv";
 
+        const string VersionUrl = "http://data.wien.gv.at/csv/wienerlinien-ogd-version.csv";
+
         private CsvConfiguration _csvConfiguration;
         private ReferenceDataContext _ctx;
 

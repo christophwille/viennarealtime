@@ -9,8 +9,8 @@ namespace MundlTransit.WP8.Data.Reference
 {
     public partial class ReferenceDataContext
     {
-        public const string ReferenceDatabaseName = "referencedata20140121.db3";
-        public static readonly DateTime ReferenceDatabaseBuildDate = new DateTime(2014, 1, 21);
+        public const string ReferenceDatabaseName = "referencedata20140311.db3";
+        public static readonly DateTime ReferenceDatabaseBuildDate = new DateTime(2014, 3, 11);
 
         private static SQLiteAsyncConnection CreateAsyncConnection(string databaseName)
         {
