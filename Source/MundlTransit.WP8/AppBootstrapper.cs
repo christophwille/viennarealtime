@@ -73,15 +73,15 @@ namespace MundlTransit.WP8
 
             container.RegisterPhoneServices(RootFrame);
 
-            var initTasks = new Task(() => PerformAsyncInitializationsAsync());
-            initTasks.RunSynchronously();
+            PerformAsyncInitializationsAsync().GetAwaiter().GetResult();
+
+            // Application Insights: http://msdn.microsoft.com/en-us/library/dn481095.aspx
 
             container.RegisterPerRequest(typeof(IConfigurationService), null, typeof(DefaultConfigurationService));
             container.RegisterPerRequest(typeof(IDataService), null, typeof(DefaultDataService));
             container.RegisterPerRequest(typeof(ILocationService), null, typeof(DefaultLocationService));
             container.RegisterPerRequest(typeof(IUIService), null, typeof(DefaultUIService));
 
-            // container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(CreateCampEchtzeitdatenService));
             container.RegisterPerRequest(typeof(IEchtzeitdatenService), null, typeof(OgdEchtzeitdatenService));
             container.RegisterPerRequest(typeof(IRoutingService), null, typeof(OgdRoutingService));
 

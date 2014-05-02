@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Caliburn.Micro;
+using Microsoft.ApplicationInsights.Telemetry.WindowsStore;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.Services;
@@ -60,6 +61,7 @@ namespace MundlTransit.WP8
 
         public async void BuildUserDatabase()
         {
+            ClientAnalyticsChannel.Default.LogEvent("Stops/BuildDatabase");
             string dbName = "UserRefDb" + Guid.NewGuid().ToString() + ".db3";
 
             try
