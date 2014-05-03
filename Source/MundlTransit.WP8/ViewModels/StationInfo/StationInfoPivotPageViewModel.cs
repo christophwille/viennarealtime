@@ -50,8 +50,6 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
 
         protected async Task LoadStationAsync()
         {
-            ClientAnalyticsChannel.Default.LogEvent("Stops/LoadDepartures");
-
             _haltestelle = await _dataService.GetHaltestelleAsync(NavigationStationId);
             departureViewModel.Haltestelle = _haltestelle;
 
