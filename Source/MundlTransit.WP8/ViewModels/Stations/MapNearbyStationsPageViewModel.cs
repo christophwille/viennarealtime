@@ -66,7 +66,7 @@ namespace MundlTransit.WP8.ViewModels.Stations
             NearbyStations = new BindableCollection<MapHaltestelleModel>(mapPins);
             NotifyOfPropertyChange(() => NearbyStations);
 
-            _eventAggregator.Publish(new ZoomMapToPinsMessage());
+            _eventAggregator.Publish(new ZoomMapToPinsMessage(), _eventAggregator.PublishOnUIThread);
         }
 
         public void Show(MapHaltestelleModel h)

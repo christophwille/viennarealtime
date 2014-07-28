@@ -9,7 +9,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
-    xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+    xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
     d:DesignHeight="800" 
     d:DesignWidth="480">
 

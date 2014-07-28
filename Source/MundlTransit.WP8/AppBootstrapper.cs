@@ -27,7 +27,7 @@ using ReviewNotifier.Apollo;
 
 namespace MundlTransit.WP8
 {
-    public class AppBootstrapper : PhoneBootstrapper
+    public class AppBootstrapper : PhoneBootstrapperBase
     {
         public static String appForceCulture = ""; // "qps-PLOC"; 
 

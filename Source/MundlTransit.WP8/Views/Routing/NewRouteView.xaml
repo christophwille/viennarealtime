@@ -6,7 +6,7 @@
     mc:Ignorable="d"
     xmlns:sampleData="clr-namespace:MundlTransit.WP8.DesignTimeData"
     d:DataContext="{Binding Source={d:DesignInstance Type=sampleData:SampleData, IsDesignTimeCreatable=True}}"
-    xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+    xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"

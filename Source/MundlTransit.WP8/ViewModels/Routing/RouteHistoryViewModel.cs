@@ -45,7 +45,7 @@ namespace MundlTransit.WP8.ViewModels.Routing
                 var msg = new ShowNewRouteViewMessage(item);
 
                 // TODO: weird animation effect in RoutingPage/Panorama
-                eventAggregator.Publish(msg);
+                eventAggregator.Publish(msg, eventAggregator.PublishOnUIThread);
             });
         }
 

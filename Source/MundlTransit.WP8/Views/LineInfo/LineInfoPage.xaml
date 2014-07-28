@@ -15,7 +15,7 @@
     SupportedOrientations="Portrait"  
     Orientation="Portrait"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
-    xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+    xmlns:cm="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
     toolkit:TiltEffect.IsTiltEnabled="True"
     shell:SystemTray.IsVisible="True">
 

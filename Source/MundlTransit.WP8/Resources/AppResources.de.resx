@@ -462,4 +462,13 @@
   <data name="Settings_Database_DateInfo" xml:space="preserve">
     <value>Erstellungsdatum:</value>
   </data>
-<data name="ShareDeparture_Message" xml:space="preserve"><value>Der Link öffnet die Applikation Vienna RealTime und zeigt die Abfahrten von der gewählten Station an</value></data><data name="ShareDeparture_Departures" xml:space="preserve"><value>Abfahrten von</value></data><data name="StationInfo_AppBar_Share" xml:space="preserve"><value>Teilen</value></data></root>
+  <data name="ShareDeparture_Message" xml:space="preserve">
+    <value>Der Link öffnet die Applikation Vienna RealTime und zeigt die Abfahrten von der gewählten Station an</value>
+  </data>
+  <data name="ShareDeparture_Departures" xml:space="preserve">
+    <value>Abfahrten von</value>
+  </data>
+  <data name="StationInfo_AppBar_Share" xml:space="preserve">
+    <value>Teilen</value>
+  </data>
+</root>
