@@ -541,11 +541,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="ReviewNotifier.Apollo">
+    <Reference Include="ReviewNotifier.Apollo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ReviewNotifier.1.0.0\lib\windowsphone8\ReviewNotifier.Apollo.dll</HintPath>
     </Reference>
-    <Reference Include="StorageHelper.WindowsPhoneSilverlight">
-      <HintPath>..\packages\StorageHelper.1.1.4\lib\windowsphone8\StorageHelper.WindowsPhoneSilverlight.dll</HintPath>
+    <Reference Include="StorageHelper.Apollo">
+      <HintPath>..\packages\StorageHelper.1.0.0\lib\windowsphone8\StorageHelper.Apollo.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

@@ -33,6 +33,11 @@ namespace MundlTransit.WP8
 
         PhoneContainer container;
 
+        public AppBootstrapper()
+        {
+            Initialize();
+        }
+
         // http://caliburnmicro.codeplex.com/discussions/346663
         protected override PhoneApplicationFrame CreatePhoneApplicationFrame()
         {
@@ -71,7 +76,10 @@ namespace MundlTransit.WP8
             LogManager.GetLog = type => new DebugLogger(type);
 #endif
 
-            container.RegisterPhoneServices(RootFrame);
+            if (!Execute.InDesignMode)
+            {
+                container.RegisterPhoneServices(RootFrame);
+            }
 
             PerformAsyncInitializationsAsync().GetAwaiter().GetResult();
 
