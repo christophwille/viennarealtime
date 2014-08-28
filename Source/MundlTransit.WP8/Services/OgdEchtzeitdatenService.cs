@@ -6,7 +6,6 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Microsoft.ApplicationInsights.Telemetry.WindowsStore;
 using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Data.Reference;
 using Newtonsoft.Json.Linq;
@@ -32,18 +31,9 @@ namespace MundlTransit.WP8.Services
             var schnittstelle = new WienerLinien.Api.Realtime.EchtzeitdatenSchnittstelle();
             schnittstelle.InitializeApi(_apiKey);
 
-            MonitorInformation response = null;
-            using (TimedAnalyticsEvent token = ClientAnalyticsChannel.Default.StartTimedEvent("GetMonitorInformation"))
-            {
-                response = await schnittstelle
+            var response = await schnittstelle
                     .GetMonitorInformationAsync(rbls, null)
                     .ConfigureAwait(false);
-
-                if (!response.Succeeded)
-                {
-                    token.Cancel();
-                }
-            }
 
             return response;
         }

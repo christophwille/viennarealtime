@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.Micro;
-using Microsoft.ApplicationInsights.Telemetry.WindowsStore;
 using Microsoft.Phone.Shell;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Resources;
@@ -41,7 +40,7 @@ namespace MundlTransit.WP8.ViewModels.StationInfo
         public async Task RefreshDepartureInformationAsync()
         {
             EnableProgressBar();
-            ClientAnalyticsChannel.Default.LogEvent("Stops/LoadDepartures");
+            ApplicationAnalyticsService.Current.LogEvent("Stops/LoadDepartures");
 
             var monitorInfo = await _echtzeitdatenService.RetrieveMonitorInformationAsync(Haltestelle);
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="qps-ploc" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="MundlTransit.WP8" product-version="4.3.1.0" build-num="1">
+  <file datatype="xml" source-language="en-US" target-language="qps-ploc" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="MundlTransit.WP8" product-version="5.0.0.0" build-num="0">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.1.1085.0" tool-company="Microsoft" />
     </header>
@@ -53,8 +53,9 @@
         <trans-unit translate="yes" id="Resx/Alerts_MenuTitle" xml:space="preserve">
           <source>alerts</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[A6F22][!!_áľęřτŝ_!!]</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Traffic information part in main page panorama</note>
           
-        <note from="MultilingualBuild" annotates="source" priority="2">Traffic information part in main page panorama</note></trans-unit>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/Alerts_NoAlerts" xml:space="preserve">
           <source>There are currently no traffic alerts.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[F8B8B][!!_Τĥęŗê àŕê ċúѓѓęήťłý ήó тѓàƒƒìĉ àĺęѓтş._!!!!!!!!!!!!]</target>
@@ -278,13 +279,15 @@
         <trans-unit translate="yes" id="Resx/ResourceFlowDirection" xml:space="preserve">
           <source>LeftToRight</source>
           <target state="translated">LeftToRight</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note>
           
-        <note from="MultilingualBuild" annotates="source" priority="2">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note></trans-unit>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/ResourceLanguage" xml:space="preserve">
           <source>en-US</source>
           <target state="translated">qps-ploc</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note>
           
-        <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note></trans-unit>
+        </trans-unit>
         <trans-unit translate="yes" id="Resx/ReviewNotifications_Title" xml:space="preserve">
           <source>Please review the app</source>
           <target state="new">Please review the app</target>

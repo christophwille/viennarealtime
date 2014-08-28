@@ -66,7 +66,7 @@ namespace MundlTransit.WP8.ViewModels.Stations
             if (posResult.Succeeded)
             {
                 var pos = posResult.Position;
-                InfoMessage = String.Format("{0}: {1:F2} {2:F2}", AppResources.PositionMessage_YourPosition, pos.Coordinate.Longitude, pos.Coordinate.Latitude);
+                InfoMessage = String.Format("{0}: {1:F2} {2:F2}", AppResources.PositionMessage_YourPosition, pos.Coordinate.Point.Position.Longitude, pos.Coordinate.Point.Position.Latitude);
 
                 MyLocation = new Wgs84Location(pos.Coordinate);
 
@@ -75,7 +75,7 @@ namespace MundlTransit.WP8.ViewModels.Stations
                 if (!haltestellen.Any())
                 {
                     InfoMessage = String.Format("{0}: {1:F2} {2:F2}", AppResources.PositionMessage_NoStopsFoundNear,
-                        pos.Coordinate.Longitude, pos.Coordinate.Latitude);
+                        pos.Coordinate.Point.Position.Longitude, pos.Coordinate.Point.Position.Latitude);
                 }
                 else
                 {

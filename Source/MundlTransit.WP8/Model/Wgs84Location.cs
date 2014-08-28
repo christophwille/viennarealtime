@@ -17,8 +17,8 @@ namespace MundlTransit.WP8.Model
 
         public Wgs84Location(Geocoordinate gc)
         {
-            Longitude = gc.Longitude;
-            Latitude = gc.Latitude;
+            Longitude = gc.Point.Position.Longitude;
+            Latitude = gc.Point.Position.Latitude;
         }
 
         public double Longitude { get; set; }

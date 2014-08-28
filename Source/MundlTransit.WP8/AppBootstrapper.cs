@@ -35,6 +35,8 @@ namespace MundlTransit.WP8
 
         public AppBootstrapper()
         {
+            ApplicationAnalyticsService.Initialize(new DebugApplicationAnalyticsService());
+
             Initialize();
         }
 

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
-using Microsoft.ApplicationInsights.Telemetry.WindowsStore;
 using Microsoft.Phone.Tasks;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Data.Runtime;

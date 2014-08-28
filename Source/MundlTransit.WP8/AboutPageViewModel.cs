@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.ApplicationInsights.Telemetry.WindowsStore;
 using Microsoft.Phone.Tasks;
 using Windows.ApplicationModel;
 using MundlTransit.WP8.Resources;
@@ -25,7 +24,7 @@ namespace MundlTransit.WP8
             WienerLinienRealtimeUrl = new Uri("https://open.wien.at/site/datensatz/?id=add66f20-d033-4eee-b9a0-47019828e698");
             WienerLinienRoutingUrl = new Uri("https://open.wien.at/site/datensatz/?id=9c203fec-dc0d-412c-a7a3-7fd77d0346f1");
 
-            ClientAnalyticsChannel.Default.LogEvent("About");
+            ApplicationAnalyticsService.Current.LogEvent("About");
         }
 
         public string VersionText { get; set; }

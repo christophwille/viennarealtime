@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Shapes;
 using Caliburn.Micro;
-using Microsoft.ApplicationInsights.Telemetry.WindowsStore;
 using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Data.Reference;
 using MundlTransit.WP8.Services;
@@ -23,7 +22,7 @@ namespace MundlTransit.WP8.ViewModels.LineInfo
             _dataService = ds;
             _navigationService = navigationService;
 
-            ClientAnalyticsChannel.Default.LogEvent("Stops/LineInfo");
+            ApplicationAnalyticsService.Current.LogEvent("Stops/LineInfo");
         }
 
         public int NavigationLineId { get; set; }
