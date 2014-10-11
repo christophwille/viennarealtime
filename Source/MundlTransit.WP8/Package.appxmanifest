@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="d2293d53-df52-404c-b622-196d1681e0f6" Publisher="CN=christophw" Version="5.0.0.0" />
+  <Identity Name="ChristophWille.ViennaRealTime" Publisher="CN=C7672E4A-2AFC-41B8-87FD-CBC3978C49C6" Version="5.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="77c4e411-c07d-4d3b-9323-2e95a8437610" PhonePublisherId="e1178ef0-757b-44a9-8e46-2a76bee2c409" />
   <Properties>
     <DisplayName>MundlTransit.WP8</DisplayName>
@@ -31,6 +31,7 @@
     </Application>
   </Applications>
   <Capabilities>
+    <Capability Name="internetClientServer" />
     <DeviceCapability Name="location" />
   </Capabilities>
   <Extensions>

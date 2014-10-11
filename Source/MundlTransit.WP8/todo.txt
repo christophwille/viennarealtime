@@ -1,4 +1,13 @@
 ﻿
+More open data that could be mashed in
+
+	Piktogramme Wiener Linien (use High-Logic FontCreator to turn those -> Font? [perf, size])
+	https://open.wien.at/site/datensatz/?id=fd3b5bee-bef4-4acd-8ea8-fc9d24aa024f
+
+	Tarife Wiener Linien
+	https://open.wien.at/site/datensatz/?id=f1341267-6bbb-4396-8338-683adf865356
+
+
 Feature wish list
 
 	-- ECHTZEIT
