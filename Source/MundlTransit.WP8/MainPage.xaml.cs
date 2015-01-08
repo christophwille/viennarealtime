@@ -13,7 +13,7 @@ using MundlTransit.WP8.Common;
 using MundlTransit.WP8.Resources;
 using MundlTransit.WP8.ViewModels;
 using MundlTransit.WP8.Views;
-using ReviewNotifier.Apollo;
+using ReviewNotifier.WindowsPhoneSilverlight;
 using CM = Caliburn.Micro;
 
 namespace MundlTransit.WP8

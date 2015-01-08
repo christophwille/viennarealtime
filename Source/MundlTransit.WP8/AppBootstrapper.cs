@@ -23,7 +23,7 @@ using MundlTransit.WP8.ViewModels.StationInfo;
 using MundlTransit.WP8.ViewModels.Stations;
 using MundlTransit.WP8.Services;
 using MundlTransit.WP8.ViewModels.LineInfo;
-using ReviewNotifier.Apollo;
+using ReviewNotifier.WindowsPhoneSilverlight;
 
 namespace MundlTransit.WP8
 {
