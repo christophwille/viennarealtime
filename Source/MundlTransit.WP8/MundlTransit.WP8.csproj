@@ -476,7 +476,6 @@
     </Content>
     <Content Include="Assets\time.png" />
     <Content Include="Assets\WideLogo.png" />
-    <Content Include="ReadMe.Coding4Fun.Toolkit.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
