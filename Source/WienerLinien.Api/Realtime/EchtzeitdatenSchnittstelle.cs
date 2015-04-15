@@ -18,11 +18,11 @@ namespace WienerLinien.Api.Realtime
         // {0}: the multiple rbls
         // {1}: the Api key
         // {2}: this is a "no-cache" parameter (Ticks)
-        private const string MonitorApiUrl = "http://www.wienerlinien.at/ogd_realtime/monitor?{0}&sender={1}&vrtnocache={2}";
+        private const string MonitorApiUrl = "https://www.wienerlinien.at/ogd_realtime/monitor?{0}&sender={1}&vrtnocache={2}";
 
         // {0}: the Api key
         // {1}: this is a "no-cache" parameter (Ticks)
-        private const string TrafficInfoListApiUrl = "http://www.wienerlinien.at/ogd_realtime/trafficInfoList?name=stoerunglang&sender={0}&vrtnocache={1}";
+        private const string TrafficInfoListApiUrl = "https://www.wienerlinien.at/ogd_realtime/trafficInfoList?name=stoerunglang&sender={0}&vrtnocache={1}";
 
         private string _apiKey;
 
