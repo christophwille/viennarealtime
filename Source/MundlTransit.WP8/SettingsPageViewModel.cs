@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 
 namespace MundlTransit.WP8
 {
@@ -61,7 +62,9 @@ namespace MundlTransit.WP8
         public async void BuildUserDatabase()
         {
             ApplicationAnalyticsService.Current.LogEvent("Stops/BuildDatabase");
-            string dbName = "UserRefDb" + Guid.NewGuid().ToString() + ".db3";
+
+            var localFolder = ApplicationData.Current.LocalFolder.Path;
+            string dbName = localFolder + "\\" + "UserRefDb" + Guid.NewGuid().ToString() + ".db3";
 
             try
             {
