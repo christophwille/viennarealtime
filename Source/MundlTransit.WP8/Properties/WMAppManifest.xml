@@ -3,7 +3,7 @@
   <DefaultLanguage xmlns="" code="en-US" />
   <Languages xmlns="">
     <Language code="de" />
-    <Language code="qps-ploc" />
+    <!--<Language code="qps-ploc" />-->
   </Languages>
   <App xmlns="" ProductID="{77c4e411-c07d-4d3b-9323-2e95a8437610}" Title="Vienna RealTime" RuntimeType="Silverlight" Version="5.3.0.0" Genre="apps.normal" Author="Christoph Wille" Description="Realtime departure information for subway, tram and bus in Vienna, Austria. Station information is provided via open government data of the City of Vienna, realtime departure information via qando.at." Publisher="Christoph Wille" PublisherID="{e1178ef0-757b-44a9-8e46-2a76bee2c409}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
