@@ -11,9 +11,9 @@ namespace MundlTransit.WP8.Data.Reference
     {
         // http://data.wien.gv.at/csv/wienerlinien-ogd-version.csv
         // GUELTIG_AB;"ERSTELLT_AM"
-        // 2015-04-01;"2015-04-01 07:18:51"
-        public const string ReferenceDatabaseName = "referencedata20150401.db3";
-        public static readonly DateTime ReferenceDatabaseBuildDate = new DateTime(2015, 04, 01);
+        // "2015-07-06";"2015-07-06 14:38:01"
+        public const string ReferenceDatabaseName = "referencedata20150706.db3";
+        public static readonly DateTime ReferenceDatabaseBuildDate = new DateTime(2015, 07, 06);
 
         private static SQLiteAsyncConnection CreateAsyncConnection(string databaseName)
         {
